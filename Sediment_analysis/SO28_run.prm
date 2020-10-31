@@ -1,0 +1,188 @@
+#############################################
+# Run parameters
+verbose       0       # Detailed logged output
+
+flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
+flag_fisheries_on  0   # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
+flag_skip_biol     0   # Flag showing whether want biological model run (1) or not (0 - only used when debugging fisheries)
+flag_skip_phys     0   # Flag showing whether want biological model run (0) or not (1 - only used when debugging fisheries)
+track_rugosity_arag 0  # flag indicating that rugosity and aragonite saturation to be tracked - needed for corals
+track_pH           0  # flag indicating that pH to be tracked
+mirror_invalid     1   # Flag indicating whether want the model to estimate source destinations of hydrodynamics if have invalide feed data (1) or not (0)
+flagpassivetracer  1    # Flag indicating whether a passive tracer is needed for tracking tranpsorts or not (1 = yes, 0 = no)
+flag_sanity_check 0
+checkbox      0      # Give detailed logged output for this box
+checkstart    366666660 day    # Start detailed logged output after this date
+checkstop     366666660 day    # Stop detailed logged output after this date
+fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
+flaggape      0        # Periodically list prey vs gape statistics (tuning diagnostic)
+flagchecksize 0        # Periodically list relative size (tuning diagnostic)
+flagagecheck  0        # Periodically list age structure per cohort (tuning diagnostic)
+flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
+checkNH       0        # Give detailed logged output for NH in checkbox
+checkDL       0        # Give detailed logged output for DL in checkbox
+checkDR       0        # Give detailed logged output for DR in checkbox
+checkbiom     0        # Give detailed logged output for biomasses in checkbox
+which_fleet   33        # ID number of fleet to track (if don't want to track anything set to 33 (for other fleets see list below) 5
+which_check   7       # ID number of group to track (if don't want to track anything set to 80 (for other groups see list below)
+move_check    67       # ID number of group where tracking movements  (if don't want to track anything set it to 67, for other groups see list below)
+habitat_check 0
+fishmove      0        # Set to 0 to turn vertebrate movement off for debugging purposes
+debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
+                       # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ effort,
+                       # 8=debug econ, 9=debug quota, 10=debug aging, 11=debug_recruitment,
+                       # 12=debug spawning, 13=debug migration, 14=debug movement, 15=debug stocks,
+                       # 16=debug biomass calcs, 17=debug feeding, 18=debug everything
+                       # 19 - not valid as yet
+                       # 20=debug biology process, 21=debug prey biology processes,
+                       # 22=debug clam - atlantis linkage, 23=debug deposition,
+                       # 24=debug mortality scalar, 25=debug growth scalar
+                       # 26=debug FSPB additions, 27=debug C and P code, 28=debug SS3 tiered code
+                       # 29=debug external scaling
+
+debug_it      0
+trackAtomicRatio 0
+
+title      Antarctic
+dt         12 hour     # 12 hour time step 12
+tstop      365 day   # Stop time after the given period (7305) 3650 730
+toutstart  0 day       # Output start time
+toutinc 1 day       # Write output with this periodicity 1 day 1
+toutfinc   364 day     # Write fisheries output with this periodicity
+tburnday   0 day
+external_box 0
+flagAllowLand 0
+
+tsumout    1 hour     # Write stock state summary with this periodicity 365 1 day
+flagannual_Mest 1      # Whether to write out estimates of mortality per predator annually (1) or not (0)
+fishout    0           # Switch to turn fisheries output on = 1, off = 0
+flagreusefile 2        # Switch to show want to append output file no = 0, yes = 1, replace = 2
+flag_age_output  1     # 1 = age structured overall biomass output desired, 0 = off
+
+flag_avgTcorr_output 1    # 1 = want avg Tcorr output, 0 = 0ff
+
+# Parameters defining the numbers of certain types of groups (needed to  parameter arrays in the
+# initialisation section of the model, best left untouched for now)
+K_num_tot_sp    43     # total number of biological groups in the model
+K_num_vert_sp   23     # total number of vertebrate groups in the model
+K_num_stocks_per_sp 1  # maximum number of stocks per group in the model
+K_num_cohorts   25     # maximum number of cohorts (age stages) for a vertebrate group
+K_num_invert    17     # total number of invertebrate groups in the model
+K_num_invcohorts 1     # maximum number of cohorts for an invertebrate group
+K_num_invmig     5     # Maximum number of vertically migrating invertebrate groups          9
+K_num_bed_types  3     # maximum number of seabed types (currently only reef, soft and flat) 3
+K_num_cover_types 5    # maximum number of habitat types                                     9
+K_num_detritus   3     # Total number of detritus groups in the model (labile and refractory; water column and sediments)
+
+# Parameters defining the numbers of certain types of fisheries
+# (needed to  parameter arrays in the initialisation section of the model,
+# best left untouched for now)
+K_num_fisheries   4    # Maximum number of fisheries
+K_num_subfleet    1    # Maximum number of sub fleets (vessel types)
+K_num_fished_sp   4    # Maximum number of groups targeted by fishing
+K_num_impacted_sp 21   # Maxiumum number of groups impacted by fishing (target or bycatch)
+K_num_ports       1    # Maxiumum number of ports in the model area
+K_max_num_zoning  1    # Maximum number of spatial zonings used in the model
+K_num_reg         1    # Maximum number of management zonings used in the model
+K_num_markets     1    # Maxiumum number of markets in the model area
+K_num_catchqueue  7    # Length (in days) of list of catches used in running average to give recent CPUE for effort model 8
+
+# Location configuration parameters
+flaghemisphere    0    # Flag for hemisphere model is in (0 = southern; 1 = northern)
+flagIsEstuary     0    # Flag to indicate if the model is estuary. If true a sediment tracer is required in the initial conditions input file.
+
+# Parameters for rescalingin inital vertebrate densities - only for use in emergencies,
+# should really update the cdf file instead
+
+flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
+
+# Multiplicative scalr for vertebrate initial densities (as read-in from cdf file)
+init_scalar 43
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+################################################
+# List of group numbers for use with which_check
+# Group ID number
+# IPL 0
+# IDF 1
+# PCO 2
+# PPS 3
+# PPL 4
+# PDF 5
+# IZ 6
+# ZS 7
+# ZM 8
+# ZL 9
+# ZG 10
+# BD 11
+# BM 12
+# BF 13
+# KR 14
+# FP 15
+# FM 16
+# FT 17
+# FI 18
+# CEP 19
+# SF 20
+# SE 21
+# SC 22
+# SL 23
+# SO 24
+# PNA 25
+# PNE 26
+# PNO 27
+# SBA 28
+# SBS 29
+# SBO 30
+# WHM 31
+# WHH 32
+# WHA 33
+# WHB 34
+# WHC 35
+# WHO 36
+# PB 37
+# BB 38
+# IB 39
+# DL 40
+# DR 41
+# DC 42
+# DLsed 43
+# DRsed 44
+# DCsed 45
+# NHwc 46
+# NOwc 47
+# Siwc 48
+# Fewc 49
+# O2 50
+# DSi 51
+# NHsed 52
+# NOsed 53
+# Sised 54
+# Fesed 55
+# DON 56
+# O2sed 57
+# DSised 58
+#
+#
+################################################
+# List of fishery numbers for use with which_check
+# Fishery ID number
+# KRfishery 0
+# FTfishery 1
+# FIfishery 2
+# OtherFishery 3
+#
+track_contaminants 0
+flag_replicated_old 1
+flag_old_embryo_init 0
+flag_replicate_old_calendar 0
+check_dups 0
+
+
+## new Flags
+external_populations 0
+flag_multiyr_migs 0
+flag_use_deltaH 0
+store_aggregate_yoy 0
+store_mig_array 0
