@@ -1,0 +1,29 @@
+Code,Index,IsTurnedOn,Name,LongName,NumCohorts,NumGeneTypes,NumStages,NumSpawns,NumAgeClassSize,NumStocks,VerticallyMigrates,HorizontallyMigrates,IsFished,IsImpacted,IsTAC,GroupType,IsPredator,IsCover,IsSiliconDep,IsAssessed,IsCatchGrazer,OverWinters,IsCultured,IsHabDepend,numMoveSeaons,isSupplemented,iBioEroder
+IPL,0,1,Ice_Diatoms,Ice Diatoms,1,1,1,1,1,1,0,0,0,0,0,LG_PHY,0,0,1,0,0,0,0,1,4,0,0
+IDF,1,1,Ice_Mixotrophs,Ice Mixotrophs,1,1,1,1,1,1,0,0,0,0,0,DINOFLAG,0,0,0,0,0,0,0,1,4,0,0
+PPS,2,1,Pelagic_Picophytoplankton,Pelagic Picophytoplankton,1,1,1,1,1,1,0,0,0,0,0,SM_PHY,0,0,0,0,0,0,0,0,4,0,0
+PPL,3,1,Pelagic_Diatoms,Pelagic Diatoms,1,1,1,1,1,1,0,0,0,0,0,LG_PHY,0,0,1,0,0,0,0,0,4,0,0
+PDF,4,1,Pelagic_Dinoflagellates,Pelagic Dinoflagellates,1,1,1,1,1,1,0,0,0,0,0,DINOFLAG,0,0,0,0,0,0,0,0,4,0,0
+IZ,5,1,Ice_Zoobiota,Ice Zoobiota,1,1,1,1,1,1,0,0,0,0,0,SM_ZOO,1,0,0,0,0,0,0,1,4,0,0
+ZM,6,1,Copepods,Copepods,1,1,1,1,1,1,1,0,0,0,0,MED_ZOO,1,0,0,0,0,0,0,0,4,0,0
+ZG,7,1,Salps,Salps,1,1,1,1,1,1,1,0,0,0,0,LG_ZOO,1,0,0,0,0,0,0,0,4,0,0
+BD,8,1,Benthos,Benthos,1,1,1,1,1,1,0,0,0,0,0,MOB_EP_OTHER,1,0,0,0,0,0,0,0,4,0,0
+IKR,9,1,Ice_Krill,Ice Krill,5,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+KR,10,1,Antarctic_Krill,Antarctic Krill,6,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+FM,11,1,Fish_Mesopelagic,Fish Mesopelagic,4,1,2,1,1,1,1,1,0,1,0,FISH,1,0,0,0,0,0,0,0,4,0,0
+FT,12,1,Fish_Benthopelagic,Fish Benthopelagic,20,1,2,1,3,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+SF,13,1,Seal_Fish,Seal Fish,10,1,2,1,2,1,1,1,0,1,0,MAMMAL,1,0,0,0,0,0,0,0,4,0,0
+SK,14,1,Seal_Krill,Seal Krill,10,1,2,1,3,1,1,1,0,1,0,MAMMAL,1,0,0,0,0,0,0,1,4,0,0
+PNK,15,1,Penguin_Krill,Penguin Krill,15,1,2,1,1,1,1,1,0,1,0,BIRD,1,0,0,0,0,0,0,1,4,0,0
+PNF,16,1,Penguin_Fish,Penguin Fish,10,1,2,1,2,1,1,1,0,1,0,BIRD,1,0,0,0,0,0,0,1,4,0,0
+SB,17,1,Flying_Seabirds,Flying Seabirds,20,1,2,1,2,1,1,1,0,1,0,BIRD,1,0,0,0,0,0,0,0,4,0,0
+WHM,18,1,Minke_Whales,Minke Whales,15,1,2,1,3,1,1,1,1,1,1,MAMMAL,1,0,0,0,0,0,0,0,4,0,0
+WHO,19,1,Other_Baleen_Whales,Other Baleen Whales,20,1,2,1,3,1,1,1,0,1,0,MAMMAL,1,0,0,0,0,0,0,0,4,0,0
+TP,20,1,Top_Predators,Top Predators,20,1,2,1,4,1,1,1,0,1,0,MAMMAL,1,0,0,0,0,0,0,0,4,0,0
+WHH,21,1,Humpback_Whales,Humpback Whales,20,1,2,1,3,1,1,1,0,1,0,MAMMAL,1,0,0,0,0,0,0,0,4,0,0
+PB,22,1,Pelagic_Bacteria,Pelagic Bacteria,1,1,1,1,1,1,0,0,0,0,0,PL_BACT,0,0,0,0,0,0,0,0,4,0,0
+BB,23,1,Sediment_bacteria,Sediment bacteria,1,1,1,1,1,1,0,0,0,0,0,SED_BACT,0,0,0,0,0,0,0,0,4,0,0
+IB,24,1,Ice_Bacteria,Ice Bacteria,1,1,1,1,1,1,0,0,0,0,0,ICE_BACT,0,0,0,0,0,0,0,1,4,0,0
+DL,25,1,Labile_Detritus,Labile Detritus,1,1,1,1,1,1,0,0,0,0,0,LAB_DET,0,0,0,0,0,0,0,0,4,0,0
+DR,26,1,Refractory_Detritus,Refractory Detritus,1,1,1,1,1,1,0,0,0,0,0,REF_DET,0,0,0,0,0,0,0,0,4,0,0
+DC,27,1,Carrion,Carrion,1,1,1,1,1,1,0,0,0,0,0,CARRION,0,0,0,0,0,0,0,0,4,0,0

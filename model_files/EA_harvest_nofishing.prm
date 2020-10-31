@@ -1,0 +1,6792 @@
+## Fisheries parameter file for use with the southeast Australian version of the Boxmodel (Atlantis) model
+#
+## For reference, the following are the codenames for each biological component. 
+# Those marked with a + also have Si pool too. Those marked Special have three pools, a sructural N
+# (mg N individual-1), reserve N (mg N individual-1) and numbers (per box)
+# Large phytoplankton             PPL    mg N m-3
+# Small phytoplankton (pico)      PPS    mg N m-3
+# Dinoflagellates                 PDF    mg N m-3
+# Ice diatoms                     IPL    mg N m-2
+# Ice mixotrophs                  IDF    mg N m-2
+# Coccolithophores                PCO    mg N m-3
+# Planktivorous fish              FP     Special
+# Mesopelagics fish               FM     Special
+# Toothfish                       FT     Special
+# Icefish                         FI     Special
+# Antarctic fur seal              SF     Special
+# Elephant seal                   SE     Special
+# Crabeater seal                  SC     Special
+# Leopard seal                    SL     Special
+# Other seal                      SO     Special
+# adelie penguins                 PNA    Special
+# emperor penguins                PNE    Special
+# other penguins                  PNO    Special
+# Albatross                       SBA    Special
+# Skuas                           SBS    Special
+# Other skuas                     SBO    Special
+# Minke whales                    WHM    Special
+# Baleen whales                   WHH    Special
+# orca - A                        WHA    Special
+# orca - B                        WHB    Special
+# orca - C                        WHC    Special
+# Sperm whales                    WHO    Special
+# Krill                           KR     mg N m-3
+# Cephalopods                     CEP    mg N m-3
+# Ice zoobiota                    IZ     mg N m-3  
+# Salps                           ZG     mg N m-3  
+# Large carnivorous zooplankton   ZL     mg N m-3
+# Mesozooplankton                 ZM     mg N m-3
+# Small zooplankton               ZS     mg N m-3
+# Ice bacteria                    IB     mg N m-2
+# Pelagic associated bacteria     PB     mg N m-2
+# Sedimentary bacteria            BB     mg N m-2
+# Deposit feeders                 BD     mg N m-2
+# Benthic filter feeders          BF     mg N m-2
+# Macrozoobenthos                 BM     mg N m-2
+# Carrion (detritus)              DC     mg N m-3
+# Labile detritus                 DL     mg N m-3
+# Refractory detritus             DR     mg N m-3
+# Dissolved organic nitrogen      DON    mg N m-3
+# Ammonia                         NH     mg N m-3
+# Nitrate                         NO     mg N m-3
+# Dissolved silica                Si     mg Si m-3
+# Biogenic silica                 DSi    mg Si m-3
+# Dissolved oxygen                O2     mg O m-3
+# Light                           IRR    W m-2
+# 
+# 
+## For reference, the following are the codenames for each fishery. 
+# Description                   Symbol
+# krill fishery                 KRF
+# toothfish fishery             FTF
+# icefish fishery               FIF
+# other fishery                 OF
+
+## Parameter list
+# Symbol       Value           Description                                  Units        Default Value
+#                                                                                             
+## Flags and switches      
+# Period of activity for fisheries
+## Flags and switches      
+
+### Fisheries flags
+# Period of activity for fisheries
+flagKRFday  2         Active: 2 = no preference, 1 = day, 0 = night                       2
+flagFTFday  2         Active: 2 = no preference, 1 = day, 0 = night                       2
+flagFIFday  2         Active: 2 = no preference, 1 = day, 0 = night                       2
+flagOFday   2         Active: 2 = no preference, 1 = day, 0 = night                       2
+
+# This sets the start date of a fishery in days after the start of the run
+KRF_tStart  1000000000                                                                         0
+FTF_tStart  1000000000                                                                        0
+FIF_tStart  1000000000                                                                         0
+OF_tStart   1000000000                                                                        0
+
+# This sets the end date of a fishery in days after the start of the run
+KRF_tEnd  1000000000                                                                         1000000000
+FTF_tEnd  1000000000                                                                         1000000000
+FIF_tEnd  1000000000                                                                         1000000000
+OF_tEnd   1000000000                                                                         1000000000
+
+# Fisheries targeting options
+flagfishFP      0         1=fishing of planktivores, 0=off                            1
+flagfishFM      0         1=fishing of mesopelagic fish, 0=off                        0
+flagfishFT      0         1=fishing of toothfish, 0=off                               0
+flagfishFI      0         1=fishing of icefish, 0=off                                 0
+flagfishSF      0         1=fishing of fur seals, 0=off                               0
+flagfishSE      0         1=fishing of elephant seals, 0=off                          0
+flagfishSC      0         1=fishing of crab seals, 0=off                              0
+flagfishSL      0         1=fishing of leopard seals, 0=off                           1
+flagfishSO      0         1=fishing of other seals, 0=off                             0
+flagfishPNA     0         1=fishing of adelie penguins, 0=off                         1
+flagfishPNE     0         1=fishing of emperor penguins, 0=off                        0
+flagfishPNO     0         1=fishing of other penguins, 0=off                          0
+flagfishSBS     0         1=fishing of skuas, 0=off                                   0
+flagfishSBA     0         1=fishing of albatross, 0=off                               0
+flagfishSBO     0         1=fishing of other seabirds, 0=off                          0
+flagfishWHM     0         1=fishing of minke whales, 0=off                            0
+flagfishWHH     0         1=fishing of baleen whales, 0=off                           0
+flagfishWHO     0         1=fishing of sperm whales, 0=off                            0
+flagfishWHA     0         1=fishing of orca A, 0=off                                  0
+flagfishWHB     0         1=fishing of orca B, 0=off                                  0
+flagfishWHC     0         1=fishing of orca C, 0=off                                  0
+flagfishCEP     0         1=fishing of cephalopods, 0=off                             1
+flagfishIZ      0         1=fishing of ice zooplankton, 0=off                         0
+flagfishZL      0         1=fishing of mesozooplankton, 0=off                         0
+flagfishZG      0         1=fishing of salps, 0=off                                   0 
+flagfishBF      0         1=fishing of filter feeders, 0=off                          1
+flagfishBM      0         1=fishing of macrozoobenthos, 0=off                         1
+flagfishBD      0         1=fishing of deposit feeders, 0=off                         0
+
+
+# Fisheries habitat related - the vectors indicate which habitat patchiness equation
+# to use when applying fishing mortality related mortality.  
+# 0=standard % overlap, 1=Ellis and Pantus based subgrid scale model
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+flaghabitat_FP  4
+0 0 0 0
+
+flaghabitat_FM  4
+0 0 0 0
+
+flaghabitat_FT  4
+0 0 0 0
+
+flaghabitat_FI  4
+0 0 0 0
+
+flaghabitat_SF  4
+0 0 0 0
+
+flaghabitat_SE  4
+0 0 0 0
+
+flaghabitat_SL  4
+0 0 0 0
+
+flaghabitat_SC  4
+0 0 0 0
+
+flaghabitat_SO  4
+0 0 0 0
+
+flaghabitat_PNA  4
+0 0 0 0
+
+flaghabitat_PNE  4
+0 0 0 0
+
+flaghabitat_PNO  4
+0 0 0 0
+
+flaghabitat_SBS   4
+0 0 0 0
+
+flaghabitat_SBA   4
+0 0 0 0
+
+flaghabitat_SBO  4
+0 0 0 0
+
+flaghabitat_WHM  4
+0 0 0 0
+
+flaghabitat_WHH  4
+0 0 0 0
+
+flaghabitat_WHO  4
+0 0 0 0
+
+flaghabitat_WHA  4
+0 0 0 0
+
+flaghabitat_WHB  4
+0 0 0 0
+
+flaghabitat_WHC  4
+0 0 0 0
+
+flaghabitat_IZ   4
+0 0 0 0
+
+flaghabitat_ZL   4
+0 0 0 0
+
+flaghabitat_ZG   4
+0 0 0 0
+
+flaghabitat_BF   4
+0 0 0 0
+
+flaghabitat_BM   4
+0 0 0 0
+
+flaghabitat_CEP  4
+0 0 0 0
+
+flaghabitat_BD   4
+0 0 0 0
+
+flaghabitat_KR   4
+0 0 0 0
+
+# This sets the flag for each group and fishery to show whether it is benthic or pelagic.
+# 0 = pelagic, 1 = demersal
+KRF_flagdempelfishery       0                                                                         0
+FTF_flagdempelfishery       0                                                                         0
+FIF_flagdempelfishery       0                                                                         0
+OF_flagdempelfishery        0                                                                         0
+
+# Flag to indicate whether want dynamic (=1) or pseudo (=0) movement if using pseudo assemssments and effortmodel = 8
+dynanyway 0
+
+# Flag indicating effort dynamics model to use. 0=Constant fishing pressure per quarter per cell 
+# (evenly distributed across cells), 1=Constant fishing pressure per quarter per cell (adjusted
+# by relative area of the cell), 2=Constant effort with Spatial distribution based on location
+# of previous day's cpue, 3=Prescribed Spatial effort matrices, 4=Effort based on cpue of previous day,
+# 5=full fleet dynamics model using ports, 6=human population-based recreational fishing
+# 7=alternative full fleet dynamics model using ports, 8=alternative fleet model but weighted by
+# prescribed effort matrices, 9=distribution based on distributions of target species (perfect knowledge)
+# 10=cpue based dynamic effort, 11=read effort timeseries, 12=recreational economic model, 
+# 13=dynamic economic commercial fleet model
+
+KRF_effortmodel       0                                                                       0
+FTF_effortmodel       0                                                                       0
+FIF_effortmodel       0                                                                       0
+OF_effortmodel        0                                                                       0
+
+# Flags indicating whether effort per cell is capped (eSpecially if using effort model 8) 0=no, 1=yes.
+KRF_flagcap_peak      0                                                                         0
+FTF_flagcap_peak      0                                                                         0
+FIF_flagcap_peak      0                                                                         0
+OF_flagcap_peak       0                                                                         0
+
+# Flags indicating whether use all species caught to define CPUE for CPUE based effort models (1=yes) or not (0=use target species only).
+KRF_flaguseall       1                                                                         1
+FTF_flaguseall       1                                                                         1
+FIF_flaguseall       1                                                                         1
+OF_flaguseall        1                                                                         1
+
+# Flag indicating whether fisheries will do exploratory fishing to expand their grounds (0=no, 1=yes)
+KRF_explore       1                                                                        0
+FTF_explore       0                                                                        0
+FIF_explore       0                                                                        0
+OF_explore        0                                                                        0
+
+# Flag indicating whether total effort can drop dynamically (without management) as stocks are depleted. 
+# 0=No, 1=Yes
+KRF_effortdrop       0                                                                         0
+FTF_effortdrop       0                                                                         0
+FIF_effortdrop       0                                                                         0
+OF_effortdrop        0                                                                         0
+
+# Flag indicating what form of selectivity a fishery starts with (this can change through time
+# if the appropriate changeSEL is set to 1 below). 
+# 0=groups SBAecific constant, 1=cohort SBAecific constant for each group,
+# 2=size based logistic curve, 3=size based normal curve, 4=size based lognormal curve,
+# 5=size based gamma curve, 6=knife edged
+KRF_selcurve          0                                                                         0
+FTF_selcurve          0                                                                         0
+FIF_selcurve          0                                                                         0
+OF_selcurve           0                                                                         0
+
+# Flag indicating which discarding formulation is used. 0=constant %, 1=constant % per cohort,
+# 2=size based, 3=loaded from timeseries file, 4 = conditional on catch of other species.
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+flagdiscard_FP  4
+0 0 0 0
+
+flagdiscard_FM  4
+0 0 0 0
+
+flagdiscard_FT  4
+0 0 0 0
+
+flagdiscard_FI  4
+0 0 0 0
+
+flagdiscard_SF  4
+0 0 0 0
+
+flagdiscard_SE  4
+0 0 0 0
+
+flagdiscard_SL  4
+0 0 0 0
+
+flagdiscard_SC  4
+0 0 0 0
+
+flagdiscard_SO  4
+0 0 0 0
+
+flagdiscard_PNA  4
+0 0 0 0
+
+flagdiscard_PNE  4
+0 0 0 0
+
+flagdiscard_PNO  4
+0 0 0 0
+
+flagdiscard_SBS   4
+0 0 0 0
+
+flagdiscard_SBA   4
+0 0 0 0
+
+flagdiscard_SBO  4
+0 0 0 0
+
+flagdiscard_WHM  4
+0 0 0 0
+
+flagdiscard_WHH  4
+0 0 0 0
+
+flagdiscard_WHO  4
+0 0 0 0
+
+flagdiscard_WHA  4
+0 0 0 0
+
+flagdiscard_WHB  4
+0 0 0 0
+
+flagdiscard_WHC  4
+0 0 0 0
+
+flagdiscard_ZI  4
+0 0 0 0
+
+flagdiscard_ZL   4
+0 0 0 0
+
+flagdiscard_ZG   4
+0 0 0 0
+
+flagdiscard_BF   4
+0 0 0 0
+
+flagdiscard_BM   4
+0 0 0 0
+
+flagdiscard_CEP  4
+0 0 0 0
+
+flagdiscard_KR   4
+0 0 0 0
+
+flagdiscard_BD   4
+0 0 0 0
+
+# Flag indicating which escapement formulation is used. 0=no escapement, 1=fixed proportion escape,
+# 2=size based. Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+flagescapement_FP  4
+1 1 1 1
+
+flagescapement_FM  4
+1 1 1 1
+
+flagescapement_FT  4
+1 1 1 1
+
+flagescapement_FI  4
+1 1 1 1
+
+flagescapement_SF  4
+1 1 1 1
+
+flagescapement_SE  4
+1 1 1 1
+
+flagescapement_SL  4
+1 1 1 1
+
+flagescapement_SC  4
+1 1 1 1
+
+flagescapement_SO  4
+1 1 1 1
+
+flagescapement_PNA  4
+1 1 1 1
+
+flagescapement_PNE  4
+1 1 1 1
+
+flagescapement_PNO  4
+1 1 1 1
+
+flagescapement_SBS   4
+1 1 1 1
+
+flagescapement_SBA   4
+1 1 1 1
+
+flagescapement_SBO  4
+1 1 1 1
+
+flagescapement_WHM  4
+1 1 1 1
+
+flagescapement_WHH  4
+1 1 1 1
+
+flagescapement_WHO  4
+1 1 1 1
+
+flagescapement_WHA  4
+1 1 1 1
+
+flagescapement_WHB  4
+1 1 1 1
+
+flagescapement_WHC  4
+1 1 1 1
+
+flagescapement_IZ   4
+1 1 1 1
+
+flagescapement_ZL   4
+1 1 1 1
+
+flagescapement_ZG   4
+1 1 1 1
+
+flagescapement_BF   4
+1 1 1 1
+
+flagescapement_BM   4
+1 1 1 1
+
+flagescapement_CEP  4
+1 1 1 1
+
+flagescapement_KR  4
+1 1 1 1
+
+flagescapement_BD   4
+1 1 1 1
+
+# Access identifier - whether a species can be accessed throughout the water column regardless 
+# of reSBAective vertical distributions of fishery and group (1=yes, 0=no) 
+flag_access_thru_wc_FP      0         1=can access planktivores through the water column, 0=no               0
+flag_access_thru_wc_FM      0         1=can access mesopelagic fish through the water column, 0=no           0
+flag_access_thru_wc_FT      0         1=can access toothfish through the water column, 0=no                  0
+flag_access_thru_wc_FI      0         1=can access icefish through the water column, 0=no                    0
+flag_access_thru_wc_SF      0         1=can access fur seals through the water column, 0=no                  0
+flag_access_thru_wc_SE      0         1=can access elephant seals through the water column, 0=no             0
+flag_access_thru_wc_SC      0         1=can access crab seals through the water column, 0=no                 0
+flag_access_thru_wc_SL      0         1=can access leopard seals through the water column, 0=no              0
+flag_access_thru_wc_SO      0         1=can access other seals through the water column, 0=no                0
+flag_access_thru_wc_PNA     0         1=can access adelie penguins through the water column, 0=no            0
+flag_access_thru_wc_PNE     0         1=can access emperor penguins through the water column, 0=no           0
+flag_access_thru_wc_PNO     0         1=can access other penguins through the water column, 0=no             0
+flag_access_thru_wc_SBS     0         1=can access skuas through the water column, 0=no                      0
+flag_access_thru_wc_SBA     0         1=can access albatross through the water column, 0=no                  0
+flag_access_thru_wc_SBO     0         1=can access other seabirds through the water column, 0=no             0
+flag_access_thru_wc_WHM     0         1=can access minke whales through the water column, 0=no               0
+flag_access_thru_wc_WHH     0         1=can access baleen whales through the water column, 0=no              0
+flag_access_thru_wc_WHO     0         1=can access sperm whales through the water column, 0=no               0
+flag_access_thru_wc_WHA     0         1=can access orca A through the water column, 0=no                     0
+flag_access_thru_wc_WHB     0         1=can access orca B through the water column, 0=no                     0
+flag_access_thru_wc_WHC     0         1=can access orca C through the water column, 0=no                     0
+flag_access_thru_wc_IZ      0         1=can access ice zooplankton through the water column, 0=no            0
+flag_access_thru_wc_ZL      0         1=can access mesozooplankton through the water column, 0=no            0
+flag_access_thru_wc_ZG      0         1=can access salps through the water column, 0=no                      0 
+flag_access_thru_wc_BF      0         1=can access filter feeders through the water column, 0=no             0
+flag_access_thru_wc_BM      0         1=can access macrozoobenthos through the water column, 0=no            0
+flag_access_thru_wc_CEP     0         1=can access cephalopods through the water column, 0=no                0
+flag_access_thru_wc_KR      0         1=can access krill through the water column, 0=no                      0
+flag_access_thru_wc_BD      0         1=can access deposit feeders through the water column, 0=no            0
+
+# Fisheries catch time series used.
+# This flag indicates whether generally there is
+# 0 = no imposed catch
+# 1 = imposed catch matches global biomass distribution
+# 2 = imposed catch is Spatially explicit
+# 3 = imposed catch is Spatially explicit but will "steal" from the stock if can't fill local catch
+# 4 = imposed catch is Spatially explicit but will from adjacent cells only if cant'y fill local catch time series
+flagimposeglobal    0                  
+
+# Fisheries catch time series used - the vectors indicate which of the 5 options listed above
+# (no imposed catch, global, Spatially explicit, stock associated or adjacent cells) is
+# used for each fishery for each group
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+flagimposecatch_FP  4
+0 0 0 0
+
+flagimposecatch_FM  4
+0 0 0 0
+
+flagimposecatch_FT  4
+0 0 0 0
+
+flagimposecatch_FI  4
+0 0 0 0
+
+flagimposecatch_SF  4
+0 0 0 0
+
+flagimposecatch_SE  4
+0 0 0 0
+
+flagimposecatch_SL  4
+0 0 0 0
+
+flagimposecatch_SC  4
+0 0 0 0
+
+flagimposecatch_SO  4
+0 0 0 0
+
+flagimposecatch_PNA  4
+0 0 0 0
+
+flagimposecatch_PNE  4
+0 0 0 0
+
+flagimposecatch_PNO  4
+0 0 0 0
+
+flagimposecatch_SBS   4
+0 0 0 0
+
+flagimposecatch_SBA   4
+0 0 0 0
+
+flagimposecatch_SBO  4
+0 0 0 0
+
+flagimposecatch_WHM  4
+0 0 0 0
+
+flagimposecatch_WHH  4
+0 0 0 0
+
+flagimposecatch_WHO  4
+0 0 0 0
+
+flagimposecatch_WHA  4
+0 0 0 0
+
+flagimposecatch_WHB  4
+0 0 0 0
+
+flagimposecatch_WHC  4
+0 0 0 0
+
+flagimposecatch_IZ   4
+0 0 0 0
+
+flagimposecatch_ZL   4
+0 0 0 0
+
+flagimposecatch_ZG   4
+0 0 0 0
+
+flagimposecatch_BF   4
+0 0 0 0
+
+flagimposecatch_BM   4
+0 0 0 0
+
+flagimposecatch_CEP  4
+0 0 0 0
+
+flagimposecatch_KR  4
+0 0 0 0
+
+# The vectors indicate whether a catch time
+# series is used for catch rather than fleet dynamics model (0=no, 1=yes)
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+flagF_FP  4
+0 0 0 0
+
+flagF_FM  4
+0 0 0 0
+
+flagF_FT  4
+0 0 0 0
+
+flagF_FI  4
+0 0 0 0
+
+flagF_SF  4
+0 0 0 0
+
+flagF_SE  4
+0 0 0 0
+
+flagF_SL  4
+0 0 0 0
+
+flagF_SC  4
+0 0 0 0
+
+flagF_SO  4
+0 0 0 0
+
+flagF_PNA  4
+0 0 0 0
+
+flagF_PNE  4
+0 0 0 0
+
+flagF_PNO  4
+0 0 0 0
+
+flagF_SBS   4
+0 0 0 0
+
+flagF_SBA   4
+0 0 0 0
+
+flagF_SBO  4
+0 0 0 0
+
+flagF_WHM  4
+0 0 0 0
+
+flagF_WHH  4
+0 0 0 0
+
+flagF_WHO  4
+0 0 0 0
+
+flagF_WHA  4
+0 0 0 0
+
+flagF_WHB  4
+0 0 0 0
+
+flagF_WHC  4
+0 0 0 0
+
+flagF_IZ   4
+0 0 0 0
+
+flagF_ZL   4
+0 0 0 0
+
+flagF_ZG   4
+0 0 0 0
+
+flagF_BF   4
+0 0 0 0
+
+flagF_BG   4
+0 0 0 0
+
+flagF_BM   4
+0 0 0 0
+
+flagF_CEP  4
+0 0 0 0
+
+flagF_KR   4
+0 0 0 0
+
+flagF_BD   4
+0 0 0 0
+
+flag_sel_with_mFC      1        # This flag indicates whether using selectivity with fishing mortality (mFC) or simple age of first effect (using mFC_start_age)
+
+### Management flags 
+# General fisheries options
+flagfinfish      0         1=finfish fisheries active, 0=off                                   0
+flagincidmort    0         1=fisheries cause incidental mortality (take bycatch), 0=off        0
+flaghighgrading  0         1=high grading, 0=no high grading                                   0
+flagmarketdiscard 0        1=market-based discarding, 0=not on                                 0
+
+flagendangered   0         1=endangered group status effect effort allocation, 0=off           0
+flagmpa          1         0=no mpa for any group, 1=mpas for at least one group               0
+flaginfringe     0         0=no infringement, 1=infringement of mpas                           0
+flagdiSBAlace     0         1=effort diSBAlacement due to low CPUE or MPA present, 0=off         0
+flagbuffereffort 1         1=effort buffering on for dynamic fleet model, 0 = off              1
+flagchangeeffort 1         1=fishing pressure changes with time, 0=remains constant            0
+flagchangediscrd 0         1=discarding practices change with time, 0=remain constant          0
+flagchangesel    0         1=selectivity changes with time, 0=remains constant                 0
+flagchangeF      0         1=F mortality rate forcing changes, 0=F not used or remains constant 0
+flagchangeq      0         1=catchability changes 5with time, 0=remains constant                0
+flagchangep      0         1=fisheries Spatial coverage changes with time, 0=remains constant  0
+flagchangeswept  0         1=fisheries gear swept area changes with time, 0=remains constant   0
+flagchangecap    0         1=effort cap on and changes through time, 0=off or remain constant  0
+flagnewport      1         1=new fishing ports may open, 0=only use inital ports               0
+flagchangepop    1         1=human population size changes, 0=remains constant                 0
+flagreinitpop    0         0=virgin biomass calc day 0, 1=calc on user SBAecified day           0
+pseudo_assess    0         1=use pseudo assessment not assessment library code                 0
+dynDAS           0         1=use dynamic days-at-sea cap (recalculated each year), 0=static days-at-sea cap
+
+# Flag indicating whether or not TAC includes discards or just landed catch (1=yes, 0=no)
+flagTACincludeDiscard 1
+
+# Flag indicating whether or not trade off Spatial closures for TAC reductions (i.e. no/less reduction as close area instead)
+flagTradeTACvsMPA    0
+
+# Flag indicating whether fixed ratio of catches for companion species given in co_sp_catch is used throughout the run (0) or
+# whether it is updated dynamically (1)
+flagdyn_coupdate     1
+
+# Flag indicating whether want to bound dynamic TAC to be a band around original TAC
+# 0 = no, 1 = bound upper end by TACbound parameter value (e.g. 2x starting TAC), 2 = bound upper and lower end (using xTACbound, x1/TACbound)
+flagQuotaBound       2
+
+# This sets the start date for fishery managment in days after the start of the run
+KRF_start_manage       0                                                                         0
+FTF_start_manage       0                                                                         0
+FIF_start_manage       0                                                                         0
+OF_start_manage        0                                                                         0
+
+# This sets the end date for fishery management in days after the start of the run
+KRF_end_manage       1000000000                                                                         1000000000
+FTF_end_manage       1000000000                                                                         1000000000
+FIF_end_manage       1000000000                                                                         1000000000
+OF_end_manage        1000000000                                                                         1000000000
+
+# Flags indicating form of adaptive management used. 0=none, 1=simple adaptive management which reSBAonds
+# to the size of the target groups for this fishery. If a population has fallen to critical % of virgin
+# stock size reduce overall effort (done gradually over a SBAecified time period rather than as a
+# sudden drop). If stock size is still too low after a set period its reduced again. 2=standard TACs in place.
+# 3=basket TAC, 4=regional TAC (only for multiple stock groups so far), 5=companion TAC
+# 6=companion TACs and basket quotas, 7=basket and regional quotas, 8=companion, regional and basket TACs
+# 9=companion, regional and basket TACs and basket groups can transition to individual TAC
+KRF_flagmanage       0                                                                         0
+FTF_flagmanage       0                                                                         0
+FIF_flagmanage       0                                                                         0
+OF_flagmanage        0                                                                         0
+
+# If using a common pool TAC (so all participating fleets compare to a single TAC) set =1 (if not set =0)
+flagTACparticipate_KRF       0                                                                         0
+flagTACparticipate_FTF       0                                                                         0
+flagTACparticipate_FIF       0                                                                         0
+flagTACparticipate_OF        0                                                                         0
+
+bulkTAC 0        Whether the TAC set across multiple years is consolidated annually (0) or if it is a bulk TAC to be used cumulatively across the entire period (1)
+
+# Multi year TAC setting - put in the number of years between TAC reassessments
+tac_resetperiodFP      1
+tac_resetperiodFM      1
+tac_resetperiodFT      1
+tac_resetperiodFI      1
+tac_resetperiodSF      1
+tac_resetperiodSE      1
+tac_resetperiodSC      1
+tac_resetperiodSL      1
+tac_resetperiodSO      1
+tac_resetperiodPNA     1
+tac_resetperiodPNE     1
+tac_resetperiodPNO     1
+tac_resetperiodSBS     1
+tac_resetperiodSBA     1
+tac_resetperiodSBO     1
+tac_resetperiodWHM     1
+tac_resetperiodWHH     1
+tac_resetperiodWHO     1
+tac_resetperiodWHA     1
+tac_resetperiodWHB     1
+tac_resetperiodWHC     1
+tac_resetperiodZL      1
+tac_resetperiodBD      1
+tac_resetperiodUZ      1
+tac_resetperiodBF      1
+tac_resetperiodBM      1
+tac_resetperiodCEP     1
+tac_resetperiodKR      1
+  
+# Flags indicating whether effort caps are used. 0=none, 1=yes.
+KRF_flagcap       0                                                                         0
+FTF_flagcap       0                                                                         0
+FIF_flagcap       0                                                                         0
+OF_flagcap        0                                                                         0
+
+# Flag indicating whether the fishery is seasonal. 0=no seasonal closures, 1=fishery has seasonal closures.
+KRF_flagseasonal       0                                                                        0
+FTF_flagseasonal       0                                                                        0
+FIF_flagseasonal       0                                                                        0
+OF_flagseasonal        0                                                                        0
+
+# Flag indicating whether the fishery has Spatial management. 0=no Spatial management, 1=fixed mpas,
+# 2=rotating (or changing) mpas, 3=area closures when stock low (using fixed mpas), 
+# 4=area closures when endangered groups depleted (using fixed mpas), 5=area closures when
+# stock low and/or when endangered groups depleted (using fixed mpas), 6=area closures when
+# stock low (using changing mpa locations), 7=area closures when endangered groups depleted
+# (using changing mpa locations), 8=area closures when stock low and/or when endangered
+# groups depleted (using changing mpa locations)
+KRF_flagmpa       1                                                                            1
+FTF_flagmpa       1                                                                            1
+FIF_flagmpa       1                                                                            1
+OF_flagmpa        1                                                                            1
+
+### Scenario specification flags
+# Flag indicating whether the selectivity for the SBAecific fishery changes through time. 0=no, 1=yes
+# If any of these are set flagchangesel to 1 then set to 1 too
+KRF_changeSEL      0                                                                            0
+FTF_changeSEL      0                                                                            0
+FIF_changeSEL      0                                                                            0
+OF_changeSEL       0                                                                            0
+
+# Flag indicating whether the coverage of a SBAecific fishery changes through time. 0=no, 1=yes
+# If any of these are set flagchangep to 1 then set to 1 too
+KRF_changeP        0                                                                            0
+FTF_changeP        0                                                                            0
+FIF_changeP        0                                                                            0
+OF_changeP         0                                                                            0
+
+# Flag indicating whether the swept area of the gear used by a SBAecific fishery changes through
+# time. 0=no, 1=yes. If any of these are set to 1 then set flagchangeswept to 1 too
+KRF_changeSWEPT    0                                                                        0
+FTF_changeSWEPT    0                                                                        0
+FIF_changeSWEPT    0                                                                        0
+OF_changeSWEPT     0                                                                        0
+
+# Flag indicating whether the coverage of a SBAecific fishery changes through time. 0=no, 0=yes
+# If any of these are set flagchangeeffort to 0 then set to 0 too
+KRF_changeEFF      0                                                                            0
+FTF_changeEFF      0                                                                            0
+FIF_changeEFF      0                                                                            0
+OF_changeEFF       0                                                                            0
+
+# Flag indicating whether the length of the fishing season changes for a SBAecific fishery changes
+# through time. 0=no, 1=yes
+KRF_changeseason  0                                                                            0
+FTF_changeseason  0                                                                            0
+FIF_changeseason  0                                                                            0
+OF_changeseason   0                                                                            0
+
+# Flag indicating whether the TACs for a fishery change through time. 0=no, 1=yes
+KRF_TACchange     0                                                                            0
+FTF_TACchange     0                                                                            0
+FIF_TACchange     0                                                                            0
+OF_TACchange      0                                                                            0
+
+# Flag indicating whether catchabiity of a group to a fishery changes through time. 0=no, 1=yes,
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+flagQchange_FP  4
+0 0 0 0
+
+flagQchange_FM  4
+0 0 0 0
+
+flagQchange_FT  4
+0 0 0 0
+
+flagQchange_FI  4
+0 0 0 0
+
+flagQchange_SF  4
+0 0 0 0
+
+flagQchange_SE  4
+0 0 0 0
+
+flagQchange_SL  4
+0 0 0 0
+
+flagQchange_SC  4
+0 0 0 0
+
+flagQchange_SO  4
+0 0 0 0
+
+flagQchange_PNA  4
+0 0 0 0
+
+flagQchange_PNE  4
+0 0 0 0
+
+flagQchange_PNO  4
+0 0 0 0
+
+flagQchange_SBS   4
+0 0 0 0
+
+flagQchange_SBA   4
+0 0 0 0
+
+flagQchange_SBO  4
+0 0 0 0
+
+flagQchange_WHM  4
+0 0 0 0
+
+flagQchange_WHH  4
+0 0 0 0
+
+flagQchange_WHO  4
+0 0 0 0
+
+flagQchange_WHA  4
+0 0 0 0
+
+flagQchange_WHB  4
+0 0 0 0
+
+flagQchange_WHC  4
+0 0 0 0
+
+flagQchange_IZ  4
+0 0 0 0
+
+flagQchange_ZL   4
+0 0 0 0
+
+flagQchange_ZG   4
+0 0 0 0
+
+flagQchange_BF   4
+0 0 0 0
+
+flagQchange_BM   4
+0 0 0 0
+
+flagQchange_CEP  4
+0 0 0 0
+
+flagQchange_KR   4
+0 0 0 0
+
+flagQchange_BD   4
+0 0 0 0
+
+# Flag indicating whether fishing mortality value of a group (if being used to force the model) changes
+# for a fishery changes through time. 0=no, 1=yes,
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+flagFchange_FP  4
+0 0 0 0
+
+flagFchange_FM  4
+0 0 0 0
+
+flagFchange_FT  4
+0 0 0 0
+
+flagFchange_FI  4
+0 0 0 0
+
+flagFchange_SC  4
+0 0 0 0
+
+flagFchange_SL  4
+0 0 0 0
+
+flagFchange_SF  4
+0 0 0 0
+
+flagFchange_SE  4
+0 0 0 0
+
+flagFchange_SO  4
+0 0 0 0
+
+flagFchange_PNE  4
+0 0 0 0
+
+flagFchange_PNO  4
+0 0 0 0
+
+flagFchange_PNA  4
+0 0 0 0
+
+flagFchange_SBS   4
+0 0 0 0
+
+flagFchange_SBO  4
+0 0 0 0
+
+flagFchange_SBA   4
+0 0 0 0
+
+flagFchange_WHM  4
+0 0 0 0
+
+flagFchange_WHO  4
+0 0 0 0
+
+flagFchange_WHH  4
+0 0 0 0
+
+flagFchange_WHA  4
+0 0 0 0
+
+flagFchange_WHB  4
+0 0 0 0
+
+flagFchange_WHC  4
+0 0 0 0
+
+flagFchange_CEP  4
+0 0 0 0
+
+flagFchange_BF   4
+0 0 0 0
+
+flagFchange_BM   4
+0 0 0 0
+
+flagFchange_IZ   4
+0 0 0 0
+
+flagFchange_ZG   4
+0 0 0 0
+
+flagFchange_ZL   4
+0 0 0 0
+
+flagFchange_BD   4
+0 0 0 0
+
+flagFchange_KR   4
+0 0 0 0
+
+## Flag indicating whether discarding of a group by a fishery changes through time. 0=no, 1=yes,
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+flagchangeDISCRD_FP  4
+0 0 0 0
+
+flagchangeDISCRD_FM  4
+0 0 0 0
+
+flagchangeDISCRD_FT  4
+0 0 0 0
+
+flagchangeDISCRD_FI  4
+0 0 0 0
+
+flagchangeDISCRD_SF  4
+0 0 0 0
+
+flagchangeDISCRD_SE  4
+0 0 0 0
+
+flagchangeDISCRD_SL  4
+0 0 0 0
+
+flagchangeDISCRD_SC  4
+0 0 0 0
+
+flagchangeDISCRD_SO  4
+0 0 0 0
+
+flagchangeDISCRD_PNA  4
+0 0 0 0
+
+flagchangeDISCRD_PNE  4
+0 0 0 0
+
+flagchangeDISCRD_PNO  4
+0 0 0 0
+
+flagchangeDISCRD_SBS   4
+0 0 0 0
+
+flagchangeDISCRD_SBA   4
+0 0 0 0
+
+flagchangeDISCRD_SBO  4
+0 0 0 0
+
+flagchangeDISCRD_WHM  4
+0 0 0 0
+
+flagchangeDISCRD_WHH  4
+0 0 0 0
+
+flagchangeDISCRD_WHO  4
+0 0 0 0
+
+flagchangeDISCRD_WHA  4
+0 0 0 0
+
+flagchangeDISCRD_WHB  4
+0 0 0 0
+
+flagchangeDISCRD_WHC  4
+0 0 0 0
+
+flagchangeDISCRD_IZ   4
+0 0 0 0
+
+flagchangeDISCRD_ZL   4
+0 0 0 0
+
+flagchangeDISCRD_ZG   4
+0 0 0 0
+
+flagchangeDISCRD_BF   4
+0 0 0 0
+
+flagchangeDISCRD_BM   4
+0 0 0 0
+
+flagchangeDISCRD_CEP  4
+0 0 0 0
+
+flagchangeDISCRD_KR   4
+0 0 0 0
+
+flagchangeDISCRD_BD   4
+0 0 0 0
+
+### Fisheries parameters
+# Reduction in effectiveness of gear due to mismatch in watercolumn of gear and vertebrates
+k_mismatch       0.25
+
+# Identify chief target species for each fishery - when determining effort allocation,
+# the expected CPUE of these species is used to select (or weight) potential fishing sites
+# The list assumes the following order of groups
+# IPL IDF PCO PPS PPL PDF IZ ZS ZM ZL ZG BD BM BF KR FP FM FT FI CEP SF SE SC SL SO 
+# PNA PNE PNO SBA SBS SBO WHM WHH WHA WHB WHC WHO
+target_KRF 37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+target_FTF 37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+target_FIF 37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+target_OF 37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+# General vessel characteristics (SBAecific characteristics are in the economics parameter file )
+SBAeed_boat       9260      SBAeed of average fishing vessel                   m.hr-1            9260
+SBAeed_recboat    2260      SBAeed of average recreational fishing vessel      m.hr-1            9260
+KDEP_fishery     0.1       Sediment penetration depth of fishing gear        m                 0.1 
+
+# Fisheries habitat association.
+# Vectors indicating which habitats each fishery can operate in.
+# 1 = in the habitat, 0 = excluded from the habitat
+# The list of habitats are BFS, BFF, BFD, MA, SG, MB, reef, flat, soft, canyon
+habitat_KRF  6
+1 1 1 1 1 1
+
+habitat_FTF  6
+1 1 1 1 1 1
+
+habitat_FIF  6
+1 1 1 1 1 1
+
+habitat_OF   6
+1 1 1 1 1 1
+
+
+# Minimum seafloor depths fishery will act over (so if won't fish shallower than 50m put 50 here)
+KRF_mindepth       0
+FTF_mindepth       0
+FIF_mindepth       0 
+OF_mindepth        0
+
+# Maximum seafloor depths fishery will act over (so if won't fish deeper than 1500m put 1500 here)
+KRF_maxdepth       3500
+FTF_maxdepth       3500
+FIF_maxdepth       3500
+OF_maxdepth        3500
+
+# Catch time series start dates (day from run start)
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+imposecatchstart_FP  4
+0 0 0 0
+
+imposecatchstart_FM  4
+0 0 0 0
+
+imposecatchstart_FT  4
+0 0 0 0
+
+imposecatchstart_FI  4
+0 0 0 0
+
+imposecatchstart_SF  4
+0 0 0 0
+
+imposecatchstart_SE  4
+0 0 0 0
+
+imposecatchstart_SL  4
+0 0 0 0
+
+imposecatchstart_SC  4
+0 0 0 0
+
+imposecatchstart_SO  4
+0 0 0 0
+
+imposecatchstart_PNA  4
+0 0 0 0
+
+imposecatchstart_PNE  4
+0 0 0 0
+
+imposecatchstart_PNO  4
+0 0 0 0
+
+imposecatchstart_SBS   4
+0 0 0 0
+
+imposecatchstart_SBA   4
+0 0 0 0
+
+imposecatchstart_SBO  4
+0 0 0 0
+
+imposecatchstart_WHM  4
+0 0 0 0
+
+imposecatchstart_WHB  4
+0 0 0 0
+
+imposecatchstart_WHO  4
+0 0 0 0
+
+imposecatchstart_WHT  4
+0 0 0 0
+
+imposecatchstart_IZ   4
+0 0 0 0
+
+imposecatchstart_ZL   4
+0 0 0 0
+
+imposecatchstart_ZG   4
+0 0 0 0
+
+imposecatchstart_BF   4
+0 0 0 0
+
+imposecatchstart_BM   4
+0 0 0 0
+
+imposecatchstart_CEP  4
+0 0 0 0
+
+imposecatchstart_KR   4
+0 0 0 0
+
+imposecatchstart_BD   4
+0 0 0 0
+
+# Catch time series end dates (day from run start)
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+imposecatchend_FP  4
+0 0 0 0
+
+imposecatchend_FM  4
+0 0 0 0
+
+imposecatchend_FT  4
+0 0 0 0
+
+imposecatchend_FI  4
+0 0 0 0
+
+imposecatchend_SF  4
+0 0 0 0
+
+imposecatchend_SE  4
+0 0 0 0
+
+imposecatchend_SL  4
+0 0 0 0
+
+imposecatchend_SC  4
+0 0 0 0
+
+imposecatchend_SO  4
+0 0 0 0
+
+imposecatchend_PNA  4
+0 0 0 0
+
+imposecatchend_PNE  4
+0 0 0 0
+
+imposecatchend_PNO  4
+0 0 0 0
+
+imposecatchend_SBS   4
+0 0 0 0
+
+imposecatchend_SBA   4
+0 0 0 0
+
+imposecatchend_SBO  4
+0 0 0 0
+
+imposecatchend_WHM  4
+0 0 0 0
+
+imposecatchend_WHB  4
+0 0 0 0
+
+imposecatchend_WHO  4
+0 0 0 0
+
+imposecatchend_WHT  4
+0 0 0 0
+
+imposecatchend_IZ   4
+0 0 0 0
+
+imposecatchend_ZL   4
+0 0 0 0
+
+imposecatchend_ZG   4
+0 0 0 0
+
+imposecatchend_BF   4
+0 0 0 0
+
+imposecatchend_BM   4
+0 0 0 0
+
+imposecatchend_CEP  4
+0 0 0 0
+
+imposecatchend_KR   4
+0 0 0 0
+
+imposecatchend_BD   4
+0 0 0 0
+
+# Scalar for imposed catches to scale from reported catches to total catches (including misreporting)
+# For example if there was an additional 25% of the catch that was not reported, so that total catch
+# was equal to 125% of official reported catch then the scalar should be set to 1.25 here.
+reportscale_FP      4
+0.0 0.0 0.0 0.0
+
+reportscale_FM      4
+0.0 0.0 0.0 0.0
+
+reportscale_FT      4
+0.0 0.0 0.0 0.0
+
+reportscale_FI      4
+0.0 0.0 0.0 0.0
+
+reportscale_SC      4
+0.0 0.0 0.0 0.0
+
+reportscale_SL      4
+0.0 0.0 0.0 0.0
+
+reportscale_SF      4
+0.0 0.0 0.0 0.0
+
+reportscale_SE      4
+0.0 0.0 0.0 0.0
+
+reportscale_SO      4
+0.0 0.0 0.0 0.0
+
+reportscale_PNA      4
+0.0 0.0 0.0 0.0
+
+reportscale_PNE      4
+0.0 0.0 0.0 0.0
+
+reportscale_PNO      4
+0.0 0.0 0.0 0.0
+
+reportscale_SBA       4
+0.0 0.0 0.0 0.0
+
+reportscale_SBS       4
+0.0 0.0 0.0 0.0
+
+reportscale_SBO      4
+0.0 0.0 0.0 0.0
+
+reportscale_WHM      4
+0.0 0.0 0.0 0.0
+
+reportscale_WHH      4
+0.0 0.0 0.0 0.0
+
+reportscale_WHA      4
+0.0 0.0 0.0 0.0
+
+reportscale_WHB      4
+0.0 0.0 0.0 0.0
+
+reportscale_WHC      4
+0.0 0.0 0.0 0.0
+
+reportscale_WHO      4
+0.0 0.0 0.0 0.0
+
+reportscale_CEP      4
+0.0 0.0 0.0 0.0
+
+reportscale_BF       4
+0.0 0.0 0.0 0.0
+
+reportscale_BM       4
+0.0 0.0 0.0 0.0
+
+reportscale_IZ       4
+0.0 0.0 0.0 0.0
+
+reportscale_ZL       4
+0.0 0.0 0.0 0.0
+
+reportscale_ZG       4
+0.0 0.0 0.0 0.0
+
+reportscale_BD       4
+0.0 0.0 0.0 0.0
+
+reportscale_KR      4
+0.0 0.0 0.0 0.0
+
+# Catch by age distribution for conditioning time series of catch (if used)
+# Note that for CEP and PWN only the first 2 entries are effective.
+CatchTS_agedistribFP 10        
+0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribFM 4        
+0 0 0 0
+         
+CatchTS_agedistribFT 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribFI 6        
+0 0 0 0 0 0
+         
+CatchTS_agedistribSF 10        
+0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribSE 10        
+0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribSL 15
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribSC 10
+0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribSO 10
+0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribPNA 15
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribPNE 10        
+0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribPNO 10        
+0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribSBS 15
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribSBA 20        
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+         
+CatchTS_agedistribSBO 12        
+0 0 0 0 0 0 0 0 0 0 0 0
+
+CatchTS_agedistribWHM 15
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+CatchTS_agedistribWHH 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+CatchTS_agedistribWHO 12
+0 0 0 0 0 0 0 0 0 0 0 0
+
+CatchTS_agedistribWHA 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+CatchTS_agedistribWHB 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+CatchTS_agedistribWHC 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+CatchTS_agedistribKR  6
+0 0 0 0 0 0
+
+# Proportion of catch which defines perferred target size (so if CatchTS value > highgrade_thresh this is preferred cohort)
+highgrade_thresh 0.1
+
+# Forced fishing mortality rates - one entry per fishery
+mFC_FP      4
+0.0 0.0 0.0 0.0
+
+mFC_FM      4
+0.0 0.0 0.0 0.0
+
+mFC_FT      4
+0.0 0.0 0.0 0.0
+
+mFC_FI      4
+0.0 0.0 0.0 0.0
+
+mFC_SC      4
+0.0 0.0 0.0 0.0
+
+mFC_SL      4
+0.0 0.0 0.0 0.0
+
+mFC_SF      4
+0.0 0.0 0.0 0.0
+
+mFC_SE      4
+0.0 0.0 0.0 0.0
+
+mFC_SO      4
+0.0 0.0 0.0 0.0
+
+mFC_PNA      4
+0.0 0.0 0.0 0.0
+
+mFC_PNE      4
+0.0 0.0 0.0 0.0
+
+mFC_PNO      4
+0.0 0.0 0.0 0.0
+
+mFC_SBA       4
+0.0 0.0 0.0 0.0
+
+mFC_SBS       4
+0.0 0.0 0.0 0.0
+
+mFC_SBO      4
+0.0 0.0 0.0 0.0
+
+mFC_WHM      4
+0.0 0.0 0.0 0.0
+
+mFC_WHH      4
+0.0 0.0 0.0 0.0
+
+mFC_WHA      4
+0.0 0.0 0.0 0.0
+
+mFC_WHB      4
+0.0 0.0 0.0 0.0
+
+mFC_WHC      4
+0.0 0.0 0.0 0.0
+
+mFC_WHO      4
+0.0 0.0 0.0 0.0
+
+mFC_CEP      4
+0.0 0.0 0.0 0.0
+
+mFC_BF       4
+0.0 0.0 0.0 0.0
+
+mFC_BM       4
+0.0 0.0 0.0 0.0
+
+mFC_ZG       4
+0.0 0.0 0.0 0.0
+
+mFC_IZ       4
+0.0 0.0 0.0 0.0
+
+mFC_ZL       4
+0.0 0.0 0.0 0.0
+
+mFC_BD       4
+0.0 0.0 0.0 0.0
+
+mFC_KR      4
+0.0 0.0 0.0 0.0
+
+# Age class forced fishing mortality rates begin being imposed - one entry per fishery
+FP_mFC_startage            4
+0 0 0 0
+
+FM_mFC_startage            4
+0 0 0 0
+
+FT_mFC_startage            4
+0 0 0 0
+
+FI_mFC_startage            4
+0 0 0 0
+
+SC_mFC_startage            4
+0 0 0 0
+
+SL_mFC_startage            4
+0 0 0 0
+
+SF_mFC_startage            4
+0 0 0 0
+
+SE_mFC_startage            4
+0 0 0 0
+
+SO_mFC_startage            4
+0 0 0 0
+
+PNE_mFC_startage            4
+0 0 0 0
+
+PNO_mFC_startage            4
+0 0 0 0
+
+PNA_mFC_startage            4
+0 0 0 0
+
+SBA_mFC_startage            4
+0 0 0 0
+
+SBS_mFC_startage            4
+0 0 0 0
+
+SBO_mFC_startage            4
+0 0 0 0
+
+WHH_mFC_startage            4
+0 0 0 0
+
+WHA_mFC_startage            4
+0 0 0 0
+
+WHB_mFC_startage            4
+0 0 0 0
+
+WHC_mFC_startage            4
+0 0 0 0
+
+WHM_mFC_startage            4
+0 0 0 0
+
+WHO_mFC_startage            4
+0 0 0 0
+
+CEP_mFC_startage            4
+0 0 0 0
+
+KR_mFC_startage            4
+0 0 0 0
+
+# Catchability per group per fishery. Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+q_FP   4
+0 0 0 0
+
+q_FM   4
+0 0 0 0
+
+q_FT   4
+0 0 0 0
+
+q_FI   4
+0 0 0 0
+
+q_SF   4
+0 0 0 0
+
+q_SE   4
+0 0 0 0
+
+q_SL   4
+0 0 0 0
+
+q_SC   4
+0 0 0 0
+
+q_SO   4
+0 0 0 0
+
+q_PNA   4
+0 0 0 0
+
+q_PNE   4
+0 0 0 0
+
+q_PNO   4
+0 0 0 0
+
+q_SBS   4
+0 0 0 0
+
+q_SBA   4
+0 0 0 0
+
+q_SBO   4
+0 0 0 0
+
+q_WHM   4
+0 0 0 0
+
+q_WHH   4
+0 0 0 0
+
+q_WHO   4
+0 0 0 0
+
+q_WHA   4
+0 0 0 0
+
+q_WHB   4
+0 0 0 0
+
+q_WHC   4
+0 0 0 0
+
+q_ZL   4
+0 0 0 0
+
+q_ZG   4
+0 0 0 0
+
+q_BF   4
+0 0 0 0
+
+q_IZ   4
+0 0 0 0
+
+q_BM   4
+0 0 0 0
+
+q_CEP  4
+0 0 0 0
+
+q_KR  4
+0 0 0 0
+
+q_BD   4
+0 0 0 0
+
+## Selectivity parameters per fishery per group
+# For the invertebrate functional groups take into account the range of possible sizes of those 
+# animals and adjust the selectivity accordingly (e.g. BFS represents many of filter feeders 
+# not just scallops so the selectivity is set below what it would be for scallops alone)
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+
+sel_FP    4
+0 0 0 0
+
+sel_FM    4
+0 0 0 0
+
+sel_FT    4
+0 0 0 0
+
+sel_FI    4
+0 0 0 0
+
+sel_SF    4
+0 0 0 0
+
+sel_SE    4
+0 0 0 0
+
+sel_SL    4
+0 0 0 0
+
+sel_SC    4
+0 0 0 0
+
+sel_SO    4
+0 0 0 0
+
+sel_PNA   4
+0 0 0 0
+
+sel_PNE   4
+0 0 0 0
+
+sel_PNO   4
+0 0 0 0
+
+sel_SBS   4
+0 0 0 0
+
+sel_SBA   4
+0 0 0 0
+
+sel_SBO   4
+0 0 0 0
+
+sel_WHM   4
+0 0 0 0
+
+sel_WHH   4
+0 0 0 0
+
+sel_WHA   4
+0 0 0 0
+
+sel_WHB   4
+0 0 0 0
+
+sel_WHC   4
+0 0 0 0
+
+sel_WHO   4
+0 0 0 0
+
+sel_ZL    4
+0 0 0 0
+
+sel_ZG    4
+0 0 0 0
+
+sel_BF    4
+0 0 0 0
+
+sel_BMS   4
+0 0 0 0
+
+sel_CEP   4
+0 0 0 0
+
+sel_KR    4
+0 0 0 0
+
+sel_BD    4
+0 0 0 0
+
+# Constant selectivity per cohort or stage for each group (for the invertebrates it is identical to
+# the entries above for constant selectivity regardless of size. The following vectors are the
+# selectivities per maturity level for each species for each fishery it is
+# captured in. The first entry is for juveniles, the second for adults.
+sel_FPad 4
+0 0 0 0
+
+sel_FPjuv 4
+0 0 0 0
+
+sel_FMad 4
+0 0 0 0
+
+sel_FMjuv 4
+0 0 0 0
+
+sel_FTad 4
+0 0 0 0
+
+sel_FTjuv 4
+0 0 0 0
+
+sel_FIad 4
+0 0 0 0
+
+sel_FIjuv 4
+0 0 0 0
+
+sel_SFad 4
+0 0 0 0
+
+sel_SFjuv 4
+0 0 0 0
+
+sel_SEad 4
+0 0 0 0
+
+sel_SEjuv 4
+0 0 0 0
+
+sel_SLad 4
+0 0 0 0
+
+sel_SLjuv 4
+0 0 0 0
+                                
+sel_SCad 4
+0 0 0 0
+
+sel_SCjuv 4
+0 0 0 0
+
+sel_SOad 4
+0 0 0 0
+
+sel_SOjuv 4
+0 0 0 0
+
+sel_PNAad 4
+0 0 0 0
+
+sel_PNAjuv 4
+0 0 0 0
+
+sel_PNEad 4
+0 0 0 0
+
+sel_PNEjuv 4
+0 0 0 0
+
+sel_PNOad 4
+0 0 0 0
+
+sel_PNOjuv 4
+0 0 0 0
+
+sel_SBAd 4
+0 0 0 0
+
+sel_SBSjuv 4
+0 0 0 0
+
+sel_SBAad 4
+0 0 0 0
+
+sel_SBAjuv 4
+0 0 0 0
+
+sel_SBOad 4
+0 0 0 0
+
+sel_SBOjuv 4
+0 0 0 0
+
+sel_WHMad 4
+0 0 0 0
+
+sel_WHMjuv 4
+0 0 0 0
+
+sel_WHHad 4
+0 0 0 0
+
+sel_WHHjuv 4
+0 0 0 0
+
+sel_WHOad 4
+0 0 0 0
+
+sel_WHOjuv 4
+0 0 0 0
+
+sel_WHAad 4
+0 0 0 0
+
+sel_WHAjuv 4
+0 0 0 0
+
+sel_WHBad 4
+0 0 0 0
+
+sel_WHBjuv 4
+0 0 0 0
+
+sel_WHCad 4
+0 0 0 0
+
+sel_WHCjuv 4
+0 0 0 0
+
+sel_KRad 4
+0 0 0 0
+
+sel_KRjuv 4
+0 0 0 0
+
+## Selectivity curve parameters
+# Logistic selectivity curve parameters
+KRFsel_b          0.0
+FTFsel_b          0.0
+FIFsel_b          0.0
+OFsel_b           0.0
+
+# Inflexion point of the logistic selectivity curve
+KRFsel_lsm        0.0
+FTFsel_lsm        0.0
+FIFsel_lsm        0.0
+OFsel_lsm         0.0
+
+# Measure of SBAread of normal selectivity curve
+KRFsel_normsigma     0.0
+FTFsel_normsigma     0.0
+FIFsel_normsigma     0.0
+OFsel_normsigma      0.0
+
+# Modal length of the normal selectivity curve
+KRFsel_normlsm       0.0
+FTFsel_normlsm       0.0
+FIFsel_normlsm       0.0
+OFsel_normlsm        0.0
+
+# Measure of SBAread of lognormal selectivity curve
+KRFsel_lognormsigma   0.0
+FTFsel_lognormsigma   0.0
+FIFsel_lognormsigma   0.0
+OFsel_lognormsigma    0.0
+
+# Modal length of the lognormal selectivity curve
+KRFsel_lognormlsm     0.0
+FTFsel_lognormlsm     0.0
+FIFsel_lognormlsm     0.0
+OFsel_lognormlsm      0.0
+
+# Measure of SBAread of gamma selectivity curve
+KRFsel_gammasigma     0.0
+FTFsel_gammasigma     0.0
+FIFsel_gammasigma     0.0
+OFsel_gammasigma      0.0
+
+# Modal length of the gamma selectivity curve
+KRFsel_gammalsm   0.0
+FTFsel_gammalsm   0.0
+FIFsel_gammalsm   0.0
+OFsel_gammalsm    0.0
+
+# Measure of SBAread of bi-modal "nomral" selectivity curve
+KRFsel_bisigma   0.0
+FTFsel_bisigma   0.0
+FIFsel_bisigma   0.0
+OFsel_bisigma    0.0
+
+# Leftside modal length of the bimodal "normal" selectivity curve
+KRFsel_bilsm1    0.0
+FTFsel_bilsm1    0.0
+FIFsel_bilsm1    0.0
+OFsel_bilsm1     0.0
+
+# Right modal length of the bimodal "normal" selectivity curve
+KRFsel_bilsm2    0.0
+FTFsel_bilsm2    0.0
+FIFsel_bilsm2    0.0
+OFsel_bilsm2     0.0
+
+## Swept area of each piece of fishing gear or shot (in m3) in an average day
+KRF_sweptarea    1
+FTF_sweptarea    1
+FIF_sweptarea    1
+OF_sweptarea     1
+
+## Escapement parameters
+# Proportion that escape per fishery per group. Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id netFD_id netSH_id plineFVO_id pseineFVO_id
+# pseineFP_id trapBMS_id trapFD_id dtrawlBMS_id dtrawlCEP_id dtrawlFD_id dtrawlFT_id 
+# dtrawlFDO_id midwcFD_id dseineFT_id dlineFD_id dlineFVS_id dlineSH_id diveBG_id 
+# pseineFVS_id cullSBO_id recfish_id ptrawlPWN_id dtrawlFBP_id midwcZL_id trapFDE_id
+p_escape_FP  4
+0.0 0.0 0.0 0.0
+
+p_escape_FM  4
+0.0 0.0 0.0 0.0
+
+p_escape_FT  4
+0.0 0.0 0.0 0.0
+
+p_escape_FI  4
+0.0 0.0 0.0 0.0
+
+p_escape_SF  4
+0.0 0.0 0.0 0.0
+
+p_escape_SE  4
+0.0 0.0 0.0 0.0
+
+p_escape_SL  4
+0.0 0.0 0.0 0.0
+
+p_escape_SC  4
+0.0 0.0 0.0 0.0
+
+p_escape_SO  4
+0.0 0.0 0.0 0.0
+
+p_escape_PNA 4
+0.0 0.0 0.0 0.0
+
+p_escape_PNE 4
+0.0 0.0 0.0 0.0
+
+p_escape_PNO 4
+0.0 0.0 0.0 0.0
+
+p_escape_SBS 4
+0.0 0.0 0.0 0.0
+
+p_escape_SBA 4
+0.0 0.0 0.0 0.0
+
+p_escape_SBO 4
+0.0 0.0 0.0 0.0
+
+p_escape_WHM 4
+0.0 0.0 0.0 0.0
+
+p_escape_WHH 4
+0.0 0.0 0.0 0.0
+
+p_escape_WHO 4
+0.0 0.0 0.0 0.0
+
+p_escape_WHA 4
+0.0 0.0 0.0 0.0
+
+p_escape_WHB 4
+0.0 0.0 0.0 0.0
+
+p_escape_WHC 4
+0.0 0.0 0.0 0.0
+
+p_escape_ZL  4
+0.0 0.0 0.0 0.0
+
+p_escape_ZG  4
+0.0 0.0 0.0 0.0
+
+p_escape_BF  4
+0.0 0.0 0.0 0.0
+
+p_escape_IZ  4
+0.0 0.0 0.0 0.0
+
+p_escape_BM  4
+0.0 0.0 0.0 0.0
+
+p_escape_CEP 4
+0.0 0.0 0.0 0.0
+
+p_escape_KR  4
+0.0 0.0 0.0 0.0
+
+p_escape_BD  4
+0.0 0.0 0.0 0.0
+
+# Coefficient of escape for size based escapement. Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+Ka_escape_FP    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_FM    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_FT    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_FI    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_SF    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_SE    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_SL    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_SC    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_SO    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_PNA    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_PNE    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_PNO    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_SBS     4
+0.0 0.0 0.0 0.0
+
+Ka_escape_SBA     4
+0.0 0.0 0.0 0.0
+
+Ka_escape_SBO    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_WHM    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_WHH    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_WHO    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_WHA    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_WHB    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_WHC    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_ZL     4
+0.0 0.0 0.0 0.0
+
+Ka_escape_ZG     4
+0.0 0.0 0.0 0.0
+
+Ka_escape_BF     4
+0.0 0.0 0.0 0.0
+
+Ka_escape_IZ     4
+0.0 0.0 0.0 0.0
+
+Ka_escape_BM     4
+0.0 0.0 0.0 0.0
+
+Ka_escape_CEP    4
+0.0 0.0 0.0 0.0
+
+Ka_escape_KR     4
+0.0 0.0 0.0 0.0
+
+Ka_escape_BD     4
+0.0 0.0 0.0 0.0
+
+# Exponent of escape for size based escapement. Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+Kb_escape_FP    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_FM    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_FT    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_FI    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_SF    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_SE    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_SL    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_SC    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_SO    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_PNA    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_PNE    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_PNO    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_SBS     4
+0.0 0.0 0.0 0.0
+
+Kb_escape_SBA     4
+0.0 0.0 0.0 0.0
+
+Kb_escape_SBO    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_WHM    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_WHH    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_WHA    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_WHB    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_WHC    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_WHO    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_ZL     4
+0.0 0.0 0.0 0.0
+
+Kb_escape_ZG     4
+0.0 0.0 0.0 0.0
+
+Kb_escape_BF     4
+0.0 0.0 0.0 0.0
+
+Kb_escape_IZ     4
+0.0 0.0 0.0 0.0
+
+Kb_escape_BM     4
+0.0 0.0 0.0 0.0
+
+Kb_escape_CEP    4
+0.0 0.0 0.0 0.0
+
+Kb_escape_KR     4
+0.0 0.0 0.0 0.0
+
+Kb_escape_BD     4
+0.0 0.0 0.0 0.0
+
+# High grading and market-based discarding parameters
+UpdateMaxSalePrice    0          Whether want to dynamically update maximum sale price as prices change through time (1) or not (0) - if the later than making it a lowest acceptable threshold in effect
+
+# Discarding parameters 
+prop_within      0.9             Proportion of quota which when exceeded will see fisheries begin high grading
+salethresh       0.1             Proportion of maximum market value below which fishery will begin market-based discarding
+ 
+KRF_maxsaleprice  1.0                                                                       1
+FTF_maxsaleprice  1.0                                                                       1
+FIF_maxsaleprice  1.0                                                                       1
+OF_maxsaleprice   1.0                                                                       1
+
+# Discard by age distribution for conditioning time series of discard (if used)
+# Note that for CEP and PWN only the first 2 entries are effective.
+DiscardTS_agedistribFP 10        
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribFM 4        
+0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribFT 20        
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribFI 6        
+0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribSF 10        
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribSE 10        
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribSL 15
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribSC 10        
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribSO 10        
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribPNA 15
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribPNE 10        
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribPNO 10        
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribSBS 15         
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribSBA 20         
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribSBO 12
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribWHM 15
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribWHH 20
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribWHO 25
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.00.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribWHA 20
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribWHB 20
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribWHC 20
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         
+DiscardTS_agedistribKR 6        
+0.0 0.0 0.0 0.0 0.0 0.0
+
+# Proportional discarding of biomass of a species based on catch of another species (e.g. ratio of
+# kg of FPS discarded for each kg of PWN landed
+FCcocatchFP    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchFM    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchFT    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchFI    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchSF    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchSE    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchSL    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchSC    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchSO    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchPNA    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchPNE    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchPNO    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchSBS     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchSBA     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchSBO    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchWHM    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchWHH    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchWHA    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchWHB    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchWHC    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchWHO    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchZL     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchZG     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchBF     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchIZ     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchBM     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchCEP    37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchKR     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+FCcocatchBD     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+## Habitat patchiness parameters for fishing
+k_pattern   0.0
+k_patches   2.0
+
+k_coverKRF  28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+k_coverFTF  28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+k_coverFIF  28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+k_coverOF   28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+## Fisheries discarding parameters
+# Fixed proportion of the catch discarded for each group.
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+
+FFCDR_FP  4
+1 1 1 1
+
+FFCDR_FM  4
+1 1 1 1
+
+FFCDR_FT  4
+1 1 1 1
+
+FFCDR_FI  4
+1 1 1 1
+
+FFCDR_SF  4
+1 1 1 1
+
+FFCDR_SE  4
+1 1 1 1
+
+FFCDR_SL  4
+1 1 1 1
+
+FFCDR_SC  4
+1 1 1 1
+
+FFCDR_SO  4
+1 1 1 1
+
+FFCDR_PNA 4
+1 1 1 1
+
+FFCDR_PNE 4
+1 1 1 1
+
+FFCDR_PNO 4
+1 1 1 1
+
+FFCDR_SBS 4
+1 1 1 1
+
+FFCDR_SBA 4
+1 1 1 1
+
+FFCDR_SBO 4
+1 1 1 1
+
+FFCDR_WHM 4
+1 1 1 1
+
+FFCDR_WHH 4
+1 1 1 1
+
+FFCDR_WHA 4
+1 1 1 1
+
+FFCDR_WHB 4
+1 1 1 1
+
+FFCDR_WHC 4
+1 1 1 1
+
+FFCDR_WHO 4
+1 1 1 1
+
+FFCDR_ZL  4
+1 1 1 1
+
+FFCDR_ZG  4
+1 1 1 1
+
+FFCDR_BF  4
+1 1 1 1
+
+FFCDR_IZ  4
+1 1 1 1
+
+FFCDR_BM  4
+1 1 1 1
+
+FFCDR_CEP 4
+1 1 1 1
+
+FFCDR_KR  4
+1 1 1 1
+
+FFCDR_BD  4
+1 1 1 1
+
+# Which version of the age-dependent discarding distribution to use 
+# for which fishery (currently only two options A=0 and B=1). This assumes
+# KRF_id FTF_id FIF_id OF_id
+FC_caseFP   4
+0 0 0 0
+
+FC_caseFM   4
+0 0 0 0
+
+FC_caseFT   4
+0 0 0 0
+
+FC_caseFI   4
+0 0 0 0
+
+FC_caseSF   4
+0 0 0 0
+
+FC_caseSE   4
+0 0 0 0
+
+FC_caseSL   4
+0 0 0 0
+
+FC_caseSC   4
+0 0 0 0
+
+FC_caseSO   4
+0 0 0 0
+
+FC_casePNA  4
+0 0 0 0
+
+FC_casePNE  4
+0 0 0 0
+
+FC_casePNO  4
+0 0 0 0
+
+FC_caseSBS  4
+0 0 0 0
+
+FC_caseSBA  4
+0 0 0 0
+
+FC_caseSBO   4
+0 0 0 0
+
+FC_caseWHM   4
+0 0 0 0
+
+FC_caseWHH   4
+0 0 0 0
+
+FC_caseWHO   4
+0 0 0 0
+
+FC_caseWHA   4
+0 0 0 0
+
+FC_caseWHB   4
+0 0 0 0
+
+FC_caseWHC   4
+0 0 0 0
+
+FC_caseZL    4
+0 0 0 0
+
+FC_caseZG    4
+0 0 0 0
+
+FC_caseBF    4
+0 0 0 0
+
+FC_caseIZ    4
+0 0 0 0
+
+FC_caseBM    4
+0 0 0 0
+
+FC_caseCEP   4
+0 0 0 0
+
+FC_caseKR    4
+0 0 0 0
+
+FC_caseBD    4
+0 0 0 0
+
+# Constant discards per cohort per group. Note that for CEP only the first 2 entries are effective.
+FFCDR_FPchrt 10                
+1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_FMchrt 4                
+1 1 1 1
+                 
+FFCDR_FTchrt 20                
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_FIchrt 6                
+1 1 1 1 1 1
+                 
+FFCDR_SFchrt 10                
+1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_SEchrt 10                
+1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_SLchrt 15  
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1                 
+
+FFCDR_SCchrt 10                
+1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_SOchrt 10                
+1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_PNAchrt 15
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_PNEchrt 10
+1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_PNOchrt 10                
+1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_SBSchrt 15
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_SBAchrt 20   
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_SBOchrt 12
+1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_WHMchrt 15         
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1        
+                 
+FFCDR_WHHchrt 20   
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_WHOchrt 25
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_WHAchrt 20
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_WHBchrt 20
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_WHCchrt 20
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                 
+FFCDR_KRchrt 6
+1 1 1 1 1 1                         
+         
+## TO DO                 
+# Constant discards per cohort per group. Note that this is entry 1      
+# for the purposes of FC_case above (for the vertebrates only)       
+FFCDR_FPchrtB 10                
+0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_FMchrtB 4                
+0 0 0 0
+                 
+FFCDR_FTchrtB 20                
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_FIchrtB 6                
+0 0 0 0 0 0
+                 
+FFCDR_SFchrtB 10                
+0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_SEchrtB 10                
+0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_SLchrtB 15  
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0                 
+
+FFCDR_SCchrtB 10                
+0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_SOchrtB 10                
+0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_PNAchrtB 15
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_PNEchrtB 10
+0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_PNOchrtB 10                
+0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_SBSchrtB 15
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_SBAchrtB 20   
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_SBOchrtB 12
+0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_WHMchrtB 15         
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0        
+                 
+FFCDR_WHHchrtB 20   
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_WHOchrtB 25
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_WHAchrtB 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_WHBchrtB 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_WHCchrtB 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+                 
+FFCDR_KRchrtB 6
+0 0 0 0 0 0                         
+
+# Size based discarding
+# Threshold length below which the group is disarded for each fishery.
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+
+FCthreshli_FP   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_FM   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_FT   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_FI   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_SF   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_SE   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_SL   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_SC   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_SO   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_PNA   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_PNE   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_PNO   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_SBS    4
+0.0 0.0 0.0 0.0
+
+FCthreshli_SBA    4
+0.0 0.0 0.0 0.0
+
+FCthreshli_SBO   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_WHM   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_WHH   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_WHO   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_WHA   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_WHB   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_WHC   4
+0.0 0.0 0.0 0.0
+
+FCthreshli_KR    4
+0.0 0.0 0.0 0.0
+
+# Proportion of the discarded undersize animals that do NOT survive discarding
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+invert_incidmort 1.0
+
+incidmort_FP     4
+1.0 1.0 1.0 1.0
+
+incidmort_FM     4
+1.0 1.0 1.0 1.0
+
+incidmort_FT     4
+1.0 1.0 1.0 1.0
+
+incidmort_FI     4
+1.0 1.0 1.0 1.0
+
+incidmort_SF     4
+1.0 1.0 1.0 1.0
+
+incidmort_SE     4
+1.0 1.0 1.0 1.0
+
+incidmort_SL     4
+1.0 1.0 1.0 1.0
+
+incidmort_SC     4
+1.0 1.0 1.0 1.0
+
+incidmort_SO     4
+1.0 1.0 1.0 1.0
+
+incidmort_PNA     4
+1.0 1.0 1.0 1.0
+
+incidmort_PNE     4
+1.0 1.0 1.0 1.0
+
+incidmort_PNO     4
+1.0 1.0 1.0 1.0
+
+incidmort_SBS      4
+1.0 1.0 1.0 1.0
+
+incidmort_SBA      4
+1.0 1.0 1.0 1.0
+
+incidmort_SBO     4
+1.0 1.0 1.0 1.0
+
+incidmort_WHM     4
+1.0 1.0 1.0 1.0
+
+incidmort_WHH     4
+1.0 1.0 1.0 1.0
+
+incidmort_WHA     4
+1.0 1.0 1.0 1.0
+
+incidmort_WHB     4
+1.0 1.0 1.0 1.0
+
+incidmort_WHC     4
+1.0 1.0 1.0 1.0
+
+incidmort_WHO     4
+1.0 1.0 1.0 1.0
+
+incidmort_ZL     4
+1.0 1.0 1.0 1.0
+
+incidmort_ZG     4
+1.0 1.0 1.0 1.0
+
+incidmort_CEP     4
+1.0 1.0 1.0 1.0
+
+incidmort_KR      4
+1.0 1.0 1.0 1.0
+
+incidmort_BF      4
+1.0 1.0 1.0 1.0
+
+incidmort_IZ      4
+1.0 1.0 1.0 1.0
+
+incidmort_BM      4
+1.0 1.0 1.0 1.0
+
+incidmort_BD     4
+1.0 1.0 1.0 1.0
+
+# Proportion of the undersize that are retained (illegally)
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+k_retain_FP     4
+0.0 0.0 0.0 0.0
+
+k_retain_FM     4
+0.0 0.0 0.0 0.0
+
+k_retain_FT     4
+0.0 0.0 0.0 0.0
+
+k_retain_FI     4
+0.0 0.0 0.0 0.0
+
+k_retain_SF     4
+0.0 0.0 0.0 0.0
+
+k_retain_SE     4
+0.0 0.0 0.0 0.0
+
+k_retain_SL     4
+0.0 0.0 0.0 0.0
+
+k_retain_SC     4
+0.0 0.0 0.0 0.0
+
+k_retain_SO     4
+0.0 0.0 0.0 0.0
+
+k_retain_PNA     4
+0.0 0.0 0.0 0.0
+
+k_retain_PNE     4
+0.0 0.0 0.0 0.0
+
+k_retain_PNO     4
+0.0 0.0 0.0 0.0
+
+k_retain_SBS     4
+0.0 0.0 0.0 0.0
+
+k_retain_SBA     4
+0.0 0.0 0.0 0.0
+
+k_retain_SBO     4
+0.0 0.0 0.0 0.0
+
+k_retain_WHM     4
+0.0 0.0 0.0 0.0
+
+k_retain_WHH     4
+0.0 0.0 0.0 0.0
+
+k_retain_WHA     4
+0.0 0.0 0.0 0.0
+
+k_retain_WHB     4
+0.0 0.0 0.0 0.0
+
+k_retain_WHC     4
+0.0 0.0 0.0 0.0
+
+k_retain_WHO     4
+0.0 0.0 0.0 0.0
+
+k_retain_KR      4
+0.0 0.0 0.0 0.0
+
+# Proportion of catch of that is discarded as waste (guts, skin etc).
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+
+k_waste_FP     4
+0.0 0.0 0.0 0.0
+
+k_waste_FM     4
+0.0 0.0 0.0 0.0
+
+k_waste_FT     4
+0.0 0.0 0.0 0.0
+
+k_waste_FI     4
+0.0 0.0 0.0 0.0
+
+k_waste_SF     4
+0.0 0.0 0.0 0.0
+
+k_waste_SE     4
+0.0 0.0 0.0 0.0
+
+k_waste_SL     4
+0.0 0.0 0.0 0.0
+
+k_waste_SC     4
+0.0 0.0 0.0 0.0
+
+k_waste_SO     4
+0.0 0.0 0.0 0.0
+
+k_waste_PNA     4
+0.0 0.0 0.0 0.0
+
+k_waste_PNE     4
+0.0 0.0 0.0 0.0
+
+k_waste_PNO     4
+0.0 0.0 0.0 0.0
+
+k_waste_SBS     4
+0.0 0.0 0.0 0.0
+
+k_waste_SBA     4
+0.0 0.0 0.0 0.0
+
+k_waste_SBO     4
+0.0 0.0 0.0 0.0
+
+k_waste_WHM     4
+0.0 0.0 0.0 0.0
+
+k_waste_WHH     4
+0.0 0.0 0.0 0.0
+
+k_waste_WHA     4
+0.0 0.0 0.0 0.0
+
+k_waste_WHB     4
+0.0 0.0 0.0 0.0
+
+k_waste_WHC     4
+0.0 0.0 0.0 0.0
+
+k_waste_WHO     4
+0.0 0.0 0.0 0.0
+
+k_waste_KR      4
+0.0 0.0 0.0 0.0
+
+### Gear conflict information
+# Vectors indicating which gears conflict
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+gear_conflict_KRF  4
+0 0 0 0
+
+gear_conflict_FTF    4
+0 0 0 0
+
+gear_conflict_FIF   4
+0 0 0 0
+
+gear_conflict_OF 4
+0 0 0 0
+
+### Effort model parameters
+# Perscribed effort, per quarter                                             d-1          
+mEff_KRF    4
+0.0 0.0 0.0 0.0
+
+mEff_FTF      4
+0.0 0.0 0.0 0.0
+
+mEff_FIF     4
+0.0 0.0 0.0 0.0
+
+mEff_OF   4
+0.0 0.0 0.0 0.0
+
+# Maximum level of effort for dynamic effort model,                          d-1
+KRF_mEff_max       0.001
+FTF_mEff_max       0.001
+FIF_mEff_max       0.001
+OF_mEff_max        0.001
+
+# Coefficient in dynamic effort model
+KRF_mEff_a        100.0
+FTF_mEff_a        100.0
+FIF_mEff_a        100.0
+OF_mEff_a         100.0
+
+# Offset in dynamic effort model (this value is taken away from the value calculated value
+# so that can have zero effort in poor production boxes)
+KRF_mEff_offset   100.0
+FTF_mEff_offset   100.0
+FIF_mEff_offset   100.0
+OF_mEff_offset    100.0
+
+# Exploratory fishing effort in dynamic effort model 
+KRF_mEff_testfish   1.0
+FTF_mEff_testfish   1.0
+FIF_mEff_testfish   1.0
+OF_mEff_testfish    1.0
+
+# Threshold CPUE for effort diSBAlacement (below this and fishery will try and diSBAlace effort to
+# best stocked neighbouring cells or take effort out of the fishery for some effort models)   mg N m-3 d-1
+KRF_mEff_thresh   0.0
+FTF_mEff_thresh   0.0
+FIF_mEff_thresh   0.0
+OF_mEff_thresh    0.0
+
+# Threshold CPUE above which invest in more effort            kg d-1
+KRF_mEff_thresh_top   0.0
+FTF_mEff_thresh_top   0.0
+FIF_mEff_thresh_top   0.0
+OF_mEff_thresh_top    0.0
+
+# Proportional increase/decrease in effort in effort if outside CPUE thresholds
+# Effort decrease will be (1-mEff_prop) and increase will be (1+mEff_prop) - used in some effort models
+KRF_mEff_shift   0.0
+FTF_mEff_shift   0.0
+FIF_mEff_shift   0.0
+OF_mEff_shift    0.0
+
+# Distance scalar for each fishery (this scales impact of travel on effort allocation)        
+KRF_mFCscale     1                                                                         1
+FTF_mFCscale     1                                                                         1
+FIF_mFCscale     1                                                                         1
+OF_mFCscale      1                                                                         1
+
+# Max proportion of the effort allowed in any one cell (for use with effort model 8 and flagcap_peak)
+KRF_mFCpeak     1.0                                                                       1
+FTF_mFCpeak     1.0                                                                       1
+FIF_mFCpeak     1.0                                                                       1
+OF_mFCpeak      1.0                                                                       1
+
+# Effort per day for each fishery (so this is effort in total days per day fished by the fishery)
+KRF_Effort      0
+FTF_Effort      0
+FIF_Effort      0
+OF_Effort       0
+
+# Prescribed effort distributions (total effort per box per in each quarter)     
+Effort_hdistribKRF1   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribKRF2   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribKRF3   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribKRF4   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Effort_hdistribFTF1   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribFTF2   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribFTF3   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribFTF4   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Effort_hdistribFIF1   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribFIF2   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribFIF3   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribFIF4   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Effort_hdistribOF1   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribOF2   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribOF3   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribOF4   28
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+# Vertical effort distributions (proportion of effort for the box applied in each water column layer)
+
+Effort_vdistribKRF  5
+0.0 0.0 0.0 0.0 1.0
+
+Effort_vdistribFTF    5
+0.0 0.0 0.0 0.0 1.0
+
+Effort_vdistribFIF   5
+0.0 0.0 0.0 0.0 1.0
+
+Effort_vdistribOF 5
+0.0 0.0 0.0 0.0 1.0
+
+# CPUE thresholds - CPUEs above or below this tonnes/days-at-sea for a target species will cause an effort shift
+# Proportional size of that shift is given by the scalar below
+KRFCPUEthresh    0.0                                                                      0
+FTFCPUEthresh    0.0                                                                      0
+FIFCPUEthresh    0.0                                                                      0
+OFCPUEthresh     0.0                                                                      0
+
+explore_thresh_effort 0.10  Proportion of effort above which exploratory fishing will occur in nearby cells
+ 
+# Incremental proportional change in CPUE if pass CPUE threshold (i.e. 1+prop on way up and 1-prop on way down)
+KRFCPUEscale  0.0                                                                         0
+FTFCPUEscale  0.0                                                                         0
+FIFCPUEscale  0.0                                                                         0
+OFCPUEscale   0.0                                                                         0
+
+# Effort caps - size in total days at sea allowed for the entire fleet for the year
+# Only need be > 0  if flagcap set = 1
+KRF_cap    0                                                                         0
+FTF_cap    0                                                                         0
+FIF_cap    0                                                                         0
+OF_cap     0                                                                         0
+
+### Port information
+# Fisheries port association.
+# Vectors indicating which ports each fishery can operate from initially (other ports may be activated
+# using the flagnewport option in the switch and flag section at the top of the file).
+# 1 = from the port, 0 = not active from the port
+# The list of ports are listed at the top of the parameter file - there must
+# be as many entries as there are ports (K_num_ports)
+ports_KRF  1
+0
+
+ports_FTF   1
+0
+
+ports_FIF   1
+0
+
+ports_OF    1
+0
+
+# Port location and timing parameters - there must be as many entries as there are ports (K_num_ports)
+# x coordinate (in metres as in model SBAace)
+ports_x   1
+0
+
+# y coordinate (in metres as in model SBAace)
+ports_y   1
+0
+
+# time port first used (days from model start time)
+ports_start   1
+0
+
+# time port last used (days from model start time)
+ports_end   1
+314496000
+
+# population of each port (numbers as of 2001)
+ports_pop   1
+1
+ 
+# which market is feed by each port (for economic model)
+ports_markets 1
+0
+
+k_proprecfish         0.0    The proportion of the population who fish recreationally          0.20
+
+####### Management parameters
+# Reference points and trend lengths for use in dynamic TAC setting
+targ_refA 0.48                Target reference point - tier1
+targ_refB 0.40                Target reference point - tier1
+targ_refC 0.60                Target reference point - tier2
+targ_refD 0.50                Target reference point - tier2
+lim_ref   0.20                Limit reference point
+forage_refA 0.48              Forage target reference point - tier1
+forage_refB 0.40              Forage target reference point - tier1
+forage_refC 0.60              Forage target reference point - tier2
+forage_refD 0.50              Forage target reference point - tier2
+forage_lim_ref 0.20           Forage limit reference point
+
+# Flag to incidcate which set of reference points to use.
+# Enter a 1 to use targ_ref reference points or 0 to use forage reference points - one per fished species
+whichref 37  
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+TAC_multiyr  5                Years of trend before change TAC  
+critCPUE  0.05                Threshold CPUE before TAC changes
+TACbound  2.0                 Maximum possible TAC increase through run (relative to starting TACs)
+prop_incTAC 1.2               Allowable proportional jump in TAC (scalar so if 20% jump put 1.2)
+prop_decTAC 0.5               Allowable proportional drop in TAC (scalar so if 10% drop put 0.9)
+RBCalpha  1.0                 Coefficient for RBC calculations
+TAC_crit_change 100           Magnitude of TAC shift before actually implemented (t) - so don;t get caught up shifting it 10kg
+
+# Virgin biomasses for use with pseudo assessment (typically dynamically calculated in model instead) - one per fished species
+estBo    37        
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+# Fishing rate (F) that equates with BrefA (i.e.F to apply if B > Bref)  - one per fished species
+Fref     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+# Whether using catch-cost-risk tiers
+useRBCTiers 0
+
+# Harvest strategy tier for RBC setting (only >0 if dynamically setting TACs)
+# 0 = whinging harvest strategy, 1-4 = tier 1-4, tier 5 = ecological indicator based
+tierFP 0
+tierFM 0
+tierFT 0
+tierFI 0
+tierSF 0
+tierSE 0
+tierSC 0
+tierSL 0
+tierSO 0
+tierPNA 0
+tierPNE 0
+tierPNO 0
+tierSBS 0
+tierSBA 0
+tierSBO 0
+tierWHM 0
+tierWHH 0
+tierWHO 0
+tierWHA 0
+tierWHB 0
+tierWHC 0
+tierBD  0
+tierBF  0
+tierIZ  0
+tierBM  0
+tierCEP 0
+tierKR  0
+tierZL  0
+
+## MSY related management parameters
+# When using MSY based management (tier6 above), then this identifies the lever to use for each group 
+# None 0
+# Effort 1
+# Catch (quota) 2      (Will require meaningful values in the TAC_XX parameter arrays below)
+# Spatial management 3  (Will require meaningful values in the MPA_YY parameter arrays below)
+# Season 4   (Will require meaningful seasonopen and seasonclose values below)
+# Gear 5
+# YY_FC_restrict will also require a meaningful value (as that is the value used when fishery in recovery mode)
+
+UseLever     37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+# Whether to rescale fisheries management levers based on minimum across species (1) or  the average (0)
+KRF_use_min_lever  0                                                                         0
+FTF_use_min_lever  0                                                                         0
+FIF_use_min_lever  0                                                                         0
+OF_use_min_lever   0                                                                         0
+
+## Seasonal fishery parameters 
+# Whether seasonal closures in effect for that management region (must be as many entries as there are management regions (minimum = 1)
+# If want seasonal closure used in all regions enter 1 for all regions e.g.
+# RegSesaon  1 
+# 1
+
+RegSeason   1
+1
+
+## Seasonal fishery parameters 
+# Day of the year season opens (note: start of the year is day 0 NOT day 1)
+KRF_seasonopen   0  Day of year krill fishery begins d               0
+FTF_seasonopen   0  Day of year toothfish fishery begins            d               0
+FIF_seasonopen   0  Day of year midwater trawl for planktiv. begins   d               0
+OF_seasonopen    0  Day of year other fishery begins    d               0
+
+# Day of the year season closes (note: end of the year is day 364 NOT day 365)
+KRF_seasonclose   364  Day of year krill fishery ends d               364
+FTF_seasonclose   364  Day of year toothfish fishery ends            d               364
+FIF_seasonclose   364  Day of year icefish fishery ends d               364
+OF_seasonclose    364  Day of year other fishery ends      d               364
+
+## Trip Limit parameters - not necessarily associated with a TAC, this is a limit on total catch (in kg)
+# of the group for that fishery per seven day period (if there are shorter trips in reality,
+# sum over these trips to get 7 days duration and use the sum as the limit here).
+# Individual trip limits (in tonnes) per fishery per group. Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+#
+# If no trip limit in place fill with the value 1000000000000.0
+ 
+TripLimit_FP   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_FM   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_FT   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_FI   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_SF   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_SE   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_SL   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_SC   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_SO   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_PNA   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_PNE   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_PNO   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_SBS   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_SBA   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_SBO   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_WHM   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_WHA   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_WHB   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_WHC   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_WHO   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_WHH   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_ZL   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_BF   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_IZ   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_BM   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_CEP  4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_KR   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TripLimit_BD   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+##TAC parameters
+# Total allowable catch (TAC in tonnes) per fishery per group. Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id.
+# If want to indicate not under quota put the value 1000000000000.0
+ 
+TAC_FP   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_FM   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_FT   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_FI   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_SF   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_SE   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_SL   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_SC   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_SO   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_PNA   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_PNE   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_PNO   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_SBS   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_SBA   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_SBO   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_WHM   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_WHA   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_WHB   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_WHC   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_WHO   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_WHH   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_ZL   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_BF   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_BM   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_CEP   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_KR   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_BD   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+TAC_IZ   4
+1000000000000.0 1000000000000.0 1000000000000.0 1000000000000.0
+
+# Bimonthly trip limts (like in the US) - if you want to use these (currently only with Dan Holland economic
+# model) then to enter them, fill in TAC above for entire year and then enter the proportion in each bimonthly
+# period in the vectors below - you must do one set for each management region (currently allows for 3 management
+# regions)
+BiTAC_Reg1_FP          6
+1.0 0.0 0.0 0.0 0.0 0.0 
+
+BiTAC_Reg1_FM          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_FT          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_FI          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_SF          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_SE          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_SL          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_SC          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_SO          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_PNA          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_PNE          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_PNO          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_SBS           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_SBA           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_SBO          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_WHM          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_WHA          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_WHB          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_WHC          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_WHO          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_WHH          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_ZL           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_BF           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_BM           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_CEP          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_KR           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_BD           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg1_IZ           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+# Bimonthly trip limits for region 2 (see directions above for region 1)
+
+BiTAC_Reg2_FP          6
+1.0 0.0 0.0 0.0 0.0 0.0 
+
+BiTAC_Reg2_FM          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_FT          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_FI          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_SF          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_SE          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_SL          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_SC          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_SO          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_PNA          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_PNE          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_PNO          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_SBS           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_SBA           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_SBO          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_WHM          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_WHA          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_WHB          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_WHC          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_WHO          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_WHH          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_ZL           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_BF          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_BM          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_CEP          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_KR          6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_BD           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+BiTAC_Reg2_IZ           6
+1.0 0.0 0.0 0.0 0.0 0.0
+
+# Whether the fishery must land all catch of quota groups regardless of quota remaining (i.e. no discards allowed if over quota)
+KRF_landallTAC_SBA        0                                                                       0
+FTF_landallTAC_SBA        0                                                                       0
+FIF_landallTAC_SBA        0                                                                       0
+OF_landallTAC_SBA         0                                                                       0
+
+# Maximum number of groups for which the fishery can exceed its TAC before being closed
+KRF_max_num_SBA        4  Number species krill fishery can exceed quota                   4
+FTF_max_num_SBA        4  Number species toothfish fishery can exceed quota               4
+FIF_max_num_SBA        4  Number species icefish fishery can exceed quota                 4
+OF_max_num_SBA         4  Number species other fishery can exceed quota                   4
+
+# Regional quotas
+regionalSPFP   0       Whether planktivores is regional quota member                      0
+regionalSPFM   0       Whether mesopelagics is regional quota member                      0
+regionalSPFT   0       Whether toothfish is regional quota member                         0
+regionalSPFI   0       Whether icefish is regional quota member                           0
+regionalSPSF   0       Whether fur seals is regional quota member                         0
+regionalSPSE   0       Whether elephant seals is regional quota member                    0
+regionalSPSL   0       Whether leopard seals is regional quota member                     0
+regionalSPSO   0       Whether other seals is regional quota member                       0
+regionalSPSC   0       Whether crab seals is regional quota member                        0
+regionalSPPNA  0       Whether adelie penguins is regional quota member                   0
+regionalSPPNE  0       Whether emperor penguins is regional quota member                  0
+regionalSPPNO  0       Whether other penguins is regional quota member                    0
+regionalSPSBS  0       Whether skuas is regional quota member                             0
+regionalSPSBA  0       Whether albatross is regional quota member                         0
+regionalSPSBO  0       Whether other seabirds is regional quota member                    0
+regionalSPWHM  0       Whether minke whales is regional quota member                      0
+regionalSPWHH  0       Whether baleen whales is regional quota member                     0
+regionalSPWHO  0       Whether sperm whales is regional quota member                      0
+regionalSPWHA  0       Whether orca A is regional quota member                            0
+regionalSPWHB  0       Whether orca B is regional quota member                            0
+regionalSPWHC  0       Whether orca C is regional quota member                            0
+regionalSPZL   0       Whether zooplankton is regional quota member                       0
+regionalSPBF   0       Whether filter feeders is regional quota member                    0
+regionalSPBM   0       Whether macrozoobenthos is regional quota member                   0
+regionalSPCEP  0       Whether cephalopods is regional quota member                       0
+regionalSPKR   0       Whether krill is regional quota member                             0
+regionalSPBD   0       Whether deposit feeders is regional quota member                   0
+regionalSPIZ   0       Whether ice zooplankton is regional quota member                   0
+
+manage_reg      0       Whether TACs use stock based regional TAC (0) or management area regional TAC (1)
+
+# Proportional distribution of overall TACs across management regions - this read in is currently only used by
+# the Dan Holland model (the standard regional management model has the management zones mapped to the reproductive
+# stocks of the individual groups and so calculates the distribution directly rather than using this read-in value
+
+RegTAC_FP          2
+1.0 0.0
+
+RegTAC_FM          2
+1.0 0.0
+
+RegTAC_FT          2
+1.0 0.0
+
+RegTAC_FI          2
+1.0 0.0
+
+RegTAC_SF          2
+1.0 0.0
+
+RegTAC_SE          2
+1.0 0.0
+
+RegTAC_SL          2
+1.0 0.0
+
+RegTAC_SC          2
+1.0 0.0
+
+RegTAC_SO          2
+1.0 0.0
+
+RegTAC_PNA          2
+1.0 0.0
+
+RegTAC_PNE          2
+1.0 0.0
+
+RegTAC_PNO          2
+1.0 0.0
+
+RegTAC_SBS           2
+1.0 0.0
+
+RegTAC_SBA           2
+1.0 0.0
+
+RegTAC_SBO          2
+1.0 0.0
+
+RegTAC_WHM          2
+1.0 0.0
+
+RegTAC_WHA          2
+1.0 0.0
+
+RegTAC_WHB          2
+1.0 0.0
+
+RegTAC_WHC          2
+1.0 0.0
+
+RegTAC_WHO          2
+1.0 0.0
+
+RegTAC_WHH          2
+1.0 0.0
+
+RegTAC_ZL           2
+1.0 0.0
+
+RegTAC_BF          2
+1.0 0.0
+
+RegTAC_BM          2
+1.0 0.0
+
+RegTAC_CEP          2
+1.0 0.0
+
+RegTAC_KR          2
+1.0 0.0
+
+RegTAC_BD           2
+1.0 0.0
+
+RegTAC_IZ           2
+1.0 0.0
+
+# Basket quotas
+basketSPFP   0       Whether planktivores is basket quota member                0
+basketSPFM   0       Whether mesopelagics is basket quota member            0
+basketSPFT   0       Whether toothfish is basket quota member           0
+basketSPFI   0       Whether icefish is basket quota member              0
+basketSPSF   0       Whether fur seals is basket quota member           0
+basketSPSE   0       Whether elephant seals is basket quota member               0
+basketSPSL   1       Whether leopard seals is basket quota member                   0
+basketSPSO   0       Whether other seals is basket quota member                           0
+basketSPSC   0       Whether crab seals is basket quota member             0
+basketSPPNA  0       Whether adelie penguins is basket quota member                    0
+basketSPPNE  0       Whether emperor penguins is basket quota member                       0
+basketSPPNO  0       Whether other penguins is basket quota member                   0
+basketSPSBS   0       Whether skuas is basket quota member                          0
+basketSPSBA   0       Whether albatross is basket quota member                          0
+basketSPSBO   0       Whether other seabirds is basket quota member                         0
+basketSPWHM   0       Whether minke whales is basket quota member                           0
+basketSPWHH   0       Whether baleen whales is basket quota member                     0
+basketSPWHO   0       Whether sperm whales is basket quota member              0
+basketSPWHA   0       Whether orca A is basket quota member                    0
+basketSPWHB   0       Whether orca B is basket quota member                    0
+basketSPWHC   0       Whether orca C is basket quota member                    0
+basketSPZL    0       Whether zooplankton is basket quota member                       0
+basketSPBF    0       Whether filter feeders is basket quota member            0
+basketSPBM    0       Whether macrozoobenthos is basket quota member           0
+basketSPCEP   0       Whether cephalopods is basket quota member                       0
+basketSPKR    0       Whether krill is basket quota member                            0
+basketSPBD    0       Whether deposit feeders is basket quota member                   0
+basketSPIZ    0       Whether ice zooplankton is basket quota member                        0
+
+# Basket quotas
+basket_sizeFP   1       Number of groups planktivores with in the quota                1
+basket_sizeFM   1       Number of groups mesopelagics with in the quota            1
+basket_sizeFT   1       Number of groups toothfish with in the quota           1
+basket_sizeFI   1       Number of groups icefish with in the quota              1
+basket_sizeSF   1       Number of groups fur seals with in the quota           1
+basket_sizeSE   1       Number of groups elephant seals with in the quota               1
+basket_sizeSL   1       Number of groups leopard seals with in the quota                   1
+basket_sizeSO   1       Number of groups other seals with in the quota                           1
+basket_sizeSC   1       Number of groups crab seals with in the quota             1
+basket_sizePNA   1       Number of groups adelie penguins with in the quota                    1
+basket_sizePNE   1       Number of groups emperor penguins with in the quota                       1
+basket_sizePNO   1       Number of groups other penguins with in the quota                   1
+basket_sizeSBS   1       Number of groups skuas with in the quota                          1
+basket_sizeSBA   1       Number of groups albatross with in the quota                          1
+basket_sizeSBO   1       Number of groups other seabirds with in the quota                         1
+basket_sizeWHM   1       Number of groups minke whales with in the quota                           1
+basket_sizeWHH   1       Number of groups baleen whales with in the quota                     1
+basket_sizeWHO   1       Number of groups sperm whales with in the quota              1
+basket_sizeWHA   1       Number of groups orca A with in the quota                    1
+basket_sizeWHB   1       Number of groups orca B with in the quota                    1
+basket_sizeWHC   1       Number of groups orca C with in the quota                    1
+basket_sizeZL    1       Number of groups zooplankton with in the quota                       1
+basket_sizeBF    1       Number of groups filter feeders with in the quota            1
+basket_sizeBM    1       Number of groups macrozoobenthos with in the quota           1
+basket_sizeCEP   1       Number of groups cephalopods with in the quota                       1
+basket_sizeKR    1       Number of groups krill with in the quota                            1
+basket_sizeBD    1       Number of groups deposit feeders with in the quota                   1
+basket_sizeIZ    1       Number of groups ice zooplankton with in the quota                        1
+
+# Basket quota membership (entries should be the guild id numbers (see top of file for values) for 
+# each species in the basket other than the basket_TACFxx group (i.e. in basketTAC_FPS do not
+# put the code for FPS, only the species other than FPS in the basket with FPS). For an entry
+# of "no other species" (i.e. single species quota) put in a single entry with value 45
+# (which maps to "Not_fished_id" inside the code)
+basketTAC_FP 1
+45
+
+basketTAC_FM 1
+45
+
+basketTAC_FT 1
+45
+
+basketTAC_FI 1
+45
+
+basketTAC_SF 1
+45
+
+basketTAC_SE 1
+45
+
+basketTAC_SL 1
+45
+
+basketTAC_SC 1
+45
+
+basketTAC_SO 1
+45
+
+basketTAC_PNA 1
+45
+
+basketTAC_PNE 1
+45
+
+basketTAC_PNO 1
+45
+
+basketTAC_SBS  1
+45
+
+basketTAC_SBA  1
+45
+
+basketTAC_SBO 1
+45
+
+basketTAC_WHM 1
+45
+
+basketTAC_WHH 1
+45
+
+basketTAC_WHO 1
+45
+
+basketTAC_WHA 1
+45
+
+basketTAC_WHB 1
+45
+
+basketTAC_WHC 1
+45
+
+basketTAC_ZL  1
+45
+
+basketTAC_BF  1
+45
+
+basketTAC_BM  1
+45
+
+basketTAC_CEP 1
+45
+
+basketTAC_KR  1
+45
+
+basketTAC_BD  1
+45
+
+basketTAC_IZ  1
+45
+
+# Maximum number of companions in a companion TAC
+max_co_sp  2
+
+# Identity of companions in companion TAC - for all entries must have as many entries as 
+# for max_co_sp. If there are not enough (or any) companions then for all extra entries 
+# enter companion as 45 (Not_fished_id). For those WITH companions 
+# entries to the ID numbers of the companion then enter 45 to fill up the rest of the array
+# For example if max_co_sp = 2 and the companions for FXX were FPS and FVV
+# co_sp_FXX    2
+# 2 4
+#
+
+co_sp_FP    2
+45 45
+
+co_sp_FM    2
+45 45
+
+co_sp_FT    2
+45 45
+
+co_sp_FI    2
+45 45
+
+co_sp_SF    2
+45 45
+
+co_sp_SE    2
+45 45
+
+co_sp_SC    2
+25 34
+
+co_sp_SL    2
+45 45
+
+co_sp_SO    2
+45 45
+
+co_sp_PNA    2
+45 45
+
+co_sp_PNE    2
+21 45
+
+co_sp_PNO    2
+45 45
+
+co_sp_SBS     2
+45 45
+
+co_sp_SBA     2
+45 45
+
+co_sp_SBO    2
+45 45
+
+co_sp_WHM    2
+45 45
+
+co_sp_WHH    2
+45 45
+
+co_sp_WHO    2
+45 45
+
+co_sp_WHA    2
+45 45
+
+co_sp_WHB    2
+45 45
+
+co_sp_WHC    2
+45 45
+
+co_sp_ZL     2
+45 45
+
+co_sp_BD     2
+45 45
+
+co_sp_IZ     2
+45 45
+
+co_sp_BF     2
+45 45
+
+co_sp_BM     2
+45 45
+
+co_sp_CEP    2
+45 45
+
+co_sp_KR     2
+45 45
+
+# Type of companion TAC (0 = weakest link dictates quota, 1 = strongest link dictates quota)
+coType_FP      1
+coType_FM      1
+coType_FT      1
+coType_FI      1
+coType_SF      1
+coType_SE      1
+coType_SC      1
+coType_SL      1
+coType_SO      1
+coType_PNA     1
+coType_PNE     1
+coType_PNO     1
+coType_SBS     1
+coType_SBA     1
+coType_SBO     1
+coType_WHM     1
+coType_WHH     1
+coType_WHO     1
+coType_WHA     1
+coType_WHB     1
+coType_WHC     1
+coType_ZL      1
+coType_BD      1
+coType_IZ      1
+coType_BF      1
+coType_BM      1
+coType_CEP     1
+coType_KR      1
+
+# Vectors indicating ratio of catch of compannion group identified above with each group in each fishery
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+co_sp_catch_FP  4
+0 0 0 0
+
+co_sp_catch_FM  4
+0 0 0 0
+
+co_sp_catch_FT  4
+0 0 0 0
+
+co_sp_catch_FI  4
+0 0 0 0
+
+co_sp_catch_SF  4
+0 0 0 0
+
+co_sp_catch_SE  4
+0 0 0 0
+
+co_sp_catch_SL  4
+0 0 0 0
+
+co_sp_catch_SC  4
+0 0 0 0
+
+co_sp_catch_SO  4
+0 0 0 0
+
+co_sp_catch_PNA  4
+0 0 0 0
+
+co_sp_catch_PNE  4
+0 0 0 0
+
+co_sp_catch_PNO  4
+0 0 0 0
+
+co_sp_catch_SBS   4
+0 0 0 0
+
+co_sp_catch_SBA   4
+0 0 0 0
+
+co_sp_catch_SBO  4
+0 0 0 0
+
+co_sp_catch_WHM  4
+0 0 0 0
+
+co_sp_catch_WHH  4
+0 0 0 0
+
+co_sp_catch_WHO  4
+0 0 0 0
+
+co_sp_catch_WHA  4
+0 0 0 0
+
+co_sp_catch_WHB  4
+0 0 0 0
+
+co_sp_catch_WHC  4
+0 0 0 0
+
+co_sp_catch_ZL   4
+0 0 0 0
+
+co_sp_catch_ZG   4
+0 0 0 0
+
+co_sp_catch_BF   4
+0 0 0 0
+
+co_sp_catch_BM   4
+0 0 0 0
+
+co_sp_catch_CEP  4
+0 0 0 0
+
+co_sp_catch_KR   4
+0 0 0 0
+
+co_sp_catch_BD   4
+0 0 0 0
+
+co_sp_catch_IZ   4
+0 0 0 0
+
+# Vectors indicating ratio of catch of second companion group identified
+# above with each group in each fishery
+co_sp_catch2_FP  4
+0 0 0 0
+
+co_sp_catch2_FM  4
+0 0 0 0
+
+co_sp_catch2_FT  4
+0 0 0 0
+
+co_sp_catch2_FI  4
+0 0 0 0
+
+co_sp_catch2_SF  4
+0 0 0 0
+
+co_sp_catch2_SE  4
+0 0 0 0
+
+co_sp_catch2_SL  4
+0 0 0 0
+
+co_sp_catch2_SC  4
+0 0 0 0
+
+co_sp_catch2_SO  4
+0 0 0 0
+
+co_sp_catch2_PNA  4
+0 0 0 0
+
+co_sp_catch2_PNE  4
+0 0 0 0
+
+co_sp_catch2_PNO  4
+0 0 0 0
+
+co_sp_catch2_SBS   4
+0 0 0 0
+
+co_sp_catch2_SBA   4
+0 0 0 0
+
+co_sp_catch2_SBO  4
+0 0 0 0
+
+co_sp_catch2_WHM  4
+0 0 0 0
+
+co_sp_catch2_WHH  4
+0 0 0 0
+
+co_sp_catch2_WHO  4
+0 0 0 0
+
+co_sp_catch2_WHA  4
+0 0 0 0
+
+co_sp_catch2_WHB  4
+0 0 0 0
+
+co_sp_catch2_WHC  4
+0 0 0 0
+
+co_sp_catch2_ZL   4
+0 0 0 0
+
+co_sp_catch2_ZG   4
+0 0 0 0
+
+co_sp_catch2_BF   4
+0 0 0 0
+
+co_sp_catch2_BM   4
+0 0 0 0
+
+co_sp_catch2_CEP  4
+0 0 0 0
+
+co_sp_catch2_KR  4
+0 0 0 0
+
+co_sp_catch2_BD   4
+0 0 0 0
+
+co_sp_catch2_IZ   4
+0 0 0 0
+
+## Proportion of SBAawning grounds closed when trading off vs TAC reduction
+# of the group for that fishery per seven day period (if there are shorter trips in reality,
+# sum over these trips to get 7 days duration and use the sum as the limit here).
+# Individual trip limits (in tonnes) per fishery per group. Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id 
+prop_spawn_close_FP    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_FM    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_FT    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_FI    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_SF    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_SE    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_SL    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_SC    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_SO    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_PNA    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_PNE    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_PNO    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_SBS     4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_SBA     4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_SBO    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_WHM    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_WHA    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_WHB    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_WHC    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_WHO    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_WHH    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_ZL     4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_BF     4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_BM     4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_CEP    4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_KR     4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_BD     4
+0.0 0.0 0.0 0.0
+
+prop_spawn_close_IZ     4
+0.0 0.0 0.0 0.0
+
+# Identification of groups of concern - those groups regarded as threatened. If the stock of these
+# groups falls too low then fisheries may be closed. A 1=threatened, 0=ignore. The list of groups are
+# (in order)
+# IPL IDF PCO PPS PPL PDF IZ ZS ZM ZL ZG BD BM BF KR FP FM FT FI CEP SF SE SC SL SO 
+# PNA PNE PNO SBA SBS SBO WHM WHH WHA WHB WHC WHO
+SP_Concern       37
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+## Spatial management 
+# Infringement (as proportion of uncontrolled effort)
+KRF_infringe        0.0  Level of infringement for krill fishery                              0.0
+FTF_infringe        0.0  Level of infringement for toothfish fishery                          0.0
+FIF_infringe        0.0  Level of infringement for icefish fishery                            0.0
+OF_infringe         0.0  Level of infringement for other fishery                              0.0
+
+# General MPA status of the cell with regard to the SBAecific fishery.
+# 1.0=fishing allowed, 0.0=no fishing allowed, fractions represent some fishing allowed.
+MPAKRF   28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAFTF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAFIF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAOF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+# MPA's imposed when threatened groups trigger Spatial management for the fishery.
+# 1.0=fishing allowed, 0.0=no fishing allowed, fractions represent some fishing allowed.
+MPAendangeredKRF  28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAendangeredFIF   28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAendangeredFTF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAendangeredOF 28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+## MPA imposed if a fished judged as overfished has TAC exceeded (like in US style management)
+MPAoverfishedFP    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedFM    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedFT    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedFI    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedSF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedSE    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedSL    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedSC    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedSO    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedPNA    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedPNE    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedPNO    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedSBS     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedSBA     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedSBO    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedWHM    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedWHH    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedWHA    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedWHB    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedWHC    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedWHO    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedZL     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedZG     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedBF     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedBM     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedCEP    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedKR     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedBD     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+MPAoverfishedIZ     28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+
+## Rule based stock management. Population thresholds when populations fall below threshold values 
+# Proportion of the population when effort restricted in each fishery. 
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+
+FC_thresh_FP    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_FM    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_FT    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_FI    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_SF    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_SE    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_SL    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_SC    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_SO    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_PNA    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_PNE    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_PNO    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_SBS     4
+0.0 0.0 0.0 0.0
+
+FC_thresh_SBA     4
+0.0 0.0 0.0 0.0
+
+FC_thresh_SBO    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_WHM    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_WHH    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_WHA    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_WHB    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_WHC    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_WHO    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_ZL     4
+0.0 0.0 0.0 0.0
+
+FC_thresh_ZG     4
+0.0 0.0 0.0 0.0
+
+FC_thresh_BF     4
+0.0 0.0 0.0 0.0
+
+FC_thresh_BM     4
+0.0 0.0 0.0 0.0
+
+FC_thresh_CEP    4
+0.0 0.0 0.0 0.0
+
+FC_thresh_KR     4
+0.0 0.0 0.0 0.0
+
+FC_thresh_BD     4
+0.0 0.0 0.0 0.0
+
+FC_thresh_IZ     4
+0.0 0.0 0.0 0.0
+
+# Population reference points (proportion of the population) when TAC restriction due to population
+# size completely lifted and original TAC levels are reinstituted.
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+FC_high_thresh_FP    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_FM    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_FT    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_FI    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_SF    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_SE    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_SL    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_SC    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_SO    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_PNA    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_PNE    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_PNO    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_SBS     4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_SBA     4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_SBO    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_WHM    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_WHH    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_WHA    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_WHB    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_WHC    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_WHO    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_ZL     4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_ZG     4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_BF     4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_BM     4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_CEP    4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_KR     4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_BD     4
+0.0 0.0 0.0 0.0
+
+FC_high_thresh_IZ     4
+0.0 0.0 0.0 0.0
+
+# Day virgin stocks calculated (reference point for stock declines). Normally first timestep of
+# run, but can be set later if populations equilibrate at levels substantially different to initial
+# conditions
+reinit_pop_day         0    
+
+## Effort reduction parameters 
+# The following restrictions are applied once target or non-threatened stocks full to threshold
+# levels defined by FC_thresh - Proportion of effort allowed once restrictions begin 
+KRF_FC_restrict        0.1
+FTF_FC_restrict        0.1
+FIF_FC_restrict        0.1
+OF_FC_restrict         0.1
+
+# Period of time over which effort reduction occurs (d)
+KRF_FC_period         730
+FTF_FC_period         730
+FIF_FC_period         730
+OF_FC_period          730
+
+# Period of time before check if need further effort reduction (d)
+KRF_FC_period2        1825
+FTF_FC_period2        1825
+FIF_FC_period2        1825
+OF_FC_period2         1825
+
+# The following restrictions are applied when threatened stocks full to threshold levels defined
+# by FC_thresh - Proportion of effort allowed once restrictions begin
+KRF_FC_restrict_endangered   0.1
+FTF_FC_restrict_endangered   0.1
+FIF_FC_restrict_endangered   0.1
+OF_FC_restrict_endangered    0.1
+
+# Period of time over which effort reduction occurs  (d)
+KRF_FC_endanger_period     730
+FTF_FC_endanger_period     730
+FIF_FC_endanger_period     730
+OF_FC_endanger_period      730
+
+####### Scenario specification - changing fisheries and management conditions
+# Change in effort           through time
+KRF_num_changes    1    number of changes in effort                                       1
+FIF_num_changes    1    number of changes in effort                                       1
+FTF_num_changes    1    number of changes in effort                                       1
+OF_num_changes     1    number of changes in effort                                       1
+
+# Arrays to indicate when each change in fishing begins (days from run start).
+# There must be as many entries in this array as there are number of changes in effort for that fishery.
+EffortChange_start_KRF  1
+0
+
+EffortChange_start_FIF  1
+0
+
+EffortChange_start_FTF  1
+0
+
+EffortChange_start_OF   1
+0
+
+# Arrays to indicate time period over which change in fishing occurs (days).
+# There must be as many entries in this array as there are number of changes in effort for that fishery.
+EffortChange_period_KRF  1
+1
+
+EffortChange_period_FIF  1
+1
+
+EffortChange_period_FTF  1
+1
+
+EffortChange_period_OF   1
+1
+
+# Arrays to indicate proportional change in effort (relative to base mEff entered above)
+# for each change in effort. There must be as many entries in this array as there are number 
+# of changes in effort for that fishery.
+Effort_mult_KRF  1
+1.0
+
+Effort_mult_FIF  1
+1.0
+
+Effort_mult_FTF  1
+1.0
+
+Effort_mult_OF   1
+1.0
+
+# Arrays to indicate whether each change in fishing is a simple pulse or not.
+# 1=return to original levels of fishing on FP, 0=remain changed
+# There must be as many entries in this array as there are number 
+# of changes in effort for that fishery.
+flagpulseKRF  1
+0
+
+flagpulseFIF  1
+0
+
+flagpulseFTF  1
+0
+
+flagpulseOF   1
+0
+
+# Change in effort cap through time
+KRF_cap_changes    1    number of changes in effort cap                             1
+FIF_cap_changes    1    number of changes in effort cap                             1
+FTF_cap_changes    1    number of changes in effort cap                             1
+OF_cap_changes     1    number of changes in effort cap                             1
+
+# Arrays to indicate when each change in effort cap begins (days from run start).
+# There must be as many entries in this array as there are number of changes in effort cap 
+# for that fishery.
+CAPchange_start_KRF  1
+0
+
+CAPchange_start_FIF  1
+0
+
+CAPchange_start_FTF  1
+0
+
+CAPchange_start_OF   1
+0
+
+# Arrays to indicate time period over which change in effort cap occurs (days).
+# There must be as many entries in this array as there are number of changes in
+# fisheries coverage for that fishery.
+CAPchange_period_KRF  1
+1
+
+CAPchange_period_FIF  1
+1
+
+CAPchange_period_FTF  1
+1
+
+CAPchange_period_OF   1
+1
+
+# Arrays to indicate proportional change in effort cap.
+# There must be as many entries in this array as there are 
+# number of changes in fisheries coverage for that fishery.
+CAPchange_mult_KRF  1
+1.0
+
+CAPchange_mult_FIF  1
+1.0
+
+CAPchange_mult_FTF  1
+1.0
+
+CAPchange_mult_OF   1
+1.0
+
+## Human population size changes (results in changes weight of recreation fishing pressure)
+# Does population of port change (1=yes, 0=no)
+ports_popchange   1
+1
+
+# number of changes in population for each port (1 is default as = minimum array size)
+ports_popnumchange   1
+1
+
+# Start time of any changes in population size for each port.
+# This must have the same number of entries as given by ports_pop
+PortPopChange_start_Port1   1
+365
+
+# Start time of any changes in population size for each port.
+# This must have the same number of entries as given by ports_pop
+PortPopChange_period_Port1   1
+1
+
+# Start time of any changes in population size for each port.
+# This must have the same number of entries as given by ports_pop
+PortPopChange_mult_Port1   1
+1.0
+
+# Changes in selectivity through time
+KRF_sel_changes    1    number of changes in selectivity                                  1
+FIF_sel_changes    1    number of changes in selectivity                                  1
+FTF_sel_changes    1    number of changes in selectivity                                  1
+OF_sel_changes     1    number of changes in selectivity                                  1
+
+# Arrays to indicate when each change in selectivity begins (days from run start).
+# There must be as many entries in this array as there are number 
+# of changes in selectivity for that fishery.
+SELchange_start_KRF  1
+0
+
+SELchange_start_FIF  1
+0
+
+SELchange_start_FTF  1
+0
+
+SELchange_start_OF   1
+0
+
+# Arrays to indicate new form of the selectivity for that group.
+# select curve: 0=const, 1=logistic, 2=norm, 3=lognorm, 4=gamma    
+# There must be as many entries in this array as there are number 
+# of changes in selectivity for that group.
+SELchange_curve_KRF  1
+0
+
+SELchange_curve_FIF  1
+0
+
+SELchange_curve_FTF  1
+0
+
+SELchange_curve_OF   1
+0
+
+# Arrays to indicate change in lsm of selectivity curve for each change 
+# in selectivity for the fishery. If a constant selectivity is being used than this parameter 
+# indicates the change in this constant value. There must be as many entries in this 
+# array as there are number of changes in selectivity for that group.
+SELchange_addlsm_KRF  1
+0
+
+SELchange_addlsm_FIF  1
+0
+
+SELchange_addlsm_FTF  1
+0
+
+SELchange_addlsm_OF   1
+0
+
+# Arrays to indicate change in sigma of selectivity curve for each change 
+# in selectivity for the finfish. There must be as many entries in this 
+# array as there are number of changes in selectivity for that group.
+SELchange_addsigma_KRF  1
+0
+
+SELchange_addsigma_FIF  1
+0
+
+SELchange_addsigma_FTF  1
+0
+
+SELchange_addsigma_OF   1
+0
+
+# Change in fisheries coverage through time
+KRF_p_changes   1    number of changes in fisheries coverage                             1
+FIF_p_changes   1    number of changes in fisheries coverage                             1
+FTF_p_changes   1    number of changes in fisheries coverage                             1
+OF_p_changes    1    number of changes in fisheries coverage                             1
+
+# Arrays to indicate when each change in fishing coverage begins (days from run start).
+# There must be as many entries in this array as there are number of changes in fisheries coverage 
+# for that fishery.
+Pchange_start_KRF  1
+0
+
+Pchange_start_FIF  1
+0
+
+Pchange_start_FTF  1
+0
+
+Pchange_start_OF   1
+0
+
+# Arrays to indicate time period over which change in fishing coverage occurs (days).
+# There must be as many entries in this array as there are number of changes in
+# fisheries coverage for that fishery.
+Pchange_period_KRF  1
+1
+
+Pchange_period_FIF  1
+1
+
+Pchange_period_FTF  1
+1
+
+Pchange_period_OF   1
+1
+
+# Arrays to indicate proportional change in fisheries coverage (relative to base K_cover entered above)
+# for each change in fisheries coverage. There must be as many entries in this array as there are 
+# number of changes in fisheries coverage for that fishery.
+Pchange_mult_KRF  1
+1.0
+
+Pchange_mult_FIF  1
+1.0
+
+Pchange_mult_FTF  1
+1.0
+
+Pchange_mult_OF   1
+1.0
+
+# Change in fisheries coverage through time
+KRF_swept_changes   1    number of changes in fishing gear swept area                        1
+FIF_swept_changes   1    number of changes in fishing gear swept area                        1
+FTF_swept_changes   1    number of changes in fishing gear swept area                        1
+OF_swept_changes    1    number of changes in fishing gear swept area                        1
+
+# Arrays to indicate when each change in swept area begins (days from run start).
+# There must be as many entries in this array as there are number of changes in swept area 
+# for that fishery.
+SWEPTchange_start_KRF  1
+0
+
+SWEPTchange_start_FIF  1
+0
+
+SWEPTchange_start_FTF  1
+0
+
+SWEPTchange_start_OF   1
+0
+
+# Arrays to indicate time period over which change in swept area occurs (days).
+# There must be as many entries in this array as there are number of changes in
+# fisheries coverage for that fishery.
+SWEPTchange_period_KRF  1
+1
+
+SWEPTchange_period_FIF  1
+1
+
+SWEPTchange_period_FTF  1
+1
+
+SWEPTchange_period_OF   1
+1
+
+# Arrays to indicate proportional change in swept area (relative to swept_area entered above).
+# There must be as many entries in this array as there are 
+# number of changes in fisheries coverage for that fishery.
+SWEPTchange_mult_KRF  1
+1.0
+
+SWEPTchange_mult_FIF  1
+1.0
+
+SWEPTchange_mult_FTF  1
+1.0
+
+SWEPTchange_mult_OF   1
+1.0
+
+# Changes in discarding through time - number of changes in discarding
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+
+FP_discard_changes 4
+0 0 0 0
+
+FM_discard_changes 4
+0 0 0 0
+
+FT_discard_changes 4
+0 0 0 0
+
+FI_discard_changes 4
+0 0 0 0
+
+SF_discard_changes 4
+0 0 0 0
+
+SE_discard_changes 4
+0 0 0 0
+
+SL_discard_changes 4
+0 0 0 0
+
+SC_discard_changes 4
+0 0 0 0
+
+SO_discard_changes 4
+0 0 0 0
+
+PNA_discard_changes 4
+0 0 0 0
+
+PNE_discard_changes 4
+0 0 0 0
+
+PNO_discard_changes 4
+0 0 0 0
+
+SBS_discard_changes  4
+0 0 0 0
+
+SBA_discard_changes  4
+0 0 0 0
+
+SBO_discard_changes 4
+0 0 0 0
+
+WHM_discard_changes 4
+0 0 0 0
+
+WHH_discard_changes 4
+0 0 0 0
+
+WHA_discard_changes 4
+0 0 0 0
+
+WHB_discard_changes 4
+0 0 0 0
+
+WHC_discard_changes 4
+0 0 0 0
+
+WHO_discard_changes 4
+0 0 0 0
+
+ZL_discard_changes  4
+0 0 0 0
+
+ZG_discard_changes  4
+0 0 0 0
+
+BF_discard_changes 4
+0 0 0 0
+
+BM_discard_changes 4
+0 0 0 0
+
+CEP_discard_changes 4
+0 0 0 0
+
+KR_discard_changes 4
+0 0 0 0
+
+BD_discard_changes  4
+0 0 0 0
+
+IZ_discard_changes  4
+0 0 0 0
+
+# Arrays to indicate when each change in discarding begins (days from run start).
+# There must be as many entries in this array as the MAXIMUM number of changes in discarding
+# across all groups (e.g. if the highest number of changes in a single fishery by a single
+# group is 6 then there must be 6 entries etc).
+DISCRDchange_start_FP 1
+0
+
+DISCRDchange_start_FM 1
+0
+
+DISCRDchange_start_FT 1
+0
+
+DISCRDchange_start_FI 1
+0
+
+DISCRDchange_start_SF 1
+0
+
+DISCRDchange_start_SE 1
+0
+
+DISCRDchange_start_SL 1
+0
+
+DISCRDchange_start_SC 1
+0
+
+DISCRDchange_start_SO 1
+0
+
+DISCRDchange_start_PNA 1
+0
+
+DISCRDchange_start_PNE 1
+0
+
+DISCRDchange_start_PNO 1
+0
+
+DISCRDchange_start_SBS  1
+0
+
+DISCRDchange_start_SBA  1
+0
+
+DISCRDchange_start_SBO 1
+0
+
+DISCRDchange_start_WHM 1
+0
+
+DISCRDchange_start_WHA 1
+0
+
+DISCRDchange_start_WHB 1
+0
+
+DISCRDchange_start_WHC 1
+0
+
+DISCRDchange_start_WHO 1
+0
+
+DISCRDchange_start_WHH 1
+0
+
+DISCRDchange_start_ZL  1
+0
+
+DISCRDchange_start_ZG  1
+0
+
+DISCRDchange_start_BF  1
+0
+
+DISCRDchange_start_BM  1
+0
+
+DISCRDchange_start_CEP 1
+0
+
+DISCRDchange_start_KR  1
+0
+
+DISCRDchange_start_BD  1
+0
+
+DISCRDchange_start_IZ  1
+0
+
+# Arrays to indicate new minimum legal size limit for finfish. 
+# Its a multiplcation factor relative to the original minimum size.
+# There must be as many entries in this array as the MAXIMUM number 
+# of changes in discarding for any group.
+DISCRDchange_threshmult_FP 1
+1.0
+
+DISCRDchange_threshmult_FM 1
+1.0
+
+DISCRDchange_threshmult_FT 1
+1.0
+
+DISCRDchange_threshmult_FI 1
+1.0
+
+DISCRDchange_threshmult_SF 1
+1.0
+
+DISCRDchange_threshmult_SE 1
+1.0
+
+DISCRDchange_threshmult_SL 1
+1.0
+
+DISCRDchange_threshmult_SC 1
+1.0
+
+DISCRDchange_threshmult_SO 1
+1.0
+
+DISCRDchange_threshmult_PNA 1
+1.0
+
+DISCRDchange_threshmult_PNE 1
+1.0
+
+DISCRDchange_threshmult_PNO 1
+1.0
+
+DISCRDchange_threshmult_SBS  1
+1.0
+
+DISCRDchange_threshmult_SBA  1
+1.0
+
+DISCRDchange_threshmult_SBO 1
+1.0
+
+DISCRDchange_threshmult_WHM 1
+1.0
+
+DISCRDchange_threshmult_WHA 1
+1.0
+
+DISCRDchange_threshmult_WHB 1
+1.0
+
+DISCRDchange_threshmult_WHC 1
+1.0
+
+DISCRDchange_threshmult_WHO 1
+1.0
+
+DISCRDchange_threshmult_WHH 1
+1.0
+
+DISCRDchange_threshmult_ZL  1
+1.0
+
+DISCRDchange_threshmult_ZG  1
+1.0
+
+DISCRDchange_threshmult_BF  1
+1.0
+
+DISCRDchange_threshmult_BM  1
+1.0
+
+DISCRDchange_threshmult_CEP 1
+1.0
+
+DISCRDchange_threshmult_KR  1
+1.0
+
+DISCRDchange_threshmult_BD  1
+1.0
+
+DISCRDchange_threshmult_IZ  1
+1.0
+
+# Arrays to indicate new proportion of undersize fish retained. 
+# Its a multiplcation factor relative to the original proportion retained.
+# There must be as many entries in this array as the MAXIMUM number 
+# of changes in discarding for any group.
+DISCRDchange_retainmult_FP 1
+1.0
+
+DISCRDchange_retainmult_FM 1
+1.0
+
+DISCRDchange_retainmult_FT 1
+1.0
+
+DISCRDchange_retainmult_FI 1
+1.0
+
+DISCRDchange_retainmult_SF 1
+1.0
+
+DISCRDchange_retainmult_SE 1
+1.0
+
+DISCRDchange_retainmult_SL 1
+1.0
+
+DISCRDchange_retainmult_SC 1
+1.0
+
+DISCRDchange_retainmult_SO 1
+1.0
+
+DISCRDchange_retainmult_PNA 1
+1.0
+
+DISCRDchange_retainmult_PNE 1
+1.0
+
+DISCRDchange_retainmult_PNO 1
+1.0
+
+DISCRDchange_retainmult_SBS  1
+1.0
+
+DISCRDchange_retainmult_SBA  1
+1.0
+
+DISCRDchange_retainmult_SBO 1
+1.0
+
+DISCRDchange_retainmult_WHM 1
+1.0
+
+DISCRDchange_retainmult_WHA 1
+1.0
+
+DISCRDchange_retainmult_WHB 1
+1.0
+
+DISCRDchange_retainmult_WHC 1
+1.0
+
+DISCRDchange_retainmult_WHO 1
+1.0
+
+DISCRDchange_retainmult_WHH 1
+1.0
+
+DISCRDchange_retainmult_ZL  1
+1.0
+
+DISCRDchange_retainmult_ZG  1
+1.0
+
+DISCRDchange_retainmult_BF  1
+1.0
+
+DISCRDchange_retainmult_BM  1
+1.0
+
+DISCRDchange_retainmult_CEP 1
+1.0
+
+DISCRDchange_retainmult_KR  1
+1.0
+
+DISCRDchange_retainmult_BD  1
+1.0
+
+DISCRDchange_retainmult_IZ  1
+1.0
+
+# Arrays to indicate new level of discarding for that group.
+# There must be as many entries in this array as the MAXIMUM number 
+# of changes in discarding for any group. It a a multiplcation factor 
+# relative to the original level of discarding (if using constant 
+# rates) or wastes (guts/skin) diSBAosed of (if using size based discarding).
+DISCRDchange_discardmult_FP 1
+1.0
+
+DISCRDchange_discardmult_FM 1
+1.0
+
+DISCRDchange_discardmult_FT 1
+1.0
+
+DISCRDchange_discardmult_FI 1
+1.0
+
+DISCRDchange_discardmult_SF 1
+1.0
+
+DISCRDchange_discardmult_SE 1
+1.0
+
+DISCRDchange_discardmult_SL 1
+1.0
+
+DISCRDchange_discardmult_SC 1
+1.0
+
+DISCRDchange_discardmult_SO 1
+1.0
+
+DISCRDchange_discardmult_PNA 1
+1.0
+
+DISCRDchange_discardmult_PNE 1
+1.0
+
+DISCRDchange_discardmult_PNO 1
+1.0
+
+DISCRDchange_discardmult_SBS  1
+1.0
+
+DISCRDchange_discardmult_SBA  1
+1.0
+
+DISCRDchange_discardmult_SBO 1
+1.0
+
+DISCRDchange_discardmult_WHM 1
+1.0
+
+DISCRDchange_discardmult_WHA 1
+1.0
+
+DISCRDchange_discardmult_WHB 1
+1.0
+
+DISCRDchange_discardmult_WHC 1
+1.0
+
+DISCRDchange_discardmult_WHO 1
+1.0
+
+DISCRDchange_discardmult_WHH 1
+1.0
+
+DISCRDchange_discardmult_ZL  1
+1.0
+
+DISCRDchange_discardmult_ZG  1
+1.0
+
+DISCRDchange_discardmult_BF  1
+1.0
+
+DISCRDchange_discardmult_BM  1
+1.0
+
+DISCRDchange_discardmult_CEP 1
+1.0
+
+DISCRDchange_discardmult_KR  1
+1.0
+
+DISCRDchange_discardmult_BD  1
+1.0
+
+DISCRDchange_discardmult_IZ  1
+1.0
+
+# Changes in catchability through time - number of changes of catchability
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+FP_q_changes 4
+0 0 0 0
+
+FM_q_changes 4
+0 0 0 0
+
+FT_q_changes 4
+0 0 0 0
+
+FI_q_changes 4
+0 0 0 0
+
+SF_q_changes 4
+0 0 0 0
+
+SE_q_changes 4
+0 0 0 0
+
+SL_q_changes 4
+0 0 0 0
+
+SC_q_changes 4
+0 0 0 0
+
+SO_q_changes 4
+0 0 0 0
+
+PNA_q_changes 4
+0 0 0 0
+
+PNE_q_changes 4
+0 0 0 0
+
+PNO_q_changes 4
+0 0 0 0
+
+SBS_q_changes  4
+0 0 0 0
+
+SBA_q_changes  4
+0 0 0 0
+
+SBO_q_changes 4
+0 0 0 0
+
+WHM_q_changes 4
+0 0 0 0
+
+WHH_q_changes 4
+0 0 0 0
+
+WHO_q_changes 4
+0 0 0 0
+
+WHA_q_changes 4
+0 0 0 0
+
+WHB_q_changes 4
+0 0 0 0
+
+WHC_q_changes 4
+0 0 0 0
+
+ZL_q_changes  4
+0 0 0 0
+
+ZG_q_changes  4
+0 0 0 0
+
+BF_q_changes 4
+0 0 0 0
+
+BM_q_changes 4
+0 0 0 0
+
+CEP_q_changes 4
+0 0 0 0
+
+KR_q_changes 4
+0 0 0 0
+
+BD_q_changes  4
+0 0 0 0
+
+IZ_q_changes  4
+0 0 0 0
+
+# Arrays to indicate when each change in catchability begins (days from run start).
+# There must be as many entries in this array as the MAXIMUM number of changes in catchability
+# across all groups (e.g. if the highest number of changes for a single fishery by a single
+# group is 6 then there must be 6 entries etc).
+Qchange_start_FP 1
+0
+
+Qchange_start_FM 1
+0
+
+Qchange_start_FT 1
+0
+
+Qchange_start_FI 1
+0
+
+Qchange_start_SF 1
+0
+
+Qchange_start_SE 1
+0
+
+Qchange_start_SL 1
+0
+
+Qchange_start_SC 1
+0
+
+Qchange_start_SO 1
+0
+
+Qchange_start_PNA 1
+0
+
+Qchange_start_PNE 1
+0
+
+Qchange_start_PNO 1
+0
+
+Qchange_start_SBS  1
+0
+
+Qchange_start_SBA  1
+0
+
+Qchange_start_SBO 1
+0
+
+Qchange_start_WHM 1
+0
+
+Qchange_start_WHH 1
+0
+
+Qchange_start_WHO 1
+0
+
+Qchange_start_WHA 1
+0
+
+Qchange_start_WHB 1
+0
+
+Qchange_start_WHC 1
+0
+
+Qchange_start_ZL  1
+0
+
+Qchange_start_ZG  1
+0
+
+Qchange_start_BF  1
+0
+
+Qchange_start_BM  1
+0
+
+Qchange_start_CEP 1
+0
+
+Qchange_start_KR  1
+0
+
+Qchange_start_BD  1
+0
+
+Qchange_start_IZ  1
+0
+
+# Arrays to indicate period over which change in catchability occurs (days).
+# There must be as many entries in this array as the MAXIMUM number of changes in catchability
+# across all groups.
+Qchange_period_FP 1
+0
+
+Qchange_period_FM 1
+0
+
+Qchange_period_FT 1
+0
+
+Qchange_period_FI 1
+0
+
+Qchange_period_SF 1
+0
+
+Qchange_period_SE 1
+0
+
+Qchange_period_SL 1
+0
+
+Qchange_period_SC 1
+0
+
+Qchange_period_SO 1
+0
+
+Qchange_period_PNA 1
+0
+
+Qchange_period_PNE 1
+0
+
+Qchange_period_PNO 1
+0
+
+Qchange_period_SBS  1
+0
+
+Qchange_period_SBA  1
+0
+
+Qchange_period_SBO 1
+0
+
+Qchange_period_WHM 1
+0
+
+Qchange_period_WHH 1
+0
+
+Qchange_period_WHO 1
+0
+
+Qchange_period_WHA 1
+0
+
+Qchange_period_WHB 1
+0
+
+Qchange_period_WHC 1
+0
+
+Qchange_period_ZL  1
+0
+
+Qchange_period_ZG  1
+0
+
+Qchange_period_BF  1
+0
+
+Qchange_period_BM  1
+0
+
+Qchange_period_CEP 1
+0
+
+Qchange_period_KR 1
+0
+
+Qchange_period_BD  1
+0
+
+Qchange_period_IZ  1
+0
+
+# Arrays to indicate new level of catchability for that group. It a a multiplcation factor 
+# relative to the original level of catchability. There must be as many entries in this
+# array as the MAXIMUM number of changes in catchability across all groups.
+Qchange_mult_FP 1
+0
+
+Qchange_mult_FM 1
+0
+
+Qchange_mult_FT 1
+0
+
+Qchange_mult_FI 1
+0
+
+Qchange_mult_SF 1
+0
+
+Qchange_mult_SE 1
+0
+
+Qchange_mult_SL 1
+0
+
+Qchange_mult_SC 1
+0
+
+Qchange_mult_SO 1
+0
+
+Qchange_mult_PNA 1
+0
+
+Qchange_mult_PNE 1
+0
+
+Qchange_mult_PNO 1
+0
+
+Qchange_mult_SBS  1
+0
+
+Qchange_mult_SBA  1
+0
+
+Qchange_mult_SBO 1
+0
+
+Qchange_mult_WHM 1
+0
+
+Qchange_mult_WHH 1
+0
+
+Qchange_mult_WHA 1
+0
+
+Qchange_mult_WHB 1
+0
+
+Qchange_mult_WHC 1
+0
+
+Qchange_mult_WHO 1
+0
+
+Qchange_mult_ZL  1
+0
+
+Qchange_mult_ZG  1
+0
+
+Qchange_mult_BF  1
+0
+
+Qchange_mult_BM  1
+0
+
+Qchange_mult_CEP 1
+0
+
+Qchange_mult_KR  1
+0
+
+Qchange_mult_BD  1
+0
+
+Qchange_mult_IZ  1
+0
+
+# Changes in fishing mortality through time - number of changes of fishing mortality
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+
+FP_mFC_changes 4
+0 0 0 0
+
+FM_mFC_changes 4
+0 0 0 0
+
+FT_mFC_changes 4
+0 0 0 0
+
+FI_mFC_changes 4
+0 0 0 0
+
+SF_mFC_changes 4
+0 0 0 0
+
+SE_mFC_changes 4
+0 0 0 0
+
+SL_mFC_changes 4
+0 0 0 0
+
+SC_mFC_changes 4
+0 0 0 0
+
+SO_mFC_changes 4
+0 0 0 0
+
+PNA_mFC_changes 4
+0 0 0 0
+
+PNE_mFC_changes 4
+0 0 0 0
+
+PNO_mFC_changes 4
+0 0 0 0
+
+SBS_mFC_changes  4
+0 0 0 0
+
+SBA_mFC_changes  4
+0 0 0 0
+
+SBO_mFC_changes 4
+0 0 0 0
+
+WHM_mFC_changes 4
+0 0 0 0
+
+WHH_mFC_changes 4
+0 0 0 0
+
+WHO_mFC_changes 4
+0 0 0 0
+
+WHA_mFC_changes 4
+0 0 0 0
+
+WHB_mFC_changes 4
+0 0 0 0
+
+WHC_mFC_changes 4
+0 0 0 0
+
+ZL_mFC_changes  4
+0 0 0 0
+
+ZG_mFC_changes  4
+0 0 0 0
+
+BF_mFC_changes 4
+0 0 0 0
+
+BM_mFC_changes 4
+0 0 0 0
+
+CEP_mFC_changes 4
+0 0 0 0
+
+KR_mFC_changes 4
+0 0 0 0
+
+BD_mFC_changes  4
+0 0 0 0
+
+IZ_mFC_changes  4
+0 0 0 0
+
+# Arrays to indicate when each change in fishing mortality begins (days from run start).
+# There must be as many entries in this array as the MAXIMUM number of changes in fishing mortality
+# across all groups (e.g. if the highest number of changes for a single fishery by a single
+# group is 6 then there must be 6 entries etc).
+mFCchange_start_FP 1
+0
+
+mFCchange_start_FM 1
+0
+
+mFCchange_start_FT 1
+0
+
+mFCchange_start_FI 1
+0
+
+mFCchange_start_SF 1
+0
+
+mFCchange_start_SE 1
+0
+
+mFCchange_start_SL 1
+0
+
+mFCchange_start_SC 1
+0
+
+mFCchange_start_SO 1
+0
+
+mFCchange_start_PNA 1
+0
+
+mFCchange_start_PNE 1
+0
+
+mFCchange_start_PNO 1
+0
+
+mFCchange_start_SBS  1
+0
+
+mFCchange_start_SBA  1
+0
+
+mFCchange_start_SBO 1
+0
+
+mFCchange_start_WHM 1
+0
+
+mFCchange_start_WHH 1
+0
+
+mFCchange_start_WHO 1
+0
+
+mFCchange_start_WHA 1
+0
+
+mFCchange_start_WHB 1
+0
+
+mFCchange_start_WHC 1
+0
+
+mFCchange_start_ZL  1
+0
+
+mFCchange_start_ZG  1
+0
+
+mFCchange_start_BF  1
+0
+
+mFCchange_start_BM  1
+0
+
+mFCchange_start_CEP 1
+0
+
+mFCchange_start_KR  1
+0
+
+mFCchange_start_BD  1
+0
+
+mFCchange_start_IZ  1
+0
+
+# Arrays to indicate period over which change in fishing mortality occurs (days).
+# There must be as many entries in this array as the MAXIMUM number of changes in fishing mortality
+# across all groups.
+mFCchange_period_FP 1
+0
+
+mFCchange_period_FM 1
+0
+
+mFCchange_period_FT 1
+0
+
+mFCchange_period_FI 1
+0
+
+mFCchange_period_SF 1
+0
+
+mFCchange_period_SE 1
+0
+
+mFCchange_period_SL 1
+0
+
+mFCchange_period_SC 1
+0
+
+mFCchange_period_SO 1
+0
+
+mFCchange_period_PNA 1
+0
+
+mFCchange_period_PNE 1
+0
+
+mFCchange_period_PNO 1
+0
+
+mFCchange_period_SBS  1
+0
+
+mFCchange_period_SBA  1
+0
+
+mFCchange_period_SBO 1
+0
+
+mFCchange_period_WHM 1
+0
+
+mFCchange_period_WHH 1
+0
+
+mFCchange_period_WHO 1
+0
+
+mFCchange_period_WHA 1
+0
+
+mFCchange_period_WHB 1
+0
+
+mFCchange_period_WHC 1
+0
+
+mFCchange_period_ZL  1
+0
+
+mFCchange_period_ZG  1
+0
+
+mFCchange_period_BF  1
+0
+
+mFCchange_period_BM  1
+0
+
+mFCchange_period_CEP 1
+0
+
+mFCchange_period_KR 1
+0
+
+mFCchange_period_BD  1
+0
+
+mFCchange_period_IZ  1
+0
+
+# Arrays to indicate new level of fishing mortality for that group. It a a multiplcation factor 
+# relative to the original level of fishing mortality. There must be as many entries in this
+# array as the MAXIMUM number of changes in fishing mortality across all groups.
+mFCchange_mult_FP 1
+0
+
+mFCchange_mult_FM 1
+0
+
+mFCchange_mult_FT 1
+0
+
+mFCchange_mult_FI 1
+0
+
+mFCchange_mult_SF 1
+0
+
+mFCchange_mult_SE 1
+0
+
+mFCchange_mult_SL 1
+0
+
+mFCchange_mult_SC 1
+0
+
+mFCchange_mult_SO 1
+0
+
+mFCchange_mult_PNA 1
+0
+
+mFCchange_mult_PNE 1
+0
+
+mFCchange_mult_PNO 1
+0
+
+mFCchange_mult_SBS  1
+0
+
+mFCchange_mult_SBA  1
+0
+
+mFCchange_mult_SBO 1
+0
+
+mFCchange_mult_WHM 1
+0
+
+mFCchange_mult_WHH 1
+0
+
+mFCchange_mult_WHA 1
+0
+
+mFCchange_mult_WHB 1
+0
+
+mFCchange_mult_WHC 1
+0
+
+mFCchange_mult_WHO 1
+0
+
+mFCchange_mult_ZL  1
+0
+
+mFCchange_mult_ZG  1
+0
+
+mFCchange_mult_BF  1
+0
+
+mFCchange_mult_BM  1
+0
+
+mFCchange_mult_CEP 1
+0
+
+mFCchange_mult_KR  1
+0
+
+mFCchange_mult_BD  1
+0
+
+mFCchange_mult_IZ  1
+0
+
+# Changes in catchability through time - number of changes of catchability
+# Assumes fisheries in order
+# KRF_id FTF_id FIF_id OF_id
+
+FP_TAC_changes 4
+0 0 0 0
+
+FM_TAC_changes 4
+0 0 0 0
+
+FT_TAC_changes 4
+0 0 0 0
+
+FI_TAC_changes 4
+0 0 0 0
+
+SF_TAC_changes 4
+0 0 0 0
+
+SE_TAC_changes 4
+0 0 0 0
+
+SL_TAC_changes 4
+0 0 0 0
+
+SC_TAC_changes 4
+0 0 0 0
+
+SO_TAC_changes 4
+0 0 0 0
+
+PNA_TAC_changes 4
+0 0 0 0
+
+PNE_TAC_changes 4
+0 0 0 0
+
+PNO_TAC_changes 4
+0 0 0 0
+
+SBS_TAC_changes  4
+0 0 0 0
+
+SBA_TAC_changes  4
+0 0 0 0
+
+SBO_TAC_changes 4
+0 0 0 0
+
+WHM_TAC_changes 4
+0 0 0 0
+
+WHH_TAC_changes 4
+0 0 0 0
+
+WHO_TAC_changes 4
+0 0 0 0
+
+WHA_TAC_changes 4
+0 0 0 0
+
+WHB_TAC_changes 4
+0 0 0 0
+
+WHC_TAC_changes 4
+0 0 0 0
+
+ZL_TAC_changes  4
+0 0 0 0
+
+ZG_TAC_changes  4
+0 0 0 0
+
+BF_TAC_changes 4
+0 0 0 0
+
+BM_TAC_changes 4
+0 0 0 0
+
+CEP_TAC_changes 4
+0 0 0 0
+
+KR_TAC_changes 4
+0 0 0 0
+
+BD_TAC_changes  4
+0 0 0 0
+
+IZ_TAC_changes  4
+0 0 0 0
+
+# Arrays to indicate when each change in catchability begins (days from run start).
+# There must be as many entries in this array as the MAXIMUM number of changes in catchability
+# across all groups (e.g. if the highest number of changes for a single fishery by a single
+# group is 6 then there must be 6 entries etc).
+TACchange_start_FP 1
+0
+
+TACchange_start_FM 1
+0
+
+TACchange_start_FT 1
+0
+
+TACchange_start_FI 1
+0
+
+TACchange_start_SF 1
+0
+
+TACchange_start_SE 1
+0
+
+TACchange_start_SL 1
+0
+
+TACchange_start_SC 1
+0
+
+TACchange_start_SO 1
+0
+
+TACchange_start_PNA 1
+0
+
+TACchange_start_PNE 1
+0
+
+TACchange_start_PNO 1
+0
+
+TACchange_start_SBS  1
+0
+
+TACchange_start_SBA  1
+0
+
+TACchange_start_SBO 1
+0
+
+TACchange_start_WHM 1
+0
+
+TACchange_start_WHH 1
+0
+
+TACchange_start_WHO 1
+0
+
+TACchange_start_WHA 1
+0
+
+TACchange_start_WHB 1
+0
+
+TACchange_start_WHC 1
+0
+
+TACchange_start_ZL  1
+0
+
+TACchange_start_ZG  1
+0
+
+TACchange_start_BF  1
+0
+
+TACchange_start_BM  1
+0
+
+TACchange_start_CEP 1
+0
+
+TACchange_start_KR 1
+0
+
+TACchange_start_BD  1
+0
+
+TACchange_start_IZ  1
+0
+
+# Arrays to indicate period over which change in catchability occurs (days).
+# There must be as many entries in this array as the MAXIMUM number of changes in catchability
+# across all groups.
+TACchange_period_FP 1
+0
+
+TACchange_period_FM 1
+0
+
+TACchange_period_FT 1
+0
+
+TACchange_period_FI 1
+0
+
+TACchange_period_SF 1
+0
+
+TACchange_period_SE 1
+0
+
+TACchange_period_SL 1
+0
+
+TACchange_period_SC 1
+0
+
+TACchange_period_SO 1
+0
+
+TACchange_period_PNA 1
+0
+
+TACchange_period_PNE 1
+0
+
+TACchange_period_PNO 1
+0
+
+TACchange_period_SBS  1
+0
+
+TACchange_period_SBA  1
+0
+
+TACchange_period_SBO 1
+0
+
+TACchange_period_WHM 1
+0
+
+TACchange_period_WHH 1
+0
+
+TACchange_period_WHO 1
+0
+
+TACchange_period_WHA 1
+0
+
+TACchange_period_WHB 1
+0
+
+TACchange_period_WHC 1
+0
+
+TACchange_period_ZL  1
+0
+
+TACchange_period_ZG  1
+0
+
+TACchange_period_BF  1
+0
+
+TACchange_period_BM  1
+0
+
+TACchange_period_CEP 1
+0
+
+TACchange_period_KR  1
+0
+
+TACchange_period_BD  1
+0
+
+TACchange_period_IZ  1
+0
+
+# Arrays to indicate new level of catchability for that group. It a a multiplcation factor 
+# relative to the original level of catchability. There must be as many entries in this
+# array as the MAXIMUM number of changes in catchability across all groups.
+TACchange_mult_FP 1
+0
+
+TACchange_mult_FM 1
+0
+
+TACchange_mult_FT 1
+0
+
+TACchange_mult_FI 1
+0
+
+TACchange_mult_SF 1
+0
+
+TACchange_mult_SE 1
+0
+
+TACchange_mult_SL 1
+0
+
+TACchange_mult_SC 1
+0
+
+TACchange_mult_SO 1
+0
+
+TACchange_mult_PNA 1
+0
+
+TACchange_mult_PNE 1
+0
+
+TACchange_mult_PNO 1
+0
+
+TACchange_mult_SBS  1
+0
+
+TACchange_mult_SBA  1
+0
+
+TACchange_mult_SBO 1
+0
+
+TACchange_mult_WHM 1
+0
+
+TACchange_mult_WHH 1
+0
+
+TACchange_mult_WHA 1
+0
+
+TACchange_mult_WHB 1
+0
+
+TACchange_mult_WHC 1
+0
+
+TACchange_mult_WHO 1
+0
+
+TACchange_mult_ZL  1
+0
+
+TACchange_mult_ZG  1
+0
+
+TACchange_mult_BF  1
+0
+
+TACchange_mult_BM  1
+0
+
+TACchange_mult_CEP 1
+0
+
+TACchange_mult_KR  1
+0
+
+TACchange_mult_BD  1
+0
+
+TACchange_mult_IZ  1
+0
+
+## Performance measures coefficients
+enforce_coefft  1.0    Coefficient for  management enforcement performance measure
+habcoefft       1.0    Coefficient for habitat impacts performance measure 
+tepcoefft       1.0    Coefficient for interactions with TEP groups performance measure 
+sharkcoefft     1.0    Coefficient for interactions with shark groups performance measure 
+
+## Effort panalties applied for fishing in different locations - Chris Wilcox idea to steer people to desired locaiton when using effort caps and ITE
+EffortPenaltyKRF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+EffortPenaltyFTF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+EffortPenaltyFIF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+EffortPenaltyOF    28
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+# Whether want CPUE per shot generated for a fishery - and if yes which fisheries
+flagStoreShotCPUE    0           Flag indicating whether or not shot level CPUE data to be generated and stored: 1=store shot level CPUE, 0=off
+flagStoreCPUE        0           Flag indicating whether or not shot level CPUE data to be generated and stored: 1=store shot level CPUE, 0=off
+
+flagPerShotCPUE_FP   4
+0 0 0 0
+
+flagPerShotCPUE_FM   4
+0 0 0 0
+
+flagPerShotCPUE_FT   4
+0 0 0 0
+
+flagPerShotCPUE_FI   4
+0 0 0 0
+
+flagPerShotCPUE_SF   4
+0 0 0 0
+
+flagPerShotCPUE_SE   4
+0 0 0 0
+
+flagPerShotCPUE_SL   4
+0 0 0 0
+
+flagPerShotCPUE_SC   4
+0 0 0 0
+
+flagPerShotCPUE_SO   4
+0 0 0 0
+
+flagPerShotCPUE_PNA   4
+0 0 0 0
+
+flagPerShotCPUE_PNE   4
+0 0 0 0
+
+flagPerShotCPUE_PNO   4
+0 0 0 0
+
+flagPerShotCPUE_SBS   4
+0 0 0 0
+
+flagPerShotCPUE_SBA   4
+0 0 0 0
+
+flagPerShotCPUE_SBO   4
+0 0 0 0
+
+flagPerShotCPUE_WHM   4
+0 0 0 0
+
+flagPerShotCPUE_WHH   4
+0 0 0 0
+
+flagPerShotCPUE_WHO   4
+0 0 0 0
+
+flagPerShotCPUE_WHA   4
+0 0 0 0
+
+flagPerShotCPUE_WHB   4
+0 0 0 0
+
+flagPerShotCPUE_WHC   4
+0 0 0 0
+
+flagPerShotCPUE_ZL   4
+0 0 0 0
+
+flagPerShotCPUE_ZG   4
+0 0 0 0
+
+flagPerShotCPUE_BF   4
+0 0 0 0
+
+flagPerShotCPUE_BM   4
+0 0 0 0
+
+flagPerShotCPUE_CEP   4
+0 0 0 0
+
+flagPerShotCPUE_KR    4
+0 0 0 0
+
+flagPerShotCPUE_BD   4
+0 0 0 0
+
+flagPerShotCPUE_IZ   4
+0 0 0 0
+
