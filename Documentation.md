@@ -12,7 +12,7 @@
 Added column iBioEroder - set all groups to 0
 
 #### Notes
-EA_model_files only running for a few days (~45) using the EA files. IKR are exploding at the end, causing flow error. Temp, salinity and particle transport looks good. Error could be due to IKR recruitment parameters.
+EA_model_files only running for a few days (~45). IKR are exploding at the end, causing flow error. Temp, salinity and particle transport looks good. Error could be due to IKR recruitment parameters.
 
 Sediment analysis folder is working but excludes IKR.
 
