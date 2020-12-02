@@ -86,7 +86,7 @@ flagmodelArag    0         Arag?
 flagq10          1         Q10 corrections used in the model: 1 = yes, 0 = no                  1
 O2case           3         Oxygen limitation used: 0 = ambient O2, 1 = based on depth, 2 = IGBEM, 3 = quadratic lim   3
 flagnut          0         Nutrient lim used: 0=Leibig (min), 1=multiplicative, 2=WQI          0
-flagmicro        0         Nutrient lim by micronutrient: 0 = no, 1 = yes                      0
+flagmicro        1         Nutrient lim by micronutrient: 0 = no, 1 = yes                      0
 flagtempchange   0         Mean temperature changes: 0 = no,  1 = yes                          0
 flagsaltchange   0         Mean salinity changes: 0 = no,  1 = yes                             0
 flagstarve       1         Give starvation notices: 0 = no, 1 = yes                            0  
@@ -536,7 +536,7 @@ X_ON             16.0      Redfield ratio of O:N                                
 X_CN             5.7       Redfield ratio of C:N                                               5.7
 X_CHLN           7.0       Ratio of chla to N                                                  7.0
 X_SiN            3.0       Redfield ratio of Si:N                                              3.0
-X_FeN            30000.0   Redfield ratio of Fe:N                                              30000.0
+X_FeN            30   Redfield ratio of Fe:N                                              30000.0
 
 #AFDW to wet weight  
 k_wetdry         20.0      Ratio of Wet weight to AFDW                                         20.0                                  
