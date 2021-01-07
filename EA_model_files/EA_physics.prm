@@ -247,7 +247,7 @@ eddy_S4   28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
 # Eddy sclaing of vertical mixing
-eddy_vertmix 0 # Javier set 1
+eddy_vertmix 1 # Javier set 1
 
 # Coefficient used in scaling of vertical exchanges by eddies
 eddy_mixscale 10.0
