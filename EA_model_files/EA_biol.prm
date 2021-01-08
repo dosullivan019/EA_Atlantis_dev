@@ -1,6 +1,6 @@
 ## Biological parameter file for use with the southeast Australian version of the Boxmodel (Atlantis) model
 #
-## For reference, the following are the codenames for each biological component. 
+## For reference, the following are the codenames for each biological component.
 # Those marked with a + also have Si pool too. Those marked special have three pools, a sructural N
 # (mg N individual-1), reserve N (mg N individual-1) and numbers (per box)
 # Description                   Symbol  Units
@@ -11,19 +11,19 @@
 # Ice mixotrophs                  IDF    mg N m-2
 # Mesopelagics fish               FM     special
 # Toothfish                       FT     special (Benthopelagic fish: Icefish, pelagic fish)
-# Fish seal                       SF     special Elephant seal 
-# Krill seal                      SK     special Crabeater seal 
+# Fish seal                       SF     special Elephant seal
+# Krill seal                      SK     special Crabeater seal
 # Krill penguins                  PNK    special Adelie penguins
-# Fish penguins                   PNF    special Emperor penguins 
-# Flying birds                    SB     special Albatross Skuas Other seabirds 
+# Fish penguins                   PNF    special Emperor penguins
+# Flying birds                    SB     special Albatross Skuas Other seabirds
 # Minke whales                    WHM    special
 # Baleen whales                   WHH    special
 # Top predator                    TP     special Leopard seal and Orca
 # Sperm whales                    WHO    special
 # Krill                           KR     mg N m-3
 # Ice Krill                       IKR    mg N m-3
-# Ice zoobiota                    IZ     mg N m-3  
-# Salps                           ZG     mg N m-3  
+# Ice zoobiota                    IZ     mg N m-3
+# Salps                           ZG     mg N m-3
 # Large carnivorous zooplankton   ZL     mg N m-3
 # Copepods                        ZM     mg N m-3 (small, large, mesozoo)
 # Ice bacteria                    IB     mg N m-2
@@ -42,12 +42,12 @@
 # Biogenic silica                 DSi    mg Si m-3
 # Dissolved oxygen                O2     mg O m-3
 # Light                           IRR    W m-2
-# 
-# 
+#
+#
 ## Parameter list
 # Symbol       Value           Description                                  Units        Default Value
-#                                                                                             
-## Flags and switches      
+#
+## Flags and switches
 # Those determining set-up and recording
 ecotest          4         Messages: 0=no, 1=part, 2=more, 3=all, 4=fluxs, 5= do 1 iter only  4
 availflag        1         Switch to filter flows based on active groups                      1
@@ -57,7 +57,7 @@ flagrandom       1         Flag indicating whether add random wobble in aging/sp
 flag_modify_KWSR 0
 
 # Parameters defining the numbers of certain types of groups (needed to define parameter arrays in the
-# initialisation section of the model, best left untouched for now) 
+# initialisation section of the model, best left untouched for now)
 K_num_invmig     9         Maximum number of vertically migrating invertebrate groups          9
 
 readin_popratio  0         Switch to indicate whether loading pre-existing age distributions or not 0
@@ -74,8 +74,8 @@ flagBGlim        1         Switch to turn BG population limitation on/off: off=0
 flagBFlim        1         Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
 flagMAlim        1         Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
 
-# Those determining which environmental 
-# interaction formulations used      
+# Those determining which environmental
+# interaction formulations used
 flagtrackpops    1         Flag to indicate whether yearly stock value required                1
 flagseason       1         Flag of seasonal change, 0 for no, 1 yes                            1
 flaglight        0         Light adaptation: 1 = on, 0 = off                                   1
@@ -89,33 +89,33 @@ flagnut          0         Nutrient lim used: 0=Leibig (min), 1=multiplicative, 
 flagmicro        1         Nutrient lim by micronutrient: 0 = no, 1 = yes                      0
 flagtempchange   0         Mean temperature changes: 0 = no,  1 = yes                          0
 flagsaltchange   0         Mean salinity changes: 0 = no,  1 = yes                             0
-flagstarve       1         Give starvation notices: 0 = no, 1 = yes                            0  
+flagstarve       1         Give starvation notices: 0 = no, 1 = yes                            0
 flagdegrade      0         Degrade coastal habitats (effects growth of IDF, IPL and BFS)         0
 flagroc          0         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
 flaghomog_sp     1         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
 flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = track cohorts    0
 flagsenesce      1         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
-lim_sun_hours 1            Here, 1 is set for normal daylight hour, 1 is for southpolar        
+lim_sun_hours 1            Here, 1 is set for normal daylight hour, 1 is for southpolar
 
 flag_macro_model  0       Whether want to use the Savina macrophyte model (1) or not (0)
 
 ######## TO DO copied from ETAS model ########
-##############################################                
+##############################################
 swr_scalar       0.45      # Proportion of shortwave radiation available to photosynthesis
 swr_const        1367.0  #  Constant in the equation for the shortwave radiation available to photosynthesis
-swr_cos_coefft      0.034   #  Coefficient of the cos term in the equation for the shortwave radiation available to photosynthesis 
+swr_cos_coefft      0.034   #  Coefficient of the cos term in the equation for the shortwave radiation available to photosynthesis
 swr_cos_offset      0.0      #  Offset term in the cos term in the equation for the shortwave radiation available to photosynthesis
-############################################## 
-############################################## 
+##############################################
+##############################################
 
-flag_olddiet 0        Whether to use old (1) or new (0) diet calculations 1   
+flag_olddiet 0        Whether to use old (1) or new (0) diet calculations 1
 UseHardFeedingWindow  1    Whether to use Heaviside based feeding window (1) or smoother curve (0)   1
 
 ## Ontogenetic diet preferences - one entry per age class.
 flag_fine_ontogenetic_diets 0    For any new model you want to use the new calculations. The old one is only left there to be nice to people with legacy models. It really shouldn't be used anymore as its convoluted and not as correct as the new method
 flag_shrinkfat 0    A flag indicating whether growth of fish allows fish to lose fat (1) or not (0) - only for fully age structured groups
-flag_predratiodepend 0   
+flag_predratiodepend 0
 flag_report_water_detritus 0
 ## Habitat dependency
 ## Ontogenetic diet preferences - one entry per age class.
@@ -163,16 +163,16 @@ flagplankfishWHO      0         WHO: 1 = yes, 0 = no                            
 flagplankfishWHH      0         WHH: 1 = yes, 0 = no                                                1
 flagplankfishTP       0         WHA: 1 = yes, 0 = no                                                1
 flagplankfishWHM      0         WHM: 1 = yes, 0 = no                                                1
-flagplankfishKR       1         KR: 1 = yes, 0 = no                                                1   
-flagplankfishIKR       1         KR: 1 = yes, 0 = no                                                1   
+flagplankfishKR       1         KR: 1 = yes, 0 = no                                                1
+flagplankfishIKR       1         KR: 1 = yes, 0 = no                                                1
 
 # Recruitment flags
 flagtrecruitdistrib 1      0=humped recruit arrival distrib, 1=flat distrib of recruits        1
 
 # Vertebrate reproduction related flags. The flagrecruit entries refer to the recruitment function used.
 # 1=const, 2=dependent on prim producers (Chla), 3=Beverton-Holt, 4=lognormal, 5=dependent on all plankton
-# groups not just Chla, 6=Bev-Holt with lognormal variation added, 7=Bev-Holt with "encourage recovery"   
-# 8=Bev-Holt with perscribed "recovery", 9=Ricker, 10=Standard Bev-Holt (no explict use of spawn included)      
+# groups not just Chla, 6=Bev-Holt with lognormal variation added, 7=Bev-Holt with "encourage recovery"
+# 8=Bev-Holt with perscribed "recovery", 9=Ricker, 10=Standard Bev-Holt (no explict use of spawn included)
 # 11=pupping/calving linearly dependent on maternal condition, 12=pupping/calving a fixed number per adult
 # spawning, 13=forced timeseries of recruitment
 
@@ -195,9 +195,9 @@ flagrecruitWHM  12                                                              
 # occurs outside model domain (0 = no, 1 = yes) We did not set & ETAS model also set as 0
 
 
-# Vertebrate reproduction strength flags (1=very strong year classes possible, relative strength 
+# Vertebrate reproduction strength flags (1=very strong year classes possible, relative strength
 # set using recruitRange and 0=only moderate variation in year class strength possible, mainly
-# for top predators with few young per reproductive event, relative strength set using recruitRangeFlat)     
+# for top predators with few young per reproductive event, relative strength set using recruitRangeFlat)
 flagrecpeakFM   1                                                                             1
 flagrecpeakFT   1                                                                             1
 flagrecpeakSF   0                                                                             1
@@ -209,8 +209,8 @@ flagrecpeakWHO  0                                                               
 flagrecpeakWHH  0                                                                             1
 flagrecpeakTP   0                                                                             1
 flagrecpeakWHM  0                                                                             1
-flagrecpeakKR   1                                                                             1   
-flagrecpeakIKR   1                                                                             1                 
+flagrecpeakKR   1                                                                             1
+flagrecpeakIKR   1                                                                             1
 
 # Local recruitment (1 = demersal and piscivorous fish recruit at parental locations, 0 = independent distribution, 2 = external reproduction)
 # This potential distribution is modified based on whether the recruits actually recruit to the same location as the adults (flaglocalrecruit_XXX=1) and #whether local temperature, salinity, habitat conditions are suitable.
@@ -225,9 +225,9 @@ flaglocalrecruitSB   1                                                          
 flaglocalrecruitWHO  1                                                                        1
 flaglocalrecruitWHH  1                                                                        1
 flaglocalrecruitTP   1                                                                        1
-flaglocalrecruitWHM  1 
+flaglocalrecruitWHM  1
 flaglocalrecruitIKR  0                                                                       1
-flaglocalrecruitKR  0 
+flaglocalrecruitKR  0
 
 # Flag indicating whether the vertebrate group bearslive young (0 = no, 1 = yes)
 #(in which case the recruits arrive where the adults are)
@@ -245,7 +245,7 @@ flagbearliveWHM  1                                                              
 flagbearliveKR   0                                                                            0
 flagbearliveIKR   0                                                                            0
 
-# Flag indicating whether the vertebrate group provides parental care for young until maturity 
+# Flag indicating whether the vertebrate group provides parental care for young until maturity
 # (0 = no, 1 = yes, -1 = semelparous so die after reproduction)
 flagmotherFM    0                                                                              0
 flagmotherFT    0                                                                              0
@@ -261,7 +261,7 @@ flagmotherWHM   1                                                               
 flagmotherKR    0                                                                              0
 flagmotherIKR    0                                                                              0
 
-# Flag indicating whether feed during the spawning period (0 = no, 1 = yes)       
+# Flag indicating whether feed during the spawning period (0 = no, 1 = yes)
 feed_while_spawnFM   1                                                                        0
 feed_while_spawnFT   1                                                                        0
 feed_while_spawnSF   1                                                                        0
@@ -275,10 +275,10 @@ feed_while_spawnTP   1                                                          
 feed_while_spawnWHM  1                                                                        0
 
 feed_while_spawnIKR  1                                                                        0
-feed_while_spawnKR   1   
+feed_while_spawnKR   1
 
 # Switch indicating whether or not efficiency of assimilation is temperature dependent
-# 0 = no (same efficiency regardless), 1 = poorer when cooler, 2 = poorer when warmer 
+# 0 = no (same efficiency regardless), 1 = poorer when cooler, 2 = poorer when warmer
 flagq10effPPL        0
 flagq10effPPS        0
 flagq10effPDF        0
@@ -306,20 +306,20 @@ flagq10effBM         0
 flagq10effIKR        0
 flagq10effKR         0
 
-# Temperature sensitivty of vertebrates and CEP, KR: 0 = no, 1 = yes         
-flagtempsensitiveFM 1        
-flagtempsensitiveFT 1               
-flagtempsensitiveSF 1                 
-flagtempsensitiveSK 1           
-flagtempsensitivePNK 1      
-flagtempsensitivePNF 1         
-flagtempsensitiveSB 1     
-flagtempsensitiveWHO 1     
-flagtempsensitiveWHH 1     
-flagtempsensitiveTP  1      
-flagtempsensitiveWHM 1      
-flagtempsensitiveIKR 1      
-flagtempsensitiveKR 1      
+# Temperature sensitivty of vertebrates and CEP, KR: 0 = no, 1 = yes
+flagtempsensitiveFM 1
+flagtempsensitiveFT 1
+flagtempsensitiveSF 1
+flagtempsensitiveSK 1
+flagtempsensitivePNK 1
+flagtempsensitivePNF 1
+flagtempsensitiveSB 1
+flagtempsensitiveWHO 1
+flagtempsensitiveWHH 1
+flagtempsensitiveTP  1
+flagtempsensitiveWHM 1
+flagtempsensitiveIKR 1
+flagtempsensitiveKR 1
 flagtempsensitiveIPL 0
 flagtempsensitiveIDF 0
 flagtempsensitivePPS 0
@@ -342,21 +342,21 @@ flagtempsensitiveIB  0
 #SB_Arsenic_uptake_option 1
 
 
-#Uptake rate in mg/m^3 per second. 
+#Uptake rate in mg/m^3 per second.
 
 #SB_Arsenic_uptake_rate 1
 
 
-# The concentraction that will kill 100% of the population. 
+# The concentraction that will kill 100% of the population.
 
 #SB_Arsenic_LD100 1000
 
 
-# The concentraction that will kill 50% of the population. 
+# The concentraction that will kill 50% of the population.
 
 #SB_Arsenic_LD50 100
 
-#The number of seconds that it takes to kill of 50% of the population. Not 100% sure about this - based on Invitro code which is not documented. 
+#The number of seconds that it takes to kill of 50% of the population. Not 100% sure about this - based on Invitro code which is not documented.
 
 #SB_Arsenic_TimeToLD50 100
 
@@ -380,9 +380,9 @@ flagtempsensitiveIB  0
 flag_rel_cover  0  to show ehther using cumulative habitat (0) or average relative cover (1) when interacting with predators
 
 # 1st one just to know if it is necessary to read the whole list of dependency par
-flaghabdepend 0 general vertebrate demersal habitat dependency: 0 = no, 1 = yes 0   
+flaghabdepend 0 general vertebrate demersal habitat dependency: 0 = no, 1 = yes 0
 
-# The old XX_habdepend flag moved to csv file isHabDepend 
+# The old XX_habdepend flag moved to csv file isHabDepend
 
 # Vertebrate density dependent movement related flags
 flagtempdepend   0         0 = off, 1 = temperature preferences used
@@ -429,7 +429,7 @@ flagZMMigrate    0         0=always remain within the model domain, 1+=migrate i
 flagIKRMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model
 flagKRMigrate    0         0=always remain within the model domain, 1+=migrate in/out of the model
 
-# Flags for migration out of model domain (maximum number of times juvenile OR 
+# Flags for migration out of model domain (maximum number of times juvenile OR
 # adult stages must leave the model domain). For example if juvenile FVT leave once,
 # but adults leave 3 times then enter 3 here
 
@@ -446,7 +446,7 @@ flagWHMMigrate  0         0=always remain within the model domain, 1+=migrate in
 flagTPMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model
 
 
-# Predation formulation switches. 0=Holling type II, 1=Holling type I, 2=Holling type III, 
+# Predation formulation switches. 0=Holling type II, 1=Holling type I, 2=Holling type III,
 # 3=ECOSIM (currently disabled), 4=min-max, 5=Size specific Holling type III
 predcase_IZ      0                                                                             0
 predcase_ZG      0                                                                             0
@@ -467,7 +467,7 @@ predcase_WHM     0                                                              
 predcase_TP      0                                                                             0
 
 
-# Period of activity for consumer groups 
+# Period of activity for consumer groups
 flagIZday        2         Active: 2 = no preference, 1 = day, 0 = night                       2
 flagZGday        2         Active: 2 = no preference, 1 = day, 0 = night                       2
 flagZMday        2         Active: 2 = no preference, 1 = day, 0 = night                       2
@@ -490,17 +490,17 @@ flagKRday        2         Active: 2 = no preference, 1 = day, 0 = night        
 flagIKRday       2         Active: 2 = no preference, 1 = day, 0 = night                       2
 
 ## Physical and chemical parameters
-# Bioturbation 
+# Bioturbation
 Enviro_turb      0.000002  Background level of bioturbation (physcial mixing)                  0.000002
 K_TUR            116.0     Half saturation of bioturbation                                     116.0
-KTUR_BD          1.0       Bioturbation contribution by deposit feeders                        1.0 
+KTUR_BD          1.0       Bioturbation contribution by deposit feeders                        1.0
 #KTUR_BM          0.5       Bioturbation contribution by macrozoobenthos               0.5
 #KTUR_BF 0.5
 
 K_TUR_DEP        0.02      Bioturbation depth                                        m         0.02
 K_MAX_TUR        10.0      Maximum contributions to bioturbation                               10.0
 
-# Bioirrigation  
+# Bioirrigation
 K_IRR            101.0     Half saturation of bioirrigation                                    101.0
 KIRR_BC          1.0       Bioirrigation contribution by infaunal carniv                       1.0
 KIRR_BD          1.0       Bioirrigation contribution by deposit feeders                       1.0
@@ -513,13 +513,13 @@ r_DC_T15         0.5       Rate of carrion breakdown to detritus at 15 deg C d-1
 r_DL_T15         0.1       Rate of labile detrital breakdown at 15 deg C     d-1               0.1
 r_DR_T15         0.008     Rate of ref detrital breakdown at 15 deg C        d-1               0.008
 r_DON_T15        0.0176   Rate of DON breakdown at 15 deg C                 d-1               0.00176
-r_DSi_T15        0.033     Rate of detrital Si breakdown at 15 deg C         d-1               0.05  (0.04)  
+r_DSi_T15        0.033     Rate of detrital Si breakdown at 15 deg C         d-1               0.05  (0.04)
 
 FDR_DC           0.2       Fraction of carrion that breaks down to refractory detrit           0.1
 FDR_DL           0.2       Fraction of lab detrit that breaks down to refractory detrit        0.2
 FDON_D           0.05      Fraction od DON breakdown that becomes detritus                     0.05
 
-# Nitrification and denitrification 
+# Nitrification and denitrification
 R_0_T15          200       Minimum rate of sediment respiration that supports nitrification    200 - 250
 R_D_T15          10        Peak of nitrification-denitrification curve                         10 - 20
 
@@ -531,17 +531,17 @@ K_conc           2000.0    Half concentration level for nitrification by PFB mg 
 # Adsorption
 p_NH_anad        3.0       Proportion of NH4 adsorped to NH4 dissolved                         3.0
 
-# Redfield   
+# Redfield
 X_ON             16.0      Redfield ratio of O:N                                               16.0
 X_CN             5.7       Redfield ratio of C:N                                               5.7
 X_CHLN           7.0       Ratio of chla to N                                                  7.0
 X_SiN            3.0       Redfield ratio of Si:N                                              3.0
 X_FeN            30   Redfield ratio of Fe:N                                              30000.0
 
-#AFDW to wet weight  
-k_wetdry         20.0      Ratio of Wet weight to AFDW                                         20.0                                  
+#AFDW to wet weight
+k_wetdry         20.0      Ratio of Wet weight to AFDW                                         20.0
 
-# Light penetration through the water column 
+# Light penetration through the water column
 k_w_depth        55.0      Bottom depth marking estuarine vs oceanic water (for light absorp) m  55.0
 k_w_cdepth       205.0     Bottom depth marking coastal from oceanic water (for light absorp) m  205.0
 
@@ -556,7 +556,7 @@ KIOP_shift       0.25      Minimum rate of shift under light adaptation         
 KI_avail         0.5       Available light                                                     0.5
 K_addepth        10.0      Depth down to which adaptation occurs                               10.0
 
-## Temperature effects     
+## Temperature effects
 Q10              2.0       Exponent in temperature effect on rate parameters                   2.0
 temp_coefftB     1.066     Coefficient B in Gary Griffith temperature function                 1.066
 temp_coefftC     0.5       Coefficient C in Gary Griffith temperature function                 1.0
@@ -589,7 +589,7 @@ temp_coefftA_BD      0.851
 temp_coefftA_IKR     0.851
 temp_coefftA_KR      0.851
 
-# Exponent in temperature effect on rate parameters 2  
+# Exponent in temperature effect on rate parameters 2
 q10_PPL 2.0
 q10_PPS 2.0
 q10_PDF 2.0
@@ -713,15 +713,15 @@ pH_sensitivity_model  1    Whether using monod (0) or nonlinear model (1)
 pH_surface_depth          200.0      Depth of surface layer
 pH_mid_depth              1600.0     Depth of midwater layer
 pH_surface_coefft_T       -2.6214    Temperature term coefficient for surface waters
-pH_surface_coefft_S       59.764     Salinity term coefficient for surface waters       
+pH_surface_coefft_S       59.764     Salinity term coefficient for surface waters
 pH_surface_coefft_O       0.0419     Oxygen term coefficient for surface waters
 pH_surface_const          2341.0     Constant term coefficient for surface waters
 pH_mid_coefft_T           -6.3912    Temperature term coefficient for mid-level waters
-pH_mid_coefft_S           87.186     Salinity term coefficient for mid-level waters 
+pH_mid_coefft_S           87.186     Salinity term coefficient for mid-level waters
 pH_mid_coefft_O           -0.1123    Oxygen term coefficient for mid-level waters
 pH_mid_const              2407.9     Constant term coefficient for mid-level waters
 pH_deep_coefft_T          -18.274    Temperature term coefficient for deep waters
-pH_deep_coefft_S          126.66     Salinity term coefficient for deep waters 
+pH_deep_coefft_S          126.66     Salinity term coefficient for deep waters
 pH_deep_coefft_O          -0.781     Oxygen term coefficient for deep waters
 pH_deep_const             2579.6     Constant term coefficient for deep waters
 
@@ -975,7 +975,7 @@ pH_constA_BD      1.0
 #pH_constA_BM      5.5
 pH_constA_IKR     5.0
 pH_constA_KR      5.0
- 
+
 # Base coefficient pH for nonlinear pH impact function
 pH_constB_PPL     1.1705
 pH_constB_PPS     1.0
@@ -1095,7 +1095,7 @@ salt_correction_DL 1.0
 salt_correction_DR 1.0
 
 
-## Tolerances and boundaries 
+## Tolerances and boundaries
 RelTol  0.1   Relative tolerance of the adaptive differentiation scheme 0.1
 Flux_tol 0.2   Tolerance of mass balance assumption per cell mg N m-3 0.1
 min_pool         0.00000001 Minimum pool size                                                0.00000001
@@ -1104,7 +1104,7 @@ min_dens         0.0001    Minimum density of top predators and fish            
 min_channel_depth 0.001  Minimum depth of estuarine channels
 
 ## Biological parameters
-# Primary producer growth 
+# Primary producer growth
 mum_PPL_T15	0.005	Maximum growth rate, large phytoplankton         	 d-1    1.0 - 1.7 	1.7
 mum_PPS_T15	0.13	Maximum growth rate, small (pico) phytoplankton  	 d-1    1.0 - 1.24 	1.26
 mum_IDF_T15	0.3	Maximum growth rate, Ice mixotrophs                      d-1	0.1	1.3
@@ -1113,7 +1113,7 @@ mum_IPL_T15	0.62	Maximum growth rate, Ice diatoms                  	 d-1	0.05	1.
 
 MB_wc   0.01  Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 
-# Primary producer light requirements 
+# Primary producer light requirements
 KI_PPL_T15        10        Light saturation, large phytoplankton             W m-2          10 - 20 20
 KI_PPS_T15        10        Light saturation, small phytoplankton             W m-2          10 - 20 19
 KI_PDF_T15        11        Light saturation, dinoflagellates                 W m-2          10 - 20 14
@@ -1121,43 +1121,43 @@ KI_IDF_T15        0.036     Light saturation, Ice mixotrophs                    
 KI_IPL_T15        0.035     Light saturation, Ice diatoms                        W m-2             65
 #KI_PCO_T15        15        Light saturation, Coccolithophores               W m-2             3
 
-BD_wc   0.01  Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1   
+BD_wc   0.01  Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 eddy_scale       1.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 
-# Primary producer nutrient requirements 
-KN_PPL            1         Half-sat const for PPL growth on DIN               mg N m-3          10 
+# Primary producer nutrient requirements
+KN_PPL            1         Half-sat const for PPL growth on DIN               mg N m-3          10
 KN_PPS            0.67      Half-sat const for PPS growth on DIN (4)           mg N m-3          4
 KN_PDF            0.45      Half-sat const for PDF growth on DIN               mg N m-3          30
 KN_IDF            0.8       Half-sat const for IDF growth on DIN               mg N m-3          20
 KN_IPL            0.9       Half-sat const for IPL growth on DIN               mg N m-3          5
 #KN_PCO           0.5       Half-sat const for PCO growth on DIN               mg N m-3          200
 
-KS_PPL            0.2        Half-sat const for PPL growth on Si                mg Si m-3         20 
-KS_PPS            0         Half-sat const for PPS growth on Si                mg Si m-3         0 
-KS_PDF            0         Half-sat const for PDF growth on Si                mg Si m-3         0 
+KS_PPL            0.2        Half-sat const for PPL growth on Si                mg Si m-3         20
+KS_PPS            0         Half-sat const for PPS growth on Si                mg Si m-3         0
+KS_PDF            0         Half-sat const for PDF growth on Si                mg Si m-3         0
 #KS_PCO           0         Half-sat const for PCO growth on Si                mg Si m-3         100
 KS_IDF            0         Half-sat const for IDF growth on Si                mg Si m-3         0
 KS_IPL            4         Half-sat const for IPL growth on Si                mg Si m-3         0
 
-KF_PPL            1.0         Half-sat const for PPL growth on Micro-nutrient    mg Fe m-3         20 
-KF_PPS            0.78        Half-sat const for PPS growth on Micro-nutrient    mg Fe m-3         0 
-KF_PDF            0.67        Half-sat const for PDF growth on Micro-nutrient    mg Fe m-3         0 
+KF_PPL            1.0         Half-sat const for PPL growth on Micro-nutrient    mg Fe m-3         20
+KF_PPS            0.78        Half-sat const for PPS growth on Micro-nutrient    mg Fe m-3         0
+KF_PDF            0.67        Half-sat const for PDF growth on Micro-nutrient    mg Fe m-3         0
 #KF_PCO            0.67        Half-sat const for PCO growth on Micro-nutrient    mg Fe m-3         100
-KF_IDF            0.5         Half-sat const for IDF growth on Micro-nutrient    mg Fe m-3         0 
-KF_IPL            0.6         Half-sat const for IPL growth on Micro-nutrient    mg Fe m-3         0 
+KF_IDF            0.5         Half-sat const for IDF growth on Micro-nutrient    mg Fe m-3         0
+KF_IPL            0.6         Half-sat const for IPL growth on Micro-nutrient    mg Fe m-3         0
 
-# Bacterial nutrient requirements 
-KN_BB            0         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
+# Bacterial nutrient requirements
+KN_BB            0         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10
 
 # Bacterial population parameters (how much bacterial biomass detritus can support)
 XPB_DL           0.27      Maximum ratio of PB to DL biomass                                0.3 - 0.4
 XBB_DL           0.18      Maximum ratio of BB to DL biomass                                0.15 - 0.2
 XIB_DL           0.2       Maximum ratio of IB to DL biomass                                0.15 - 0.2
- 
+
 XPB_DR           0.012     Maximum ratio of PB to DR biomass                               0.01 - 0.015
 XBB_DR           0.008     Maximum ratio of BB to DR biomass                               0.005 - 0.01
 XIB_DR           0.01      Maximum ratio of IB to DR biomass                               0.005 - 0.01
- 
+
 k_PB             3.0       Shape of PB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max 3.0
 k_BB             3.0       Shape of BB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max     3.0
 k_IB             5.0       Shape of BB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max     3.0
@@ -1165,7 +1165,7 @@ k_IB             5.0       Shape of BB growth eq'n, 1 = linear, 3 = drop before 
 BBthresh         10.0      Threshold BB flux level where damping starts      mg N m-2 s-1      0.1
 BBdamp           0.85      Damping coefficient for BB fluxes                                   0.75
 
-# Space restrictions for basal (epibenthic and some infauna) groups     
+# Space restrictions for basal (epibenthic and some infauna) groups
 BDmax            300000    Maximum deposit feeder biomass                    mg N m-2         500000
 #BFmax           3000      Maximum shallow filter feeder biomass             mg N m-2         2000
 #BMmax           3000      Maximum shallow filter feeder biomass             mg N m-2         2000
@@ -1381,7 +1381,7 @@ Kcov_ad_WHM     3.0       Exponent of refuge relationship with biogenic habitat 
 Kcov_ad_TP      3.0       Exponent of refuge relationship with biogenic habitat for adult WHA 3.0
 Kcov_ad_KR      3.0       Exponent of refuge relationship with biogenic habitat for adult KR 3.0
 Kcov_ad_IKR      3.0       Exponent of refuge relationship with biogenic habitat for adult IKR 3.0
- 
+
 Bcov_ad_FM      0.6       Coefft of refuge relationship with biogenic habitat for adult FM  0.6
 Bcov_ad_FT      0.6       Coefft of refuge relationship with biogenic habitat for adult FT  0.6
 Bcov_ad_SF      0.1       Coefft of refuge relationship with biogenic habitat for adult SE  0.6
@@ -1418,17 +1418,17 @@ Bmaxdepth        250       Maximum depth shallow benthic groups fount at        
 ## Parameters to use with home range movement
 # Minimum depth (m) for each group
 
-FM_mindepth     0 
-FT_mindepth     0 
-SF_mindepth     0 
-SK_mindepth     0 
-PNK_mindepth    0 
-PNF_mindepth    0 
+FM_mindepth     0
+FT_mindepth     0
+SF_mindepth     0
+SK_mindepth     0
+PNK_mindepth    0
+PNF_mindepth    0
 SB_mindepth     0
-WHO_mindepth    0 
-WHH_mindepth    0 
-WHM_mindepth    0 
-TP_mindepth     0 
+WHO_mindepth    0
+WHH_mindepth    0
+WHM_mindepth    0
+TP_mindepth     0
 IKR_mindepth    0
 KR_mindepth     0
 IZ_mindepth     0
@@ -1449,17 +1449,17 @@ DL_mindepth     30.0
 DR_mindepth     30.0
 
 # Maximum depth (m) for each group
-FM_maxdepth     5000 
-FT_maxdepth     4000 
-SF_maxdepth     2400 
-SK_maxdepth     250  
-PNK_maxdepth    175  
-PNF_maxdepth    565  
-SB_maxdepth     10   
-WHO_maxdepth    5000 
-WHH_maxdepth    5000 
-WHM_maxdepth    5000 
-TP_maxdepth     5000 
+FM_maxdepth     5000
+FT_maxdepth     4000
+SF_maxdepth     2400
+SK_maxdepth     250
+PNK_maxdepth    175
+PNF_maxdepth    565
+SB_maxdepth     10
+WHO_maxdepth    5000
+WHH_maxdepth    5000
+WHM_maxdepth    5000
+TP_maxdepth     5000
 IKR_maxdepth    1900
 KR_maxdepth     1900
 ZM_maxdepth     5000
@@ -1512,17 +1512,17 @@ DR_maxtotdepth 100000
 
 
 # Home range radius (m) for each group
-FM_homerangerad     1 
-FT_homerangerad     1 
-SF_homerangerad     1 
-SK_homerangerad     1 
-PNK_homerangerad    1 
-PNF_homerangerad    1 
+FM_homerangerad     1
+FT_homerangerad     1
+SF_homerangerad     1
+SK_homerangerad     1
+PNK_homerangerad    1
+PNF_homerangerad    1
 SB_homerangerad    1
-WHO_homerangerad    1 
-WHH_homerangerad    1 
-WHM_homerangerad    1 
-TP_homerangerad    1 
+WHO_homerangerad    1
+WHH_homerangerad    1
+WHM_homerangerad    1
+TP_homerangerad    1
 IKR_homerangerad    1
 KR_homerangerad     1
 IZ_homerangerad     1
@@ -1533,17 +1533,17 @@ IDF_homerangerad    1
 
 # Whether home ranges overlap for each group
 
-FM_overlap     0 
-FT_overlap     0 
-SF_overlap     0 
-SK_overlap     0 
-PNK_overlap    0 
-PNF_overlap    0 
+FM_overlap     0
+FT_overlap     0
+SF_overlap     0
+SK_overlap     0
+PNK_overlap    0
+PNF_overlap    0
 SB_overlap    0
-WHO_overlap    0 
-WHH_overlap    0 
-WHM_overlap    0 
-TP_overlap    0 
+WHO_overlap    0
+WHH_overlap    0
+WHM_overlap    0
+TP_overlap    0
 IKR_overlap    0
 KR_overlap     0
 IZ_overlap     0
@@ -1559,7 +1559,7 @@ FLATchange_max_num 1       Number of changes in area of available flat bottom pe
 SOFTchange_max_num 1       Number of changes in area of available soft bottom per coastal cell
 
 # Arrays to indicate start of change in available habitat for each bed type.
-# There must be as many entries in this array as there are number 
+# There must be as many entries in this array as there are number
 # of changes in area for that bed type.
 REEFchange_start   1
 0
@@ -1571,7 +1571,7 @@ SOFTchange_start   1
 0
 
 # Arrays to indicate period of change of available habitat for each bed type takes.
-# There must be as many entries in this array as there are number 
+# There must be as many entries in this array as there are number
 # of changes in area for that bed type.
 REEFchange_period  1
 0
@@ -1583,7 +1583,7 @@ SOFTchange_period  1
 0
 
 # Arrays to indicate proportional change in available habitat for each bed type.
-# There must be as many entries in this array as there are number 
+# There must be as many entries in this array as there are number
 # of changes in area for that bed type.
 REEFchange_mult   1
 0
@@ -1604,7 +1604,7 @@ k_roc_food       0.5       Percent of body mass needed as food before disperse (
 
 #### TO DO - FOR ALL VERTEBRATES AND ZL, KR, CEP ####
 # Distribution of adult stages of each vertebrate group
-# Proportion of adult XX in each box in each 
+# Proportion of adult XX in each box in each
 
 ######### Adult
 ######### PhytoPlankton
@@ -2027,7 +2027,7 @@ FPNF_S4juv  28
 
 
 
-######### Birds 
+######### Birds
 
 
 FSB_S1juv  28
@@ -2100,7 +2100,7 @@ FWHO_S4juv  28
 
 
 
-######### Krill 
+######### Krill
 
 FKR_S1juv  28
 0.00000000 0.08333333 0.08333333 0.08333333 0.08333333 0.08333333 0.08333333 0.08333333 0.08333333 0.08333333 0.08333333 0.08333333 0.08333333 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000
@@ -2144,10 +2144,10 @@ VERTnight_ZG     10
 0.01 0.01 0.01 0.01 0.01 0.02 0.06 0.10 0.47 0.30
 
 VERTday_IZ       10
-0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 VERTnight_IZ     10
-0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 
 VERTday_ZM       10
@@ -2326,7 +2326,7 @@ VERTnight_SB2    10
 
 
 # Swimming speed
-Speed_FM        252         Swimming speed of FM                            m.hr-1        12500 
+Speed_FM        252         Swimming speed of FM                            m.hr-1        12500
 Speed_FT        8612      Swimming speed of FT                             m.hr-1       12500
 Speed_SF        6660       Swimming speed of SE                             m.hr-1       12500
 Speed_SK        12500      Swimming speed of SC                             m.hr-1       12500
@@ -2359,19 +2359,19 @@ BB_min_move_temp -4.0
 BD_min_move_temp -4.0
 DC_min_move_temp -4.0
 DL_min_move_temp -4.0
-DR_min_move_temp -4.0  
-FM_min_move_temp -4.0     
-FT_min_move_temp -4.0       
+DR_min_move_temp -4.0
+FM_min_move_temp -4.0
+FT_min_move_temp -4.0
 SF_min_move_temp -4.0
-SK_min_move_temp -4.0            
-PNK_min_move_temp -4.0      
-PNF_min_move_temp -4.0        
-SB_min_move_temp -4.0        
-WHO_min_move_temp -4.0        
-WHH_min_move_temp -4.0        
-WHM_min_move_temp -4.0        
-TP_min_move_temp -4.0      
-    
+SK_min_move_temp -4.0
+PNK_min_move_temp -4.0
+PNF_min_move_temp -4.0
+SB_min_move_temp -4.0
+WHO_min_move_temp -4.0
+WHH_min_move_temp -4.0
+WHM_min_move_temp -4.0
+TP_min_move_temp -4.0
+
 
 PPL_max_move_temp 30.0
 PPS_max_move_temp 30.0
@@ -2390,56 +2390,56 @@ BD_max_move_temp 30.0
 DC_max_move_temp 30.0
 DL_max_move_temp 30.0
 DR_max_move_temp 30.0
-FM_max_move_temp 8.0     
-FT_max_move_temp 8.0     
+FM_max_move_temp 8.0
+FT_max_move_temp 8.0
 SF_max_move_temp 18.0
-SK_max_move_temp 12.0        
-PNK_max_move_temp 14.0      
-PNF_max_move_temp 12.0        
-SB_max_move_temp 30.0        
-WHO_max_move_temp 30.0        
-WHH_max_move_temp 30.0        
-WHM_max_move_temp 30.0        
-TP_max_move_temp 30.0       
+SK_max_move_temp 12.0
+PNK_max_move_temp 14.0
+PNF_max_move_temp 12.0
+SB_max_move_temp 30.0
+WHO_max_move_temp 30.0
+WHH_max_move_temp 30.0
+WHM_max_move_temp 30.0
+TP_max_move_temp 30.0
 
-     
+
 
 # Minimum and maximum tolerated salinity
-FM_min_move_salt 0.0     
-FT_min_move_salt 0.0     
+FM_min_move_salt 0.0
+FT_min_move_salt 0.0
 SF_min_move_salt 0.0
-SK_min_move_salt 0.0        
-PNK_min_move_salt 0.0      
-PNF_min_move_salt 0.0          
-SB_min_move_salt 0.0        
-WHO_min_move_salt 0.0        
-WHH_min_move_salt 0.0        
-WHM_min_move_salt 0.0        
-TP_min_move_salt 0.0     
-KR_min_move_salt 0.0 
-IKR_min_move_salt 0.0 
+SK_min_move_salt 0.0
+PNK_min_move_salt 0.0
+PNF_min_move_salt 0.0
+SB_min_move_salt 0.0
+WHO_min_move_salt 0.0
+WHH_min_move_salt 0.0
+WHM_min_move_salt 0.0
+TP_min_move_salt 0.0
+KR_min_move_salt 0.0
+IKR_min_move_salt 0.0
 
 
- 
-FM_max_move_salt 36.0     
-FT_max_move_salt 36.0     
+
+FM_max_move_salt 36.0
+FT_max_move_salt 36.0
 SF_max_move_salt 36.0
-SK_max_move_salt 36.0          
-PNK_max_move_salt 36.0      
-PNF_max_move_salt 36.0         
-SB_max_move_salt 36.0        
-WHO_max_move_salt 36.0        
-WHH_max_move_salt 36.0        
-WHM_max_move_salt 36.0        
-TP_max_move_salt 36.0        
-KR_max_move_salt 36.0 
-IKR_max_move_salt 36.0 
+SK_max_move_salt 36.0
+PNK_max_move_salt 36.0
+PNF_max_move_salt 36.0
+SB_max_move_salt 36.0
+WHO_max_move_salt 36.0
+WHH_max_move_salt 36.0
+WHM_max_move_salt 36.0
+TP_max_move_salt 36.0
+KR_max_move_salt 36.0
+IKR_max_move_salt 36.0
 
 ## Migration out of (or into) model domain parameters
 # Migration dates for those groups moving out of model domain - must be
 # as many entries in these arrays as there are in the flagjXXXMigrate entry
 # for that group. Note an entry of 0 for the flag still requires a single
-# entry for the array, along the lines of 
+# entry for the array, along the lines of
 # XX_Migrate_Time 1
 # 0
 # XX_Migrate_Return 1
@@ -2520,7 +2520,7 @@ SB_Migrate_Time  1
 
 WHO_Migrate_Time  1
 151
- 
+
 WHH_Migrate_Time  1
 151
 
@@ -2570,7 +2570,7 @@ jWHO_Migrate_Return  1
 300
 
 jWHH_Migrate_Return  1
-300 
+300
 
 jWHM_Migrate_Return  1
 300
@@ -2608,7 +2608,7 @@ SB_Migrate_Return  1
 
 WHO_Migrate_Return  1
 300
- 
+
 WHH_Migrate_Return  1
 300
 
@@ -2646,7 +2646,7 @@ jSK_Migrate_Period  1
 1
 
 jPNK_Migrate_Period  1
-1 
+1
 
 jPNF_Migrate_Period  1
 1
@@ -2664,7 +2664,7 @@ jWHM_Migrate_Period  1
 45
 
 jTP_Migrate_Period  1
-1 
+1
 
 
 
@@ -2699,7 +2699,7 @@ SB_Migrate_Period  1
 
 WHO_Migrate_Period  1
 45
- 
+
 WHH_Migrate_Period  1
 45
 
@@ -2710,7 +2710,7 @@ TP_Migrate_Period  1
 1
 
 
-k_migslow          1       0 = all migrators leave at once, 1 = migrators leave gradually  0   
+k_migslow          1       0 = all migrators leave at once, 1 = migrators leave gradually  0
 
 # Juvenile migration return stock - set value to the integer number identifiying the stock
 # the immigrating individuals enter. If set to 0 then the returning individuals will be
@@ -2734,7 +2734,7 @@ jSK_ReturnStock  1
 0
 
 jPNK_ReturnStock  1
-0 
+0
 
 jPNF_ReturnStock  1
 0
@@ -2749,10 +2749,10 @@ jWHH_ReturnStock  1
 0
 
 jWHM_ReturnStock  1
-0 
+0
 
 jTP_ReturnStock  1
-0 
+0
 
 
 # Adult migration return stock - set value to the integer number identifiying the stock
@@ -2787,7 +2787,7 @@ SB_ReturnStock  1
 
 WHO_ReturnStock  1
 0
- 
+
 WHH_ReturnStock  1
 0
 
@@ -2866,7 +2866,7 @@ SF_FSM  1
 SK_FSM  1
 1.0
 
-PNK_FSM  1 
+PNK_FSM  1
 1.0
 
 PNF_FSM  1
@@ -2877,7 +2877,7 @@ SB_FSM  1
 
 WHO_FSM  1
 0.95
- 
+
 WHH_FSM  1
 0.95
 
@@ -2905,7 +2905,7 @@ jKR_FSMG  1
 0.0
 
 jIKR_FSMG  1
-0.0 
+0.0
 
 jFM_FSMG  1
 0.0
@@ -2982,8 +2982,8 @@ TP_FSMG  1
 0.0
 
 
-# Proportion from each box in the model that exit when group migrates out of the model domain (default value will be 
-# 0.0 except for the few cells along the boundary where the group can flow out of the model. Juv stands for 
+# Proportion from each box in the model that exit when group migrates out of the model domain (default value will be
+# 0.0 except for the few cells along the boundary where the group can flow out of the model. Juv stands for
 # juveniles and ad for adults (treated seperately in the model so separate entries for them are given here)
 
 MigIOBox_IZ      28
@@ -3072,9 +3072,9 @@ MigIOBox_TPad   28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
-# Numbers and weights of each group that begin outside the model domain and must migrate in during the first year. 
-# Treat it these as part of the initial conditions when setting up initial stock sizes (i.e. adjust numbers inside 
-# the model domain accordingly). There is one entry per cohort and the sn and rn entries are the structural and 
+# Numbers and weights of each group that begin outside the model domain and must migrate in during the first year.
+# Treat it these as part of the initial conditions when setting up initial stock sizes (i.e. adjust numbers inside
+# the model domain accordingly). There is one entry per cohort and the sn and rn entries are the structural and
 # reserve weight values for those to migrate in.
 # Invertebrate migration parameters - biomass beginning outside model domain
 KMIGa_INVERT     9
@@ -3205,7 +3205,7 @@ KMIGa_TPsn        25
 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 
 
-# Vertebrate body form and aging details 
+# Vertebrate body form and aging details
 X_RS             2.65      Ratio reserve to structure tissue in well fed vertebrates         2.2 - 2.7
 Kthresh1         0.99      Threshhold rel. reserve when handling time is reduced              0.99
 Kthresh2         0.92      Threshhold rel. reserve when costs reduce + handling time inc      0.92
@@ -3217,128 +3217,128 @@ KHTI             1.5       Factor handling time increased by for relres<thresh2 
 # Food availabilty (exploitable fractions) - note that a zero entry may signify a food group
 # that is either unavailable or not a part of the diet.
 # Note that explicit exploitable fractions are not generally given for PB and BB
-# as they're consumed with DL and DR. All populations on the consumed DL or DR 
+# as they're consumed with DL and DR. All populations on the consumed DL or DR
 # are considered grazed.
 # pPREY1FY1 is the availability of juvenile prey groups to juvenile group FY, similarly
 # pPREY1FY2 is the availability of juvenile prey groups to adult group FY and so on
 # The order of prey groups is assumed to be
 
 # IPL	IDF	PPS	PPL	PDF	IZ	ZM	ZG	BD	IKR	KR	FM	FT	SF	SK	PNK	PNF	SB	WHM	WHH	TP	WHO	PB	BB	IB	DL	DR	DC	DLsed	DRsed	DCsed
-PREYIDF	31																													
+PREYIDF	31
 0 0.1 0.001	0	0.001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREYPDF	31																													
+pPREYPDF	31
 0	0.001	0.1	0	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREYIZ	31																													
+pPREYIZ	31
 0.05	0.1	0	0	0	0.0001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREYZM	31																													
+pPREYZM	31
 0.001	0	0.05	0.05	0.01	0	0.0001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.001	0.001	0.0001	0	0	0
-pPREYZG	31																													
+pPREYZG	31
 0	0.0001	0	0	0.0001	0.05	0.1	0.0001	0	0	0	0.00001	0	0	0	0	0	0	0	0	0	0	0	0	0	0.001	0.001	0.0001	0	0	0
-pPREYBD	31																													
+pPREYBD	31
 0.01	0.01	0.01	0.01	0.01	0	0	0	0.0001	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0001	0.001	0.001	0.00001	0.00001	0.00001	0.0001	0.0001	0.0001
-pPREY1IKR1	31																													
+pPREY1IKR1	31
 0.05	0.01	0.01	0.05	0.01	0.01	0.05	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1IKR2	31																													
+pPREY1IKR2	31
 0.05	0.01	0.01	0.05	0.01	0.01	0.05	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2IKR1	31																													
+pPREY2IKR1	31
 0.05	0.01	0.01	0.05	0.01	0.01	0.05	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2IKR2	31																													
+pPREY2IKR2	31
 0.05	0.01	0.01	0.05	0.01	0.01	0.05	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1KR1	31																													
+pPREY1KR1	31
 0.05	0.01	0.01	0.05	0.01	0.01	0.05	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1KR2	31																													
+pPREY1KR2	31
 0.05	0.01	0.01	0.05	0.01	0.01	0.05	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2KR1	31																													
+pPREY2KR1	31
 0.05	0.01	0.01	0.05	0.01	0.01	0.05	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2KR2	31																													
+pPREY2KR2	31
 0.05	0.01	0.01	0.05	0.01	0.01	0.05	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1FM1	31																													
+pPREY1FM1	31
 0	0	0	0	0	0.1	0.1	0	0	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2FM1	31																													
+pPREY2FM1	31
 0	0	0	0	0	0.1	0.1	0	0	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1FM2	31																													
+pPREY1FM2	31
 0	0	0	0	0	0.1	0.1	0	0	0.3	0.3	0.005	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2FM2	31																													
+pPREY2FM2	31
 0	0	0	0	0	0.1	0.1	0	0	0.3	0.3	0.005	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1FT1	31																													
+pPREY1FT1	31
 0	0	0	0	0	0	0.01	0	0	0.05	0.05	0.2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2FT1	31																													
+pPREY2FT1	31
 0	0	0	0	0	0	0.01	0	0	0.05	0.05	0.2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1FT2	31																													
+pPREY1FT2	31
 0	0	0	0	0	0	0.01	0	0	0.15	0.15	0.2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2FT2	31																													
+pPREY2FT2	31
 0	0	0	0	0	0	0.01	0	0	0.15	0.15	0.2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1SF1	31																													
+pPREY1SF1	31
 0	0	0	0	0	0.005	0.005	0.01	0	0.1	0.1	0.001	0.0001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2SF1	31																													
+pPREY2SF1	31
 0	0	0	0	0	0.005	0.005	0.01	0	0.1	0.1	0.001	0.0001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1SF2	31																													
+pPREY1SF2	31
 0	0	0	0	0	0.005	0.005	0.01	0	0.01	0.01	0.0003	0.00003	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2SF2	31																													
+pPREY2SF2	31
 0	0	0	0	0	0.005	0.005	0.01	0	0.01	0.01	0.0003	0.00003	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1SK1	31																													
+pPREY1SK1	31
 0	0	0	0	0	0.001	0.001	0	0	0.3	0.3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2SK1	31																													
+pPREY2SK1	31
 0	0	0	0	0	0.001	0.001	0	0	0.3	0.3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1SK2	31																													
+pPREY1SK2	31
 0	0	0	0	0	0.001	0.001	0	0	0.3	0.3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2SK2	31																													
+pPREY2SK2	31
 0	0	0	0	0	0.001	0.001	0	0	0.3	0.3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1PNK1	31																													
+pPREY1PNK1	31
 0	0	0	0	0	0.001	0.005	0	0	0.1	0.1	0.05	0.001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2PNK1	31																													
+pPREY2PNK1	31
 0	0	0	0	0	0.001	0.005	0	0	0.1	0.1	0.05	0.001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1PNK2	31																													
+pPREY1PNK2	31
 0	0	0	0	0	0.001	0.005	0	0	0.1	0.1	0.05	0.001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2PNK2	31																													
+pPREY2PNK2	31
 0	0	0	0	0	0.001	0.005	0	0	0.1	0.1	0.05	0.001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1PNF1	31																													
+pPREY1PNF1	31
 0	0	0	0	0	0.001	0.005	0	0	0.15	0.15	0.1	0.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2PNF1	31																													
+pPREY2PNF1	31
 0	0	0	0	0	0.001	0.005	0	0	0.15	0.15	0.1	0.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1PNF2	31																													
+pPREY1PNF2	31
 0	0	0	0	0	0.001	0.005	0	0.0001	0.15	0.15	0.1	0.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2PNF2	31																													
+pPREY2PNF2	31
 0	0	0	0	0	0.001	0.005	0	0.0001	0.15	0.15	0.1	0.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1SB1	31																													
+pPREY1SB1	31
 0	0	0	0	0	0	0.00001	0.001	0	0.001	0.001	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0.0001	0	0.0001	0	0	0
-pPREY2SB1	31																													
+pPREY2SB1	31
 0	0	0	0	0	0	0.00001	0.001	0	0.001	0.001	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0.0001	0	0.0001	0	0	0
-pPREY1SB2	31																													
+pPREY1SB2	31
 0	0	0	0	0	0	0.00001	0.001	0	0.001	0.001	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0.0001	0	0.0001	0	0	0
-pPREY2SB2	31																													
+pPREY2SB2	31
 0	0	0	0	0	0	0.00001	0.001	0	0.001	0.001	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0.0001	0	0.0001	0	0	0
-pPREY1WHM1	31																													
+pPREY1WHM1	31
 0	0	0	0	0	0	0.05	0	0	0.15	0.15	0.05	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2WHM1	31																													
+pPREY2WHM1	31
 0	0	0	0	0	0	0.05	0	0	0.15	0.15	0.001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1WHM2	31																													
+pPREY1WHM2	31
 0	0	0	0	0	0	0.05	0	0	0.15	0.15	0.05	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2WHM2	31																													
+pPREY2WHM2	31
 0	0	0	0	0	0	0.05	0	0	0.15	0.15	0.001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1WHH1	31																													
+pPREY1WHH1	31
 0	0	0	0	0	0	0.05	0	0	0.15	0.15	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2WHH1	31																													
+pPREY2WHH1	31
 0	0	0	0	0	0	0.05	0	0	0.15	0.15	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1WHH2	31																													
+pPREY1WHH2	31
 0	0	0	0	0	0	0.05	0	0	0.15	0.15	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2WHH2	31																													
+pPREY2WHH2	31
 0	0	0	0	0	0	0.05	0	0	0.15	0.15	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1TP1	31																													
+pPREY1TP1	31
 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.1	0.0001	0	0	0	0	0	0	0	0	0	0	0
-pPREY2TP1	31																													
+pPREY2TP1	31
 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.05	0.0001	0	0	0	0	0	0	0	0	0	0	0
-pPREY1TP2	31																													
+pPREY1TP2	31
 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.1	0.0001	0	0	0	0	0	0	0	0	0	0	0
-pPREY2TP2	31																													
+pPREY2TP2	31
 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.05	0.0001	0	0	0	0	0	0	0	0	0	0	0
-pPREY1WHO1	31																													
+pPREY1WHO1	31
 0	0	0	0	0	0	0	0	0	0	0	0.001	0.00001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2WHO1	31																													
+pPREY2WHO1	31
 0	0	0	0	0	0	0	0	0	0	0	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY1WHO2	31																													
+pPREY1WHO2	31
 0	0	0	0	0	0	0	0	0	0	0	0.001	0.00001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-pPREY2WHO2	31																													
+pPREY2WHO2	31
 0	0	0	0	0	0	0	0	0	0	0	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 
 
@@ -3372,13 +3372,13 @@ p_split_BD     0
 # array cell contents to 1.0
 
 pSTOCK_KR   1
-1.0 
+1.0
 
 pSTOCK_IKR   1
-1.0 
+1.0
 
 pSTOCK_FM   1
-1.0 
+1.0
 
 pSTOCK_FT   1
 1.0
@@ -3414,13 +3414,13 @@ pSTOCK_TP  1
 # Variable availability per stock for juveniles
 
 pSTOCK_jKR  1
-1.0 
+1.0
 
 pSTOCK_jIKR  1
-1.0 
+1.0
 
 pSTOCK_jFM  1
-1.0 
+1.0
 
 pSTOCK_jFT  1
 1.0
@@ -3454,7 +3454,7 @@ pSTOCK_jTP 1
 
 
 # Availabilty of catch to opportunistic catch grazers (thieves) - if had catch grazer marked in Groups.csv file
-# pFCXX              67                                                    
+# pFCXX              67
 # 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 #
 # p_lineXX        0.0       Prop. of line catch exploitable by Skuas
@@ -3465,9 +3465,9 @@ pSTOCK_jTP 1
 # Proportion of the catch in each fishery that can be exploited by the isCatchGrazer groups. Will be read in for groups
 # that have the isCatchGrazer set to 1 in the functional group input file.
 pFCSE 43
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 PropCatch_SE 4
-0 0 0 0 
+0 0 0 0
 
 
 # Availability of bacteria being cleaned from ingested detritus #
@@ -3496,18 +3496,18 @@ KLP_KR    0.0000001  Lower prey selection size limit for krill                  
 KLP_IKR    0.0000001  Lower prey selection size limit for krill                         0.001
 KLP_BM    0.0000001  Lower prey selection size limit for macrozoobenthos                0.001
 
-KLP_PPL   0 
-KLP_PPS   0 
-KLP_PDF   0 
-KLP_IDF   0          
-KLP_IPL   0     
-KLP_ZG    0     
-KLP_IZ    0         
-KLP_ZM    0         
-KLP_BD    0     
-KLP_PB    0     
-KLP_BB    0     
-KLP_IB    0 
+KLP_PPL   0
+KLP_PPS   0
+KLP_PDF   0
+KLP_IDF   0
+KLP_IPL   0
+KLP_ZG    0
+KLP_IZ    0
+KLP_ZM    0
+KLP_BD    0
+KLP_PB    0
+KLP_BB    0
+KLP_IB    0
 
 
 # Upper gape size for predators. Should be a value for each group that is tagged as a predator in the functional group definition file.
@@ -3528,18 +3528,18 @@ KUP_KR     0.1 Upper prey selection size limit for krill                   0.2 -
 KUP_IKR     0.1 Upper prey selection size limit for krill                   0.2 - 0.7
 #KUP_BM     0.1 Upper prey selection size limit for megazoobenthos   0.2 - 0.7
 
-KUP_PPL    0 
-KUP_PPS    0 
-KUP_PDF    0 
-KUP_IDF    0         
-KUP_IPL    0     
-KUP_ZG     0.1        
-KUP_IZ     0     
-KUP_ZM     0         
-KUP_PB     0     
-KUP_BB     0     
-KUP_IB     0     
-KUP_BD     0         
+KUP_PPL    0
+KUP_PPS    0
+KUP_PDF    0
+KUP_IDF    0
+KUP_IPL    0
+KUP_ZG     0.1
+KUP_IZ     0
+KUP_ZM     0
+KUP_PB     0
+KUP_BB     0
+KUP_IB     0
+KUP_BD     0
 
 ## The structural nitrogen of an average individual
 
@@ -3566,121 +3566,121 @@ k_refDR          20.0      Reference refract. detrit. level in water column (if 
 k_refsDL      10000.0      Reference labile detrit. level in sediments (if higher availability to omnivores reduced)
 
 # Clearance rates for consumers - this is used by Holling type feeding (predcase 0, 1, 2)
-C_ZG_T15	0.002	Clearance rate of Salps	                 mg3(mg N)-1 d-1	0.02 - 0.2	
-C_IZ_T15	0.035	Clearance rate of large zooplankton	     mg3(mg N)-1 d-1	0.01 - 0.8	
+C_ZG_T15	0.002	Clearance rate of Salps	                 mg3(mg N)-1 d-1	0.02 - 0.2
+C_IZ_T15	0.035	Clearance rate of large zooplankton	     mg3(mg N)-1 d-1	0.01 - 0.8
 #C_ZL_T15	0.8	Clearance rate of large zooplankton	         mg3(mg N)-1 d-1	0.01 - 0.8	0.08
 C_ZM_T15	0.05	Clearance rate of meso-zooplankton	     mg3(mg N)-1 d-1	0.05 - 0.1	0.04
 #C_ZS_T15	0.18	Clearance rate of small zooplankton	     mg3(mg N)-1 d-1	0.2 - 0.4	0.18
-C_IDF_T15	0.03	Clearance rate of dinoflagellates	     mg3(mg N)-1 d-1	0.2 - 0.4	
-C_PDF_T15	0.03	Clearance rate of dinoflagellates	     mg3(mg N)-1 d-1	0.2 - 0.4	
-#C_BF_T15	0.005	Clearance rate of filter feeders	     mg3(mg N)-1 d-1	0.0005 - 0.015	
-C_BD_T15	0.0001369	Clearance rate of Benthic Deposit 	 mg3(mg N)-1 d-1	0.0005 - 0.015	
-#C_BM_T15   0.005	Clearance rate of Benthic Microfeder	 mg3(mg N)-1 d-1	0.0005 - 0.015	
+C_IDF_T15	0.03	Clearance rate of dinoflagellates	     mg3(mg N)-1 d-1	0.2 - 0.4
+C_PDF_T15	0.03	Clearance rate of dinoflagellates	     mg3(mg N)-1 d-1	0.2 - 0.4
+#C_BF_T15	0.005	Clearance rate of filter feeders	     mg3(mg N)-1 d-1	0.0005 - 0.015
+C_BD_T15	0.0001369	Clearance rate of Benthic Deposit 	 mg3(mg N)-1 d-1	0.0005 - 0.015
+#C_BM_T15   0.005	Clearance rate of Benthic Microfeder	 mg3(mg N)-1 d-1	0.0005 - 0.015
 
 # Bacteria need C_ param for read-in but not used - see bacteria colonistation and uptake params above
-C_PB_T15	0.009589041	Clearance rate of pelagic bacteria	 mg3(mg N)-1 d-1	0.001 - 0.05	
-C_BB_T15	0.000194521	Clearance rate of benthic bacteria	 mg3(mg N)-1 d-1	0.001 - 0.05	
-C_IB_T15	0.000194521	Clearance rate of benthic bacteria	 mg3(mg N)-1 d-1	0.001 - 0.05	
+C_PB_T15	0.009589041	Clearance rate of pelagic bacteria	 mg3(mg N)-1 d-1	0.001 - 0.05
+C_BB_T15	0.000194521	Clearance rate of benthic bacteria	 mg3(mg N)-1 d-1	0.001 - 0.05
+C_IB_T15	0.000194521	Clearance rate of benthic bacteria	 mg3(mg N)-1 d-1	0.001 - 0.05
 
 # Clearance rate of each vertebrate group, per age class                mg3(mg N)-1 d-1
-flagfishrates    0         Switch to show whether clearance and growth rates are absolute=0, or as proportion of body mass=1  
+flagfishrates    0         Switch to show whether clearance and growth rates are absolute=0, or as proportion of body mass=1
 
-# clearance rate of each vertebrate group, per age class                mg3(mg N)-1 d-1																			
-C_KR	6																		
-0.003	0.007	0.012	0.015	0.018	0.019														
-																			
-C_IKR	5																		
-0.001	0.002	0.004	0.005	0.007															
-																			
-C_FM	4																		
-0.05	0.19	0.346	0.481																
-																			
-C_FT	20																		
+# clearance rate of each vertebrate group, per age class                mg3(mg N)-1 d-1
+C_KR	6
+0.003	0.007	0.012	0.015	0.018	0.019
+
+C_IKR	5
+0.001	0.002	0.004	0.005	0.007
+
+C_FM	4
+0.05	0.19	0.346	0.481
+
+C_FT	20
 8.126	19.23	34.685	53.801	75.822	100.017	125.722	152.353	179.416	206.501	233.273	259.469	284.883	309.364	332.802	355.126	376.291	396.279	415.092	432.744
-																			
-C_SF	10																		
-210995.3	990253.7	2006336	3000141.5	3856179.8	4544673.2	5076170.6	5475937.1	5771516.2	5987550.3										
-																			
-C_SK	10																		
-97274.84	233094.99	259052.8	262995.9	263576.96	263662.21	263674.71	263676.54	263676.81	263676.85										
-																			
-C_PNK	15																		
-1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92					
-																			
-C_PNF	10																		
-4362.391	4362.391	4362.391	4362.391	4362.391	4362.391	4362.391	4362.391	4362.391	4362.391										
-																			
-C_SB	20																		
+
+C_SF	10
+210995.3	990253.7	2006336	3000141.5	3856179.8	4544673.2	5076170.6	5475937.1	5771516.2	5987550.3
+
+C_SK	10
+97274.84	233094.99	259052.8	262995.9	263576.96	263662.21	263674.71	263676.54	263676.81	263676.85
+
+C_PNK	15
+1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92	1343.92
+
+C_PNF	10
+4362.391	4362.391	4362.391	4362.391	4362.391	4362.391	4362.391	4362.391	4362.391	4362.391
+
+C_SB	20
 1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235	1723.235
-																			
-C_WHO	20																		
+
+C_WHO	20
 338316.9	407151.4	466994.5	517718.4	559937.4	594611.4	622806.2	645560.6	663819.3	678406	690019.8	699242	706550.3	712332.5	716901.7	720508.7	723354.1	725597.2	727364.8	728757.1
-																			
-C_WHH	20																		
+
+C_WHH	20
 439272.4	522907	523150.9	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6	523151.6
-																			
-C_WHM	15																		
-45673.02	76425.05	99790.59	116067.27	126923.01	133991.28	138529.53	141419.01	143249.32	144405.05	145133.39	145591.83	145880.16	146061.42	146175.33					
-																			
-C_TP	20																		
+
+C_WHM	15
+45673.02	76425.05	99790.59	116067.27	126923.01	133991.28	138529.53	141419.01	143249.32	144405.05	145133.39	145591.83	145880.16	146061.42	146175.33
+
+C_TP	20
 48705.81	96252.51	132836.7	158128.39	174777.26	185458	192211.23	196445.02	199085.84	200727.98	201747.18	202379.02	202770.44	203012.82	203162.87	203255.74	203313.21	203348.78	203370.79	203384.42
 
 
 # Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
 mum_ZG_T15	0.02	Growth rate of Salps                   	mg N d-1 	0.02 - 0.85	0.65
-mum_IZ_T15	0.35	Growth rate of large ice zooplankton    mg N d-1 	0.02 - 0.2	
+mum_IZ_T15	0.35	Growth rate of large ice zooplankton    mg N d-1 	0.02 - 0.2
 #mum_ZL_T15	0.02	Growth rate of large zooplankton        mg N d-1	0.02 - 0.35	0.8
-mum_ZM_T15	0.5	Growth rate of meso-zooplankton             mg N d-1	0.02 - 0.2	
-#mum_ZS_T15	0.55	Growth rate of microzooplankton         mg N d-1	0.5 - 2.5	
+mum_ZM_T15	0.5	Growth rate of meso-zooplankton             mg N d-1	0.02 - 0.2
+#mum_ZS_T15	0.55	Growth rate of microzooplankton         mg N d-1	0.5 - 2.5
 #mum_BF_T15	0.02	Growth rate of filter feeders          	mg N d-1		0.01
-mum_BD_T15	0.001369	Growth rate of deposit feeders      mg N d-1	0.005 - 0.07	
-#mum_BM_T15	0.0038		                                    mg N d-1	0.0015 - 0.015	
-mum_PB_T15	0.09589041	Growth rate of Pelagic Bacteria  	mg N d-1	1.0 - 2.0	
-mum_BB_T15	0.001945205	Growth rate of Sedimant Bacteria  	mg N d-1	1.0 - 2.0	
-mum_IB_T15	0.001945205	Growth rate of ice Bacteria 	    mg N d-1	1.0 - 2.0	
+mum_BD_T15	0.001369	Growth rate of deposit feeders      mg N d-1	0.005 - 0.07
+#mum_BM_T15	0.0038		                                    mg N d-1	0.0015 - 0.015
+mum_PB_T15	0.09589041	Growth rate of Pelagic Bacteria  	mg N d-1	1.0 - 2.0
+mum_BB_T15	0.001945205	Growth rate of Sedimant Bacteria  	mg N d-1	1.0 - 2.0
+mum_IB_T15	0.001945205	Growth rate of ice Bacteria 	    mg N d-1	1.0 - 2.0
 
 
 
 # Vertebrate growth rates for each group, per age class                       mg N d-1
 
-# grouth rate of each vertebrate group, per age class                mg3(mg N)-1 d-1																			
-mum_KR	6																		
-0.03	0.07	0.12	0.15	0.18	0.19														
-																			
-mum_IKR	5																		
-0.01	0.02	0.04	0.05	0.07															
-																			
-mum_FM	4																		
-0.5	1.9	3.46	4.81																
-																			
-mum_FT	20																		
+# grouth rate of each vertebrate group, per age class                mg3(mg N)-1 d-1
+mum_KR	6
+0.03	0.07	0.12	0.15	0.18	0.19
+
+mum_IKR	5
+0.01	0.02	0.04	0.05	0.07
+
+mum_FM	4
+0.5	1.9	3.46	4.81
+
+mum_FT	20
 81.26	192.3	346.85	538.01	758.22	1000.17	1257.22	1523.53	1794.16	2065.01	2332.73	2594.69	2848.83	3093.64	3328.02	3551.26	3762.91	3962.79	4150.92	4327.44
-																			
-mum_SF	10																		
-2109953	9902537	20063360	30001415	38561798	45446732	50761706	54759371	57715162	59875503										
-																			
-mum_SK	10																		
-972748.4	2330949.9	2590528	2629959	2635769.6	2636622.1	2636747.1	2636765.4	2636768.1	2636768.5										
-																			
-mum_PNK	15																		
-13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2					
-																			
-mum_PNF	10																		
-43623.91	43623.91	43623.91	43623.91	43623.91	43623.91	43623.91	43623.91	43623.91	43623.91										
-																			
-mum_SB	20																		
+
+mum_SF	10
+2109953	9902537	20063360	30001415	38561798	45446732	50761706	54759371	57715162	59875503
+
+mum_SK	10
+972748.4	2330949.9	2590528	2629959	2635769.6	2636622.1	2636747.1	2636765.4	2636768.1	2636768.5
+
+mum_PNK	15
+13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2	13439.2
+
+mum_PNF	10
+43623.91	43623.91	43623.91	43623.91	43623.91	43623.91	43623.91	43623.91	43623.91	43623.91
+
+mum_SB	20
 17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35	17232.35
-																			
-mum_WHO	20																		
+
+mum_WHO	20
 3383169	4071514	4669945	5177184	5599374	5946114	6228062	6455606	6638193	6784060	6900198	6992420	7065503	7123325	7169017	7205087	7233541	7255972	7273648	7287571
-																			
-mum_WHH	20																		
+
+mum_WHH	20
 4392724	5229070	5231509	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516	5231516
-																			
-mum_WHM	15																		
-456730.2	764250.5	997905.9	1160672.7	1269230.1	1339912.8	1385295.3	1414190.1	1432493.2	1444050.5	1451333.9	1455918.3	1458801.6	1460614.2	1461753.3					
-																			
-mum_TP	20																		
+
+mum_WHM	15
+456730.2	764250.5	997905.9	1160672.7	1269230.1	1339912.8	1385295.3	1414190.1	1432493.2	1444050.5	1451333.9	1455918.3	1458801.6	1460614.2	1461753.3
+
+mum_TP	20
 487058.1	962525.1	1328367	1581283.9	1747772.6	1854580	1922112.3	1964450.2	1990858.4	2007279.8	2017471.8	2023790.2	2027704.4	2030128.2	2031628.7	2032557.4	2033132.1	2033487.8	2033707.9	2033844.2
 
 
@@ -3688,9 +3688,9 @@ mum_TP	20
 # slows/stops so can't eat out all food. This is used by min-max feeding (predcase 4)
 KL_IDF           5.0       Lower threshold for feeding by dinoflagellates     mg N m-3      1.0 - 6.0
 KL_PDF           5.0       Lower threshold for feeding by dinoflagellates     mg N m-3      1.0 - 6.0
-KL_ZG            20.0      Lower threshold for feeding by gelatinous zoopl    mg N m-3     15.0 - 25.0   
-KL_IZ            20.0      Lower threshold for feeding by large zooplankton   mg N m-3     15.0 - 25.0   
-#KL_ZL            20.0      Lower threshold for feeding by large zooplankton   mg N m-3     15.0 - 25.0   
+KL_ZG            20.0      Lower threshold for feeding by gelatinous zoopl    mg N m-3     15.0 - 25.0
+KL_IZ            20.0      Lower threshold for feeding by large zooplankton   mg N m-3     15.0 - 25.0
+#KL_ZL            20.0      Lower threshold for feeding by large zooplankton   mg N m-3     15.0 - 25.0
 KL_ZM            18.0      Lower threshold for feeding by meso-zooplankton    mg N m-3     15.0 - 20.0
 #KL_ZS            5.0       Lower threshold for feeding by microzooplankton    mg N m-3      1.0 - 6.0
 KL_BD            0.88      Lower threshold for feeding by deposit feeders     mg N m-3      0.5 - 1.5
@@ -3827,7 +3827,7 @@ htb_TP          0.3       Exponent for handling time relation for orca          
 htb_KR           0.2       Exponent for handling time relation for small planktivores         0.2
 htb_IKR           0.2       Exponent for handling time relation for small planktivores         0.2
 
-# Vertebrate preference for rebuilding reserves over structure      
+# Vertebrate preference for rebuilding reserves over structure
 pR_FM           5.0       Migratory mesopelagic preference for reserve building              5.0
 pR_FT           2.0       toothfishersal preference for reserve building                    2.0
 pR_SF           2.3       Miscellaneous demersal preference for reserve building             2.3
@@ -3842,7 +3842,7 @@ pR_TP          3.5       orca preference for reserve building                   
 pR_KR           5.0       Small planktivore preference for reserve building                  5.0
 pR_IKR           5.0       Small planktivore preference for reserve building                  5.0
 
-# Length - weight parameters 
+# Length - weight parameters
 li_a_KR         0.0075802      Coefficient of allometic length-weight relation for krill
 li_a_IKR        0.0075802      Coefficient of allometic length-weight relation for krill
 li_a_FM         0.00631        Coefficient of allometic length-weight relation for mesopelagics
@@ -3904,11 +3904,11 @@ min_li_mat_DR 0
 
 
 
-# Depth consumers can dig "into," are found down to in the sediment 
-# Depth consumers can dig "into," are found down to in the sediment 
+# Depth consumers can dig "into," are found down to in the sediment
+# Depth consumers can dig "into," are found down to in the sediment
 #KDEP_BF          0.003     Sediment penetration depth of filter feeders         m            0.003
 KDEP_BD          0.1       Sediment penetration depth of deposit feeder          m         0.01 - 0.3
-KDEP_BC          0.1       Sediment penetration depth of infaunal carniv         m         0.01 - 0.3   
+KDEP_BC          0.1       Sediment penetration depth of infaunal carniv         m         0.01 - 0.3
 #KDEP_BM          0.001     Sediment penetration depth of macrozoobenthosm            0.00001 - 0.002
 #KDEP_CEP         0.003     Sediment penetration depth of cephalopods            m            0.003
 KDEP_KR          0.001     Sediment penetration depth of krill                   m         0.00001 - 0.002
@@ -3916,67 +3916,67 @@ KDEP_IKR          0.001     Sediment penetration depth of krill                 
 
 # Sediment penetration depth for vertebrates (m)
 
-KDEP_FM  1 
-KDEP_FT  1 
+KDEP_FM  1
+KDEP_FT  1
 
-KDEP_SF  1 
-KDEP_SK  1 
+KDEP_SF  1
+KDEP_SK  1
 KDEP_SL  1
 KDEP_PNK 1
 KDEP_PNF 1
-KDEP_SB 1 
-KDEP_WHO 0.001 
-KDEP_WHH 0.001 
-KDEP_TP 0.001 
-KDEP_WHM 0.001 
-KDEP_PPL 0 
-KDEP_PPS 0 
-KDEP_PDF 0 
-KDEP_IDF 0 
-KDEP_IPL 0 
-KDEP_ZG  0 
-KDEP_IZ  0 
-KDEP_ZM  0 
-KDEP_PB  0 
-KDEP_BB  0 
-KDEP_IB  0 
+KDEP_SB 1
+KDEP_WHO 0.001
+KDEP_WHH 0.001
+KDEP_TP 0.001
+KDEP_WHM 0.001
+KDEP_PPL 0
+KDEP_PPS 0
+KDEP_PDF 0
+KDEP_IDF 0
+KDEP_IPL 0
+KDEP_ZG  0
+KDEP_IZ  0
+KDEP_ZM  0
+KDEP_PB  0
+KDEP_BB  0
+KDEP_IB  0
 
 # Assimilation efficiency of invertebrate consumers on live food and carrion
 E_ZG             0.45      Assimilation efficiency of Salps (0.4)                        0.25 - 0.5
 E_IZ             0.45      Assimilation efficiency of ice zooplankton (0.4)               0.25 - 0.5
 #E_ZL             0.5      Assimilation efficiency of large zooplankton (0.4)               0.25 - 0.5
 E_ZM             0.5      Assimilation efficiency of meso-zooplankton                      0.3 - 0.5
-#E_ZS             0.55      Assimilation efficiency of microzooplankton                      0.5 - 0.6     
-E_IDF            0.1       Assimilation efficiency of dinoflagellates                       0.01 - 0.1     
-E_PDF            0.1       Assimilation efficiency of dinoflagellates                       0.01 - 0.1     
-#E_BF             0.4       Assimilation efficiency of filter feeders                       0.3 - 0.9   
-E_BD             0.3       Assimilation efficiency of deposit feeder                        0.01 - 0.6    
-#E_BM             0.5       Assimilation efficiency of macrozoobenthos                       0.5     
+#E_ZS             0.55      Assimilation efficiency of microzooplankton                      0.5 - 0.6
+E_IDF            0.1       Assimilation efficiency of dinoflagellates                       0.01 - 0.1
+E_PDF            0.1       Assimilation efficiency of dinoflagellates                       0.01 - 0.1
+#E_BF             0.4       Assimilation efficiency of filter feeders                       0.3 - 0.9
+E_BD             0.3       Assimilation efficiency of deposit feeder                        0.01 - 0.6
+#E_BM             0.5       Assimilation efficiency of macrozoobenthos                       0.5
 #E_CEP            0.4       Assimilation efficiency of cephalopods                           0.25 - 0.5
-E_KR             0.5       Assimilation efficiency of krill                                  0.5     
-E_IKR             0.5       Assimilation efficiency of krill                                  0.5     
+E_KR             0.5       Assimilation efficiency of krill                                  0.5
+E_IKR             0.5       Assimilation efficiency of krill                                  0.5
 
-# Assimilation efficiencies of vertebrate consumers 
+# Assimilation efficiencies of vertebrate consumers
 
 E_FM             0.5       Assimilation efficiency of Mesopelagics                0.08 - 0.55
 E_FT             0.2       Assimilation efficiency of toothfishersal                0.06 - 0.5
 E_SF             0.2       Assimilation efficiency of elephant seals               0.06 - 0.5
-E_SK             0.3       Assimilation efficiency of Crabeater seal                 0.07 - 0.5 
-E_PNK            0.3       Assimilation efficiency of Adelie penguins                0.07 - 0.5 
+E_SK             0.3       Assimilation efficiency of Crabeater seal                 0.07 - 0.5
+E_PNK            0.3       Assimilation efficiency of Adelie penguins                0.07 - 0.5
 E_PNF            0.3       Assimilation efficiency of Emperor penguins               0.06 - 0.5
 E_SB            0.5       Assimilation efficiency of Albatross                       0.08 - 0.55
-E_WHO            0.35      Assimilation efficiency of Sperm whales                    0.07 - 0.5    
-E_WHH            0.35      Assimilation efficiency of baleen whales                   0.07 - 0.5    
-E_TP            0.35      Assimilation efficiency of orca                             0.07 - 0.5    
-E_WHM            0.35      Assimilation efficiency of Minke whales                  0.07 - 0.5    
+E_WHO            0.35      Assimilation efficiency of Sperm whales                    0.07 - 0.5
+E_WHH            0.35      Assimilation efficiency of baleen whales                   0.07 - 0.5
+E_TP            0.35      Assimilation efficiency of orca                             0.07 - 0.5
+E_WHM            0.35      Assimilation efficiency of Minke whales                  0.07 - 0.5
 
-# Assimilation efficiency of invertebrate consumers on labile detritus 
-EDL_BB           0.5       Assim efficiency of sediment bacteria on labile detritus           0.5       
-EDL_PB           0.5       Assim efficiency of pelagic bacteria on labile detritus           0.5       
-EDL_IB           0.5       Assim efficiency of ice bacteria on labile detritus               0.5       
-EDL_BD           0.15      Assim efficiency of deposit feeder on labile detritus            0.002 - 0.3    
+# Assimilation efficiency of invertebrate consumers on labile detritus
+EDL_BB           0.5       Assim efficiency of sediment bacteria on labile detritus           0.5
+EDL_PB           0.5       Assim efficiency of pelagic bacteria on labile detritus           0.5
+EDL_IB           0.5       Assim efficiency of ice bacteria on labile detritus               0.5
+EDL_BD           0.15      Assim efficiency of deposit feeder on labile detritus            0.002 - 0.3
 #EDL_BM           0.12      Assim efficiency of macrozoobenthoson labile detritus           0.1 - 0.2
-#EDL_BF           0.2       Assim efficiency of shallow filter feeder on labile detritus     0.1 - 0.45         
+#EDL_BF           0.2       Assim efficiency of shallow filter feeder on labile detritus     0.1 - 0.45
 #EDL_ZS           0.0       Assim efficiency of microzooplankton on labile detritus          0.0 - 0.2
 EDL_ZM           0.12      Assim efficiency of mesozooplankton on labile detritus         0.12 - 0.25
 #EDL_ZL           0.0       Assim efficiency of large zooplankton on labile detritus         0.0 - 0.2
@@ -3985,27 +3985,27 @@ EDL_ZG           0.1       Assim efficiency of getlatinous zooplankton on labile
 EDL_IKR          0.0       Assim efficiency of cephalopods on labile detritus               0.0 - 0.2
 EDL_KR           0.0       Assim efficiency of krill on labile detritus                    0.0 - 0.2
 
-# Assimilation efficiency of vertebrate consumers on labile detritus 
+# Assimilation efficiency of vertebrate consumers on labile detritus
 
 EDL_FM           0.01      Assimilation efficiency of Mesopelagics on labile det.       0.0 - 0.1
 EDL_FT           0.04      Assimilation efficiency of toothfishersal on labile det.     0.0 - 0.2
 EDL_SF           0.0       Assimilation efficiency of elephant seals on labile det      0.0 - 0.2
-EDL_SK           0.0       Assimilation efficiency of Crabeater seal on labile det.     0.0 - 0.2 
-EDL_PNK          0.0       Assimilation efficiency of Adelie penguins on labile det.    0.0 - 0.2 
+EDL_SK           0.0       Assimilation efficiency of Crabeater seal on labile det.     0.0 - 0.2
+EDL_PNK          0.0       Assimilation efficiency of Adelie penguins on labile det.    0.0 - 0.2
 EDL_PNF          0.0       Assimilation efficiency of Emperor penguins on labile det.   0.0 - 0.2
 EDL_SB           0.0       Assimilation efficiency of Albatross on labile det.          0.0 - 0.1
-EDL_WHO          0.0       Assimilation efficiency of Sperm whales on labile det.        0.0 - 0.2    
-EDL_WHH          0.0       Assimilation efficiency of baleen whales on labile det.       0.0 - 0.2    
-EDL_TP           0.0       Assimilation efficiency of orca on labile det.                 0.0 - 0.2    
-EDL_WHM          0.0       Assimilation efficiency of Minke whales on labile det.         0.0 - 0.2    
+EDL_WHO          0.0       Assimilation efficiency of Sperm whales on labile det.        0.0 - 0.2
+EDL_WHH          0.0       Assimilation efficiency of baleen whales on labile det.       0.0 - 0.2
+EDL_TP           0.0       Assimilation efficiency of orca on labile det.                 0.0 - 0.2
+EDL_WHM          0.0       Assimilation efficiency of Minke whales on labile det.         0.0 - 0.2
 
-# Assimilation efficiency of invertebrate consumers on refractory detritus 
+# Assimilation efficiency of invertebrate consumers on refractory detritus
 
 #EDR_ZS           0.05      Assim efficiency of microzooplankton on refractory detritus      0.001 - 0.1
 EDR_ZM           0.03      Assim efficiency of meso-zooplankton on refractory detritus      0.001 - 0.1
-#EDR_ZL           0.02      Assim efficiency of large zooplankton on refractory detritus     0.001 - 0.1     
-EDR_IZ           0.02      Assim efficiency of ice zooplankton on refractory detritus        0.001 - 0.1     
-EDR_ZG           0.02      Assim efficiency of gelatinous zooplank on refractory detritus   0.001 - 0.1     
+#EDR_ZL           0.02      Assim efficiency of large zooplankton on refractory detritus     0.001 - 0.1
+EDR_IZ           0.02      Assim efficiency of ice zooplankton on refractory detritus        0.001 - 0.1
+EDR_ZG           0.02      Assim efficiency of gelatinous zooplank on refractory detritus   0.001 - 0.1
 EDR_PB           0.25      Assim efficiency of pelagic bacteria on refractory detritus        0.25
 EDR_BB           0.25      Assim efficiency of sediment bacteria on refractory detritus       0.25
 EDR_IB           0.25      Assim efficiency of ice bacteria on refractory detritus            0.25
@@ -4015,19 +4015,19 @@ EDR_KR           0.0       Assim efficiency of krill on refractory detritus     
 #EDR_BF           0.0       Assim efficiency of filter feeders on refractory det.           0.0 - 0.1
 #EDR_BM           0.0       Assim efficiency of megazoobenthos on refractory detritus        0.0 - 0.1
 
-# Assimilation efficiency of vertebrate consumers on refractory detritus 
+# Assimilation efficiency of vertebrate consumers on refractory detritus
 
 EDR_FM           0.0       Assimilation efficiency of Mesopelagics on refract det 0.0 - 0.1
 EDR_FT           0.0       Assimilation efficiency of toothfish. on refract. det.   0.0 - 0.2
 EDR_SF           0.0       Assimilation efficiency of elephant seal on refract. det.   0.0 - 0.2
-EDR_SK           0.0       Assimilation efficiency of Crabeater seal on refract. det.      0.0 - 0.2 
-EDR_PNK          0.0       Assimilation efficiency of Adelie penguins on refract. det.       0.0 - 0.2 
+EDR_SK           0.0       Assimilation efficiency of Crabeater seal on refract. det.      0.0 - 0.2
+EDR_PNK          0.0       Assimilation efficiency of Adelie penguins on refract. det.       0.0 - 0.2
 EDR_PNF          0.0       Assimilation efficiency of Emperor penguins on refract. det.          0.0 - 0.2
 EDR_SB          0.0       Assimilation efficiency of Albatross on refract. det.             0.0 - 0.1
-EDR_WHO          0.0       Assimilation efficiency of Sperm whales on refract. det.              0.0 - 0.2    
-EDR_WHH          0.0       Assimilation efficiency of baleen whales on refract. det.        0.0 - 0.2    
-EDR_TP          0.0       Assimilation efficiency of orca on refract. det.       0.0 - 0.2    
-EDR_WHM          0.0       Assimilation efficiency of Minke whales on refract. det. 0.0 - 0.2    
+EDR_WHO          0.0       Assimilation efficiency of Sperm whales on refract. det.              0.0 - 0.2
+EDR_WHH          0.0       Assimilation efficiency of baleen whales on refract. det.        0.0 - 0.2
+EDR_TP          0.0       Assimilation efficiency of orca on refract. det.       0.0 - 0.2
+EDR_WHM          0.0       Assimilation efficiency of Minke whales on refract. det. 0.0 - 0.2
 
 
 # Assimilation efficiencies of vertebrate consumers on plant
@@ -4040,14 +4040,14 @@ EPlant_KR        0.0       Assimilation efficiency of prawns                    
 EPlant_IKR       0.0       Assimilation efficiency of prawns                                  0.5
 EPlant_FT        0.0       Assimilation efficiency of toothfishersal on plants                 0.001 - 0.2
 EPlant_SF        0.0       Assimilation efficiency of elephant seals on plants                 0.001 - 0.2
-EPlant_SK        0.0       Assimilation efficiency of Crabeater seal on plants                  0.001 - 0.2 
-EPlant_PNK       0.0       Assimilation efficiency of Adelie penguins on plants                 0.001 - 0.2 
+EPlant_SK        0.0       Assimilation efficiency of Crabeater seal on plants                  0.001 - 0.2
+EPlant_PNK       0.0       Assimilation efficiency of Adelie penguins on plants                 0.001 - 0.2
 EPlant_PNF       0.0       Assimilation efficiency of Emperor penguins on plants                 0.001 - 0.2
 EPlant_SB       0.0       Assimilation efficiency of Albatross on plants                         0.001 - 0.1
-EPlant_WHO       0.0       Assimilation efficiency of Sperm whales on plants                     0.001 - 0.2    
-EPlant_WHH       0.0       Assimilation efficiency of baleen whales on plants                    0.001 - 0.2    
-EPlant_TP       0.0       Assimilation efficiency of orca on plants                               0.001 - 0.2     
-EPlant_WHM       0.0       Assimilation efficiency of Minke whales on plants                      0.001 - 0.2    
+EPlant_WHO       0.0       Assimilation efficiency of Sperm whales on plants                     0.001 - 0.2
+EPlant_WHH       0.0       Assimilation efficiency of baleen whales on plants                    0.001 - 0.2
+EPlant_TP       0.0       Assimilation efficiency of orca on plants                               0.001 - 0.2
+EPlant_WHM       0.0       Assimilation efficiency of Minke whales on plants                      0.001 - 0.2
 EPlant_BD             0       Assimilation efficiency of deposit feeder                           0.01 - 0.6
 
 # Vertebrate respiration
@@ -4086,19 +4086,19 @@ KST_bird         0.3       Factor respiration reduced by when Other seabirds are
 KST_mammal       0.3       Factor respiration reduced by when mammals are starved             0.3
 
 Ktmp_fish        0.08      Factor relating temperature to respiration for fish                0.08
-Ktmp_shark       0.075     Factor relating temperature to respiration for sharks              0.075 
+Ktmp_shark       0.075     Factor relating temperature to respiration for sharks              0.075
 Ktmp_bird        0.08      Factor relating temperature to respiration for Other seabirds            0.08
-Ktmp_mammal      0.08      Factor relating temperature to respiration for mammals             0.08 
- 
+Ktmp_mammal      0.08      Factor relating temperature to respiration for mammals             0.08
+
 ## Mortality parameters
-# Lysis rate of microalgaes  
+# Lysis rate of microalgaes
 KLYS_PPL          0.0001    Lysis rate of diatoms                            d-1              0.0001
 KLYS_PPS          0.00004   Lysis rate of picophytoplankton                  d-1              0.01
 KLYS_PDF          0.00015   Lysis rate of dinoflagellates                    d-1              0.01
 KLYS_IDF          0.00002   Lysis rate of Ice mixotrophss                    d-1              0.01
 KLYS_IPL          0.00001   Lysis rate of Ice diatoms                        d-1              0.01
 
-## Linear mortality 
+## Linear mortality
 # Invertebrates
 PPL_mL       0.14  Linear mortality rate of lg phytopl, 15 deg C      d-1              0.14
 PPS_mL       0.000002  Linear mortality rate of picophytopl, 15 deg C     d-1              0.14
@@ -4160,10 +4160,10 @@ TP_mL 2
 WHM_mL 2
 1.00E-008 1.00E-013
 
-## Quadratic mortality 
+## Quadratic mortality
 # Invertebrates
 
-PPL_mQ 0.0 
+PPL_mQ 0.0
 PPS_mQ 0.0
 PDF_mQ 0
 IPL_mQ 0
@@ -4173,7 +4173,7 @@ ZG_mQ 2.0e-8  Quad. mortality rate of gelatin. zoopl, 15 deg C  d-1 (0.00001)   
 #ZL_mQ 2.0e-8   Quad. mortality rate of large zoopl, 15 deg C     d-1              0.0 - 0.01
 ZM_mQ 0  Quad. mortality rate of meso-zoopl, 15 deg C      d-1              0.0 - 0.02
 #ZS_mQ 0  Quad. mortality rate of microzoopl, 15 deg C      d-1              0.0 - 0.2
-IB_mQ 0  
+IB_mQ 0
 PB_mQ 0
 BB_mQ 0
 BD_mQ 0.0000004  Quad. mortality rate of deposit feeder, 15 deg C  d-1              0.0
@@ -4224,8 +4224,8 @@ TP_mQ 2
 WHM_mQ 2
 1.0e-10 1.0e-10
 
-# Starvation mortality for fish (based on condition)   
-# Invertebrate - for completeness, not actual as yet can't starve a biomass pool 
+# Starvation mortality for fish (based on condition)
+# Invertebrate - for completeness, not actual as yet can't starve a biomass pool
 mStarve_ZG        0.0       Starvation mortality rate of gelatin. zoopl            d-1              0.0
 mStarve_IZ        0.0       Starvation mortality rate of large ice zoopl           d-1              0.0
 mStarve_ZM        0.0       Starvation mortality rate of meso-zoopl                d-1              0.0
@@ -4236,19 +4236,19 @@ mStarve_KR        0.0001    Starvation mortality rate of krill                  
 
 # Adult vertebrates - probably need to increase this to get sharper drop off once starving
 mStarve_FM       0.0001    Starvation mortality rate of mig mesopelagic           d-1              0.0 - 0.01
-mStarve_FT       0.0001    Starvation mortality rate of toothfish                 d-1              0.0 - 0.01   
-mStarve_SF       0.0001    Starvation mortality rate of elephant seal             d-1              0.0 - 0.01   
-mStarve_SK       0.0001    Starvation mortality rate of crabeater seal            d-1              0.0 - 0.01   
-mStarve_PNF      0.0001    Starvation mortality rate of Emperor penguins          d-1              0.0 - 0.01   
-mStarve_PNK      0.0001    Starvation mortality rate of Adelie penguins           d-1              0.0 - 0.01   
+mStarve_FT       0.0001    Starvation mortality rate of toothfish                 d-1              0.0 - 0.01
+mStarve_SF       0.0001    Starvation mortality rate of elephant seal             d-1              0.0 - 0.01
+mStarve_SK       0.0001    Starvation mortality rate of crabeater seal            d-1              0.0 - 0.01
+mStarve_PNF      0.0001    Starvation mortality rate of Emperor penguins          d-1              0.0 - 0.01
+mStarve_PNK      0.0001    Starvation mortality rate of Adelie penguins           d-1              0.0 - 0.01
 mStarve_SB       0.0001    Starvation mortality rate of Albatross                 d-1              0.0 - 0.01
-mStarve_WHO      0.0001    Starvation mortality rate of Sperm whales              d-1              0.0 - 0.01   
-mStarve_WHH      0.0001    Starvation mortality rate of baleen whales             d-1              0.0 - 0.01   
-mStarve_WHM      0.0001    Starvation mortality rate of minke whales           d-1              0.0 - 0.01   
-mStarve_TP      0.0001    Starvation mortality rate of orca            d-1              0.0 - 0.01   
+mStarve_WHO      0.0001    Starvation mortality rate of Sperm whales              d-1              0.0 - 0.01
+mStarve_WHH      0.0001    Starvation mortality rate of baleen whales             d-1              0.0 - 0.01
+mStarve_WHM      0.0001    Starvation mortality rate of minke whales           d-1              0.0 - 0.01
+mStarve_TP      0.0001    Starvation mortality rate of orca            d-1              0.0 - 0.01
 Kthreshm         0.5       Threshold starvation level when mort starts                         0.7
 
-# Oxygen mortality (based on depth and the oxygen horizon) 
+# Oxygen mortality (based on depth and the oxygen horizon)
 mD_IPL            1.0       Half oxygen mortality depth for settled phytoplankton  m          0.001 - 0.005
 mD_PPL            1.0       Half oxygen mortality depth for settled phytoplankton  m          0.001 - 0.005
 mD_PDF            1.0       Half oxygen mortality depth for settled dinoflagellate m          0.001 - 0.005
@@ -4257,11 +4257,11 @@ mD_IDF            1.0       Half oxygen mortality depth for settled dinoflagella
 mD_PB             1.0       Half oxygen mortality depth for pelagic bacteria  m              0.001 - 0.005
 mD_IB             1.0       Half oxygen mortality depth for ice bacteria  m              0.001 - 0.005
 mD_BB             0.005     Half oxygen mortality depth for sediment bacteria m              0.001 - 0.005
-mD_BD             0.005     Half oxygen mortality depth for deposit feeder    m              0.001 - 0.005      
-#mD_BM             0.001     Half oxygen mort. depth for shallow macrozoobenth m              0.0 - 0.001     
-#mD_BF             0.001     Half oxygen mortality depth for shallow filt feed m              0.0 - 0.001      
+mD_BD             0.005     Half oxygen mortality depth for deposit feeder    m              0.001 - 0.005
+#mD_BM             0.001     Half oxygen mort. depth for shallow macrozoobenth m              0.0 - 0.001
+#mD_BF             0.001     Half oxygen mortality depth for shallow filt feed m              0.0 - 0.001
 
-# Oxygen mortality based on ambient oxygen 
+# Oxygen mortality based on ambient oxygen
 mO_PPL            0.0       Oxygen dependent mortality for settled ice phytopl      d-1          0.1
 mO_PPL            0.0       Oxygen dependent mortality for settled phytoplankton    d-1          0.1
 mO_PDF            0.0       Oxygen dependent mortality for settled dinoflagellate   d-1          0.1
@@ -4295,29 +4295,29 @@ KO2LIM_PB         10.0      Limiting oxygen level for pelagic bacteria        mg
 KO2LIM_BB         10.0      Limiting oxygen level for benthic bacteria        mg O2 m-3         0.0
 KO2LIM_IB         10.0      Limiting oxygen level for ice bacteria        mg O2 m-3         0.0
 KO2LIM_BD         10.0      Limiting oxygen level for deposit feeder          mg O2 m-3         0.0
-#KO2LIM_BM         50.0      Limiting oxygen level for macrozoobenthosmg O2 m-3         0.0         
+#KO2LIM_BM         50.0      Limiting oxygen level for macrozoobenthosmg O2 m-3         0.0
 #KO2LIM_BF         50.0      Limiting oxygen level for shallow filter feeder   mg O2 m-3         0.0
 
 # Minimum tolerated oxygen level for age structured groups (typically vertebrates)
 KR_min_O2  0.0
-IKR_min_O2  0.0          
-FM_min_O2  0.0     
-FT_min_O2  0.0          
+IKR_min_O2  0.0
+FM_min_O2  0.0
+FT_min_O2  0.0
 SF_min_O2  0.0
-SK_min_O2  0.0          
-PNK_min_O2 0.0      
-PNF_min_O2 0.0        
-SB_min_O2 0.0              
-WHO_min_O2 0.0        
-WHH_min_O2 0.0        
-WHM_min_O2 0.0        
-TP_min_O2 0.0    
+SK_min_O2  0.0
+PNK_min_O2 0.0
+PNF_min_O2 0.0
+SB_min_O2 0.0
+WHO_min_O2 0.0
+WHH_min_O2 0.0
+WHM_min_O2 0.0
+TP_min_O2 0.0
 
 
 # Mortality rate of each fish group due to the implicit fish, per quarter d-1
 # This represents mortality due to fish not explicitly included in the model.
 
-mS_FDFM         4         
+mS_FDFM         4
 0.0 0.0 0.0 0.0
 
 mS_FDFT         4
@@ -4325,14 +4325,14 @@ mS_FDFT         4
 
 # Static seabird and mammal induced mortality of each fish group, per quarter    d-1
 
-mS_SBFM         4         
+mS_SBFM         4
 0.0 0.0 0.0 0.0
 
 mS_SBFT         4
 0.0 0.0 0.0 0.0
 
 
-# Seabird sloppy feeding 
+# Seabird sloppy feeding
 FSBDR_FM        0.2       Proportion of seabird catch of small planktivores lost             0.2
 FSBDR_FT        0.15      Proportion of seabird catch of toothfishersal lost         0.15
 FSBDR_SB 0
@@ -4347,43 +4347,43 @@ FSBDR_WHO 0
 FSBDR_KR 0.2
 FSBDR_IKR 0.2
 
-# Demersal fish sloppy feeding   
+# Demersal fish sloppy feeding
 FFDDR            0.95      Proportion of static demersal fish's planktivore prey that's lost
 
-# Fraction of non-assimilate lost to detritus 
+# Fraction of non-assimilate lost to detritus
 FDG_ZG           0.3       Detrit contrib from unassim material ingested by gelatinous zoopl   0.25 - 0.5
 FDG_IZ           0.3       Detrit contrib from unassim material ingested by large ice zoopl    0.25 - 0.5
 #FDG_ZL           0.3       Detrit contrib from unassim material ingested by large zooplankton  0.25 - 0.5
 FDG_ZM           0.25      Detrit contrib from unassim material ingested by meso-zooplankton   0.25 - 0.5
-#FDG_ZS           0.25      Detrit contrib from unassim material ingested by microzoopl         0.25 - 0.5  
-FDG_BF           0.35      Detrit contrib from unassim material ingested by shallow filt feed  0.25 - 0.5  
+#FDG_ZS           0.25      Detrit contrib from unassim material ingested by microzoopl         0.25 - 0.5
+FDG_BF           0.35      Detrit contrib from unassim material ingested by shallow filt feed  0.25 - 0.5
 FDG_BD           0.35      Detrit contrib from unassim material ingested by deposit feeder     0.25 - 0.5
-#FDG_BM           0.3       Detrit contrib from unassim material ingested by macrozoobenthos    0.25 - 0.5 
+#FDG_BM           0.3       Detrit contrib from unassim material ingested by macrozoobenthos    0.25 - 0.5
 FDG_IKR          0.3       Detrit contrib from unassim material ingested by cKRILL        0.25 - 0.5
-FDG_KR           0.3       Detrit contrib from unassim material ingested by krill              0.25 - 0.5 
-FDG_FM           0.3       Detrit contrib from unassim material ingested by mig. mesopelagics  0.1 - 0.3 
-FDG_FT           0.2       Detrit contrib from unassim material ingested by toothfish          0.1 - 0.3      
-FDG_SF           0.2       Detrit contrib from unassim material ingested by elephant seals     0.1 - 0.3     
-FDG_SK           0.2       Detrit contrib from unassim material ingested by Crabeater seal     0.1 - 0.3      
-FDG_PNF          0.2       Detrit contrib from unassim material ingested by Emperor penguins   0.1 - 0.3     
-FDG_PNK          0.2       Detrit contrib from unassim material ingested by Adelie penguins    0.1 - 0.3     
-FDG_SB          0.3       Detrit contrib from unassim material ingested by Albatross          0.1 - 0.3 
-FDG_WHO          0.2       Detrit contrib from unassim material ingested by Sperm whales       0.1 - 0.3     
-FDG_WHH          0.2       Detrit contrib from unassim material ingested by baleen whales      0.1 - 0.3     
-FDG_WHM          0.2       Detrit contrib from unassim material ingested by minke whales       0.1 - 0.3     
-FDG_TP          0.2       Detrit contrib from unassim material ingested by orca     0.1 - 0.3     
+FDG_KR           0.3       Detrit contrib from unassim material ingested by krill              0.25 - 0.5
+FDG_FM           0.3       Detrit contrib from unassim material ingested by mig. mesopelagics  0.1 - 0.3
+FDG_FT           0.2       Detrit contrib from unassim material ingested by toothfish          0.1 - 0.3
+FDG_SF           0.2       Detrit contrib from unassim material ingested by elephant seals     0.1 - 0.3
+FDG_SK           0.2       Detrit contrib from unassim material ingested by Crabeater seal     0.1 - 0.3
+FDG_PNF          0.2       Detrit contrib from unassim material ingested by Emperor penguins   0.1 - 0.3
+FDG_PNK          0.2       Detrit contrib from unassim material ingested by Adelie penguins    0.1 - 0.3
+FDG_SB          0.3       Detrit contrib from unassim material ingested by Albatross          0.1 - 0.3
+FDG_WHO          0.2       Detrit contrib from unassim material ingested by Sperm whales       0.1 - 0.3
+FDG_WHH          0.2       Detrit contrib from unassim material ingested by baleen whales      0.1 - 0.3
+FDG_WHM          0.2       Detrit contrib from unassim material ingested by minke whales       0.1 - 0.3
+FDG_TP          0.2       Detrit contrib from unassim material ingested by orca     0.1 - 0.3
 
-# Fraction of non-assimilate from labile detrital food lost to detritus 
-#FDGDL_ZS         0.0       Detrit contrib from unassim lab detrit ingested by small zooplankton 0.0 - 0.9      
-FDGDL_ZM         0.5       Detrit contrib from unassim lab detrit ingested by mesozooplankton   0.4 - 0.9      
-#FDGDL_ZL         0.0       Detrit contrib from unassim lab detrit ingested by large zooplankton 0.0 - 0.9      
-FDGDL_IZ         0.0       Detrit contrib from unassim lab detrit ingested by large ice zoopl   0.0 - 0.9      
-FDGDL_ZG         0.5       Detrit contrib from unassim lab detrit ingested by gelatinous zoopl  0.4 - 0.9      
-FDGDL_IKR        0.0       Detrit contrib from unassim lab detrit ingested by krill             0.0 - 0.9      
-FDGDL_KR         0.0       Detrit contrib from unassim lab detrit ingested by krill             0.0 - 0.9      
+# Fraction of non-assimilate from labile detrital food lost to detritus
+#FDGDL_ZS         0.0       Detrit contrib from unassim lab detrit ingested by small zooplankton 0.0 - 0.9
+FDGDL_ZM         0.5       Detrit contrib from unassim lab detrit ingested by mesozooplankton   0.4 - 0.9
+#FDGDL_ZL         0.0       Detrit contrib from unassim lab detrit ingested by large zooplankton 0.0 - 0.9
+FDGDL_IZ         0.0       Detrit contrib from unassim lab detrit ingested by large ice zoopl   0.0 - 0.9
+FDGDL_ZG         0.5       Detrit contrib from unassim lab detrit ingested by gelatinous zoopl  0.4 - 0.9
+FDGDL_IKR        0.0       Detrit contrib from unassim lab detrit ingested by krill             0.0 - 0.9
+FDGDL_KR         0.0       Detrit contrib from unassim lab detrit ingested by krill             0.0 - 0.9
 #FDGDL_BF         0.5       Detrit contrib from unassim lab detrit ingested by shallow filt feed 0.4 - 0.9
-FDGDL_BD         0.5       Detrit contrib from unassim lab detrit ingested by deposit feeder    0.4 - 0.9       
-#FDGDL_BM         0.8       Detrit contrib from unassim lab det. ingested by shallow macrozooben 0.4 - 0.9  
+FDGDL_BD         0.5       Detrit contrib from unassim lab detrit ingested by deposit feeder    0.4 - 0.9
+#FDGDL_BM         0.8       Detrit contrib from unassim lab det. ingested by shallow macrozooben 0.4 - 0.9
 FDGDL_FM 0.2
 FDGDL_FT 0.2
 FDGDL_SF 0.2
@@ -4401,20 +4401,20 @@ FDGDL_PB 0.2
 FDGDL_BB 0.2
 FDGDL_DC 0.2
 FDGDL_DL 0.2
-FDGDL_DR 0.2    
+FDGDL_DR 0.2
 
-# Fraction of non-assimilate from refractory detrital food lost to detritus 
+# Fraction of non-assimilate from refractory detrital food lost to detritus
 #FDGDR_ZS         0.5       Detrit contrib from unassim ref detrit ingested by microzooplankton  0.5 - 0.95
-FDGDR_ZM         0.8       Detrit contrib from unassim ref detrit ingested by meso-zooplankton  0.5 - 0.95     
-#FDGDR_ZL         0.9       Detrit contrib from unassim ref detrit ingested by large zooplank.   0.5 - 0.95     
-FDGDR_IZ         0.9       Detrit contrib from unassim ref detrit ingested by large ice zooplank 0.5 - 0.95     
-FDGDR_ZG         0.9       Detrit contrib from unassim ref detrit ingested by gelatin zooplank. 0.5 - 0.95     
-FDGDR_IKR        0.0       Detrit contrib from unassim ref detrit ingested by cephalopods       0.5 - 0.95    
-FDGDR_KR         0.0       Detrit contrib from unassim ref detrit ingested by krill             0.5 - 0.95    
-FDGDR_BD         0.8       Detrit contrib from unassim ref detrit ingested by deposit feeder    0.5 - 0.95     
-#FDGDR_BF         0.0       Detrit contrib from unassim ref detrit ingested by shallow filter    0.5 - 0.95    
-#FDGDR_BM         0.0       Detrit contrib from unassim ref detrit ingested by megazoobenthos    0.5 - 0.95    
- 
+FDGDR_ZM         0.8       Detrit contrib from unassim ref detrit ingested by meso-zooplankton  0.5 - 0.95
+#FDGDR_ZL         0.9       Detrit contrib from unassim ref detrit ingested by large zooplank.   0.5 - 0.95
+FDGDR_IZ         0.9       Detrit contrib from unassim ref detrit ingested by large ice zooplank 0.5 - 0.95
+FDGDR_ZG         0.9       Detrit contrib from unassim ref detrit ingested by gelatin zooplank. 0.5 - 0.95
+FDGDR_IKR        0.0       Detrit contrib from unassim ref detrit ingested by cephalopods       0.5 - 0.95
+FDGDR_KR         0.0       Detrit contrib from unassim ref detrit ingested by krill             0.5 - 0.95
+FDGDR_BD         0.8       Detrit contrib from unassim ref detrit ingested by deposit feeder    0.5 - 0.95
+#FDGDR_BF         0.0       Detrit contrib from unassim ref detrit ingested by shallow filter    0.5 - 0.95
+#FDGDR_BM         0.0       Detrit contrib from unassim ref detrit ingested by megazoobenthos    0.5 - 0.95
+
 FDGDR_FM 0
 FDGDR_FT 0
 FDGDR_SF 0
@@ -4431,17 +4431,17 @@ FDGDR_WHO 0
 
 
 
-# Fraction of mortality products lost to detritus 
+# Fraction of mortality products lost to detritus
 FDM_ZG           0.3       Detrit contrib from mortality of Salps                             0.3
 FDM_IZ           0.3       Detrit contrib from mortality of large ice zooplankton             0.3
 #FDM_ZL           0.3       Detrit contrib from mortality of large zooplankton                 0.3
-FDM_ZM           0.25      Detrit contrib from mortality of meso-zooplankton                  0.25     
-#FDM_ZS           0.25      Detrit contrib from mortality of microzooplankton                  0.25     
-#FDM_BF           0.25      Detrit contrib from mortality of filter feeders                    0.25     
-FDM_BD           0.35      Detrit contrib from mortality of deposit feeder                    0.35      
-#FDM_BM           0.35      Detrit contrib from mortality of macrozoobenthos                   0.35    
-FDM_IB           0.6       Detrit contrib from mortality of ice bacteria                      0.25     
-FDM_PB           0.6       Detrit contrib from mortality of pelagic bacteria                  0.6       
+FDM_ZM           0.25      Detrit contrib from mortality of meso-zooplankton                  0.25
+#FDM_ZS           0.25      Detrit contrib from mortality of microzooplankton                  0.25
+#FDM_BF           0.25      Detrit contrib from mortality of filter feeders                    0.25
+FDM_BD           0.35      Detrit contrib from mortality of deposit feeder                    0.35
+#FDM_BM           0.35      Detrit contrib from mortality of macrozoobenthos                   0.35
+FDM_IB           0.6       Detrit contrib from mortality of ice bacteria                      0.25
+FDM_PB           0.6       Detrit contrib from mortality of pelagic bacteria                  0.6
 FDM_BB           0.6       Detrit contrib from mortality of sediment bacteria                 0.6
 FDM_IKR          0.35       Detrit contrib from mortality of cephalopods                       0.3
 FDM_KR           0.35      Detrit contrib from mortality of krill                             0.3
@@ -4458,17 +4458,17 @@ FDM_WHM          0.35      Detrit contrib from mortality of Minke whales        
 FDM_TP          0.35      Detrit contrib from mortality of orca                    0.35
 
 
-# Split up of losses to detritus between labile and refractory detritus 
+# Split up of losses to detritus between labile and refractory detritus
 FDL_fish         0.1       Split between DL and DR for fish                                   0.0 - 1.0
 FDL_benth        0.1       Split between DL and DR for benthos                                0.0 - 1.0
 FDL_top          0.1       Split between DL and DR for top predators                          0.0 - 1.0
 FDL_wc           0.9       Split between DL and DR for pelagic invertebrates                  0.0 - 1.0
 
-# Fraction of bacterial losses sent to detritus 
+# Fraction of bacterial losses sent to detritus
 FPB_DR           0.2       Detrit contrib from pelagic bacteria                               0.2
 FBB_DR           0.2       Detrit contrib from sediment bacteria                              0.2
 FIB_DR           0.2       Detrit contrib from ice bacteria                                   0.2
- 
+
 # Fraction of bacterial losses sent to DON
 FPB_DON          0.05      DON contrib from pelagic bacteria                                   0.05
 FBB_DON          0.05      DON contrib from sediment bacteria                                  0.05
@@ -4478,11 +4478,11 @@ FIB_DON          0.05      DON contrib from ice bacteria                        
 Fben_den         0.95      Fraction of NH release from OB and BD used in nitrif etc calcs 0.5 - 0.7
 
 
-## Vertebrate age structure parameters 
+## Vertebrate age structure parameters
 
-###  Age when all groups are treated as adult, this parameter works especially in juv and adult distinction; habitat, pprey (reproduction is FSPB_FM) 
+###  Age when all groups are treated as adult, this parameter works especially in juv and adult distinction; habitat, pprey (reproduction is FSPB_FM)
 ### age_mat = age mature for all other seals
-# Age class of maturity 
+# Age class of maturity
 
 FM_age_mat      1         First mature age class of Mesopelagics                   1
 FT_age_mat      3         First mature age class of toothfishersal                 2
@@ -4499,7 +4499,7 @@ KR_age_mat      2         First mature age class of Antarctic Krill             
 IKR_age_mat     2         First mature age class of Ice krill                      2
 
 ## Fish reproduction parameters
-# Spawning season          
+# Spawning season
 FM_Time_Spawn   180       Time of year Mesopelagics spawn                   d                140 - 200
 FT_Time_Spawn   210       Time of year toothfishersal spawn                 d                240 - 120
 SF_Time_Spawn   300       Time of year elephant seals spawn                 d                260 - 310
@@ -4532,7 +4532,7 @@ TP_spawn_period   28      Period of mating for top predator                 d   
 KR_spawn_period   30      Period of mating for krill                        d                1 - 30
 IKR_spawn_period  30      Period of mating for krill                        d                1 - 30
 
-# Age of recruitment 
+# Age of recruitment
 
 FM_Recruit_Time 35        Length of larval period for migratory mesopelagic d                20 - 70
 FT_Recruit_Time 60        Length of larval period for toothfish.            d                20 - 70
@@ -4549,7 +4549,7 @@ KR_Recruit_Time 21        Length of larval period for krill                 d   
 IKR_Recruit_Time 21        Length of larval period for krill                d                14 - 30
 
 
-# Recruitment window  
+# Recruitment window
 Recruit_Period_FM 30      Length of time recruits arrive over for mig mesopelagic d          15 - 90
 Recruit_Period_FT 30      Length of time recruits arrive over for other shall dem d          15 - 90
 Recruit_Period_SF 15      Length of time recruits arrive over for elephant seals  d          15 - 90
@@ -4564,7 +4564,7 @@ Recruit_Period_TP 20     Length of time recruits arrive over for top predator   
 Recruit_Period_KR 14      Length of time recruits arrive over for krill            d         15 - 30
 Recruit_Period_IKR 14      Length of time recruits arrive over for krill            d         15 - 30
 
-# Spawn production  
+# Spawn production
 KSPA_FM         1.93      Constant in spawning formulation for migratoey mesopelagics        31.93
 KSPA_FT         538.6     Constant in spawning formulation for toothfishersal                158.25
 KSPA_SF         25222.0   Constant in spawning formulation for elephant seals                438.60
@@ -4599,39 +4599,39 @@ FSP_IKR         0.3     Fraction used in spawning formulation for orca          
 prop_spawn_lost_KR 0
 prop_spawn_lost_IKR 0
 
-## Proportion of the population (per age) spawning 
-        
+## Proportion of the population (per age) spawning
+
 FSPB_FM         4
-0.2 0.5 1.0 1.0 
+0.2 0.5 1.0 1.0
 
 FSPB_FT         20
-0 0.2 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 
+0 0.2 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 
 
 FSPB_SF         10
-0.0 0.2 0.3 0.4 0.58 0.7 0.8 0.8 0.8 0.8 
+0.0 0.2 0.3 0.4 0.58 0.7 0.8 0.8 0.8 0.8
 
 
 FSPB_SK         10
-0.0 0.2 0.5 0.6 0.8 0.85 0.9 0.9 0.9 0.9 
+0.0 0.2 0.5 0.6 0.8 0.85 0.9 0.9 0.9 0.9
 
 FSPB_PNK        15
-0.0 0.0 0.0 0.08 0.12 0.26 0.6 0.7 0.75 0.75 0.75 0.85 0.9 0.9 0.9 
+0.0 0.0 0.0 0.08 0.12 0.26 0.6 0.7 0.75 0.75 0.75 0.85 0.9 0.9 0.9
 
 FSPB_PNF        15
-0.0 0.0 0.8 1.0 1.0 1.0 1.0 1.0 1.0 1.0 
-        
+0.0 0.0 0.8 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+
 FSPB_SB         20
-0 0.05 0.1 0.25 0.25 0.45 0.45 0.45 0.45 0.45 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5  
+0 0.05 0.1 0.25 0.25 0.45 0.45 0.45 0.45 0.45 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
 
 FSPB_WHO        20
-0.0 0.0 0.3 0.4 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5  
+0.0 0.0 0.3 0.4 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
 
 FSPB_WHH        20
-0.0 0.0 0.3 0.4 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+0.0 0.0 0.3 0.4 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
 
 FSPB_WHM        15
-0.0 0.1 0.3 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+0.0 0.1 0.3 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
 
 FSPB_TP        20
 0.0 0.0 0.2 0.35 0.5 0.5 0.5 0.5 0.5 0.5 0.0 0.4 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
@@ -4640,7 +4640,7 @@ FSPB_KR         6
 0.2 0.5 0.6 1.0 1.0 1.0
 
 FSPB_IKR        5
-0.2 0.5 0.8 1.0 1.0 
+0.2 0.5 0.8 1.0 1.0
 
 
 ## TO DO - FOR EACH VERTEBRATE AND KR put in distribution (relative proportion per box) where settlers arrive ##
@@ -4693,7 +4693,7 @@ KR_recruit_vdistrib 10
 0.0 0.0 0.0 0.0 0.0 0.0 0.1 0.1 0.4 0.4
 
 IKR_recruit_vdistrib 10
-0.0 0.0 0.0 0.0 0.0 0.0 0.1 0.1 0.4 0.4  
+0.0 0.0 0.0 0.0 0.0 0.0 0.1 0.1 0.4 0.4
 
 FM_recruit_vdistrib 10
 0.000 0.000 0.000 0.025 0.025 0.150 0.200 0.200 0.200 0.200
@@ -4702,25 +4702,25 @@ FT_recruit_vdistrib 10
 0.000 0.000 0.000 0.025 0.025 0.150 0.200 0.200 0.200 0.200
 
 SF_recruit_vdistrib 10
-0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 SK_recruit_vdistrib 10
-0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 PNK_recruit_vdistrib 10
-0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 PNF_recruit_vdistrib 10
-0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 SB_recruit_vdistrib  10
-0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 WHO_recruit_vdistrib 10
 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 WHH_recruit_vdistrib 10
-0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
 
 WHM_recruit_vdistrib 10
 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
@@ -4742,7 +4742,7 @@ recSTOCK_IKR       1
 
 
 recSTOCK_FM       1
-1.0 
+1.0
 
 recSTOCK_FT       1
 1.0
@@ -4784,7 +4784,7 @@ recruitRange     4.5        max relative cohort strength (multiplicative) for gr
 recruitRangeFlat 1.5        max relative cohort strength (multiplicative) for groups without strong year classes
 
 ## Stock-Recruit options
-# Total number of new recruits for the year (used if recruit flag is set to 1) 
+# Total number of new recruits for the year (used if recruit flag is set to 1)
 # or number produced per adult (used if recruit flag is set to 12)
 KDENR_KR       1
 2.00E+07
@@ -4832,96 +4832,96 @@ KDENR_KR       1
 #Average biomass of new cephalopod recruits arriving mg N m-3 0.01
 
 
-# Primary production dependent recruitment 
-PP_FM           1.0       Coefficient relating primary production and Mesopelagics recruits 
-PP_FT           1.0       Coefficient relating primary production and toothfishersal recruits        
-PP_SF           1.0       Coefficient relating primary production and miscellaneous demersal recruits     
-PP_SK           1.0       Coefficient relating primary production and demersal shark recruits     
-PP_PNK          1.0       Coefficient relating primary production and Adelie penguin recruits     
-PP_PNF          1.0       Coefficient relating primary production and Emperor penguin recruits     
-PP_SB          1.0       Coefficient relating primary production and penguin fledglings  
-PP_WHO          1.0       Coefficient relating primary production and Sperm whales young     
-PP_WHM          1.0       Coefficient relating primary production and small orca young     
-PP_TP          1.0       Coefficient relating primary production and orca young     
-PP_WHH          1.0       Coefficient relating primary production and baleen whale young     
+# Primary production dependent recruitment
+PP_FM           1.0       Coefficient relating primary production and Mesopelagics recruits
+PP_FT           1.0       Coefficient relating primary production and toothfishersal recruits
+PP_SF           1.0       Coefficient relating primary production and miscellaneous demersal recruits
+PP_SK           1.0       Coefficient relating primary production and demersal shark recruits
+PP_PNK          1.0       Coefficient relating primary production and Adelie penguin recruits
+PP_PNF          1.0       Coefficient relating primary production and Emperor penguin recruits
+PP_SB          1.0       Coefficient relating primary production and penguin fledglings
+PP_WHO          1.0       Coefficient relating primary production and Sperm whales young
+PP_WHM          1.0       Coefficient relating primary production and small orca young
+PP_TP          1.0       Coefficient relating primary production and orca young
+PP_WHH          1.0       Coefficient relating primary production and baleen whale young
 PP_KR           1.0       Coefficient relating primary production and Krill recruits     1
 PP_IKR          1.0       Coefficient relating primary production and Krill recruits     1
 
 ref_chl          0.15       Reference level of chla                           mg Chla m-3      1.5 0.15
 
-# Ricker recruitment   
+# Ricker recruitment
 Ralpha_FM      1.0     Alpha in Ricker for Mesopelagics
 Ralpha_FT      1.0     Alpha in Ricker for toothfish
 Ralpha_SF      1.0     Alpha in Ricker for elephant seals
-Ralpha_SK      1.0     Alpha in Ricker for Crabeater seal     
-Ralpha_PNK     1.0     Alpha in Ricker for Adelie penguins     
-Ralpha_PNF     1.0     Alpha in Ricker for Emperor penguins     
+Ralpha_SK      1.0     Alpha in Ricker for Crabeater seal
+Ralpha_PNK     1.0     Alpha in Ricker for Adelie penguins
+Ralpha_PNF     1.0     Alpha in Ricker for Emperor penguins
 Ralpha_SB     1.0     Alpha in Ricker for Albatross
 Ralpha_WHO     1.0     Alpha in Ricker for Sperm whales
 Ralpha_WHH     1.0     Alpha in Ricker for baleen whales
 Ralpha_WHM     1.0     Alpha in Ricker for Minke whales
 Ralpha_TP     1.0     Alpha in Ricker for orca
-Ralpha_KR      1.0     Alpha in Ricker for krill     
-Ralpha_IKR      1.0     Alpha in Ricker for krill    
+Ralpha_KR      1.0     Alpha in Ricker for krill
+Ralpha_IKR      1.0     Alpha in Ricker for krill
 
- 
-Rbeta_FM       1.0     Beta in Ricker for Mesopelagics   
+
+Rbeta_FM       1.0     Beta in Ricker for Mesopelagics
 Rbeta_FT       1.0     Beta in Ricker for toothfish
 Rbeta_SF       1.0     Beta in Ricker for elephant seals
-Rbeta_SK       1.0     Beta in Ricker for Crabeater seal    
-Rbeta_PNK      1.0     Beta in Ricker for Adelie penguins    
-Rbeta_PNF      1.0     Beta in Ricker for Emperor penguins    
-Rbeta_SB      1.0     Beta in Ricker for Albatross   
+Rbeta_SK       1.0     Beta in Ricker for Crabeater seal
+Rbeta_PNK      1.0     Beta in Ricker for Adelie penguins
+Rbeta_PNF      1.0     Beta in Ricker for Emperor penguins
+Rbeta_SB      1.0     Beta in Ricker for Albatross
 Rbeta_WHO      1.0     Beta in Ricker for Sperm whales
 Rbeta_WHH      1.0     Beta in Ricker for baleen whales
 Rbeta_TP      1.0     Beta in Ricker for orca
 Rbeta_WHM      1.0     Beta in Ricker for small whales
-Rbeta_KR       1.0     Beta in Ricker for krill  
-Rbeta_IKR       1.0     Beta in Ricker for krill  
+Rbeta_KR       1.0     Beta in Ricker for krill
+Rbeta_IKR       1.0     Beta in Ricker for krill
 
 
 ## TO DO - SET THESE ONCE HAVE INITIAL BIOMASS ESTIMATES TO COMPARE REPLACEMENT OFF, USE STOCK-RECRUIT RELATIONSHIP FROM ASSESSMENT TO DICTATE SHAPE ETC #
-# Beverton-Holt recruitment   
+# Beverton-Holt recruitment
 BHalpha_FM      1.60E+10  Alpha in Beverton-Holt for Mesopelagics
 BHalpha_FT      1.26E+08  Alpha in Beverton-Holt for toothfishersal (was 6.2, 4.2)
 BHalpha_SF      1.0       Alpha in Beverton-Holt for elephant seals (was 5.1)
-BHalpha_SK      1.0       Alpha in Beverton-Holt for Crabeater seal     
-BHalpha_PNK     1.0       Alpha in Beverton-Holt for Adelie penguins     
-BHalpha_PNF     1.0       Alpha in Beverton-Holt for Emperor penguins     
+BHalpha_SK      1.0       Alpha in Beverton-Holt for Crabeater seal
+BHalpha_PNK     1.0       Alpha in Beverton-Holt for Adelie penguins
+BHalpha_PNF     1.0       Alpha in Beverton-Holt for Emperor penguins
 BHalpha_SB     1.0       Alpha in Beverton-Holt for Albatross (was 2.55 was 1.55e7)
-BHalpha_WHO     1.0       Alpha in Beverton-Holt for Sperm whales 
+BHalpha_WHO     1.0       Alpha in Beverton-Holt for Sperm whales
 BHalpha_WHH     1.0       Alpha in Beverton-Holt for baleen whales
 BHalpha_WHM     1.0       Alpha in Beverton-Holt for Minke whales
 BHalpha_TP     1.0       Alpha in Beverton-Holt for orca
-BHalpha_KR      9.00E+11  Alpha in Beverton-Holt for demersal krill     
-BHalpha_IKR      9.00E+11  Alpha in Beverton-Holt for demersal krill     
+BHalpha_KR      9.00E+11  Alpha in Beverton-Holt for demersal krill
+BHalpha_IKR      9.00E+11  Alpha in Beverton-Holt for demersal krill
 
 
-BHbeta_FM       6.06E+10  Beta in Beverton-Holt for Mesopelagics   
-BHbeta_FT       6.07E+10  Beta in Beverton-Holt for toothfishersal    
+BHbeta_FM       6.06E+10  Beta in Beverton-Holt for Mesopelagics
+BHbeta_FT       6.07E+10  Beta in Beverton-Holt for toothfishersal
 BHbeta_SF       1.0       Beta in Beverton-Holt for elephant seals
-BHbeta_SK       1.0       Beta in Beverton-Holt for Crabeater seal    
-BHbeta_PNK      1.0       Beta in Beverton-Holt for Adelie penguins    
-BHbeta_PNF      1.0       Beta in Beverton-Holt for Emperor penguins    
+BHbeta_SK       1.0       Beta in Beverton-Holt for Crabeater seal
+BHbeta_PNK      1.0       Beta in Beverton-Holt for Adelie penguins
+BHbeta_PNF      1.0       Beta in Beverton-Holt for Emperor penguins
 BHbeta_SB       1.0       Beta in Beverton-Holt for Albatross
 BHbeta_WHO      1.0       Beta in Beverton-Holt for Sperm whales
 BHbeta_WHH      1.0       Beta in Beverton-Holt for baleen whales
 BHbeta_WHM      1.0       Beta in Beverton-Holt for Minke whales
 BHbeta_TP      1.0       Beta in Beverton-Holt for orca
-BHbeta_KR       2.00E+13  Beta in Beverton-Holt for demersal krill    
-BHbeta_IKR       2.00E+13  Beta in Beverton-Holt for demersal krill  
+BHbeta_KR       2.00E+13  Beta in Beverton-Holt for demersal krill
+BHbeta_IKR       2.00E+13  Beta in Beverton-Holt for demersal krill
 
 
 
 # Recruitment modifiers to "encourage recovery" of stocks
-  
-recover_mult_FM 1.0       Recruitment multiplier for Mesopelagics   
-recover_mult_FT 1.0       Recruitment multiplier for toothfishersal       
+
+recover_mult_FM 1.0       Recruitment multiplier for Mesopelagics
+recover_mult_FT 1.0       Recruitment multiplier for toothfishersal
 recover_mult_SF 1.0       Recruitment multiplier for elephant seals
-recover_mult_SK 1.0       Recruitment multiplier for Crabeater seal       
-recover_mult_PNK 1.0      Recruitment multiplier for Adelie penguins    
-recover_mult_PNF 1.0      Recruitment multiplier for Emperor penguins     
-recover_mult_SB 1.0      Recruitment multiplier for Albatross   
+recover_mult_SK 1.0       Recruitment multiplier for Crabeater seal
+recover_mult_PNK 1.0      Recruitment multiplier for Adelie penguins
+recover_mult_PNF 1.0      Recruitment multiplier for Emperor penguins
+recover_mult_SB 1.0      Recruitment multiplier for Albatross
 recover_mult_WHO 1.0      Recruitment multiplier for Sperm whales
 recover_mult_WHH 1.0      Recruitment multiplier for baleen whales
 recover_mult_WHM 1.0      Recruitment multiplier for Minke whales
@@ -4931,18 +4931,18 @@ recover_mult_IKR 1.0       Recruitment multiplier for krill
 
 
 recover_trigger  0.0       Prop. of init. stock remaining that triggers "encourage recovery"
-recover_span     31449600000  Number of days from initial trigger until recover_mult used 
-recover_subseq   1         Number of years in a row where get increased recruitment 
+recover_span     31449600000  Number of days from initial trigger until recover_mult used
+recover_subseq   1         Number of years in a row where get increased recruitment
 
 # Starting time of perscribed recruitment "recovery" of stocks
- 
-recover_start_FM  31449600000  Recruitment change start date for Mesopelagics   
-recover_start_FT  31449600000  Recruitment change start date for toothfishersal    
+
+recover_start_FM  31449600000  Recruitment change start date for Mesopelagics
+recover_start_FT  31449600000  Recruitment change start date for toothfishersal
 recover_start_SF  31449600000  Recruitment change start date for elephant seals
-recover_start_SK  31449600000  Recruitment change start date for Crabeater seal    
-recover_start_PNK 31449600000  Recruitment change start date for Adelie penguins    
-recover_start_PNF 31449600000  Recruitment change start date for Emperor penguins    
-recover_start_SB 31449600000  Recruitment change start date for Albatross   
+recover_start_SK  31449600000  Recruitment change start date for Crabeater seal
+recover_start_PNK 31449600000  Recruitment change start date for Adelie penguins
+recover_start_PNF 31449600000  Recruitment change start date for Emperor penguins
+recover_start_SB 31449600000  Recruitment change start date for Albatross
 recover_start_WHO 31449600000  Recruitment change start date for Sperm whales
 recover_start_WHH 31449600000  Recruitment change start date for baleen whales
 recover_start_WHM 31449600000  Recruitment change start date for Minke whales
@@ -4951,26 +4951,26 @@ recover_start_KR  31449600000  Recruitment change start date for krill
 recover_start_IKR  31449600000  Recruitment change start date for krill
 
 
-# Log-normal random recruitment 
+# Log-normal random recruitment
 lognorm_mu      0.5        Centre for lognormal distribution of the number of recruits
-lognorm_sigma   0.3        Variation of lognormal distribution of the number of recruits    
+lognorm_sigma   0.3        Variation of lognormal distribution of the number of recruits
 FM_log_mult     1.0        Multipler converting distribution to number of migratory mesopelagic recruits
-FT_log_mult     1.0        Multipler converting distribution to number of toothfishersal recruits    
-SF_log_mult     1.0        Multipler converting distribution to number of miscellaneous demersal recruits     
-SK_log_mult     1.0        Multipler converting distribution to number of demersal shark recruits    
-PNK_log_mult    1.0        Multipler converting distribution to number of Adelie penguin recruits    
-PNF_log_mult    1.0        Multipler converting distribution to number of Emperor penguin recruits    
+FT_log_mult     1.0        Multipler converting distribution to number of toothfishersal recruits
+SF_log_mult     1.0        Multipler converting distribution to number of miscellaneous demersal recruits
+SK_log_mult     1.0        Multipler converting distribution to number of demersal shark recruits
+PNK_log_mult    1.0        Multipler converting distribution to number of Adelie penguin recruits
+PNF_log_mult    1.0        Multipler converting distribution to number of Emperor penguin recruits
 SB_log_mult    1.0        Multipler converting distribution to number of penguin recruits
-WHO_log_mult    1.0        Multipler converting distribution to number of Sperm whale young     
-WHH_log_mult    1.0        Multipler converting distribution to number of baleen whale young     
-WHM_log_mult    1.0        Multipler converting distribution to number of small orca young     
-TP_log_mult    1.0        Multipler converting distribution to number of orca young     
-KR_log_mult     1.0        Multipler converting distribution to number of Krill recruits  
-IKR_log_mult     1.0        Multipler converting distribution to number of Krill recruits  
+WHO_log_mult    1.0        Multipler converting distribution to number of Sperm whale young
+WHH_log_mult    1.0        Multipler converting distribution to number of baleen whale young
+WHM_log_mult    1.0        Multipler converting distribution to number of small orca young
+TP_log_mult    1.0        Multipler converting distribution to number of orca young
+KR_log_mult     1.0        Multipler converting distribution to number of Krill recruits
+IKR_log_mult     1.0        Multipler converting distribution to number of Krill recruits
 
 
 
-# Size of recruits 
+# Size of recruits
 
 KWSR_FM    0.39           Structural weight of migratory mesopel recruits   mg N m-3         0.039
 KWSR_FT    61.45          Structural weight of toothfish. recruits  mg N m-3         0.019
@@ -4980,7 +4980,7 @@ KWSR_PNF   3170.76        Structural weight of Emperor penguin recruits         
 KWSR_PNK   146.40         Structural weight of Adelie penguin recruits       mg N m-3         581.3
 KWSR_SB   987.67         Structural weight of penguin fledglings           mg N m-3         0.014
 KWSR_WHO   48219218.78    Structural weight of Sperm whale young                 mg N m-3         8048.0
-KWSR_WHH   90978331.68    Structural weight of baleen whale young           mg N m-3         117362680.0 
+KWSR_WHH   90978331.68    Structural weight of baleen whale young           mg N m-3         117362680.0
 KWSR_WHM   30592276.68    Structural weight of small orca young    mg N m-3         749557.5
 KWSR_TP   13628314.42    Structural weight of orca young          mg N m-3         749557.5
 KWSR_KR    0.1            Structural weight of krill settler       mg N m-3         0.1
@@ -5005,62 +5005,62 @@ KWRR_IKR    0.26           Reserve weight of krill settler          mg N m-3    
 ## And for spawning
 # Minimum and maximum spawning temperatures
 
-FM_min_spawn_temp -1.0     
-FT_min_spawn_temp -1.0        
-SF_min_spawn_temp -1.0         
-SK_min_spawn_temp -1.0         
-PNK_min_spawn_temp -1.0       
-PNF_min_spawn_temp -1.0              
-SB_min_spawn_temp -1.0         
-WHO_min_spawn_temp -1.0         
-WHH_min_spawn_temp -1.0         
-WHM_min_spawn_temp -1.0         
-TP_min_spawn_temp -1.0      
-KR_min_spawn_temp -1.0    
-IKR_min_spawn_temp -1.0  
- 
+FM_min_spawn_temp -1.0
+FT_min_spawn_temp -1.0
+SF_min_spawn_temp -1.0
+SK_min_spawn_temp -1.0
+PNK_min_spawn_temp -1.0
+PNF_min_spawn_temp -1.0
+SB_min_spawn_temp -1.0
+WHO_min_spawn_temp -1.0
+WHH_min_spawn_temp -1.0
+WHM_min_spawn_temp -1.0
+TP_min_spawn_temp -1.0
+KR_min_spawn_temp -1.0
+IKR_min_spawn_temp -1.0
+
 KR_max_spawn_temp 5.0
 IKR_max_spawn_temp 5.0
-FM_max_spawn_temp 8.0     
-FT_max_spawn_temp 8.0     
-SF_max_spawn_temp 18.0        
-SK_max_spawn_temp 12.0        
-PNK_max_spawn_temp 14.0      
-PNF_max_spawn_temp 12.0        
-SB_max_spawn_temp 30.0        
-WHO_max_spawn_temp 30.0        
-WHH_max_spawn_temp 30.0        
-WHM_max_spawn_temp 30.0        
-TP_max_spawn_temp 30.0       
+FM_max_spawn_temp 8.0
+FT_max_spawn_temp 8.0
+SF_max_spawn_temp 18.0
+SK_max_spawn_temp 12.0
+PNK_max_spawn_temp 14.0
+PNF_max_spawn_temp 12.0
+SB_max_spawn_temp 30.0
+WHO_max_spawn_temp 30.0
+WHH_max_spawn_temp 30.0
+WHM_max_spawn_temp 30.0
+TP_max_spawn_temp 30.0
 
 # Minimum and maximum spawning salinities
-KR_min_spawn_salt 0.0     
-IKR_min_spawn_salt 0.0 
-FM_min_spawn_salt 0.0     
-FT_min_spawn_salt 0.0     
-SF_min_spawn_salt 0.0        
-SK_min_spawn_salt 0.0          
-PNK_min_spawn_salt 0.0      
-PNF_min_spawn_salt 0.0        
-SB_min_spawn_salt 0.0        
-WHO_min_spawn_salt 0.0        
-WHH_min_spawn_salt 0.0        
-WHM_min_spawn_salt 0.0        
-TP_min_spawn_salt 0.0    
+KR_min_spawn_salt 0.0
+IKR_min_spawn_salt 0.0
+FM_min_spawn_salt 0.0
+FT_min_spawn_salt 0.0
+SF_min_spawn_salt 0.0
+SK_min_spawn_salt 0.0
+PNK_min_spawn_salt 0.0
+PNF_min_spawn_salt 0.0
+SB_min_spawn_salt 0.0
+WHO_min_spawn_salt 0.0
+WHH_min_spawn_salt 0.0
+WHM_min_spawn_salt 0.0
+TP_min_spawn_salt 0.0
 
-KR_max_spawn_salt 36.0 
-IKR_max_spawn_salt 36.0 
-FM_max_spawn_salt 36.0     
-FT_max_spawn_salt 36.0     
+KR_max_spawn_salt 36.0
+IKR_max_spawn_salt 36.0
+FM_max_spawn_salt 36.0
+FT_max_spawn_salt 36.0
 SF_max_spawn_salt 36.0
-SK_max_spawn_salt 36.0        
-PNK_max_spawn_salt 36.0      
-PNF_max_spawn_salt 36.0            
-SB_max_spawn_salt 36.0        
-WHO_max_spawn_salt 36.0        
-WHH_max_spawn_salt 36.0        
-WHM_max_spawn_salt 36.0        
-TP_max_spawn_salt 36.0        
+SK_max_spawn_salt 36.0
+PNK_max_spawn_salt 36.0
+PNF_max_spawn_salt 36.0
+SB_max_spawn_salt 36.0
+WHO_max_spawn_salt 36.0
+WHH_max_spawn_salt 36.0
+WHM_max_spawn_salt 36.0
+TP_max_spawn_salt 36.0
 
 
 ## Stock structure
@@ -5107,10 +5107,10 @@ TP_stock_struct   28
 # Vertical stock structure. First entry for each vector refers to water
 # column layer closest to the sediment and then up through the watercolumn to
 # surface most layer on the extreme right
-KR_vert_stock_struct   10 
+KR_vert_stock_struct   10
 0.0 0.0 0.0 0.0 0.0 1 1 1 1 1
 
-IKR_vert_stock_struct   10 
+IKR_vert_stock_struct   10
 0.0 0.0 0.0 0.0 0.0 1 1 1 1 1
 
 FM_vert_stock_struct   10
@@ -5148,7 +5148,7 @@ TP_vert_stock_struct   10
 
 
 ## Regional output information - when want overall Biom.txt file split by region too
-# Biomass reporting regions - give the region each box will be counted in (so if two 
+# Biomass reporting regions - give the region each box will be counted in (so if two
 # regions each box must be either in region 0 or 1 etc)
 regID   28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -5245,7 +5245,7 @@ jack_b_DR 0
 ## Evolution related parameters
 
 flag_do_evolution     0        Whether do evolution (1) or not (0)                                      0
-flag_mult_grow_curves 0        Whether using mutiple growth curves not evolution per se (1) or not (0)  0        
+flag_mult_grow_curves 0        Whether using mutiple growth curves not evolution per se (1) or not (0)  0
 flag_bound_change     0        Whether evolution is effecting bound (1) or impact (0)                   0
 evol_stdev_range      2.0      Range of genotypes in terms of stdev                                     1-2
 max_rate_evol         0.0      Maximum evolutionary shift at any one point in time
@@ -5259,10 +5259,10 @@ flag_invert_biohab 0          flag indicating whether inverebrates use dynamic b
 
 # Flag indicating which refugia model to use
 # refuge_model option: 0 = none, 1 = original, 2 is rugosity related
-flag_refuge_model 1 
+flag_refuge_model 1
 
 # Flag indicating which rugosity calculation to use
-# 0 = none, 1 = mechanistic, 2 is an empirical relationship from Blackwood 
+# 0 = none, 1 = mechanistic, 2 is an empirical relationship from Blackwood
 flag_rugosity_model 0
 
 #TODO copied from example
@@ -5281,8 +5281,8 @@ rugosity_const 1.2    # was 0.88 from Bozec et al 2014 but to allow for box wide
 
 
 # Habitat dependency
-  
-flag_move_habdepend 1 whether vertebrate movement is habitat dependent: 0 = no, 1 = yes 0     
+
+flag_move_habdepend 1 whether vertebrate movement is habitat dependent: 0 = no, 1 = yes 0
 
 # Recruitment dependent on demersal habitat: 0 = no, 0 = yes   0
 FM_rec_HabDepend       0
@@ -5458,7 +5458,7 @@ flag_dynamicXRS 0 #Flag to indicate whether to use dynamic (1) or static (0) X_R
 
 
 
-k_SED            0.05      Coefficient of light absoption due to sediment. Only used if flagIsEstuary is on.* 
+k_SED            0.05      Coefficient of light absoption due to sediment. Only used if flagIsEstuary is on.*
 
 
 ###############################################################
@@ -5466,7 +5466,7 @@ k_SED            0.05      Coefficient of light absoption due to sediment. Only 
 ##########################################
 #############################################################################################################################
 
-# Photoinhibition 
+# Photoinhibition
 
 PBmax_D_IPL 0.44
 PBmax_D_IDF 0.44
@@ -5657,10 +5657,3 @@ ice_reprod_hab_DR 1
 ##################################################################################################################################################
 ###################################################################################################################################################
 ####################################################################################################################################################
-
-
-
-
-    
-
-

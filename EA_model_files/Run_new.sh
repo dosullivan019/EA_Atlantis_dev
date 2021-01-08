@@ -1,6 +1,6 @@
 #!/bin/bash
 ## instaling Atlantis for functionality
-#sudo make install -C /home/demiurgo/Documents/PhD/Atlantis_Model/trunk/atlantis/
+sudo make install -C /home/por07g/Documents/Atlantis_codes/trunk/atlantis/
 ## This Code make an aumotamic backup of the log file
 ## The backup is do in it at the end of the run
 #datIni="$(date +'%Y%m%d%H%M%S')"
@@ -25,7 +25,6 @@ atlantisMerged -i final_with_ice_input.nc 0 -o output.nc -r EA_run.prm -f EA_for
 #     echo "To save HD space I removed the file created 4 simulation ago"
 # fi
 # echo "...Done"
-
 # osver=$(cat /etc/issue.net)
 
 # ## Writing the information of the run in the RunTrack.org file
