@@ -11,7 +11,7 @@
 #### FunctionalGroups.csv
 Added column iBioEroder - set all groups to 0
 
-#### Notes
+### Notes
 EA_model_files only running for a few days (~45). IKR are exploding at the end, causing flow error. Temp, salinity and particle transport looks good. Error could be due to IKR recruitment parameters.
 
 Sediment analysis folder is working but excludes IKR.
@@ -37,4 +37,27 @@ Increased linear mortality of PPL (PPL_mL) from 0.0001 to 0.14 but made no diffe
 
 Reduced maximum growth rate of PPL (mum_PPL_T15) from 0.62 to 0.001. This solved the problem and model ran for full year.
 
+Light availability in box 9 layer 9 falls to 0 after a while and lacks seasonality in the first 8 years. Set eddy_vertmix = 1 which did not change anything, will keep the eddy_vertmix at 1 as it was in the sediment analysis model.
+
+#### 16 Jan 2021 - NO3 flux
+Model is running for 2427 days, crashing due to unstable NO3 flux (box 13, layer 9).
+Picoplankton (PPS) dying off a lot.
+Copepods (ZM) and Dinoflagellates (PDF) growing a lot. 
+
+The PPS grow a lot just before the Copepods start going out of control, so maybe need to stop them from growing so much.
+
+**Solution:** reduced mum_PPS_T15 from 0.3 to 0.2 and model ran for 3175 days. Crashing with same error, unstable NO3 flux but this time in box 12, layer 9 and looks to be due to PDF growth. Reducing mum_PDF_T15 from 0.5 to 0.4, model ran for 20 years.
+
+
+#### TODO: 
+Check the mL of fish, as they are a bit different to SeTAS although the fish look to be the most realistic output of the model. The krill mL (KR_mL) pretty different to PWN_mL in SeTAS but KR_ML is probably following more of a fish trend rather than the PWN.
+
+ZM_mL in SeTAS was very different so I reduced it in EA model.
+
+Parameter  | EA   | SeTAS     | Description                                           | Recommended Range
+------|--------------|---------- |-------------------------------------------------|------------------
+ZG_mL | 0.000001 (LG_ZOO but salps)  |0.000001  | Linear mortality rate of gelatin zoopl, 15 deg C  d-1 (0.0008)  |  0.0 - 0.04
+ZL_mL |  |0.0002    | Linear mortality rate of large zoopl, 15 deg C    d-1 (0.001)   |   0.0 - 0.04
+ZM_mL | 0.000002 (MED_Zoo) |0.0001    |  Linear mortality rate of meso-zoopl, 15 deg C     d-1 (0.001)  |    0.0 - 0.09
+IZ_mL | 0.000001 |  | Linear mortality rate of ice zoopl, 15 deg C       d-1        |      0.0 - 0.04
 
