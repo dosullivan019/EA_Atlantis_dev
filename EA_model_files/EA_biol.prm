@@ -86,7 +86,7 @@ flagmodelArag    0         Arag?
 flagq10          1         Q10 corrections used in the model: 1 = yes, 0 = no                  1
 O2case           3         Oxygen limitation used: 0 = ambient O2, 1 = based on depth, 2 = IGBEM, 3 = quadratic lim   3
 flagnut          0         Nutrient lim used: 0=Leibig (min), 1=multiplicative, 2=WQI          0
-flagmicro        0         Nutrient lim by micronutrient: 0 = no, 1 = yes                      0
+flagmicro        1         Nutrient lim by micronutrient: 0 = no, 1 = yes                      0
 flagtempchange   0         Mean temperature changes: 0 = no,  1 = yes                          0
 flagsaltchange   0         Mean salinity changes: 0 = no,  1 = yes                             0
 flagstarve       1         Give starvation notices: 0 = no, 1 = yes                            0  
@@ -4533,7 +4533,6 @@ KR_spawn_period   30      Period of mating for krill                        d   
 IKR_spawn_period  30      Period of mating for krill                        d                1 - 30
 
 # Age of recruitment 
-
 FM_Recruit_Time 35        Length of larval period for migratory mesopelagic d                20 - 70
 FT_Recruit_Time 60        Length of larval period for toothfish.            d                20 - 70
 SF_Recruit_Time 330       Length of gestation for elephant seal             d                300 - 360
@@ -4548,6 +4547,20 @@ TP_Recruit_Time 540      Length of gestation period for top predator        d   
 KR_Recruit_Time 21        Length of larval period for krill                 d                14 - 30
 IKR_Recruit_Time 21        Length of larval period for krill                d                14 - 30
 
+# Entry value for cohort where recruits turn up - in almost all instances this should be zero, except where there is a complicated life history like salmon
+FM_cohort_recruit_entry  0
+FT_cohort_recruit_entry  0
+SF_cohort_recruit_entry  0
+SK_cohort_recruit_entry  0
+PNK_cohort_recruit_entry 0
+PNF_cohort_recruit_entry 0
+SB_cohort_recruit_entry  0
+WHO_cohort_recruit_entry 0
+WHH_cohort_recruit_entry 0
+WHM_cohort_recruit_entry 0
+TP_cohort_recruit_entry  0
+KR_cohort_recruit_entry  0
+IKR_cohort_recruit_entry 0
 
 # Recruitment window  
 Recruit_Period_FM 30      Length of time recruits arrive over for mig mesopelagic d          15 - 90
