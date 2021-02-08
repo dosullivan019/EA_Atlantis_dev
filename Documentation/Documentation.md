@@ -49,6 +49,7 @@ The PPS grow a lot just before the Copepods start going out of control, so maybe
 **Solution:** reduced mum_PPS_T15 from 0.3 to 0.2 and model ran for 3175 days. Crashing with same error, unstable NO3 flux but this time in box 12, layer 9 and looks to be due to PDF growth. Reducing mum_PDF_T15 from 0.5 to 0.4, model ran for 20 years.
 
 
+
 #### TODO: 
 Check the mL of fish, as they are a bit different to SeTAS although the fish look to be the most realistic output of the model. The krill mL (KR_mL) pretty different to PWN_mL in SeTAS but KR_ML is probably following more of a fish trend rather than the PWN.
 
@@ -61,3 +62,19 @@ ZL_mL |  |0.0002    | Linear mortality rate of large zoopl, 15 deg C    d-1 (0.0
 ZM_mL | 0.000002 (MED_Zoo) |0.0001    |  Linear mortality rate of meso-zoopl, 15 deg C     d-1 (0.001)  |    0.0 - 0.09
 IZ_mL | 0.000001 |  | Linear mortality rate of ice zoopl, 15 deg C       d-1        |      0.0 - 0.04
 
+Seabirds are feeding predominantly on Pelagic Bacteria? And have no predators.
+
+#### 8 Feb 2021 growth of large mammals are too large
+Top Predators and large mammals are growing exponentially with no stabilisation, this is with the model running for 30 years. Increasing the quadratic mortality of these species to mirror the numbers in SeTas model but they continue to grow quite quickly.
+
+The quadratic mortality can be set to moderate levels for larger mammals and species which are not preyed on to account for competition between these species which is otherwise not included in the model.
+
+Large mammals - SF looking much better after decreasing KDENR but the older generations continue to grow in the staggered way - maybe try increasing mQ. Age Class 2-6 look ok and recruitment to age class 1 still looks a bit high.
+Halved KDENR for PNF, PNK and SK as these numbers seemed to be per female but this number reflects offspring per individual. Decreasing these numbers lowered the rate at which they grew but still not within 50% of the initial values. 
+
+Top predators are only feeding on whales so increased the values on penguins, they weren't feeding on the seals so increased these to be non-zero.
+
+Need to review KDENR for the whales. 
+
+Check ice-dwelling microfauna are working as expected - suggested by Beth as she couldn't see them in Olive.
+Do PPL, PDF need iron concentrations?
