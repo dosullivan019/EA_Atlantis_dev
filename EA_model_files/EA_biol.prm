@@ -1105,11 +1105,11 @@ min_channel_depth 0.001  Minimum depth of estuarine channels
 
 ## Biological parameters
 # Primary producer growth 
-mum_PPL_T15	0.3	Maximum growth rate, large phytoplankton         	 d-1    1.0 - 1.7 	1.7
+mum_PPL_T15	0.25	Maximum growth rate, large phytoplankton         	 d-1    1.0 - 1.7 	1.7
 mum_PPS_T15	0.2	Maximum growth rate, small (pico) phytoplankton  	 d-1    1.0 - 1.24 	1.26
 mum_IDF_T15	0.5	Maximum growth rate, Ice mixotrophs                      d-1	0.1	1.3
-mum_PDF_T15	0.4	Maximum growth rate, dinoflagellates           	         d-1	0.3 - 0.8	1
-mum_IPL_T15	0.25	Maximum growth rate, Ice diatoms                  	 d-1	0.05	1.44
+mum_PDF_T15	0.35	Maximum growth rate, dinoflagellates           	         d-1	0.3 - 0.8	1
+mum_IPL_T15	0.15	Maximum growth rate, Ice diatoms                  	 d-1	0.05	1.44
 
 MB_wc   0.01  Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 
