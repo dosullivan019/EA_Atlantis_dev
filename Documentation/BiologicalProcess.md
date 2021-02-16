@@ -43,8 +43,8 @@ KDENR_SF | 1  | 0.5  |Goedegebuure et al(2018) |Paper has reproduction rate of E
 KDENR_SK  | 1  | 0.5  |Goedegebuure et al(2018) | Copying KDENR_SF for now as papers on Crabeater seals are mostly based on data from the 70s
 KDENR_PK  | 2  | 1  |  | Adelie Penguin females typically lay 2 eggs which means on average 1 offspring assuming 50:50 M:F ratio
 KDENR_PF | 1  | 0.5  |  | Emperor Penguin females typically lay 1 egg which means on average 0.5 offspring assuming 50:50 M:F ratio
-KDENR_WHH | 0.5  | 0.5  |  | Emperor Penguin females typically lay 1 egg which means on average 0.5 offspring assuming 50:50 M:F ratio
-
+KDENR_WHH | 0.5  | 0.5  | Pallin et al (2018) | Humpback Whales have 1 offspring every 1-3 years which means on average there is 0.5 per pregnancy.
+KDENR_WHM | 0.5 | 0.5 | Minke Whales have 1 offspring which means on average there is 0.5 per pregnancy.
 
 ## Dinoflagellates
 
@@ -53,6 +53,41 @@ These groups are involved in processes of growth and mortality due to lysis and 
 Sudden increases would be due to growth rates being too high or predator dying off.
 
 $G_{PP} = mum * B_{PP} * \delta_{light} * \delta_{nutrient} * \delta_{space} * \delta_{eddy} * pHscalar$
+
+
+$\delta_{light} = min(IRR/KI, 1)$ when flaglight=0 which is the case for EA model.
+
+IRR = amount of light available
+
+KI = light saturation, parameter KI_XXX.
+
+The larger KI the smaller $\delta_{light}$ will be which will decrease dinoflagellate growth.
+
+$\delta_{nutrient} = $ 
+
+The larger values of KN_XXX, KS_XXX, KF_XXX the smaller $\delta_{nutrient}$ will be. 
+
+$\delta_{space}$ Space limitation is only applied to epibenthic primary producers, defined by PHYTOBEN or SEAGRASS. The EA model includes no epibenthic primary producers.
+
+$\delta_{eddy} = eddy_{scale} * eddy_{strength}$
+
+pHscalar will be used if flagfecundsensitive_XXX=1, in this model no functional group is sensitive to pH.
+
+The following parameters are what controls primary production growth in EA model:
+
+* mum
+
+* Bpp - biomass of primary producers
+
+* IRR - light availability
+
+* KI_XXX
+
+* KN_XXX
+
+* KS_XXX - for diatoms and ice diatoms (PPL and IPL)
+
+* KF_XXX
 
 growth of pelagic dinoflagellates
 

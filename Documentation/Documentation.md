@@ -76,5 +76,36 @@ Top predators are only feeding on whales so increased the values on penguins, th
 
 Need to review KDENR for the whales. 
 
+
+#### 13 Feb 2021 Pprey
+Seal and penguin diets were not being reflected correctly in the output. Seals were feeding too much on zooplankton which was causing them to grow too fast. Set ppreySeal_Zoo to 0 as this is what it is in SeTas. Might need to review this once the zooplankton are growing steadily. Also changed the Penguin pPrey and increased pPrey TP for penguin and seals.
+
+
+Phytoplankton are still growing too quick, the one burst at the beginning of the run keeps causing issues higher in the food web. Increasing KI_XXX parameters which are the recommended and found on https://github.com/AustralianAntarcticDivision/EA-Atlantis-dev/blob/master/SO28_biol.prm
+
+Code |Value | New Value | Reference  | Comments
+----|----|----|------------|-----------------
+KI_PPL_T15 | 10 | 20  | |
+KI_PPS_T15  | 10 | 19  | | 
+KI_PDF_T15  | 11 | 14  |  | 
+KI_IDF_T15 | 0.036  | 0.036  |  | 
+KI_IPL_T15 | 0.035  | 0.035  |  | 
+
+Changing the above parameters made no difference to primary producer growth and have changed back.
+
+Code |Value | New Value | Reference  | Comments
+----|----|----|------------|-----------------
+KN_PPL_T15 | 10 |  | | 
+KN_PPS_T15  | 0.67 |   | | 
+KN_PDF_T15  | 0.45 | 30 | SeTAS  | 
+KN_IDF_T15 | 0.8  |   |  | 
+KN_IPL_T15 | 0.9  |   |  |
+KS_PPL_T15 | 10 |   | |
+KS_PPS_T15  | 10 |   | | 
+KS_PDF_T15  | 11 |   |  0 in SeTAS | 
+KS_IDF_T15 | 0.036  |   |  | 
+KS_IPL_T15 | 0.035  |   |  | 
+
 Check ice-dwelling microfauna are working as expected - suggested by Beth as she couldn't see them in Olive.
 Do PPL, PDF need iron concentrations?
+Check outputBoxlight.txt. Looks like Box 2, 3 and 4 have high light at the beginning and then drops off - which is probably why the growth is weird?
