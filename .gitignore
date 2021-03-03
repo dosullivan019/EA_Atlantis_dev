@@ -1,0 +1,3 @@
+## files to ignore when working on Github
+EA_model_files/output_EA_biol_debug/*.*
+/*.~

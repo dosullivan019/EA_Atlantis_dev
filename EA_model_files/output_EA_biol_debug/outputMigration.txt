@@ -1,0 +1,2 @@
+Time WHO_juv_0_Migrating_Biomass(tonnes) WHO_juv_0_Total_biomass(tonnes) WHO_juv_0_Prop_Migrating WHO_ad_0_Migrating_Biomass(tonnes) WHO_ad_0_Total_biomass(tonnes) WHO_ad_0_Prop_Migrating WHH_juv_0_Migrating_Biomass(tonnes) WHH_juv_0_Total_biomass(tonnes) WHH_juv_0_Prop_Migrating WHH_ad_0_Migrating_Biomass(tonnes) WHH_ad_0_Total_biomass(tonnes) WHH_ad_0_Prop_Migrating
+0.000000e+00 0.000000e+00 4.097130e+04 0.000000e+00 0.000000e+00 1.042348e+04 0.000000e+00 0.000000e+00 5.003676e+05 0.000000e+00 0.000000e+00 9.413845e+04 0.000000e+00

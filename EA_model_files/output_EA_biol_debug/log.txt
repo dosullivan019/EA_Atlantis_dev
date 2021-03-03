@@ -1,0 +1,178 @@
+#
+#Atlantis2 Updated to Version 6529
+#
+#
+#
+#Atlantis path https://svnserv.csiro.au/svn/atlantis/Atlantis/trunk/atlantis Relative ^/Atlantis/trunk/atlantis
+#
+#
+#
+#Atlantis SVN Last Change Date 2020-05-20 12:48:21 +1000 (Wed, 20 May 2020)
+
+# Log file for run of Atlantis - only ecological errors and important events are recorded here #
+# Key to indices used in Atlantis, which may appear in logged errors here:
+atlantisMerged -i final_with_ice_input.nc 0 -o output.nc -r EA_run.prm -f EA_force.prm -p EA_physics.prm -b EA_biol.prm -h EA_harvest_nofishing.prm -s AntarcticGroupsnew2019.csv -d output_EA_biol_debug
+Counter: 0, sp: WHO-0, MigrateAway: 148, MigrateBack: 297 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 1, sp: WHO-0, MigrateAway: 519, MigrateBack: 668 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 2, sp: WHO-0, MigrateAway: 669, MigrateBack: 669 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 0, sp: WHO-1, MigrateAway: 148, MigrateBack: 297 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 1, sp: WHO-1, MigrateAway: 519, MigrateBack: 668 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 2, sp: WHO-1, MigrateAway: 669, MigrateBack: 669 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 0, sp: WHH-0, MigrateAway: 162, MigrateBack: 311 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 1, sp: WHH-0, MigrateAway: 505, MigrateBack: 654 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 2, sp: WHH-0, MigrateAway: 655, MigrateBack: 655 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 0, sp: WHH-1, MigrateAway: 162, MigrateBack: 311 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 1, sp: WHH-1, MigrateAway: 505, MigrateBack: 654 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+Counter: 2, sp: WHH-1, MigrateAway: 655, MigrateBack: 655 sp_Migrate_Time: 151, sp_Migrate_Return: 300, startDay: 151, endDay: 300, num_migrate: 1 multiyr_mig: 0
+IKR is smallest vertebrate (at 7.248191e-04 kg) - SN: 4.768547e-01, RN: 5.881208e+00
+WHO is largest vertebrate (at 8.313018e+04 kg) - SN: 1.997841e+08, RN: 5.294280e+08
+Time: 0.000000e+00, species IPL virgin biomass is 0.000000 t
+Time: 0.000000e+00, species IDF virgin biomass is 0.000000 t
+Time: 0.000000e+00, species PPS virgin biomass is 17395017.610764 t
+Time: 0.000000e+00, species PPL virgin biomass is 13794946.855067 t
+Time: 0.000000e+00, species PDF virgin biomass is 12903500.763180 t
+Time: 0.000000e+00, species IZ virgin biomass is 0.000000 t
+Time: 0.000000e+00, species ZM virgin biomass is 39111647.080153 t
+Time: 0.000000e+00, species ZG virgin biomass is 1651674.285479 t
+Time: 0.000000e+00, species BD virgin biomass is 8463214.079202 t
+Time: 0.000000e+00, species IKR virgin biomass is 246.531665 t
+Time: 0.000000e+00, species KR virgin biomass is 14861987.932284 t
+Time: 0.000000e+00, species FM virgin biomass is 193583.975605 t
+Time: 0.000000e+00, species FT virgin biomass is 5793300.012080 t
+Time: 0.000000e+00, species SF virgin biomass is 628077.394376 t
+Time: 0.000000e+00, species SK virgin biomass is 153654.841011 t
+Time: 0.000000e+00, species PNK virgin biomass is 2380.261989 t
+Time: 0.000000e+00, species PNF virgin biomass is 3521.522870 t
+Time: 0.000000e+00, species SB virgin biomass is 113269.745910 t
+Time: 0.000000e+00, species WHM virgin biomass is 15506.718322 t
+Time: 0.000000e+00, species WHO virgin biomass is 51394.781648 t
+Time: 0.000000e+00, species TP virgin biomass is 60809.273077 t
+Time: 0.000000e+00, species WHH virgin biomass is 594506.049558 t
+Time: 0.000000e+00, species PB virgin biomass is 94974054.479561 t
+Time: 0.000000e+00, species BB virgin biomass is 1793661.887179 t
+Time: 0.000000e+00, species IB virgin biomass is 1550.791559 t
+Time: 0.000000e+00, species DL virgin biomass is 58294010.167443 t
+Time: 0.000000e+00, species DR virgin biomass is 58294010.167443 t
+Time: 0.000000e+00, species DC virgin biomass is 0.000000 t
+Time: 0.000000e+00, species DIN virgin biomass is 2845760107820.996582 t
+Time: 0.000000e+00 modeldt: 43200.000000 nowday: 0.000000 startday: 0.000000 dayswitch: 1 daytime: 1, timeleft: 0.500000
+WHO leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 670)
+WHO leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 671)
+WHO leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 672)
+WHO leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 673)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 670)
+WHO leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 674)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 671)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 672)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 673)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 674)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 675)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 676)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 677)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 678)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 679)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 680)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 681)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 682)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 683)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 684)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 685)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 686)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 687)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 688)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 689)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 690)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 691)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 692)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 693)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 694)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 695)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 696)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 697)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 698)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 699)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 700)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 701)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 702)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 703)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 704)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 705)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 706)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 707)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 708)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 709)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 710)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 711)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 712)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 713)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 714)
+WHO leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 715)
+WHH leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 656)
+WHH leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 657)
+WHH leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 658)
+WHH leave_stage 0 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 659)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 656)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 657)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 658)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 659)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 660)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 661)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 662)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 663)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 664)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 665)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 666)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 667)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 668)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 669)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 670)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 671)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 672)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 673)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 674)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 675)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 676)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 677)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 678)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 679)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 680)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 681)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 682)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 683)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 684)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 685)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 686)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 687)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 688)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 689)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 690)
+WHH leave_stage 1 qqid 2 had clash of one group returning as next group leaves so pushing out leaving so there and ready to go (now day 691)
+Time: 0.000000e+00, species IPL is at 1.000000 of virgin biomass (now 0.000000 t vs virgin 0.000000 t)
+Time: 0.000000e+00, species IDF is at 1.000000 of virgin biomass (now 0.000000 t vs virgin 0.000000 t)
+Time: 0.000000e+00, species PPS is at 1.000000 of virgin biomass (now 17395017.610764 t vs virgin 17395017.610764 t)
+Time: 0.000000e+00, species PPL is at 1.000000 of virgin biomass (now 13794946.855067 t vs virgin 13794946.855067 t)
+Time: 0.000000e+00, species PDF is at 1.000000 of virgin biomass (now 12903500.763180 t vs virgin 12903500.763180 t)
+Time: 0.000000e+00, species IZ is at 1.000000 of virgin biomass (now 0.000000 t vs virgin 0.000000 t)
+Time: 0.000000e+00, species ZM is at 1.000000 of virgin biomass (now 39111647.080153 t vs virgin 39111647.080153 t)
+Time: 0.000000e+00, species ZG is at 1.000000 of virgin biomass (now 1651674.285479 t vs virgin 1651674.285479 t)
+Time: 0.000000e+00, species BD is at 1.000000 of virgin biomass (now 8463214.079202 t vs virgin 8463214.079202 t)
+Time: 0.000000e+00, species IKR is at 1.000000 of virgin biomass (now 246.531665 t vs virgin 246.531665 t)
+Time: 0.000000e+00, species KR is at 1.000000 of virgin biomass (now 14861987.932284 t vs virgin 14861987.932284 t)
+Time: 0.000000e+00, species FM is at 1.000000 of virgin biomass (now 193583.975605 t vs virgin 193583.975605 t)
+Time: 0.000000e+00, species FT is at 1.000000 of virgin biomass (now 5793300.012080 t vs virgin 5793300.012080 t)
+Time: 0.000000e+00, species SF is at 1.000000 of virgin biomass (now 628077.394376 t vs virgin 628077.394376 t)
+Time: 0.000000e+00, species SK is at 1.000000 of virgin biomass (now 153654.841011 t vs virgin 153654.841011 t)
+Time: 0.000000e+00, species PNK is at 1.000000 of virgin biomass (now 2380.261989 t vs virgin 2380.261989 t)
+Time: 0.000000e+00, species PNF is at 1.000000 of virgin biomass (now 3521.522870 t vs virgin 3521.522870 t)
+Time: 0.000000e+00, species SB is at 1.000000 of virgin biomass (now 113269.745910 t vs virgin 113269.745910 t)
+Time: 0.000000e+00, species WHM is at 1.000000 of virgin biomass (now 15506.718322 t vs virgin 15506.718322 t)
+Time: 0.000000e+00, species WHO is at 1.000000 of virgin biomass (now 51394.781648 t vs virgin 51394.781648 t)
+Time: 0.000000e+00, species TP is at 1.000000 of virgin biomass (now 60809.273077 t vs virgin 60809.273077 t)
+Time: 0.000000e+00, species WHH is at 1.000000 of virgin biomass (now 594506.049558 t vs virgin 594506.049558 t)
+Time: 0.000000e+00, species PB is at 1.000000 of virgin biomass (now 94974054.479561 t vs virgin 94974054.479561 t)
+Time: 0.000000e+00, species BB is at 1.000000 of virgin biomass (now 1793661.887179 t vs virgin 1793661.887179 t)
+Time: 0.000000e+00, species IB is at 1.000000 of virgin biomass (now 1550.791559 t vs virgin 1550.791559 t)
+Time: 0.000000e+00, species DL is at 1.000000 of virgin biomass (now 58294010.167443 t vs virgin 58294010.167443 t)
+Time: 0.000000e+00, species DR is at 1.000000 of virgin biomass (now 58294010.167443 t vs virgin 58294010.167443 t)
+Time: 0.000000e+00, species DC is at 1.000000 of virgin biomass (now 0.000000 t vs virgin 0.000000 t)
+Time: 0.000000e+00, species DIN is at 1.000000 of virgin biomass (now 2845760107820.996582 t vs virgin 2845760107820.996582 t)

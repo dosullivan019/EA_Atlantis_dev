@@ -1,0 +1,459 @@
+make: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis'
+Making install in ConvertAtlantis
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/ConvertAtlantis'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/ConvertAtlantis'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatConvertAtlantis.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatConvertAtlantis.a )
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/ConvertAtlantis'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/ConvertAtlantis'
+Making install in atassess
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atassess'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atassess'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatassess.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatassess.a )
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atassess'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atassess'
+Making install in atecology
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atecology'
+gcc -DHAVE_CONFIG_H -I. -I.. -I/usr/include/libxml2 -I../atassess/include -I../atecology/include -I../ateconomic/include -I../atlantisUtil/include -I../atlantismain/include -I../atharvest/include -I../atimplementation/include -I../atmanage/include -I../atphysics/include -I../atFileConvert/include -I../sjwlib/include  -I../ConvertAtlantis/include -I../atSS3Link/include -I. -I../atlantismain	   -D PROJ4 -D REPLICATE_OLD_RESULTS -D BETH_LOG_FILE_SIZE  -g -msse2 -mfpmath=sse   -Wall -Wextra -Wno-unused-parameter -Wuninitialized -Warray-bounds -Wno-format-overflow -Wno-unused-parameter -Werror  -pedantic  -std=c99    -MT atbiology.o -MD -MP -MF .deps/atbiology.Tpo -c -o atbiology.o atbiology.c
+mv -f .deps/atbiology.Tpo .deps/atbiology.Po
+rm -f libatecology.a
+ar cru libatecology.a atbiolUtil.o atannualbiology.o atbiolmessage.o atbiology.o atbiolsetup.o atbiophysics.o atcalibtools.o atecology.o atecologyts.o atfluxbreakdown.o atmovement.o atprocess.o atq10.o attime.o atvertprocesses.o atmacrophytes.o atBuildTracer.o atGroupProcesses.o atBiologyXMLParamIO.o atNutrient.o atPhysChemIO.o atdemography.o atdiversity.o atcoral.o atImposeRecruit.o additionalTracer.o atExternalScalar.o atdemography.o atIceProcesses.o atLandProcess.o atContaminants.o atmigration.o atexternalpop.o 
+ranlib libatecology.a
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atecology'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatecology.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatecology.a )
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atecology'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atecology'
+Making install in ateconomic
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/ateconomic'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/ateconomic'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libateconomic.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libateconomic.a )
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/ateconomic'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/ateconomic'
+Making install in atlantisUtil
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atlantisUtil'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atlantisUtil'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatlantisutil.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatlantisutil.a )
+ /bin/mkdir -p '/usr/local/include/Atlantis-3.0/Atlantis'
+ /usr/bin/install -c -m 644 ../atlantisUtil/include/atUtilLib.h ../atlantisUtil/include/atTracer.h ../atlantisUtil/include/atXMLUtil.h ../atlantisUtil/include/atFunctGroup.h ../atlantisUtil/include/atGroupTypes.h '/usr/local/include/Atlantis-3.0/Atlantis'
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atlantisUtil'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atlantisUtil'
+Making install in atharvest
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atharvest'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atharvest'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatharvest.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatharvest.a )
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atharvest'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atharvest'
+Making install in atmanage
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atmanage'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atmanage'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatmanage.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatmanage.a )
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atmanage'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atmanage'
+Making install in atimplementation
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atimplementation'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atimplementation'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatimplementation.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatimplementation.a )
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atimplementation'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atimplementation'
+Making install in atphysics
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atphysics'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atphysics'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatphysics.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatphysics.a )
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atphysics'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atphysics'
+Making install in sjwlib
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/sjwlib'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/sjwlib'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libsjwlib.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libsjwlib.a )
+ /bin/mkdir -p '/usr/local/include/Atlantis-3.0/Atlantis'
+ /usr/bin/install -c -m 644 ../sjwlib/include/datafile.h ../sjwlib/include/gridlib.h ../sjwlib/include/mapproj.h ../sjwlib/include/pointsourcesink.h ../sjwlib/include/polyline.h ../sjwlib/include/ptrack.h ../sjwlib/include/sjwalloc.h ../sjwlib/include/sjwconfig.h ../sjwlib/include/sjwlib.h ../sjwlib/include/timeseries.h ../sjwlib/include/txt_param.h ../sjwlib/include/xytoij.h ../sjwlib/include/colourtable.h ../sjwlib/include/nrcdflib.h '/usr/local/include/Atlantis-3.0/Atlantis'
+ /bin/mkdir -p '/usr/local/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libsjwlib.pc '/usr/local/lib/pkgconfig'
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/sjwlib'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/sjwlib'
+Making install in atSS3Link
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atSS3Link'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atSS3Link'
+ /bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644  libatSS3Link.a '/usr/local/lib'
+ ( cd '/usr/local/lib' && ranlib libatSS3Link.a )
+ /bin/mkdir -p '/usr/local/include/Atlantis-3.0/Atlantis'
+ /usr/bin/install -c -m 644 ../atSS3Link/include/atSS3LinkLib.h ../atSS3Link/include/atSS3Util.h '/usr/local/include/Atlantis-3.0/Atlantis'
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atSS3Link'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atSS3Link'
+Making install in atlantismain
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atlantismain'
+gcc -DHAVE_CONFIG_H -I. -I.. -I/usr/include/libxml2 -I../atassess/include -I../atecology/include -I../ateconomic/include -I../atlantisUtil/include -I../atlantismain/include -I../atharvest/include -I../atimplementation/include -I../atmanage/include -I../atphysics/include -I../atFileConvert/include -I../sjwlib/include  -I../ConvertAtlantis/include -I../atSS3Link/include -I. -I../atlantismain	   -D PROJ4 -D REPLICATE_OLD_RESULTS -D BETH_LOG_FILE_SIZE  -g -msse2 -mfpmath=sse   -Wall -Wextra -Wno-unused-parameter -Wuninitialized -Warray-bounds -Wno-format-overflow -Wno-unused-parameter -Werror  -pedantic  -std=c99   -D'ATLANTIS_WCPATH="https://svnserv.csiro.au/svn/atlantis/Atlantis/trunk/atlantis Relative ^/Atlantis/trunk/atlantis"' -D'ATLANTIS_WCDATE="2020-05-20 12:48:21 +1000 (Wed, 20 May 2020)"' -D'ATLANTIS_REVISION="6529"' -MT atlantismain.o -MD -MP -MF .deps/atlantismain.Tpo -c -o atlantismain.o atlantismain.c
+mv -f .deps/atlantismain.Tpo .deps/atlantismain.Po
+gcc -D PROJ4 -D REPLICATE_OLD_RESULTS -D BETH_LOG_FILE_SIZE  -g -msse2 -mfpmath=sse   -Wall -Wextra -Wno-unused-parameter -Wuninitialized -Warray-bounds -Wno-format-overflow -Wno-unused-parameter -Werror  -pedantic  -std=c99   -D'ATLANTIS_WCPATH="https://svnserv.csiro.au/svn/atlantis/Atlantis/trunk/atlantis Relative ^/Atlantis/trunk/atlantis"' -D'ATLANTIS_WCDATE="2020-05-20 12:48:21 +1000 (Wed, 20 May 2020)"' -D'ATLANTIS_REVISION="6529"' -L../atassess -L../atecology -L../ateconomic -L../atlantisUtil -L../atlantismain -L../atmanage -L../atharvest -L../atimplementation -L../atphysics -L../ConvertAtlantis -L../sjwlib -L../atSS3Link    -lxml2  -o atlantisMerged atlantismain.o -latlantisutil -latassess -latphysics -latecology -lateconomic -latmanage -latharvest -latimplementation -latphysics -latConvertAtlantis -latlantisutil -lsjwlib -latSS3Link    -lxml2 -lproj -lnetcdf -lm 
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atlantismain'
+gcc -DHAVE_CONFIG_H -I. -I.. -I/usr/include/libxml2 -I../atassess/include -I../atecology/include -I../ateconomic/include -I../atlantisUtil/include -I../atlantismain/include -I../atharvest/include -I../atimplementation/include -I../atmanage/include -I../atphysics/include -I../atFileConvert/include -I../sjwlib/include  -I../ConvertAtlantis/include -I../atSS3Link/include -I. -I../atlantismain	   -D PROJ4 -D REPLICATE_OLD_RESULTS -D BETH_LOG_FILE_SIZE  -g -msse2 -mfpmath=sse   -Wall -Wextra -Wno-unused-parameter -Wuninitialized -Warray-bounds -Wno-format-overflow -Wno-unused-parameter -Werror  -pedantic  -std=c99   -D'ATLANTIS_WCPATH="https://svnserv.csiro.au/svn/atlantis/Atlantis/trunk/atlantis Relative ^/Atlantis/trunk/atlantis"' -D'ATLANTIS_WCDATE="2020-05-20 12:48:21 +1000 (Wed, 20 May 2020)"' -D'ATLANTIS_REVISION="6529"' -MT atlantismain.o -MD -MP -MF .deps/atlantismain.Tpo -c -o atlantismain.o atlantismain.c
+mv -f .deps/atlantismain.Tpo .deps/atlantismain.Po
+gcc -D PROJ4 -D REPLICATE_OLD_RESULTS -D BETH_LOG_FILE_SIZE  -g -msse2 -mfpmath=sse   -Wall -Wextra -Wno-unused-parameter -Wuninitialized -Warray-bounds -Wno-format-overflow -Wno-unused-parameter -Werror  -pedantic  -std=c99   -D'ATLANTIS_WCPATH="https://svnserv.csiro.au/svn/atlantis/Atlantis/trunk/atlantis Relative ^/Atlantis/trunk/atlantis"' -D'ATLANTIS_WCDATE="2020-05-20 12:48:21 +1000 (Wed, 20 May 2020)"' -D'ATLANTIS_REVISION="6529"' -L../atassess -L../atecology -L../ateconomic -L../atlantisUtil -L../atlantismain -L../atmanage -L../atharvest -L../atimplementation -L../atphysics -L../ConvertAtlantis -L../sjwlib -L../atSS3Link    -lxml2  -o atlantisMerged atlantismain.o -latlantisutil -latassess -latphysics -latecology -lateconomic -latmanage -latharvest -latimplementation -latphysics -latConvertAtlantis -latlantisutil -lsjwlib -latSS3Link    -lxml2 -lproj -lnetcdf -lm 
+ /bin/mkdir -p '/usr/local/bin'
+  /usr/bin/install -c atlantisMerged '/usr/local/bin'
+ /bin/mkdir -p '/usr/local/include/Atlantis-3.0/Atlantis'
+ /usr/bin/install -c -m 644 include/atlantisboxmodel.h '/usr/local/include/Atlantis-3.0/Atlantis'
+ /bin/mkdir -p '/usr/local/lib/pkgconfig'
+ /usr/bin/install -c -m 644 atlantisMerged.pc '/usr/local/lib/pkgconfig'
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atlantismain'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis/atlantismain'
+make[1]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis'
+make[2]: Entering directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis'
+make[1]: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis'
+make: Leaving directory '/home/por07g/Documents/Atlantis_codes/trunk/atlantis'
+convertedXMLFileName = EA_run.xml
+bm->track_contaminants  = 0
+tstop: 365.000000
+4 of 28 boxes are boundary boxes
+dbm->boxes[0].ice.currentnz = 1
+dbm->boxes[1].ice.currentnz = 1
+dbm->boxes[2].ice.currentnz = 1
+dbm->boxes[3].ice.currentnz = 1
+dbm->boxes[4].ice.currentnz = 1
+dbm->boxes[5].ice.currentnz = 1
+dbm->boxes[6].ice.currentnz = 1
+dbm->boxes[7].ice.currentnz = 1
+dbm->boxes[8].ice.currentnz = 1
+dbm->boxes[9].ice.currentnz = 1
+dbm->boxes[10].ice.currentnz = 1
+dbm->boxes[11].ice.currentnz = 1
+dbm->boxes[12].ice.currentnz = 1
+dbm->boxes[13].ice.currentnz = 1
+dbm->boxes[14].ice.currentnz = 1
+dbm->boxes[15].ice.currentnz = 1
+dbm->boxes[16].ice.currentnz = 1
+dbm->boxes[17].ice.currentnz = 1
+dbm->boxes[18].ice.currentnz = 1
+dbm->boxes[19].ice.currentnz = 1
+dbm->boxes[20].ice.currentnz = 1
+dbm->boxes[21].ice.currentnz = 1
+dbm->boxes[22].ice.currentnz = 1
+dbm->boxes[23].ice.currentnz = 1
+dbm->boxes[24].ice.currentnz = 1
+dbm->boxes[25].ice.currentnz = 1
+dbm->boxes[26].ice.currentnz = 1
+dbm->boxes[27].ice.currentnz = 1
+bm->boxes[0].ice.dz[0]= 0.000000e+00
+bm->boxes[1].ice.dz[0]= 0.000000e+00
+bm->boxes[2].ice.dz[0]= 0.000000e+00
+bm->boxes[3].ice.dz[0]= 0.000000e+00
+bm->boxes[4].ice.dz[0]= 1.000000e+00
+bm->boxes[5].ice.dz[0]= 0.000000e+00
+bm->boxes[6].ice.dz[0]= 0.000000e+00
+bm->boxes[7].ice.dz[0]= 0.000000e+00
+bm->boxes[8].ice.dz[0]= 0.000000e+00
+bm->boxes[9].ice.dz[0]= 0.000000e+00
+bm->boxes[10].ice.dz[0]= 0.000000e+00
+bm->boxes[11].ice.dz[0]= 0.000000e+00
+bm->boxes[12].ice.dz[0]= 0.000000e+00
+bm->boxes[13].ice.dz[0]= 0.000000e+00
+bm->boxes[14].ice.dz[0]= 0.000000e+00
+bm->boxes[15].ice.dz[0]= 0.000000e+00
+bm->boxes[16].ice.dz[0]= 0.000000e+00
+bm->boxes[17].ice.dz[0]= 0.000000e+00
+bm->boxes[18].ice.dz[0]= 0.000000e+00
+bm->boxes[19].ice.dz[0]= 0.000000e+00
+bm->boxes[20].ice.dz[0]= 0.000000e+00
+bm->boxes[21].ice.dz[0]= 0.000000e+00
+bm->boxes[22].ice.dz[0]= 0.000000e+00
+bm->boxes[23].ice.dz[0]= 0.000000e+00
+bm->boxes[24].ice.dz[0]= 0.000000e+00
+bm->boxes[25].ice.dz[0]= 0.000000e+00
+bm->boxes[26].ice.dz[0]= 0.000000e+00
+bm->boxes[27].ice.dz[0]= 0.000000e+00
+ bm->tinfo[i].name, = Ice_Diatoms_N
+in gere 2
+ bm->tinfo[i].name, = Ice_Diatoms_S
+in gere 2
+ bm->tinfo[i].name, = Ice_Diatoms_F
+in gere 2
+ bm->tinfo[i].name, = Ice_Mixotrophs_N
+in gere 2
+ bm->tinfo[i].name, = Ice_Zoobiota_N
+in gere 2
+ bm->tinfo[i].name, = Ice_Bacteria_N
+in gere 2
+Creating general output file
+Check summary output file outputTOT.nc
+Create growth and consumption output file
+Initialise hydrodynamics
+Reading in size change time series forcing file with units seconds since 2000-01-01 00:00:00 +10
+Reading in growth rate time series forcing file with units seconds since 2000-01-01 00:00:00 +10
+Reading in FSPB time series forcing file with units seconds since 2000-01-01 00:00:00 +10
+Reading in pCO2 time series forcing file with units seconds since 2000-01-01 00:00:00 +10
+Initialise temperature and salinity forcing
+Initialise physics
+filename = sea_ice_test.nc, fid = 589824
+init - filename = sea_ice_test.nc, fid = 589824
+flag_fine_ontogenetic_diets: 0 initarray
+Initialise biology
+createPhysicalLimXML
+Done invader and moving on
+Start reading biological parameters from EA_biol.prm.
+Biological parameter file loading
+0                                 100
+**Ecosystem parameter: availflag = 1.000000
+Ecosystem parameter: flagrandom = 1.000000
+Ecosystem parameter: readin_popratio = 0.000000
+Ecosystem parameter: flagresp = 0.000000
+Ecosystem parameter: flagavgmig = 0.000000
+Ecosystem parameter: flagbactstim = 0.000000
+Read_Physical_Limitation
+Ecosystem parameter: flagtrackpops = 1.000000
+Ecosystem parameter: flagseason = 1.000000
+Ecosystem parameter: flaglight = 0.000000
+Ecosystem parameter: flaglightopt = 2.000000
+Ecosystem parameter: lim_sun_hours = 1.000000
+Ecosystem parameter: flagmodeltemp = 0.000000
+Ecosystem parameter: flagq10 = 1.000000
+Ecosystem parameter: O2case = 3.000000
+Ecosystem parameter: flagnut = 0.000000
+Ecosystem parameter: flagmicro = 1.000000
+Ecosystem parameter: flagtempchange = 0.000000
+Ecosystem parameter: flagsaltchange = 0.000000
+Ecosystem parameter: flagpHchange = 0.000000
+Ecosystem parameter: flagstarve = 1.000000
+Ecosystem parameter: flagdegrade = 0.000000
+Ecosystem parameter: flagroc = 0.000000
+Ecosystem parameter: flaghomog_sp = 1.000000
+Ecosystem parameter: flagagestruct = 1.000000
+Ecosystem parameter: flagsenesce = 1.000000
+Ecosystem parameter: flagtsforcerecruit = 0.000000
+Ecosystem parameter: flag_modify_KWSR = 0.000000
+Ecosystem parameter: norm_larval_distrib = 0.000000
+Ecosystem parameter: larvae_connect_only = 0.000000
+Ecosystem parameter: enviro_independ_larvae = 0.000000
+Ecosystem parameter: flag_recruit_effect = 1.000000
+Ecosystem parameter: flag_macro_model = 0.000000
+Ecosystem parameter: flag_benthos_sediment_link = 0.000000
+Ecosystem parameter: flag_competing_epiff = 0.000000
+Ecosystem parameter: flag_invert_biohab = 0.000000
+Ecosystem parameter: flag_olddiet = 0.000000
+Ecosystem parameter: flag_fine_ontogenetic_diets = 0.000000
+Ecosystem parameter: UseHardFeedingWindow = 1.000000
+Ecosystem parameter: UseBiLogisticFeedingWindow = 0.000000
+Ecosystem parameter: flag_satiation = 0.000000
+Ecosystem parameter: flag_shrinkfat = 0.000000
+Ecosystem parameter: flag_predratiodepend = 0.000000
+Ecosystem parameter: flag_dynamicXRS = 0.000000
+Ecosystem parameter: flag_rel_cover = 0.000000
+Ecosystem parameter: flag_report_water_detritus = 0.000000
+Ecosystem parameter: flag_refuge_model = 1.000000
+Ecosystem parameter: flag_rugosity_model = 0.000000
+Ecosystem parameter: flag_georugosity = 0.000000
+Ecosystem parameter: RugCover_Coefft = 1.461300
+Ecosystem parameter: RugCover_Const = 0.047500
+Ecosystem parameter: RugCover_Cap = 4.000000
+Ecosystem parameter: min_rugosity = 1.000000
+Ecosystem parameter: max_rugosity = 5.000000
+Ecosystem parameter: rugosity_const = 1.200000
+Ecosystem parameter: flagmodelpH = 0.000000
+Ecosystem parameter: flagmodelArag = 0.000000
+Ecosystem parameter: Enviro_turb = 0.000002
+Ecosystem parameter: K_TUR = 116.000000
+Ecosystem parameter: K_TUR_DEP = 0.020000
+Ecosystem parameter: K_MAX_TUR = 10.000000
+Ecosystem parameter: K_IRR = 101.000000
+Ecosystem parameter: K_MAX_IRR = 10.000000
+Ecosystem parameter: K_MIN_IRR = 2.000000
+Ecosystem parameter: r_DC_T15 = 0.500000
+Ecosystem parameter: r_DL_T15 = 0.100000
+Ecosystem parameter: r_DR_T15 = 0.008000
+Ecosystem parameter: r_DON_T15 = 0.017600
+Ecosystem parameter: r_DSi_T15 = 0.033000
+Ecosystem parameter: FDR_DC = 0.200000
+Ecosystem parameter: FDR_DL = 0.200000
+Ecosystem parameter: FDON_D = 0.050000
+Ecosystem parameter: R_0_T15 = 200.000000
+Ecosystem parameter: R_D_T15 = 10.000000
+Ecosystem parameter: Dmax = 0.250000
+Ecosystem parameter: K_nit_T15 = 0.010000
+Ecosystem parameter: K_conc = 2000.000000
+Ecosystem parameter: p_NH_anad = 3.000000
+Ecosystem parameter: X_ON = 16.000000
+Ecosystem parameter: X_CN = 5.700000
+Ecosystem parameter: X_CHLN = 7.000000
+Ecosystem parameter: X_SiN = 3.000000
+Ecosystem parameter: X_FeN = 30.000000
+Ecosystem parameter: k_wetdry = 20.000000
+Ecosystem parameter: k_w_cdepth = 205.000000
+Ecosystem parameter: k_w_depth = 55.000000
+Ecosystem parameter: k_w_deep = 0.005000
+Ecosystem parameter: k_w_shallow = 0.050000
+Ecosystem parameter: k_PN = 0.003500
+Ecosystem parameter: k_DON = 0.000900
+Ecosystem parameter: k_DL = 0.003800
+Ecosystem parameter: k_IS = 0.050000
+Ecosystem parameter: k_SED = 0.050000
+Ecosystem parameter: KIOP_min = 4.000000
+Ecosystem parameter: KIOP_shift = 0.250000
+Ecosystem parameter: KI_avail = 0.500000
+Ecosystem parameter: K_addepth = 10.000000
+Ecosystem parameter: swr_scalar = 0.450000
+Ecosystem parameter: swr_const = 1367.000000
+Ecosystem parameter: swr_cos_coefft = 0.034000
+Ecosystem parameter: swr_cos_offset = 0.000000
+Ecosystem parameter: albedo_ice = 0.400000
+Ecosystem parameter: k_bs = 15.000000
+Ecosystem parameter: k_bi = 2.000000
+Ecosystem parameter: k_rs = 35.000000
+Ecosystem parameter: k_ri = 4.000000
+Ecosystem parameter: R_bi = 0.500000
+Ecosystem parameter: k_ice = 0.450000
+Ecosystem parameter: ka_star = 0.030000
+Ecosystem parameter: RelTol = 0.100000
+Ecosystem parameter: Flux_tol = 0.200000
+Ecosystem parameter: min_pool = 0.000000
+Ecosystem parameter: min_dens = 0.000100
+Ecosystem parameter: min_channel_depth = 0.001000
+Ecosystem parameter: flag_do_var_express = 0.000000
+Ecosystem parameter: flag_do_evolution = 0.000000
+Ecosystem parameter: flag_bound_change = 0.000000
+Ecosystem parameter: flag_inheritance = 1.000000
+Ecosystem parameter: flag_evolvar_capped = 0.000000
+Ecosystem parameter: evol_stdev_range = 2.000000
+Ecosystem parameter: max_rate_evol = 0.000000
+Ecosystem parameter: flag_mult_grow_curves = 0.000000
+Ecosystem parameter: MB_wc = 0.010000
+Ecosystem parameter: eddy_scale = 1.000000
+Ecosystem parameter: XPB_DL = 0.270000
+Ecosystem parameter: XBB_DL = 0.180000
+Ecosystem parameter: XPB_DR = 0.012000
+Ecosystem parameter: XBB_DR = 0.008000
+Ecosystem parameter: k_PB = 3.000000
+Ecosystem parameter: k_BB = 3.000000
+Ecosystem parameter: flaghabdepend = 0.000000
+Ecosystem parameter: flag_move_habdepend = 1.000000
+Ecosystem parameter: REEFchange_max_num = 1.000000
+Ecosystem parameter: FLATchange_max_num = 1.000000
+Ecosystem parameter: SOFTchange_max_num = 1.000000
+Ecosystem parameter: roc_wgt = 10000.000000
+Ecosystem parameter: k_roc_food = 0.500000
+Ecosystem parameter: flagtempdepend = 0.000000
+Ecosystem parameter: flagsaltdepend = 0.000000
+Ecosystem parameter: flagO2depend = 0.000000
+Ecosystem parameter: flagconstrain_epiwander = 0.000000
+Ecosystem parameter: X_RS = 2.650000
+Ecosystem parameter: Kthresh1 = 0.990000
+Ecosystem parameter: Kthresh1 = 0.990000
+Ecosystem parameter: KHTD = 0.500000
+Ecosystem parameter: KHTI = 1.500000
+Ecosystem parameter: p_BBfish = 0.300000
+Ecosystem parameter: p_BBben = 0.600000
+Ecosystem parameter: p_PBwc = 0.900000
+Ecosystem parameter: p_PBben = 0.950000
+Ecosystem parameter: k_refDL = 10.000000
+Ecosystem parameter: k_refDR = 20.000000
+Ecosystem parameter: k_refsDL = 10000.000000
+Ecosystem parameter: flagfishrates = 0.000000
+Reading clearance rate for Ice_Zoobiota cohort 0 - value 3.500000e-02
+Reading clearance rate for Copepods cohort 0 - value 5.000000e-02
+Reading clearance rate for Salps cohort 0 - value 2.000000e-03
+Reading clearance rate for Benthos cohort 0 - value 1.369000e-04
+Ecosystem parameter: li_a_invert = 0.010000
+Ecosystem parameter: li_b_invert = 3.000000
+Ecosystem parameter: Q10 = 2.000000
+Ecosystem parameter: temp_coefftB = 1.066000
+Ecosystem parameter: temp_coefftC = 0.500000
+Ecosystem parameter: temp_exp = 1.000000
+Ecosystem parameter: KST_fish = 0.300000
+Ecosystem parameter: KST_shark = 0.300000
+Ecosystem parameter: KST_bird = 0.300000
+Ecosystem parameter: KST_mammal = 0.300000
+Ecosystem parameter: Ktmp_fish = 0.080000
+Ecosystem parameter: Ktmp_shark = 0.075000
+Ecosystem parameter: Ktmp_bird = 0.080000
+Ecosystem parameter: Ktmp_mammal = 0.080000
+Ecosystem parameter: Kthreshm = 0.500000
+Ecosystem parameter: FFDDR = 0.950000
+Ecosystem parameter: FDL_fish = 0.100000
+Ecosystem parameter: FDL_benth = 0.100000
+Ecosystem parameter: FDL_top = 0.100000
+Ecosystem parameter: FDL_wc = 0.900000
+Ecosystem parameter: FPB_DR = 0.200000
+Ecosystem parameter: FBB_DR = 0.200000
+Ecosystem parameter: FPB_DON = 0.050000
+Ecosystem parameter: FBB_DON = 0.050000
+Ecosystem parameter: Fben_den = 0.950000
+Ecosystem parameter: flagtrecruitdistrib = 1.000000
+Ecosystem parameter: recover_trigger = 0.000000
+Ecosystem parameter: recover_span = 31449600000.000000
+Ecosystem parameter: recover_subseq = 1.000000
+Ecosystem parameter: lognorm_mu = 0.500000
+Ecosystem parameter: lognorm_sigma = 0.300000
+Ecosystem parameter: rec_m = 1.000000
+Ecosystem parameter: rec_sigma = 1.000000
+Ecosystem parameter: recruitRange = 4.500000
+Ecosystem parameter: recruitRangeFlat = 1.500000
+Ecosystem parameter: ref_chl = 0.150000
+Ecosystem parameter: invading_sp_model = 0.000000
+Ecosystem parameter: InvaderIndex = 0.000000
+Ecosystem parameter: minInvaderAge = 0.000000
+Ecosystem parameter: maxInvaderAge = 0.000000
+Ecosystem parameter: InvaderEntryBox = 0.000000
+Ecosystem parameter: InvadersEntering = 0.000000
+Ecosystem parameter: InvaderMinDepth = 2000.000000
+Ecosystem parameter: InvaderMaxDepth = 2000.000000
+Ecosystem parameter: InvaderStartDay = 36666666660.000000
+Ecosystem parameter: InvaderEndDay = 36666666660.000000
+Ecosystem parameter: InvaderScalar = 1.000000
+Ecosystem parameter: InvaderSpeed = 0.000000
+Creating MIGRATION arrays
+Ecosystem parameter: k_migslow = 1.000000
+Ecosystem parameter: p_IBice = 0.900000
+Checking the loaded biology data
+**Create biological arrays
+Populate biological arrays
+Free unneeded memory
+Creating outputSpecificMort.txt
+Creating outputSpecificPredMort.txt
+Creating outputAgeBiomIndx.txt
+Creating outputAnnualAgeBiomIndx.txt
+Creating outputBoxLight.txt
+Creating outputBoxBiomass.txt
+Constructing home ranges
+Initialise management
+Skipping fisheries as not active
+DEN: 0.000000e+00
+IKR is smallest vertebrate (at 7.248191e-04 kg)
+WHO is largest vertebrate (at 8.313018e+04 kg)
+Create general output file
+Create summary output file outputTOT.nc
+Create growth and consumption output file
+Checking for cryptic vertebrate biomass
+t = 0, hd.t = 1.5, TofY: 0, % Done: 0.000000
+
+Enter 5Creating outputVertSize.txt
+	 ... Done 5The flagModel is = 1
+ij = 6, fluxArray[ij] = 8.673082e-04
