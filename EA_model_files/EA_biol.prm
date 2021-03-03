@@ -1104,12 +1104,13 @@ min_dens         0.0001    Minimum density of top predators and fish            
 min_channel_depth 0.001  Minimum depth of estuarine channels
 
 ## Biological parameters
-# Primary producer growth
-mum_PPL_T15	0.005	Maximum growth rate, large phytoplankton         	 d-1    1.0 - 1.7 	1.7
-mum_PPS_T15	0.13	Maximum growth rate, small (pico) phytoplankton  	 d-1    1.0 - 1.24 	1.26
-mum_IDF_T15	0.3	Maximum growth rate, Ice mixotrophs                      d-1	0.1	1.3
-mum_PDF_T15	0.3	Maximum growth rate, dinoflagellates           	         d-1	0.3 - 0.8	1
-mum_IPL_T15	0.62	Maximum growth rate, Ice diatoms                  	 d-1	0.05	1.44
+# Primary producer growth 
+mum_PPL_T15	0.25	Maximum growth rate, large phytoplankton         	 d-1    1.0 - 1.7 	1.7
+mum_PPS_T15	0.2	Maximum growth rate, small (pico) phytoplankton  	 d-1    1.0 - 1.24 	1.26
+mum_IDF_T15	0.5	Maximum growth rate, Ice mixotrophs                      d-1	0.1	1.3
+mum_PDF_T15	0.35	Maximum growth rate, dinoflagellates           	         d-1	0.3 - 0.8	1
+mum_IPL_T15	0.15	Maximum growth rate, Ice diatoms                  	 d-1	0.05	1.44
+
 
 MB_wc   0.01  Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 
@@ -1124,10 +1125,11 @@ KI_IPL_T15        0.035     Light saturation, Ice diatoms                       
 BD_wc   0.01  Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 eddy_scale       1.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 
+
 # Primary producer nutrient requirements
 KN_PPL            1         Half-sat const for PPL growth on DIN               mg N m-3          10
 KN_PPS            0.67      Half-sat const for PPS growth on DIN (4)           mg N m-3          4
-KN_PDF            0.45      Half-sat const for PDF growth on DIN               mg N m-3          30
+KN_PDF            30        Half-sat const for PDF growth on DIN               mg N m-3          30
 KN_IDF            0.8       Half-sat const for IDF growth on DIN               mg N m-3          20
 KN_IPL            0.9       Half-sat const for IPL growth on DIN               mg N m-3          5
 #KN_PCO           0.5       Half-sat const for PCO growth on DIN               mg N m-3          200
@@ -3224,7 +3226,8 @@ KHTI             1.5       Factor handling time increased by for relres<thresh2 
 # The order of prey groups is assumed to be
 
 # IPL	IDF	PPS	PPL	PDF	IZ	ZM	ZG	BD	IKR	KR	FM	FT	SF	SK	PNK	PNF	SB	WHM	WHH	TP	WHO	PB	BB	IB	DL	DR	DC	DLsed	DRsed	DCsed
-PREYIDF	31
+
+pPREYIDF	31																													
 0 0.1 0.001	0	0.001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 pPREYPDF	31
 0	0.001	0.1	0	0.1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
@@ -3340,14 +3343,6 @@ pPREY1WHO2	31
 0	0	0	0	0	0	0	0	0	0	0	0.001	0.00001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 pPREY2WHO2	31
 0	0	0	0	0	0	0	0	0	0	0	0.01	0.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-
-
-
-
-
-
-
-
 
 # Ontogenetic diet preferences - one entry per age class. 1=use explicit interactions above, 0=use ontogenetic values below .
 # For each group where the p_split value is set to 0 there will be a value for each cohort of the groups tagged below as age_structured_pred.
@@ -3630,8 +3625,8 @@ C_TP	20
 mum_ZG_T15	0.02	Growth rate of Salps                   	mg N d-1 	0.02 - 0.85	0.65
 mum_IZ_T15	0.35	Growth rate of large ice zooplankton    mg N d-1 	0.02 - 0.2
 #mum_ZL_T15	0.02	Growth rate of large zooplankton        mg N d-1	0.02 - 0.35	0.8
-mum_ZM_T15	0.5	Growth rate of meso-zooplankton             mg N d-1	0.02 - 0.2
-#mum_ZS_T15	0.55	Growth rate of microzooplankton         mg N d-1	0.5 - 2.5
+mum_ZM_T15	0.2	Growth rate of meso-zooplankton             mg N d-1	0.02 - 0.2	
+#mum_ZS_T15	0.55	Growth rate of microzooplankton         mg N d-1	0.5 - 2.5	
 #mum_BF_T15	0.02	Growth rate of filter feeders          	mg N d-1		0.01
 mum_BD_T15	0.001369	Growth rate of deposit feeders      mg N d-1	0.005 - 0.07
 #mum_BM_T15	0.0038		                                    mg N d-1	0.0015 - 0.015
@@ -4101,13 +4096,13 @@ KLYS_IPL          0.00001   Lysis rate of Ice diatoms                        d-1
 ## Linear mortality
 # Invertebrates
 PPL_mL       0.14  Linear mortality rate of lg phytopl, 15 deg C      d-1              0.14
-PPS_mL       0.000002  Linear mortality rate of picophytopl, 15 deg C     d-1              0.14
-PDF_mL       0.000001  Linear mortality rate of dinoflag, 15 deg C        d-1              0.14
+PPS_mL       0.14  Linear mortality rate of picophytopl, 15 deg C     d-1              0.14
+PDF_mL       0.14 Linear mortality rate of dinoflag, 15 deg C        d-1              0.14
 IDF_mL       0.0000001 Linear mortality rate of ice mixotrophs, 15 deg C  d-1              0.002 - 0.04
 IPL_mL       0.0000001 Linear mortality rate of ice diatoms, 15 deg C     d-1              0.001 - 0.01
 ZG_mL        0.000001  Linear mortality rate of gelatin zoopl, 15 deg C   d-1              0.0 - 0.04
 IZ_mL        0.000001  Linear mortality rate of ice zoopl, 15 deg C       d-1              0.0 - 0.04
-ZM_mL        0.000002  Linear mortality rate of meso-zoopl, 15 deg C      d-1              0.0 - 0.09
+ZM_mL        0.0001  Linear mortality rate of meso-zoopl, 15 deg C      d-1              0.0 - 0.09
 #BF_mL        0.0000001 Linear mortality rate of shallow ff, 15 deg C     d-1              0.0 -  0.001
 BD_mL        0.0000005 Linear mortality rate of deposit feeder, 15 deg C  d-1              0.0 -  0.001
 #BM_mL        0.0000002 Linear mort rate of shallow macrozooben, 15 deg C d-1              0.0 - 0.002
@@ -4198,10 +4193,10 @@ FT_mQ 2
 1.0e-20 1.0e-20
 
 SF_mQ 2
-1.0e-20 1.0e-20
+1.50E-007 2.00E-007
 
 SK_mQ 2
-1.0e-20 1.0e-20
+1.50E-007 2.00E-007
 
 PNF_mQ 2
 1.0e-20 1.0e-20
@@ -4213,16 +4208,16 @@ SB_mQ 2
 1.0e-10 1.0e-10
 
 WHO_mQ 2
-1.0e-10 1.0e-10
+1.00E-007 5.00E-008
 
 WHH_mQ 2
-1.0e-10 1.0e-10
+1.00E-007 5.00E-008
 
 TP_mQ 2
-1.0e-10 1.0e-10
+1.00E-006 5.00E-007
 
 WHM_mQ 2
-1.0e-10 1.0e-10
+1.00E-007 5.00E-008
 
 # Starvation mortality for fish (based on condition)
 # Invertebrate - for completeness, not actual as yet can't starve a biomass pool
@@ -4532,8 +4527,6 @@ TP_spawn_period   28      Period of mating for top predator                 d   
 KR_spawn_period   30      Period of mating for krill                        d                1 - 30
 IKR_spawn_period  30      Period of mating for krill                        d                1 - 30
 
-# Age of recruitment
-
 FM_Recruit_Time 35        Length of larval period for migratory mesopelagic d                20 - 70
 FT_Recruit_Time 60        Length of larval period for toothfish.            d                20 - 70
 SF_Recruit_Time 330       Length of gestation for elephant seal             d                300 - 360
@@ -4548,6 +4541,20 @@ TP_Recruit_Time 540      Length of gestation period for top predator        d   
 KR_Recruit_Time 21        Length of larval period for krill                 d                14 - 30
 IKR_Recruit_Time 21        Length of larval period for krill                d                14 - 30
 
+# Entry value for cohort where recruits turn up - in almost all instances this should be zero, except where there is a complicated life history like salmon
+FM_cohort_recruit_entry  0
+FT_cohort_recruit_entry  0
+SF_cohort_recruit_entry  0
+SK_cohort_recruit_entry  0
+PNK_cohort_recruit_entry 0
+PNF_cohort_recruit_entry 0
+SB_cohort_recruit_entry  0
+WHO_cohort_recruit_entry 0
+WHH_cohort_recruit_entry 0
+WHM_cohort_recruit_entry 0
+TP_cohort_recruit_entry  0
+KR_cohort_recruit_entry  0
+IKR_cohort_recruit_entry 0
 
 # Recruitment window
 Recruit_Period_FM 30      Length of time recruits arrive over for mig mesopelagic d          15 - 90
@@ -4800,16 +4807,16 @@ KDENR_FT       1
 1.0
 
 KDENR_SF       1
-1.0
+0.5
 
 KDENR_SK       1
-1.0
+0.5
 
 KDENR_PNK      1
-2.0
+1.0
 
 KDENR_PNF      1
-1.0
+0.5
 
 KDENR_SB      1
 1.0
@@ -4847,7 +4854,7 @@ PP_WHH          1.0       Coefficient relating primary production and baleen wha
 PP_KR           1.0       Coefficient relating primary production and Krill recruits     1
 PP_IKR          1.0       Coefficient relating primary production and Krill recruits     1
 
-ref_chl          0.15       Reference level of chla                           mg Chla m-3      1.5 0.15
+ref_chl          1.08       Reference level of chla                           mg Chla m-3      1.5 0.15
 
 # Ricker recruitment
 Ralpha_FM      1.0     Alpha in Ricker for Mesopelagics

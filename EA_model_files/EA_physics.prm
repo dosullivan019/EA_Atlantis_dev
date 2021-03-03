@@ -176,7 +176,7 @@ vert_diffusion 0
 
 # Switch to indicate whether or not the forced vertical mixing model
 # added to the transport model is used. Yes = 1, No =0.
-vert_mix 0
+vert_mix 1
 # Mao fixed from 0 to 1
 
 # Switch to indicate whether or not the basic advect_diffusion 
@@ -210,7 +210,7 @@ decay_sed 0
 decay_sed_scale 1.0
  
 # Switch to indicate whether or not to scale exchanges. No =0, Yes = 1, Area_corrected = 2.
-scale_transport 1
+scale_transport 0
 
 # Coefficient used in constant scaling of exchanges
 # (the exchanges are multiplied by this value before they are used)
@@ -220,7 +220,7 @@ prcnt_exchange 1
 # Coefficient used in area corrected scaling of exchanges
 # (the area corrected exchanges are multiplied by
 # this value before they are used)
-ka_exchange 100000000
+ka_exchange 1000
 
 # Switch to indicate whether or not to have cascading flows (exchanges). No =0, Yes = 1
 cascade_flows 1
@@ -247,7 +247,7 @@ eddy_S4   28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
 # Eddy sclaing of vertical mixing
-eddy_vertmix 0 # Javier set 1
+eddy_vertmix 1 # Javier set 1
 
 # Coefficient used in scaling of vertical exchanges by eddies
 eddy_mixscale 10.0
@@ -306,7 +306,7 @@ pss_start2  1
 
 # ice model parameters
 maxicedz 15
-minicedz 1  ## Mao changed from 5 to 1
+minicedz 5  ## Mao changed from 5 to 1
 num_ice_classes 1
 slush 1
 kind_ice_model 1
