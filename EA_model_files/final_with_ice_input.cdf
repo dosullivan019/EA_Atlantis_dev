@@ -520,26 +520,6 @@ variables:
 		Ice_Diatoms_S:b_dens = 1000000000. ;
 		Ice_Diatoms_S:i_conc = 200000000. ;
 		Ice_Diatoms_S:inice = 1 ;
-	double Ice_Diatoms_F(t, b, icenz) ;
-		Ice_Diatoms_F:units = "mg Fe m-3" ;
-		Ice_Diatoms_F:_FillValue = 0. ;
-		Ice_Diatoms_F:long_name = "Ice_Diatoms Iron" ;
-		Ice_Diatoms_F:bmtype = "icetracer" ;
-		Ice_Diatoms_F:dtype = 0 ;
-		Ice_Diatoms_F:sumtype = 1 ;
-		Ice_Diatoms_F:inwc = 0 ;
-		Ice_Diatoms_F:insed = 0 ;
-		Ice_Diatoms_F:dissol = 0 ;
-		Ice_Diatoms_F:decay = 0. ;
-		Ice_Diatoms_F:partic = 1 ;
-		Ice_Diatoms_F:fill.value = 0. ;
-		Ice_Diatoms_F:passive = 1 ;
-		Ice_Diatoms_F:svel = -2.89e-06 ;
-		Ice_Diatoms_F:xvel = 0. ;
-		Ice_Diatoms_F:psize = 1.e-05 ;
-		Ice_Diatoms_F:b_dens = 1000000000. ;
-		Ice_Diatoms_F:i_conc = 200000000. ;
-		Ice_Diatoms_F:inice = 1 ;
 	double Light_Adaptn_IPL(t, b, z) ;
 		Light_Adaptn_IPL:units = "PSU" ;
 		Light_Adaptn_IPL:_FillValue = 0. ;
@@ -573,26 +553,6 @@ variables:
 		Ice_Mixotrophs_N:b_dens = 1000000000. ;
 		Ice_Mixotrophs_N:i_conc = 200000000. ;
 		Ice_Mixotrophs_N:inice = 1 ;
-	double Ice_Mixotrophs_F(t, b, icenz) ;
-		Ice_Mixotrophs_F:units = "mg Fe m-3" ;
-		Ice_Mixotrophs_F:_FillValue = 0. ;
-		Ice_Mixotrophs_F:long_name = "Ice_Mixotrophs Iron;
-		Ice_Mixotrophs_F:bmtype = "icetracer" ;
-		Ice_Mixotrophs_F:dtype = 0 ;
-		Ice_Mixotrophs_F:sumtype = 1 ;
-		Ice_Mixotrophs_F:inwc = 0 ;
-		Ice_Mixotrophs_F:insed = 0 ;
-		Ice_Mixotrophs_F:dissol = 0 ;
-		Ice_Mixotrophs_F:decay = 0. ;
-		Ice_Mixotrophs_F:partic = 1 ;
-		Ice_Mixotrophs_F:fill.value = 0. ;
-		Ice_Mixotrophs_F:passive = 1 ;
-		Ice_Mixotrophs_F:svel = 0. ;
-		Ice_Mixotrophs_F:xvel = 0. ;
-		Ice_Mixotrophs_F:psize = 1.e-05 ;
-		Ice_Mixotrophs_F:b_dens = 1000000000. ;
-		Ice_Mixotrophs_F:i_conc = 200000000. ;
-		Ice_Mixotrophs_F:inice = 1 ;
 	double Light_Adaptn_IDF(t, b, z) ;
 		Light_Adaptn_IDF:units = "PSU" ;
 		Light_Adaptn_IDF:_FillValue = 0. ;
@@ -676,25 +636,6 @@ variables:
 		Pelagic_Diatoms_S:psize = 1.e-05 ;
 		Pelagic_Diatoms_S:b_dens = 1000000000. ;
 		Pelagic_Diatoms_S:i_conc = 200000000. ;
-	double Pelagic_Diatoms_F(t, b, z) ;
-		Pelagic_Diatoms_F:units = "mg Fe m-3" ;
-		Pelagic_Diatoms_F:_FillValue = 0.3 ;
-		Pelagic_Diatoms_F:long_name = "Pelagic_Diatoms Iron";
-		Pelagic_Diatoms_F:bmtype = "tracer" ;
-		Pelagic_Diatoms_F:dtype = 0 ;
-		Pelagic_Diatoms_F:sumtype = 1 ;
-		Pelagic_Diatoms_F:inwc = 1 ;
-		Pelagic_Diatoms_F:insed = 1 ;
-		Pelagic_Diatoms_F:dissol = 0 ;
-		Pelagic_Diatoms_F:decay = 0. ;
-		Pelagic_Diatoms_F:partic = 1 ;
-		Pelagic_Diatoms_F:fill.value = 0.3 ;
-		Pelagic_Diatoms_F:passive = 1 ;
-		Pelagic_Diatoms_F:svel = -2.89e-06 ;
-		Pelagic_Diatoms_F:xvel = 0. ;
-		Pelagic_Diatoms_F:psize = 1.e-05 ;
-		Pelagic_Diatoms_F:b_dens = 1000000000. ;
-		Pelagic_Diatoms_F:i_conc = 200000000. ;
 	double Light_Adaptn_PPL(t, b, z) ;
 		Light_Adaptn_PPL:units = "PSU" ;
 		Light_Adaptn_PPL:_FillValue = 0. ;
@@ -11724,19 +11665,18 @@ data:
   _, _, _, _, _, _, _, _, _, _, _ ;
 
  MicroNut =
-0,0,0,0,0,0,0,0,0,0,0,
 0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,0,0,0,2.7,
-0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,0,0,0,2.7,
-0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,0,0,0,2.7,
-0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,0,0,0,2.7,
-0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,0,0,0,2.7,
-0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,0,0,0,2.7,
-0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,2.7,
-0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,2.7,
-0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,2.7,
-0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,2.7,
-0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,2.7,
-0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.011169,0.0055845,2.7,
+0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,0,0,0,2.7,
+0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,0,0,0,2.7,
+0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,0,0,0,2.7,
+0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,0,0,0,2.7,
+0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,0,0,0,2.7,
+0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,2.7,
+0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,2.7,
+0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,2.7,
+0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,2.7,
+0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,2.7,
+0.022338,0.022338,0.0279225,0.0279225,0.05863725,0.0390915,0.022338,0.0167535,0.012169,0.0055845,2.7,
 0.009214425,0.009214425,0.009214425,0.009214425,0.009214425,0.009214425,0.00837675,0.004188375,0.004188375,0.004188375,2.7,
 0.009214425,0.009214425,0.009214425,0.009214425,0.009214425,0.009214425,0.00837675,0.004188375,0.004188375,0.004188375,2.7,
 0.009214425,0.009214425,0.009214425,0.009214425,0.009214425,0.009214425,0.00837675,0.004188375,0.004188375,0.004188375,2.7,
@@ -11751,8 +11691,7 @@ data:
 0.0156366,0.0156366,0.0156366,0.0156366,0.0156366,0.00837675,0.00837675,0.004188375,0.004188375,0.004188375,2.7,
 0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0 ;
-
+0,0,0,0,0,0,0,0,0,0,0;
 
  Oxygen =
   7083.2, 6661.33333333333, 6334.93333333333, 6054.4, 5843.2, 5859.2, 
@@ -12312,35 +12251,6 @@ data:
   _,
   _ ;
 
-Ice_Diatoms_F =
-  _,
-  _,
-  _,
-  _,
-  332.6436,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _ ;
 
  Light_Adaptn_IPL =
   _, _, _, _, _, _, _, _, _, _, _,
@@ -12373,36 +12283,6 @@ Ice_Diatoms_F =
   _, _, _, _, _, _, _, _, _, _, _ ;
 
  Ice_Mixotrophs_N =
-  _,
-  _,
-  _,
-  _,
-  110.8812,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _ ;
-
-Ice_Mixotrophs_F =
   _,
   _,
   _,

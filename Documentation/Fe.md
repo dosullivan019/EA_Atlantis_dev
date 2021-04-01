@@ -34,12 +34,6 @@ Polygon 23 is an extreme point, fig 7b.
 | 1000-2000  | 0.4        | 0.165 | 0.23      | 0.28        | 0.27          |
 | 2000-10000 | 0.4        | 0.165 | 0.23      | 0.28        | 0.27          |
 
-Conversion of nmol/kg to mg/m3 is done by the following equation:
-
-Fe \[mg/m3\] = 55.845 \* 0.001 \* x
-
-where x = original dissolved Fe value
-
 ``` r
 raw_data = matrix(c(
   0.10,0.075, 0.075, 0.05, 0.075,
@@ -66,13 +60,23 @@ names(polygons) = c(1:28)
 
 iron_values <- matrix(ncol=10, nrow=28)
 row.names(iron_values) = c(1:28)
+shallow_layers = c(2:7)
 
 for(box_i in 1:nrow(iron_values)){
-  if(!is.na(polygons[box_i])){
-    iron_values[box_i,] = raw_data[,polygons[box_i]]
+  if(!is.na(polygons[box_i]) & !(box_i %in% shallow_layers)){
+    iron_values[box_i,] = rev(raw_data[,polygons[box_i]]) # rev as the init.nc file the layers are reversed
   }
+  else if(!is.na(polygons[box_i]) & (box_i %in% shallow_layers)){
+    iron_values[box_i,1:7] = rev(raw_data[,polygons[box_i]][1:7]) # only the 
+  } 
 }
 ```
+
+Conversion of nmol/kg to mg/m3 is done by the following equation:
+
+Fe \[mg/m3\] = 55.845 \* 0.001 \* x
+
+where x = original dissolved Fe value
 
 ``` r
 iron_conversion <- function(value){
@@ -84,7 +88,6 @@ iron_conversion <- function(value){
 iron_mg <- apply(iron_values, 1:2, iron_conversion)
 
 # replace coastal polygons with NA for layers 8-10
-iron_mg[2:7, 8:10] = 0
 iron_mg[which(is.na(iron_mg))] = 0
 iron_mg = cbind(iron_mg, c(0,rep(2.7, 24), 0, 0, 0))
 
@@ -114,7 +117,7 @@ library(tidyr)
 cum_depths = c(0,20,50,100,200,300,400,750,1000,2000)
 
 # Add box name to matrix
-iron_df = as.data.frame(cbind(iron_mg[,1:10], rownames(iron_mg), polygons))
+iron_df = as.data.frame(cbind(rbind(iron_mg[2:7,c(7:1,8:10)],iron_mg[c(1,8:28),10:1]), rownames(iron_mg), polygons))
 iron_df[,1:10] = sapply(iron_df[,1:10],function(x) as.numeric(x))
 colnames(iron_df)=c(1:10, 'box_no', 'box_name')
 
@@ -136,12 +139,25 @@ iron_df %>% pivot_longer(cols=1:10, names_to='layer') %>% cbind(depth=rep(cum_de
 
 ### Note
 
-These initial values were not high enough in some box-layers and the
-initial iron levels did not support iron flux on day 1 which led to the
-model crashing immediately. The following box-layers were overwritten by
-the values which Mao had in the input file when Denise took over: Box
-2-13 Layer 1: Increased from 0.0055845 to 0.0279225. Box 2-13 Layer 2:
-Increased from 0.011169 to 0.05863725.
+These initial values were not high enough in layer 2 of some boxes and
+the initial iron levels did not support iron flux on day 1 which led to
+the model crashing immediately. The following box-layers were
+overwritten to avoid this crash happening and probably need to be
+reviewed:
+
+Box 2-13 Layer 2: Increased from 0.011169 to 0.012169.
+
+### Redfield Ratio
+
+The Redfield ratio of Fe:N is SeTAS is 30000 which was very large and
+causing the model to crash once the flagmicro was turned on. The
+redfield ratio for the EA model is set to 400 and was calculated using
+the equation from wikipedia
+(<https://en.wikipedia.org/wiki/Redfield_ratio>):
+
+106 C:16 N:1 P:0.1-0.001 Fe
+
+Using the mid-range between 0.1 and 0.001 -\> 16N:\~0.04Fe
 
 ### References
 
