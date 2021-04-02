@@ -113,6 +113,14 @@ Have also reviewed the initial Fe values and they should be ok now. Had to incre
 
 Still problems in the pprey matrix, when the phytoplankton are no longer growing the copepods take over the food web. Whales, penguins, fish and salps begin feeding predominantly on the copepods which allows them to continue to grow. The copepods keep growing as they are feeding on themselves and detritus.
 
+First check the assimilation efficiency of ZM on detritus, if it is high trying setting it to it's lower bound. This looks ok for EA model.
+
+How to control the zooplankton biomass:
+
+Kill the ZM - either by decreasing their mum or clearance rate.
+
+Control their predators by focusing on increasing the biomass of their predators.
+
 #### TODO
 Check ice-dwelling microfauna are working as expected - suggested by Beth as she couldn't see them in Olive.
 Do PPL, PDF need iron concentrations?
