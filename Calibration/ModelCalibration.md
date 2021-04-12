@@ -64,4 +64,24 @@ Next step is to fix the copepods diet so looked into the pprey matrix. Krill and
 
 Model crashed after 1088 days but the copepods diet looks much better and the feedback loop has not yet started.
 
-ZM_mum was still at 0.7 so next step is to increase it back to 0.075 which is when the model ran the longest.
+ZM_mum was still at 0.07 so next step is to increase it back to 0.075 which is when the model ran the longest.
+ZM_mum = 0.075 and KR and IKR prey increased on ZM: Model crashes after 1113 days.
+
+Checked KLYS_PDF=0.1 and pprey KR on PPL=0.05. 1137.5 days
+Decrease KLYS_PDF back to 0.075 so it will have some growth pattern. 1137.5 days.
+
+Increased KR prey on PPL and PPS to 0.05. output_EA_KR_prey_on_PPL_and_PPS_0.05. 1134 days.
+
+Decreasing mum_ZM from 0.075 to 0.05 as they are still growing way too much. 1043 days so does not do well with mum=0.05.
+
+PPS are growing too much of the primary producers, always way too far over their relative biomass and the causing of crashing. The PDF stay nicely in the relative biomass throughout and PPL just go outside the relative biomass at growth stay.
+
+Decreased mum_PPS from 0.95 to 0.8. output_EA_ZM_mum_0.075_PPS_mum_0.8. 1468 days so ran for longer but now the PPS have lost their nice seasonality and die off quicker. The PDF have lost their nice trend and the reason the model crash.
+
+Increased PPS from 0.8 to 0.9. 1134 days. PPS reason for crash.
+
+mum_PPS = 0.85. 1459 days. PDF reason for crash and nice trend of primary producers lost again.
+
+mum_PPS = 0.875. 1443 days. PDF still dominating. PPS and PPL are not growing after year 3.
+
+Quick growth of ZM follows a spike in growth of PPS for the coastal boxes. Going to half the availability of PPS to ZM, decreasing from 0.05 to 0.025. 1082 days. I think the ZM are now just feeding on PDF so will change this back.
