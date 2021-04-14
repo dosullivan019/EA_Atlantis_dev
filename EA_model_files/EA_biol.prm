@@ -1106,7 +1106,7 @@ min_channel_depth 0.001  Minimum depth of estuarine channels
 ## Biological parameters
 # Primary producer growth 
 mum_PPL_T15	0.975	Maximum growth rate, large phytoplankton         	 d-1    1.0 - 1.7 	1.7
-mum_PPS_T15	0.875	Maximum growth rate, small (pico) phytoplankton  	 d-1    1.0 - 1.24 	1.26
+mum_PPS_T15	0.9	Maximum growth rate, small (pico) phytoplankton  	 d-1    1.0 - 1.24 	1.26
 mum_IDF_T15	0.1	Maximum growth rate, Ice mixotrophs                      d-1	0.1	1.3
 mum_PDF_T15	0.65	Maximum growth rate, dinoflagellates           	         d-1	0.3 - 0.8	1
 mum_IPL_T15	0.05	Maximum growth rate, Ice diatoms                  	 d-1	0.05	1.44
@@ -3593,7 +3593,7 @@ C_IKR	5
 0.001	0.002	0.004	0.005	0.007															
 																			
 C_FM	4																		
-0.05	0.19	0.346	0.481																
+0.10	0.38	0.692	0.962															
 																			
 C_FT	20																		
 8.126	19.23	34.685	53.801	75.822	100.017	125.722	152.353	179.416	206.501	233.273	259.469	284.883	309.364	332.802	355.126	376.291	396.279	415.092	432.744
@@ -3651,7 +3651,7 @@ mum_IKR	5
 0.01	0.02	0.04	0.05	0.07															
 																			
 mum_FM	4																		
-0.5	1.9	3.46	4.81																
+1.0	3.8	6.92	9.62															
 																			
 mum_FT	20																		
 81.26	192.3	346.85	538.01	758.22	1000.17	1257.22	1523.53	1794.16	2065.01	2332.73	2594.69	2848.83	3093.64	3328.02	3551.26	3762.91	3962.79	4150.92	4327.44
@@ -4895,7 +4895,7 @@ Rbeta_IKR       1.0     Beta in Ricker for krill
 
 ## TO DO - SET THESE ONCE HAVE INITIAL BIOMASS ESTIMATES TO COMPARE REPLACEMENT OFF, USE STOCK-RECRUIT RELATIONSHIP FROM ASSESSMENT TO DICTATE SHAPE ETC #
 # Beverton-Holt recruitment   
-BHalpha_FM      1.60E+10  Alpha in Beverton-Holt for Mesopelagics
+BHalpha_FM      1.60E+11  Alpha in Beverton-Holt for Mesopelagics
 BHalpha_FT      1.26E+08  Alpha in Beverton-Holt for toothfishersal (was 6.2, 4.2)
 BHalpha_SF      1.0       Alpha in Beverton-Holt for elephant seals (was 5.1)
 BHalpha_SK      1.0       Alpha in Beverton-Holt for Crabeater seal     
@@ -4985,7 +4985,7 @@ IKR_log_mult     1.0        Multipler converting distribution to number of Krill
 
 # Size of recruits 
 
-KWSR_FM    0.39           Structural weight of migratory mesopel recruits   mg N m-3         0.039
+KWSR_FM    5.839           Structural weight of migratory mesopel recruits   mg N m-3         0.039
 KWSR_FT    61.45          Structural weight of toothfish. recruits  mg N m-3         0.019
 KWSR_SF    2158816.44     Structural weight of misc. demersal recruits      mg N m-3         0.038
 KWSR_SK    2459662.64     Structural weight of demersal shark recruits      mg N m-3         8.78
@@ -5001,7 +5001,7 @@ KWSR_IKR    0.1            Structural weight of krill settler       mg N m-3    
 
 
 
-KWRR_FM    1.03           Reserve weight of migratory mesopelagic recruits  mg N m-3          0.1
+KWRR_FM    15.473           Reserve weight of migratory mesopelagic recruits  mg N m-3          0.1
 KWRR_FT    162.84         Reserve weight of toothfishersal recruits mg N m-3          0.05
 KWRR_SF    5720863.56     Reserve weight of miscellaneous demersal recruits mg N m-3          0.1
 KWRR_SK    6518106.01     Reserve weight of demersal shark recruits         mg N m-3          23.3

@@ -85,3 +85,14 @@ mum_PPS = 0.85. 1459 days. PDF reason for crash and nice trend of primary produc
 mum_PPS = 0.875. 1443 days. PDF still dominating. PPS and PPL are not growing after year 3.
 
 Quick growth of ZM follows a spike in growth of PPS for the coastal boxes. Going to half the availability of PPS to ZM, decreasing from 0.05 to 0.025. 1082 days. I think the ZM are now just feeding on PDF so will change this back.
+
+Dropping KLYS_PPL and KLYS_PPS to 0.075.
+
+# April 14 2021
+Fish (FM) numbers are going down. mum_FM is very low so doubled these numbers and this is looking much better. The availability of ZM to FM is high but FM are not a significant predator on ZM (although ZM make up most of their diet).
+
+KWSR_FM and KWRR_FM were much lower than the values in the initial conditions file. Increased the KWSR_FM and KWWR_FM to match the values in the initial conditions and FM growth looks very good now. Will need to do this for the FT also.
+
+If you do not have fishing pressure in the model yet then you could increase mL or mQ to represent a simple harvest model while calibrating - this could be an idea to decrease the krill but need to krill atm to keep preying on copepods. 
+
+Set mL to F/365 where F is annual fishing pressure. This relationship is more complicated than this and involves a log but will just use this for now until the harvest model is introduced.

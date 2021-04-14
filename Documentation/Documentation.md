@@ -106,13 +106,15 @@ KS_PDF_T15  | 11 |   |  0 in SeTAS |
 KS_IDF_T15 | 0.036  |   |  | 
 KS_IPL_T15 | 0.035  |   |  | 
 
-#### 1 April 2021
+#### 1 April 2021 Phytoplankton growth
 Growth of phytoplankton was causing shading, confirmed by Javier. Javier suggested increasing lysis rates so that the initial exponential growth of primary producers would be reduced. Have now kranked the KLYS_XXX parameters very high for PPL, PDF and PPS,  they are currently 0.1. The light levels appear ok now. The model is running for 15 years but the primary producer growth dies off after around 3 years. Will continue to reduce KLYS rates steadily until the model will run and output realistic primary producer growth.
 
 Have also reviewed the initial Fe values and they should be ok now. Had to increase initial values of layer 2 in box 2-13 as there was an flux imbalance on day 1 otherwise. The phytoplankton are also nutrient limitied in box 24.
 
 Still problems in the pprey matrix, when the phytoplankton are no longer growing the copepods take over the food web. Whales, penguins, fish and salps begin feeding predominantly on the copepods which allows them to continue to grow. The copepods keep growing as they are feeding on themselves and detritus.
 
+##### Solving feedback loop with a species and detritus
+Using ZM as an example.
 First check the assimilation efficiency of ZM on detritus, if it is high trying setting it to it's lower bound. This looks ok for EA model.
 
 How to control the zooplankton biomass:
@@ -121,7 +123,19 @@ Kill the ZM - either by decreasing their mum or clearance rate.
 
 Control their predators by focusing on increasing the biomass of their predators.
 
+#### 14 April 2021 Trouble shooting calibration issues - from Beth's lectures
+If SN and RN are increasing/steady but numbers are decreasing: too few recruits.
+
+You will need to play with the KDENR or the BH alpha.
+
+If recruits are not growing quick enough.
+KWRR and KWSR - set these to the XXX_Struct_N and XXX_Res_N of the youngest age class in the initial conditions file.
+
+
 #### TODO
 Check ice-dwelling microfauna are working as expected - suggested by Beth as she couldn't see them in Olive.
 Do PPL, PDF need iron concentrations?
 Check outputBoxlight.txt. Looks like Box 2, 3 and 4 have high light at the beginning and then drops off - which is probably why the growth is weird?
+Increase mL for fished species until harvest model is brought in.
+Fix transport warnings - one is box 24 layer 0 and the initial Fe in this box layer needs to be increased as the phytoplankton are limited from the very beginning.
+Det_Si goes negative in box 10 layer 9 and box 7 layers 6-9 at some point so need to look into this.
