@@ -144,7 +144,7 @@ The different cohorts are most likely competing with each other. Solution os to 
 #### Ice
 The ice species need to have the relevant ice functional group name eg. ICE_DIATOMS, ICE_ZOOBIOTA. You can find these in the atFunctGroup.h
 
-Ice_PrimaryProduction process is only running in the first time step and never again. 
+Ensure the minicedz in the physics.prm file is not greater than the ice depth in the first time step if the ice is to continue throughout the next few time steps.
 
 #### TODO
 Check ice-dwelling microfauna are working as expected - suggested by Beth as she couldn't see them in Olive.

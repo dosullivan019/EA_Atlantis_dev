@@ -99,6 +99,8 @@ FT Numbers are increasing but SN and RN are decreasing. FT Cohort 1 are decreasi
 
 Increased predation on FT and increased mStarve_FT by 10 fold and increased BHalpha_FT. None of these affected the FT biomass numbers. Will increase mStarve by much more to see if that makes a difference and if not will work on debugging the issue.
 
+Increasing mStarve is making no difference. Could try increasing E_FT or FT_mL.
+
 If you do not have fishing pressure in the model yet then you could increase mL or mQ to represent a simple harvest model while calibrating - this could be an idea to decrease the krill but need to krill atm to keep preying on copepods. 
 
 Set mL to F/365 where F is annual fishing pressure. This relationship is more complicated than this and involves a log but will just use this for now until the harvest model is introduced.

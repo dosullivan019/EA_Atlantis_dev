@@ -306,7 +306,7 @@ pss_start2  1
 
 # ice model parameters
 maxicedz 15
-minicedz 5  ## Mao changed from 5 to 1
+minicedz 1  ## Mao changed from 5 to 1
 num_ice_classes 1
 slush 1
 kind_ice_model 1
