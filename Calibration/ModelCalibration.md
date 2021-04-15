@@ -91,8 +91,27 @@ Dropping KLYS_PPL and KLYS_PPS to 0.075.
 # April 14 2021
 Fish (FM) numbers are going down. mum_FM is very low so doubled these numbers and this is looking much better. The availability of ZM to FM is high but FM are not a significant predator on ZM (although ZM make up most of their diet).
 
-KWSR_FM and KWRR_FM were much lower than the values in the initial conditions file. Increased the KWSR_FM and KWWR_FM to match the values in the initial conditions and FM growth looks very good now. Will need to do this for the FT also.
+KWSR_FM and KWRR_FM were much lower than the values in the initial conditions file. Increased the KWSR_FM and KWWR_FM to match the values in the initial conditions and FM growth looks very good now. 
+Adjusting the KWSR_FT and KWWR_FT made no difference to their total biomass numbers.
+FM AgeClass 1 and 2 look ok. AgeClass 4 Numbers increasing a lot but nitrogen remain stable. AgeClass3 numbers up and down - think they're ok for the length of time the model runs.
+
+FT Numbers are increasing but SN and RN are decreasing. FT Cohort 1 are decreasing in numbers but structural N remains steady. Likely the cohorts are in too much competition with each other. Need to kill off some of the fish.
+
+Increased predation on FT and increased mStarve_FT by 10 fold and increased BHalpha_FT. None of these affected the FT biomass numbers. Will increase mStarve by much more to see if that makes a difference and if not will work on debugging the issue.
 
 If you do not have fishing pressure in the model yet then you could increase mL or mQ to represent a simple harvest model while calibrating - this could be an idea to decrease the krill but need to krill atm to keep preying on copepods. 
 
 Set mL to F/365 where F is annual fishing pressure. This relationship is more complicated than this and involves a log but will just use this for now until the harvest model is introduced.
+
+### Ice
+KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
+mum_IPL and mum_IDF is also quite low compared to other primary prodcucers.
+
+Code is not going into the Ice_PrimaryProduction process after time step 1.
+
+atlantismain definitely goes into open_iceprop function in atIceIO.c as I can see the printf. 
+open_iceprop is called by ice_cdf_init and get_ice_property.
+
+ice_cdf_init called by Load_Ice_Timeseries which is called in the physics.c if(bm->ice_on) {Load_Ice_Timeseries(bm)}
+
+get_ice_property also called by Load_Ice_Timeseries and CDF_iceBM (called by Get_Ice which is only called by if(bm->ice_on){}) and ice_cdf_init

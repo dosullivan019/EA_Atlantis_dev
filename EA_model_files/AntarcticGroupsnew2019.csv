@@ -1,10 +1,10 @@
 Code,Index,IsTurnedOn,Name,LongName,NumCohorts,NumGeneTypes,NumStages,NumSpawns,NumAgeClassSize,NumStocks,VerticallyMigrates,HorizontallyMigrates,IsFished,IsImpacted,IsTAC,GroupType,IsPredator,IsCover,IsSiliconDep,IsAssessed,IsCatchGrazer,OverWinters,IsCultured,IsHabDepend,numMoveSeaons,isSupplemented,iBioEroder
-IPL,0,1,Ice_Diatoms,Ice Diatoms,1,1,1,1,1,1,0,0,0,0,0,LG_PHY,0,0,1,0,0,0,0,1,4,0,0
-IDF,1,1,Ice_Mixotrophs,Ice Mixotrophs,1,1,1,1,1,1,0,0,0,0,0,DINOFLAG,0,0,0,0,0,0,0,1,4,0,0
+IPL,0,1,Ice_Diatoms,Ice Diatoms,1,1,1,1,1,1,0,0,0,0,0,ICE_DIATOMS,0,0,1,0,0,0,0,1,4,0,0
+IDF,1,1,Ice_Mixotrophs,Ice Mixotrophs,1,1,1,1,1,1,0,0,0,0,0,ICE_MIXOTROPHS,0,0,0,0,0,0,0,1,4,0,0
 PPS,2,1,Pelagic_Picophytoplankton,Pelagic Picophytoplankton,1,1,1,1,1,1,0,0,0,0,0,SM_PHY,0,0,0,0,0,0,0,0,4,0,0
 PPL,3,1,Pelagic_Diatoms,Pelagic Diatoms,1,1,1,1,1,1,0,0,0,0,0,LG_PHY,0,0,1,0,0,0,0,0,4,0,0
 PDF,4,1,Pelagic_Dinoflagellates,Pelagic Dinoflagellates,1,1,1,1,1,1,0,0,0,0,0,DINOFLAG,0,0,0,0,0,0,0,0,4,0,0
-IZ,5,1,Ice_Zoobiota,Ice Zoobiota,1,1,1,1,1,1,0,0,0,0,0,SM_ZOO,1,0,0,0,0,0,0,1,4,0,0
+IZ,5,1,Ice_Zoobiota,Ice Zoobiota,1,1,1,1,1,1,0,0,0,0,0,ICE_ZOOBIOTA,1,0,0,0,0,0,0,1,4,0,0
 ZM,6,1,Copepods,Copepods,1,1,1,1,1,1,1,0,0,0,0,MED_ZOO,1,0,0,0,0,0,0,0,4,0,0
 ZG,7,1,Salps,Salps,1,1,1,1,1,1,1,0,0,0,0,LG_ZOO,1,0,0,0,0,0,0,0,4,0,0
 BD,8,1,Benthos,Benthos,1,1,1,1,1,1,0,0,0,0,0,MOB_EP_OTHER,1,0,0,0,0,0,0,0,4,0,0

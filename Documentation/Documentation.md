@@ -124,18 +124,40 @@ Kill the ZM - either by decreasing their mum or clearance rate.
 Control their predators by focusing on increasing the biomass of their predators.
 
 #### 14 April 2021 Trouble shooting calibration issues - from Beth's lectures
-If SN and RN are increasing/steady but numbers are decreasing: too few recruits.
+1. If SN and RN are increasing/steady but numbers are decreasing: too few recruits.
 
 You will need to play with the KDENR or the BH alpha.
 
-If recruits are not growing quick enough.
+2. If recruits are not growing quick enough:
 KWRR and KWSR - set these to the XXX_Struct_N and XXX_Res_N of the youngest age class in the initial conditions file.
 
+3. If numbers are increasing but SN and RN are decreasing: 
+
+The different cohorts are most likely competing with each other. Solution os to kill some off. You can do this by the following ways:
+
+* Reduce Recruits (decrease BHalpha_XXX)
+
+* Increase predation on the species
+
+* Increase mStarve (or possibly mL or mQ)
+
+#### Ice
+The ice species need to have the relevant ice functional group name eg. ICE_DIATOMS, ICE_ZOOBIOTA. You can find these in the atFunctGroup.h
+
+Ice_PrimaryProduction process is only running in the first time step and never again. 
 
 #### TODO
 Check ice-dwelling microfauna are working as expected - suggested by Beth as she couldn't see them in Olive.
-Do PPL, PDF need iron concentrations?
+
+Ice-dwelling microfauna are being included but the processes aren't running after time step 1. Currently debugging (15/04)
+
+
+Do PPL, PDF need iron concentrations? Yes, have added placement values for now. Need to add for PDF and PPL. Also need to add whale, krill and iron flux.
+
 Check outputBoxlight.txt. Looks like Box 2, 3 and 4 have high light at the beginning and then drops off - which is probably why the growth is weird?
+
 Increase mL for fished species until harvest model is brought in.
+
 Fix transport warnings - one is box 24 layer 0 and the initial Fe in this box layer needs to be increased as the phytoplankton are limited from the very beginning.
+
 Det_Si goes negative in box 10 layer 9 and box 7 layers 6-9 at some point so need to look into this.
