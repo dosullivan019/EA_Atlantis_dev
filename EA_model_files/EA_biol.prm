@@ -3596,7 +3596,7 @@ C_FM	4
 0.10	0.38	0.692	0.962															
 																			
 C_FT	20																		
-8.126	19.23	34.685	53.801	75.822	100.017	125.722	152.353	179.416	206.501	233.273	259.469	284.883	309.364	332.802	355.126	376.291	396.279	415.092	432.744
+51.027   9.6150  17.3425  26.9005  75.822 100.017 125.722 152.353 179.416 206.501 233.273 259.469 284.883 309.364 332.802 355.126 376.291 396.279 415.092 432.744
 																			
 C_SF	10																		
 210995.3	990253.7	2006336	3000141.5	3856179.8	4544673.2	5076170.6	5475937.1	5771516.2	5987550.3										
@@ -3959,7 +3959,7 @@ E_IKR             0.5       Assimilation efficiency of krill                    
 # Assimilation efficiencies of vertebrate consumers 
 
 E_FM             0.5       Assimilation efficiency of Mesopelagics                0.08 - 0.55
-E_FT             0.2       Assimilation efficiency of toothfishersal                0.06 - 0.5
+E_FT             0.5       Assimilation efficiency of toothfishersal                0.06 - 0.5
 E_SF             0.2       Assimilation efficiency of elephant seals               0.06 - 0.5
 E_SK             0.3       Assimilation efficiency of Crabeater seal                 0.07 - 0.5 
 E_PNK            0.3       Assimilation efficiency of Adelie penguins                0.07 - 0.5 
@@ -4140,7 +4140,7 @@ SK_mL 2
 1.00E-008 5.00E-013
 
 PNF_mL 2
-8.00E-008 8.00E-006
+8.00E-008 8.00E-06
 
 PNK_mL 2
 8.00E-008 8.00E-006
@@ -4204,10 +4204,10 @@ SK_mQ 2
 1.50E-007 2.00E-007
 
 PNF_mQ 2
-1.0e-20 1.0e-20
+1.0e-5 1.0e-5
 
 PNK_mQ 2
-1.0e-5 1.0e-5
+1.0e-20 1.0e-20
 
 SB_mQ 2
 1.0e-10 1.0e-10
@@ -4236,10 +4236,10 @@ mStarve_KR        0.0001    Starvation mortality rate of krill                  
 
 # Adult vertebrates - probably need to increase this to get sharper drop off once starving
 mStarve_FM       0.0001    Starvation mortality rate of mig mesopelagic           d-1              0.0 - 0.01
-mStarve_FT       0.0001    Starvation mortality rate of toothfish                 d-1              0.0 - 0.01   
+mStarve_FT       0.01    Starvation mortality rate of toothfish                 d-1              0.0 - 0.01   
 mStarve_SF       0.0001    Starvation mortality rate of elephant seal             d-1              0.0 - 0.01   
 mStarve_SK       0.0001    Starvation mortality rate of crabeater seal            d-1              0.0 - 0.01   
-mStarve_PNF      0.0001    Starvation mortality rate of Emperor penguins          d-1              0.0 - 0.01   
+mStarve_PNF      0.01    Starvation mortality rate of Emperor penguins          d-1              0.0 - 0.01   
 mStarve_PNK      0.0001    Starvation mortality rate of Adelie penguins           d-1              0.0 - 0.01   
 mStarve_SB       0.0001    Starvation mortality rate of Albatross                 d-1              0.0 - 0.01
 mStarve_WHO      0.0001    Starvation mortality rate of Sperm whales              d-1              0.0 - 0.01   
@@ -4896,7 +4896,7 @@ Rbeta_IKR       1.0     Beta in Ricker for krill
 ## TO DO - SET THESE ONCE HAVE INITIAL BIOMASS ESTIMATES TO COMPARE REPLACEMENT OFF, USE STOCK-RECRUIT RELATIONSHIP FROM ASSESSMENT TO DICTATE SHAPE ETC #
 # Beverton-Holt recruitment   
 BHalpha_FM      1.60E+11  Alpha in Beverton-Holt for Mesopelagics
-BHalpha_FT      1.26E+08  Alpha in Beverton-Holt for toothfishersal (was 6.2, 4.2)
+BHalpha_FT      6.2E+10   Alpha in Beverton-Holt for toothfishersal (was 6.2, 4.2)
 BHalpha_SF      1.0       Alpha in Beverton-Holt for elephant seals (was 5.1)
 BHalpha_SK      1.0       Alpha in Beverton-Holt for Crabeater seal     
 BHalpha_PNK     1.0       Alpha in Beverton-Holt for Adelie penguins     
