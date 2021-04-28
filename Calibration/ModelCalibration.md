@@ -135,7 +135,7 @@ Code |Value | Comments
 mum_PPL_T15 | 0.6 |
 mum_PPS_T15	| 0.525 |
 mum_IDF_T15	| 0.2	| 
-mum_PDF_T15	| 0.41	| Any higher than 0.415 and model crashes before 10 year mark, prob needs to be lowered more
+mum_PDF_T15	| 0.4	| Any higher than 0.415 and model crashes before 10 year mark, prob needs to be lowered more
 mum_IPL_T15	| 1.44 |
 KI_PPL_T15 | 20 | 
 KI_PPS_T15  | 19 |
@@ -168,5 +168,5 @@ Increased ZM and ZG mum and they are also now looking good - may still need some
 ### Ice
 KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
 
-mum_IPL and mum_IDF is also quite low compared to other primary prodcucers.
+mum_IPL and mum_IDF is also quite low compared to other primary producers.
 
