@@ -105,15 +105,29 @@ If you do not have fishing pressure in the model yet then you could increase mL 
 
 Set mL to F/365 where F is annual fishing pressure. This relationship is more complicated than this and involves a log but will just use this for now until the harvest model is introduced.
 
+# April 16 2021
+IPL are not growing and dying out pretty quick. 
+
+Decreased mum_FT and C_FT by half which made no difference. Looking at their predators they are following the same trend.
+
+PNF and SF have the same problem of numbers increasing and RN and SN are decreasing. The first cohort of both looks pretty good. 
+
+Decreasing mum_PNF and mum_SF by 10-fold.  No change.
+
+The only predator of PNF and SF is TP so could probably increase mQ. Increasing mQ did decrease their biomass but the numbers to nitrogen ratio remains the same. The younger age classes are looking better.
+
+Increasing mL FT made a big difference. Numbers to RN&SN ratio looks very good now. Numbers are just decreasing very steadily and not by much. Now need to adjust so that they will grow.
+
+## April 22 2021
+Working on the stabilising the Krill growth rate. I aligned the KWSR and KWRR with the ResN and StructN in the input file and the biomass of the krill blew up even more. 
+
+Decreasing the primary producer mum made a big difference to the krill growth and krill look much better. Primary producers now have a really nice growth pattern.
+
+## April 27 2021
+The initial biomass of the ice species appears to be too high, when it was lowered the output looked better. Going to change the initial biomass of the species back to original for now and work on using the parameters to control their growth. Need to calibrate to mum and KN_XXX and KI_XXX.
+
 ### Ice
 KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
+
 mum_IPL and mum_IDF is also quite low compared to other primary prodcucers.
 
-Code is not going into the Ice_PrimaryProduction process after time step 1.
-
-atlantismain definitely goes into open_iceprop function in atIceIO.c as I can see the printf. 
-open_iceprop is called by ice_cdf_init and get_ice_property.
-
-ice_cdf_init called by Load_Ice_Timeseries which is called in the physics.c if(bm->ice_on) {Load_Ice_Timeseries(bm)}
-
-get_ice_property also called by Load_Ice_Timeseries and CDF_iceBM (called by Get_Ice which is only called by if(bm->ice_on){}) and ice_cdf_init

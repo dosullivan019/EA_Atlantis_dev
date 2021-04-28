@@ -133,5 +133,12 @@ The Redfield ratio of Fe:N is SeTAS is 30000 which was very large and causing th
 
 Using the mid-range between 0.1 and 0.001 -> 16N:~0.04Fe 
 
+### Iron in Primary Producers
+Fe:C ratio in pelagic phytoplankton is 1:3000 to 1:500000. Used the 1:3000 ratio so 1C = 1/3000Fe = 1/6.625N (should probably change to 5.7N)
+
+0.1509N = 0.000033Fe
+
+1N = 0.0022Fe
+
 ### References
 Schallenberg, C., Bestley, S., Klocker, A., Trull, T.W., Davies, D.M., Gault-Ringold, M., Eriksen, R., Roden, N.P., Sander S.G., Sumner, M., Townsend, A.T., van der Merwe, P., Westwood, K., Wuttig, K, Bowie, A., 2018. Sustained Upwelling of Subsurface Iron Supplies Seasonally Persistent Phytoplankton Blooms Around the Southern Kerguelen Plateau, Southern Ocean. J. Geophys. Res. Ocean. 123, 5986-6003. https://doi.org/10.1029/2018JC013932

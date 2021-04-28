@@ -146,11 +146,26 @@ The ice species need to have the relevant ice functional group name eg. ICE_DIAT
 
 Ensure the minicedz in the physics.prm file is not greater than the ice depth in the first time step if the ice is to continue throughout the next few time steps.
 
+The initial biomass of the ice species appears to be too high, when I lowered it they seemed to have some growth but maybe it's also because of shading? 
+
+Mao had C:chl-a ratio as 75 from Arrigo (1998). 
+
+C:N = 5.7
+
+Moa's calculation:
+Averaged chl-a in sea ice in Jan in the Southern Ocean is 15mg/m2 derived from Meiners (2012). Average length of all sample cores is 0.89m, so averaged chl-a in sea ice is 16.85393 mg chla/m3.
+
+The ratio of carbon to chlorophyll from Arrigo (1998) paper is:
+
+C/chl-a = 75
+
+C_ice [mgC/m3] =  16.85393*75 = 1264.045
+
+Using the redfield ratio of C:N=5.7 we get 221.7623 mgN m3 (1264.045/5.7)
+
+
 #### TODO
-Check ice-dwelling microfauna are working as expected - suggested by Beth as she couldn't see them in Olive.
-
-Ice-dwelling microfauna are being included but the processes aren't running after time step 1. Currently debugging (15/04)
-
+Check ice-dwelling microfauna are working as expected - suggested by Beth as she couldn't see them in Olive. - DONE. The ice processes are working but the ice species parameters need to be calibrated so the output looks better.
 
 Do PPL, PDF need iron concentrations? Yes, have added placement values for now. Need to add for PDF and PPL. Also need to add whale, krill and iron flux.
 
@@ -158,6 +173,10 @@ Check outputBoxlight.txt. Looks like Box 2, 3 and 4 have high light at the begin
 
 Increase mL for fished species until harvest model is brought in.
 
-Fix transport warnings - one is box 24 layer 0 and the initial Fe in this box layer needs to be increased as the phytoplankton are limited from the very beginning.
+Fix transport warnings - one is box 24 layer 0 and the initial Fe in this box layer needs to be increased as the phytoplankton are limited from the very beginning. - DONE
 
 Det_Si goes negative in box 10 layer 9 and box 7 layers 6-9 at some point so need to look into this.
+
+Change FT_BHalpha back to what it what once the other classes look a bit better.
+
+Fix PNF and SF growth. If decreasing mum doesn't work then try increasing mL and mQ.
