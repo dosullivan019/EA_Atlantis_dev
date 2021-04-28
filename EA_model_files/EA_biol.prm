@@ -1118,7 +1118,7 @@ KI_PPL_T15        20        Light saturation, large phytoplankton             W 
 KI_PPS_T15        19        Light saturation, small phytoplankton             W m-2          10 - 20 19
 KI_PDF_T15        11        Light saturation, dinoflagellates                 W m-2          10 - 20 14
 KI_IDF_T15        5         Light saturation, Ice mixotrophs                  W m-2             5
-KI_IPL_T15        0.035     Light saturation, Ice diatoms                        W m-2             65
+KI_IPL_T15        5         Light saturation, Ice diatoms                        W m-2             65
 #KI_PCO_T15        15        Light saturation, Coccolithophores               W m-2             3
 
 BD_wc   0.01  Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1   
@@ -1129,7 +1129,7 @@ KN_PPL            10         Half-sat const for PPL growth on DIN               
 KN_PPS            4	     Half-sat const for PPS growth on DIN (4)           mg N m-3          4
 KN_PDF            30        Half-sat const for PDF growth on DIN               mg N m-3          30
 KN_IDF            0.8       Half-sat const for IDF growth on DIN               mg N m-3          20
-KN_IPL            0.9       Half-sat const for IPL growth on DIN               mg N m-3          5
+KN_IPL            4         Half-sat const for IPL growth on DIN               mg N m-3          5
 #KN_PCO           0.5       Half-sat const for PCO growth on DIN               mg N m-3          200
 
 KS_PPL            20        Half-sat const for PPL growth on Si                mg Si m-3         20 
@@ -4860,7 +4860,7 @@ PP_WHH          1.0       Coefficient relating primary production and baleen wha
 PP_KR           1.0       Coefficient relating primary production and Krill recruits     1
 PP_IKR          1.0       Coefficient relating primary production and Krill recruits     1
 
-ref_chl          1.08       Reference level of chla                           mg Chla m-3      1.5 0.15
+ref_chl          1.5        Reference level of chla                           mg Chla m-3      1.5 0.15
 
 # Ricker recruitment   
 Ralpha_FM      1.0     Alpha in Ricker for Mesopelagics
