@@ -88,7 +88,7 @@ Quick growth of ZM follows a spike in growth of PPS for the coastal boxes. Going
 
 Dropping KLYS_PPL and KLYS_PPS to 0.075.
 
-# April 14 2021
+### April 14 2021
 Fish (FM) numbers are going down. mum_FM is very low so doubled these numbers and this is looking much better. The availability of ZM to FM is high but FM are not a significant predator on ZM (although ZM make up most of their diet).
 
 KWSR_FM and KWRR_FM were much lower than the values in the initial conditions file. Increased the KWSR_FM and KWWR_FM to match the values in the initial conditions and FM growth looks very good now. 
@@ -105,7 +105,7 @@ If you do not have fishing pressure in the model yet then you could increase mL 
 
 Set mL to F/365 where F is annual fishing pressure. This relationship is more complicated than this and involves a log but will just use this for now until the harvest model is introduced.
 
-# April 16 2021
+### April 16 2021
 IPL are not growing and dying out pretty quick. 
 
 Decreased mum_FT and C_FT by half which made no difference. Looking at their predators they are following the same trend.
@@ -118,13 +118,52 @@ The only predator of PNF and SF is TP so could probably increase mQ. Increasing 
 
 Increasing mL FT made a big difference. Numbers to RN&SN ratio looks very good now. Numbers are just decreasing very steadily and not by much. Now need to adjust so that they will grow.
 
-## April 22 2021
+Played with pprey, think the matrix still needs some adjustment.
+
+### April 22 2021
 Working on the stabilising the Krill growth rate. I aligned the KWSR and KWRR with the ResN and StructN in the input file and the biomass of the krill blew up even more. 
 
 Decreasing the primary producer mum made a big difference to the krill growth and krill look much better. Primary producers now have a really nice growth pattern.
 
-## April 27 2021
+### April 27 2021
 The initial biomass of the ice species appears to be too high, when it was lowered the output looked better. Going to change the initial biomass of the species back to original for now and work on using the parameters to control their growth. Need to calibrate to mum and KN_XXX and KI_XXX.
+
+Primary Producer growth now looks very good, model will run for at least 10 years with these parameters:
+
+Code |Value | Comments
+----|----|-----------------
+mum_PPL_T15 | 0.6 |
+mum_PPS_T15	| 0.525 |
+mum_IDF_T15	| 0.2	| 
+mum_PDF_T15	| 0.41	| Any higher than 0.415 and model crashes before 10 year mark, prob needs to be lowered more
+mum_IPL_T15	| 1.44 |
+KI_PPL_T15 | 20 | 
+KI_PPS_T15  | 19 |
+KI_PDF_T15  | 11 |
+KI_IDF_T15 | 5 | May need to be lowered
+KI_IPL_T15 | 5 | May need to be lowered
+KN_PPL_T15 | 10 | 
+KN_PPS_T15  | 4 | 
+KN_PDF_T15  | 30 |
+KN_IDF_T15 | 0.8 | 
+KN_IPL_T15 | 4 | May need to be lowered
+KS_PPL_T15 | 20 | 
+KS_PPS_T15  | 0 |
+KS_PDF_T15  | 0 | 
+KS_IDF_T15 | 0 |
+KS_IPL_T15 | 4 |
+KLYS_PPL | 0.1 |
+KLYS_PPS | 0.1 |
+KLYS_PDF | 0.075 |
+KLYS_IDF | 0.02 |
+KLYS_IPL | 0.01 |
+PPL_mL | 0.14 |
+PPS_mL | 0.14 |
+PDF_mL | 0.14 |
+IDF_mL | 0.04 |
+IPL_mL | 0.01 |
+
+Increased ZM and ZG mum and they are also now looking good - may still need some calibration though.
 
 ### Ice
 KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
