@@ -4985,35 +4985,35 @@ IKR_log_mult     1.0        Multipler converting distribution to number of Krill
 
 # Size of recruits 
 
-KWSR_FM    5.839           Structural weight of migratory mesopel recruits   mg N m-3         0.039
-KWSR_FT    61.45          Structural weight of toothfish. recruits  mg N m-3         0.019
+KWSR_FM    5.839          Structural weight of migratory mesopel recruits   mg N m-3         0.039
+KWSR_FT    4266.458       Structural weight of toothfish. recruits          mg N m-3         0.019
 KWSR_SF    2158816.44     Structural weight of misc. demersal recruits      mg N m-3         0.038
 KWSR_SK    2459662.64     Structural weight of demersal shark recruits      mg N m-3         8.78
-KWSR_PNF   3170.76        Structural weight of Emperor penguin recruits          mg N m-3         72.93
-KWSR_PNK   146.40         Structural weight of Adelie penguin recruits       mg N m-3         581.3
-KWSR_SB   987.67         Structural weight of penguin fledglings           mg N m-3         0.014
-KWSR_WHO   48219218.78    Structural weight of Sperm whale young                 mg N m-3         8048.0
+KWSR_PNF   3170.76        Structural weight of Emperor penguin recruits     mg N m-3         72.93
+KWSR_PNK   146.40         Structural weight of Adelie penguin recruits      mg N m-3         581.3
+KWSR_SB    987.67         Structural weight of penguin fledglings           mg N m-3         0.014
+KWSR_WHO   48219218.78    Structural weight of Sperm whale young            mg N m-3         8048.0
 KWSR_WHH   90978331.68    Structural weight of baleen whale young           mg N m-3         117362680.0 
-KWSR_WHM   30592276.68    Structural weight of small orca young    mg N m-3         749557.5
-KWSR_TP   13628314.42    Structural weight of orca young          mg N m-3         749557.5
-KWSR_KR    0.1            Structural weight of krill settler       mg N m-3         0.1
-KWSR_IKR    0.1            Structural weight of krill settler       mg N m-3         0.1
+KWSR_WHM   30592276.68    Structural weight of small orca young             mg N m-3         749557.5
+KWSR_TP    13628314.42    Structural weight of orca young                   mg N m-3         749557.5
+KWSR_KR    0.14           Structural weight of krill settler                mg N m-3         0.1
+KWSR_IKR   0.02           Structural weight of krill settler                mg N m-3         0.1
 
 
 
-KWRR_FM    15.473           Reserve weight of migratory mesopelagic recruits  mg N m-3          0.1
-KWRR_FT    162.84         Reserve weight of toothfishersal recruits mg N m-3          0.05
+KWRR_FM    15.473         Reserve weight of migratory mesopelagic recruits  mg N m-3          0.1
+KWRR_FT    11304.5569     Reserve weight of toothfishersal recruits         mg N m-3          0.05
 KWRR_SF    5720863.56     Reserve weight of miscellaneous demersal recruits mg N m-3          0.1
 KWRR_SK    6518106.01     Reserve weight of demersal shark recruits         mg N m-3          23.3
-KWRR_PNK   387.97         Reserve weight of Adelie penguin recruits          mg N m-3          1540.5
-KWRR_PNF   8402.52        Reserve weight of Emperor penguin recruits             mg N m-3          193.27
-KWRR_SB   2617.33        Reserve weight of penguin fledglings              mg N m-3          0.038
-KWRR_WHO   127780929.77   Reserve weight of Sperm whale young                    mg N m-3          21328.0
+KWRR_PNK   387.97         Reserve weight of Adelie penguin recruits         mg N m-3          1540.5
+KWRR_PNF   8402.52        Reserve weight of Emperor penguin recruits        mg N m-3          193.27
+KWRR_SB    2617.33        Reserve weight of penguin fledglings              mg N m-3          0.038
+KWRR_WHO   127780929.77   Reserve weight of Sperm whale young               mg N m-3          21328.0
 KWRR_WHH   241092578.95   Reserve weight of baleen whale young              mg N m-3          311011104.0
-KWRR_WHM   81069533.20    Reserve weight of small orca young       mg N m-3          1986327.0
-KWRR_TP   36115033.20    Reserve weight of orca young             mg N m-3          1986327.0
-KWRR_KR    0.26           Reserve weight of krill settler          mg N m-3          0.36
-KWRR_IKR    0.26           Reserve weight of krill settler          mg N m-3          0.36
+KWRR_WHM   81069533.20    Reserve weight of small orca young                mg N m-3          1986327.0
+KWRR_TP    36115033.20    Reserve weight of orca young                      mg N m-3          1986327.0
+KWRR_KR    1.735          Reserve weight of krill settler                   mg N m-3          0.36
+KWRR_IKR   0.3            Reserve weight of krill settler                   mg N m-3          0.36
 
 ## And for spawning
 # Minimum and maximum spawning temperatures
