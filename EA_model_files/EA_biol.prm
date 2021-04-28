@@ -3566,10 +3566,10 @@ k_refDR          20.0      Reference refract. detrit. level in water column (if 
 k_refsDL      10000.0      Reference labile detrit. level in sediments (if higher availability to omnivores reduced)
 
 # Clearance rates for consumers - this is used by Holling type feeding (predcase 0, 1, 2)
-C_ZG_T15	0.002	Clearance rate of Salps	                 mg3(mg N)-1 d-1	0.02 - 0.2	
+C_ZG_T15	0.01	Clearance rate of Salps	                 mg3(mg N)-1 d-1	0.02 - 0.2	
 C_IZ_T15	0.035	Clearance rate of large zooplankton	     mg3(mg N)-1 d-1	0.01 - 0.8	
 #C_ZL_T15	0.8	Clearance rate of large zooplankton	         mg3(mg N)-1 d-1	0.01 - 0.8	0.08
-C_ZM_T15	0.05	Clearance rate of meso-zooplankton	     mg3(mg N)-1 d-1	0.05 - 0.1	0.04
+C_ZM_T15	0.007	Clearance rate of meso-zooplankton	     mg3(mg N)-1 d-1	0.05 - 0.1	0.04
 #C_ZS_T15	0.18	Clearance rate of small zooplankton	     mg3(mg N)-1 d-1	0.2 - 0.4	0.18
 C_IDF_T15	0.03	Clearance rate of dinoflagellates	     mg3(mg N)-1 d-1	0.2 - 0.4	
 C_PDF_T15	0.03	Clearance rate of dinoflagellates	     mg3(mg N)-1 d-1	0.2 - 0.4	
@@ -3627,10 +3627,10 @@ C_TP	20
 
 
 # Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
-mum_ZG_T15	0.02	Growth rate of Salps                   	mg N d-1 	0.02 - 0.85	0.65
+mum_ZG_T15	0.07	Growth rate of Salps                   	mg N d-1 	0.02 - 0.85	0.65
 mum_IZ_T15	0.35	Growth rate of large ice zooplankton    mg N d-1 	0.02 - 0.2	
 #mum_ZL_T15	0.02	Growth rate of large zooplankton        mg N d-1	0.02 - 0.35	0.8
-mum_ZM_T15	0.075	Growth rate of meso-zooplankton             mg N d-1	0.02 - 0.2	
+mum_ZM_T15	0.1	Growth rate of meso-zooplankton             mg N d-1	0.02 - 0.2	
 #mum_ZS_T15	0.55	Growth rate of microzooplankton         mg N d-1	0.5 - 2.5	
 #mum_BF_T15	0.02	Growth rate of filter feeders          	mg N d-1		0.01
 mum_BD_T15	0.001369	Growth rate of deposit feeders      mg N d-1	0.005 - 0.07	
