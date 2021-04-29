@@ -165,6 +165,26 @@ IPL_mL | 0.01 |
 
 Increased ZM and ZG mum and they are also now looking good - may still need some calibration though.
 
+### April 28 2021
+Code |Value | Comments
+----|----|-----------------
+mum_PPL_T15 | 0.605 | Increased as PPS were limiting their growth after increasing their mum
+mum_PPS_T15	| 0.53 | Increased to avoid PPS dying out 
+mum_IDF_T15	| 0.2	| 
+mum_PDF_T15	| 0.4	| Any higher than 0.415 and model crashes before 10 year mark, prob needs to be lowered more
+mum_IPL_T15	| 1.44 |
+
+The model now runs for about 30 years but PPL grow too much at the end and the model crashes. Need to adjust their mum again.
+
+### Next Steps
+Try running for 50 years with mum_PPS=0.525 and mum_PPL=0.6
+
+If current run is better than changing the mum_PPS and mum_PPL then try slightly lower mum for PPL.
+
+Calibrate ZG as they are growing uncontrollably. Try reducing mum and C.
+
+Ice diatoms growth.
+
 ### Ice
 KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
 

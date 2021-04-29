@@ -159,6 +159,20 @@ the equation from wikipedia
 
 Using the mid-range between 0.1 and 0.001 -\> 16N:\~0.04Fe
 
+### Iron in Primary Producers
+
+Fe:C ratio in pelagic phytoplankton is 1:3000 to 1:500000. Used the
+1:3000 ratio so 1C = 1/3000Fe = 1/6.625N (should probably change to
+5.7N)
+
+0.1509N = 0.000033Fe
+
+1N = 0.0022Fe
+
+### Iron in Krill
+
+Fe/C ratio = 10.3 +- 4.3 micro-mol/mol
+
 ### References
 
 Schallenberg, C., Bestley, S., Klocker, A., Trull, T.W., Davies, D.M.,

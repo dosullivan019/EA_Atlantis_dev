@@ -140,5 +140,8 @@ Fe:C ratio in pelagic phytoplankton is 1:3000 to 1:500000. Used the 1:3000 ratio
 
 1N = 0.0022Fe
 
+### Iron in Krill
+Fe/C ratio = 10.3 +- 4.3 micro-mol/mol
+
 ### References
 Schallenberg, C., Bestley, S., Klocker, A., Trull, T.W., Davies, D.M., Gault-Ringold, M., Eriksen, R., Roden, N.P., Sander S.G., Sumner, M., Townsend, A.T., van der Merwe, P., Westwood, K., Wuttig, K, Bowie, A., 2018. Sustained Upwelling of Subsurface Iron Supplies Seasonally Persistent Phytoplankton Blooms Around the Southern Kerguelen Plateau, Southern Ocean. J. Geophys. Res. Ocean. 123, 5986-6003. https://doi.org/10.1029/2018JC013932
