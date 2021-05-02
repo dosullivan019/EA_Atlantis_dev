@@ -185,6 +185,22 @@ Calibrate ZG as they are growing uncontrollably. Try reducing mum and C.
 
 Ice diatoms growth.
 
+### April 30 2021
+Code |Value | Comments
+----|----|-----------------
+mum_PPL_T15 | 0.6 | Growth possibly too high
+mum_PPS_T15	| 0.525 | Growth maybe a bit too low
+mum_IDF_T15	| 0.2	| 
+mum_PDF_T15	| 0.4	| Growing too much at the end
+mum_IPL_T15	| 1.44 |
+
+Model now runs for 50 years.
+
+### May 1 2021
+Lowered the initial biomass of ice species. The ice diatoms had a biomass of over 100 where as the pelagic diatoms have a biomass of about 0.01 in a box-layer. The ice diatoms biomass seems way too large compared to the pelagic diatoms. Jess said it is ok to lower as we have little data on ice diatoms in the area of the model and they should be somewhat similiar to the pelagic diatoms.
+
+The growth of the ice diatoms looks much better after lowering their initial biomass and can clearly see the seasonility of their growth now. IDF still die out at the very beginning, will try increasing their mum.
+
 ### Ice
 KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
 
