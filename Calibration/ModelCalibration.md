@@ -201,6 +201,15 @@ Lowered the initial biomass of ice species. The ice diatoms had a biomass of ove
 
 The growth of the ice diatoms looks much better after lowering their initial biomass and can clearly see the seasonility of their growth now. IDF still die out at the very beginning, will try increasing their mum.
 
+### June 12 2021
+Large mammals increasing continuously trend. 
+
+1. PNK. Increased PNK_mQ from 1e-20 to 1e-5. They just dropped off and were pretty low after 20 years so stopped the run. 1e-10 is too high, growing up out of the relative biomass range after about 10 years. 1e-7 looks good - still growing too much though but following the trend of the krill. 
+KR and IKR last age class is causing them to not have steady state variables.
+
+### 13 June 2021
+Ran model for 100 years. Crashed just after 70 years as the ZG exploded. They started feeding on themselves as PPL and PPS died out. PDF are growing too much so either need to decrease PDF mum or increase PPS and PPL mum
+
 ### Ice
 KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
 
