@@ -210,6 +210,20 @@ KR and IKR last age class is causing them to not have steady state variables.
 ### 13 June 2021
 Ran model for 100 years. Crashed just after 70 years as the ZG exploded. They started feeding on themselves as PPL and PPS died out. PDF are growing too much so either need to decrease PDF mum or increase PPS and PPL mum
 
+### July 2021
+Increased PPS, PPL and PDF mum slightly so they would not die out
+
+Best values now are:
+
+mum_PPL_T15 | 0.6005 |
+mum_PPS_T15	| 0.527 |
+mum_IDF_T15	| 0.835	| 
+mum_PDF_T15	| 0.3975	|
+mum_IPL_T15	| 1.44 |
+
+### 11 July 2021
+Increased mQ of adult whales. First increased from 1e-008 to 1e-08 but made no difference, then increased to 1e-8 but was still too high, increased to 1e-5 which made a significant difference. Although the biomass doesn't remain within the relative threshold it decreased the growth significantly compared to an mQ of 1e-8 and the growth levels out after a burn in period. The model runs for 100 years after making these changes.
+
 ### Ice
 KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
 
