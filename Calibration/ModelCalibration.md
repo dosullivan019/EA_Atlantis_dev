@@ -224,6 +224,15 @@ mum_IPL_T15	| 1.44 |
 ### 11 July 2021
 Increased mQ of adult whales. First increased from 1e-008 to 1e-08 but made no difference, then increased to 1e-8 but was still too high, increased to 1e-5 which made a significant difference. Although the biomass doesn't remain within the relative threshold it decreased the growth significantly compared to an mQ of 1e-8 and the growth levels out after a burn in period. The model runs for 100 years after making these changes.
 
+### October 1 2021
+Seabirds (SB) are eating far too much Pelagic Bacteria (PB), it makes up a lot of their diet. PB isn't even available to SB in the pprey matrix but it must be because they feed on detritus.
+
+All the bacteria have a low linear mortality value, increasing PB_mL and BB_mL to 0.1 and IB_mL to 0.01 as suggested.
+
+
+### November 6 2022
+Krill are growing too much - increasing KR_mL aned IKR_mL (adults) from 5.00E-014 to 5.00E-010 and IKR_mL (juveniles) from 1.00E-008 to 1.00E-8, same as KR_mL - output_EA_20221106_increase_KR_mL
+
 ### Ice
 KI_XXX, KN_XXX and KS_XXX are much lower for the ice species.
 

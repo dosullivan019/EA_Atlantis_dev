@@ -1270,6 +1270,19 @@ variables:
 		Antarctic_Krill_N:decay = 0. ;
 		Antarctic_Krill_N:partic = 0 ;
 		Antarctic_Krill_N:fill.value = 0. ;
+	double Antarctic_Krill_F(t, b, z) ;
+		Antarctic_Krill_F:units = "mg Fe m-3" ;
+		Antarctic_Krill_F:_FillValue = 0.001 ;
+		Antarctic_Krill_F:long_name = "Antarctic_Krill total Fe" ;
+		Antarctic_Krill_F:bmtype = "tracer" ;
+		Antarctic_Krill_F:dtype = 0 ;
+		Antarctic_Krill_F:sumtype = 1 ;
+		Antarctic_Krill_F:inwc = 0 ;
+		Antarctic_Krill_F:insed = 0 ;
+		Antarctic_Krill_F:dissol = 1 ;
+		Antarctic_Krill_F:decay = 0. ;
+		Antarctic_Krill_F:partic = 0 ;
+		Antarctic_Krill_F:fill.value = 0. ;
 	double Antarctic_Krill1_Nums(t, b, z) ;
 		Antarctic_Krill1_Nums:units = "1" ;
 		Antarctic_Krill1_Nums:_FillValue = 0. ;
@@ -6789,6 +6802,19 @@ variables:
 		Minke_Whales_N:decay = 0. ;
 		Minke_Whales_N:partic = 0 ;
 		Minke_Whales_N:fill.value = 0. ;
+	double Minke_Whales_F(t, b, z) ;
+		Minke_Whales_F:units = "mg Fe m-3" ;
+		Minke_Whales_F:_FillValue = 0.001 ;
+		Minke_Whales_F:long_name = "Minke_Whales total Fe" ;
+		Minke_Whales_F:bmtype = "tracer" ;
+		Minke_Whales_F:dtype = 0 ;
+		Minke_Whales_F:sumtype = 1 ;
+		Minke_Whales_F:inwc = 0 ;
+		Minke_Whales_F:insed = 0 ;
+		Minke_Whales_F:dissol = 1 ;
+		Minke_Whales_F:decay = 0. ;
+		Minke_Whales_F:partic = 0 ;
+		Minke_Whales_F:fill.value = 0. ;
 	double Minke_Whales1_Nums(t, b, z) ;
 		Minke_Whales1_Nums:units = "1" ;
 		Minke_Whales1_Nums:_FillValue = 0. ;
@@ -7657,6 +7683,19 @@ variables:
 		Other_Baleen_Whales_N:decay = 0. ;
 		Other_Baleen_Whales_N:partic = 0 ;
 		Other_Baleen_Whales_N:fill.value = 0. ;
+	double Other_Baleen_Whales_F(t, b, z) ;
+		Other_Baleen_Whales_F:units = "mg Fe m-3" ;
+		Other_Baleen_Whales_F:_FillValue = 0.001 ;
+		Other_Baleen_Whales_F:long_name = "Other_Baleen_Whales total Fe" ;
+		Other_Baleen_Whales_F:bmtype = "tracer" ;
+		Other_Baleen_Whales_F:dtype = 0 ;
+		Other_Baleen_Whales_F:sumtype = 1 ;
+		Other_Baleen_Whales_F:inwc = 0 ;
+		Other_Baleen_Whales_F:insed = 0 ;
+		Other_Baleen_Whales_F:dissol = 1 ;
+		Other_Baleen_Whales_F:decay = 0. ;
+		Other_Baleen_Whales_F:partic = 0 ;
+		Other_Baleen_Whales_F:fill.value = 0. ;
 	double Other_Baleen_Whales1_Nums(t, b, z) ;
 		Other_Baleen_Whales1_Nums:units = "1" ;
 		Other_Baleen_Whales1_Nums:_FillValue = 0. ;
@@ -9963,6 +10002,19 @@ variables:
 		Humpback_Whales_N:decay = 0. ;
 		Humpback_Whales_N:partic = 0 ;
 		Humpback_Whales_N:fill.value = 0. ;
+	double Humpback_Whales_F(t, b, z) ;
+		Humpback_Whales_F:units = "mg Fe m-3" ;
+		Humpback_Whales_F:_FillValue = 0.001 ;
+		Humpback_Whales_F:long_name = "Humpback_Whales total Fe" ;
+		Humpback_Whales_F:bmtype = "tracer" ;
+		Humpback_Whales_F:dtype = 0 ;
+		Humpback_Whales_F:sumtype = 1 ;
+		Humpback_Whales_F:inwc = 0 ;
+		Humpback_Whales_F:insed = 0 ;
+		Humpback_Whales_F:dissol = 1 ;
+		Humpback_Whales_F:decay = 0. ;
+		Humpback_Whales_F:partic = 0 ;
+		Humpback_Whales_F:fill.value = 0. ;
 	double Humpback_Whales1_Nums(t, b, z) ;
 		Humpback_Whales1_Nums:units = "1" ;
 		Humpback_Whales1_Nums:_FillValue = 0. ;
@@ -14126,6 +14178,36 @@ Pelagic_Dinoflagellates_F =
   _, _, _, _, _, _, _, _, _, _, _,
   _, _, _, _, _, _, _, _, _, _, _ ;
 
+ Antarctic_Krill_F =
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0 ;
+  
  Antarctic_Krill1_Nums =
   _, _, _, _, _, _, _, _, _, _, _,
   _, _, 2240306302.92487, 2240306302.92487, 4480612605.84975, 
@@ -24098,6 +24180,35 @@ Pelagic_Dinoflagellates_F =
   _, _, _, _, _, _, _, _, _, _, _,
   _, _, _, _, _, _, _, _, _, _, _ ;
 
+  Minke_Whales_F =
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0 ;
  Minke_Whales1_Nums =
   _, _, _, _, _, _, _, _, _, _, _,
   3.62125459376365, 3.62125459376365, 3.62125459376365, 3.62125459376365, 
@@ -26329,6 +26440,35 @@ Pelagic_Dinoflagellates_F =
   _, _, _, _, _, _, _, _, _, _, _,
   _, _, _, _, _, _, _, _, _, _, _,
   _, _, _, _, _, _, _, _, _, _, _ ;
+  Other_Baleen_Whales_F =
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0 ;
 
  Other_Baleen_Whales1_Nums =
   _, _, _, _, _, _, _, _, _, _, _,
@@ -31688,6 +31828,35 @@ Pelagic_Dinoflagellates_F =
   _, _, _, _, _, _, _, _, _, _, _,
   _, _, _, _, _, _, _, _, _, _, _,
   _, _, _, _, _, _, _, _, _, _, _ ;
+  Humpback_Whales_F =
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, 0, 0, 0, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0,
+  _, _, _, _, _, _, _, _, _, _, 0 ;
 
  Humpback_Whales1_Nums =
   _, _, _, _, _, _, _, _, _, _, _,

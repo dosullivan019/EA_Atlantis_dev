@@ -4120,10 +4120,10 @@ DR_mL 0.0
 
 # For age structured groups
 IKR_mL 2
-1.00E-008 5.00E-014
+1.00E-8 5.00E-010
 
 KR_mL 2
-1.00E-8 5.00E-014
+1.00E-8 5.00E-010
 
 
 FM_mL 2
